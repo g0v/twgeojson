@@ -1,1 +1,32 @@
-foo
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>TW</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
+    <script src="mymap.js"></script>
+
+    <style>
+#taiwan path, #state-centroids circle {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+#taiwan .active {
+  fill: steelblue;
+}
+
+rect.background {
+  fill: white;            
+}
+</style>
+
+ </head>
+  <body>
+    <script type="text/javascript">
+        mymap();
+    </script>
+  </body>
+</html>
+​
