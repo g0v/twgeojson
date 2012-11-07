@@ -13,12 +13,11 @@
     "url": "git://github.com/gedion/ep_tables.git"
   },
   "scripts": {
-    "prepublish": "./node_modules/.bin/lsc -cj package.ls\n./node_modules/.bin/lsc -bc -o lib src"
+    "prepublish": "./node_modules/.bin/lsc -cj package.ls"
   },
   "engines": {
     "node": "*"
   },
-  "main": "./lib/index.js",
   "dependencies": {},
   "devDependencies": {
     "LiveScript": "1.1.x",
