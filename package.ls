@@ -2,11 +2,11 @@ author:
   name: ['Chia-liang Kao']
   email: 'clkao@clkao.org'
 name: 'twgeojson'
-description: 'GeoJSON files for Taiwan'
-version: '0.0.1'
+description: 'GeoJSON files for Administrative divisions in Taiwan'
+version: '0.0.2'
 repository:
   type: 'git'
-  url: 'git://github.com/gedion/ep_tables.git'
+  url: 'git://github.com/g0v/twgeojson.git'
 scripts:
   prepublish: """
     ./node_modules/.bin/lsc -cj package.ls

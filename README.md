@@ -22,6 +22,12 @@ The county level data file is about 64K in size.
 For raw data or different levels of simplification, see Makefile for the rules
 generating them.
 
+# Todo
+
+* Merge subsumed polygons in the 2010 city merge
+* Town level translation for the 2010 city merge
+* Provide zip code as layer properties for towns
+
 # See Also
 
 * http://www.iot.gov.tw/ct.asp?xItem=154948&ctNode=1091
@@ -30,7 +36,7 @@ generating them.
 # CC0 1.0 Universal
 
 To the extent possible under law, Chia-liang Kao has waived all copyright
-and related or neighboring rights to jscex-jquery.
+and related or neighboring rights to twgeojson.
 
 This work is published from Taiwan.
 
