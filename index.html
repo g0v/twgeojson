@@ -6,11 +6,11 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
     <script src="mymap.js"></script>
 
+    <link type="text/css" rel="stylesheet" href="colorbrewer.css"/>
     <style>
-#taiwan path, #state-centroids circle {
-  fill: #ccc;
-  stroke: #fff;
+#taiwan path {
   stroke-width: 1.5px;
+  stroke: #fff;
 }
 
 #taiwan .active {
@@ -28,6 +28,8 @@ rect.background {
     <script type="text/javascript">
         mymap();
     </script>
+    <span id="foo">scale</span>
+    <span id="bar">restore</span>
     <a href="http://github.com/g0v/twgeojson">github</a>
     <a href="mymap.ls">source</a>
   </body>
