@@ -16,17 +16,20 @@ for {properties,geometry,type} in data.features
     throw "not Polygon" unless geometry.type is \Polygon
     name = properties.COUNTYNAME
     name = translate2010 name if argv.2010
-    (by_county[name] ||= []).push geometry.coordinates.0
+    (by_county[name] ||= []).push geometry.coordinates
 
 features = for name, coordinates of by_county => do
     properties: {name}
     type: \Feature
     geometry: do
-        type: \Polygon
-        coordinates: coordinates
+        if coordinates.length is 1
+            type: \Polygon
+            coordinates: coordinates[0]
+        else
+            { type: \MultiPolygon, coordinates }
 
 if argv.simplify
-    simplify = d3.simplify().topology(true).area(argv.simplify).projection -> it
+    simplify = d3.simplify!topology true .area argv.simplify .projection -> it
 
     for {geometry}:f in features
         p = simplify simplify.project geometry
