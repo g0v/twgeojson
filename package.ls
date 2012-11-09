@@ -3,7 +3,7 @@ author:
   email: 'clkao@clkao.org'
 name: 'twgeojson'
 description: 'GeoJSON files for Administrative divisions in Taiwan'
-version: '0.0.2'
+version: '0.0.3'
 repository:
   type: 'git'
   url: 'git://github.com/g0v/twgeojson.git'
