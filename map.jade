@@ -1,0 +1,28 @@
+!!! 5
+html(lang='en')
+ head
+  title D3 + Leaflet
+  style
+    #map {
+    width: 960px;
+    height: 500px;
+    }
+    path {
+    fill: #000;
+    fill-opacity: .2;
+    stroke: #fff;
+    stroke-width: 1.5px;
+    }
+    path:hover {
+    fill: brown;
+    fill-opacity: .7;
+    }
+ link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css')
+ script(src='http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js')
+ script(src="http://cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js")
+ body
+  h1 D3 + Leaflet
+  #map
+  p
+    aside Images © 2012 CloudMade, OpenStreetMap contributors, CC-BY-SA.
+  script(src="leaflet.js")
