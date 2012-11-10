@@ -17,6 +17,10 @@
   fill: steelblue;
 }
 
+#taiwan line.show {
+   stroke: gray;
+}
+
 rect.background {
   fill: white;            
 }
@@ -25,12 +29,15 @@ rect.background {
  </head>
   <body>
 <h1>GeoJSON data for Taiwan Administrative Divisions</h1>
+<div id="nav">
+    <span id="scale">scale</span>
+    <span id="restore">restore</span>
+    <span id="showlinks">links</span>
+    <a href="http://github.com/g0v/twgeojson">github</a>
+    <a href="https://github.com/g0v/twgeojson/blob/gh-pages/mymap.ls">source</a>
+</div>
     <script type="text/javascript">
         mymap();
     </script>
-    <span id="foo">scale</span>
-    <span id="bar">restore</span>
-    <a href="http://github.com/g0v/twgeojson">github</a>
-    <a href="mymap.ls">source</a>
   </body>
 </html>
