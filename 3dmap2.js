@@ -72,10 +72,6 @@ init = function(){
   directionalLight = new THREE.DirectionalLight(16777215);
   directionalLight.position.set(1, 0.75, 0.5).normalize();
   scene.add(directionalLight);
-  renderer = new THREE.WebGLRenderer({
-    antialias: true,
-    preserveDrawingBuffer: true
-  });
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
   stats = new Stats;
@@ -241,13 +237,14 @@ gradient = function(length, maxLength){
   return rgb;
 };
 init3d = function(){
-  if (!Detector.webgl) {
-    Detector.addGetWebGLMessage();
-    $(function(){
+  renderer = Detector.webgl
+    ? new THREE.WebGLRenderer({
+      antialias: true,
+      preserveDrawingBuffer: true
+    })
+    : ($(function(){
       return $('#nowebgl').show();
-    });
-    return;
-  }
+    }), new THREE.CanvasRenderer());
   init();
   return d3.json("twCounty1982.json", function(data){
     addGeoObject(data);
