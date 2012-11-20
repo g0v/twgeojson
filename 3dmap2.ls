@@ -33,7 +33,7 @@ init = ->
     top: '10px'
     width: '100%'
     textAlign: 'center'
-  info.innerHTML = 'HI'
+  info.innerHTML = 'press shift to rotate'
   container.appendChild info
 
   camera := new THREE.CombinedCamera window.innerWidth, window.innerHeight, 45, 1, 10000, -2000, 10000
@@ -79,8 +79,7 @@ init = ->
   stats.domElement.style.position = 'absolute'
   stats.domElement.style.top = '0px'
   container.appendChild stats.domElement
-  document.addEventListener 'mousemove', onDocumentMouseMove, false
-  document.addEventListener 'mousedown', onDocumentMouseDown, false
+  document.addEventListener('mousemove', onDocumentMouseMove, false);
   document.addEventListener 'keydown', onDocumentKeyDown, false
   document.addEventListener 'keyup', onDocumentKeyUp, false
   window.addEventListener 'resize', onWindowResize, false
@@ -119,22 +118,6 @@ onDocumentMouseMove = (event) ->
   event.preventDefault!
   mouse2D.x = event.clientX / window.innerWidth * 2 - 1
   mouse2D.y = -(event.clientY / window.innerHeight) * 2 + 1
-
-onDocumentMouseDown = (event) ->
-  event.preventDefault!
-  intersects = ray.intersectObjects scene.children
-  if intersects.length > 0
-    intersector = getRealIntersector intersects
-    if isCtrlDown
-      scene.remove intersector.object if not (intersector.object is plane)
-    else
-      intersector = getRealIntersector intersects
-      setVoxelPosition intersector
-      voxel = new THREE.Mesh cubeGeo, cubeMaterial
-      voxel.position.copy voxelPosition
-      voxel.matrixAutoUpdate = false
-      voxel.updateMatrix!
-      scene.add voxel
 
 onDocumentKeyDown = (event) ->
   switch event.keyCode

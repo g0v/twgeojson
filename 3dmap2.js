@@ -1,4 +1,4 @@
-var container, stats, camera, scene, renderer, projector, plane, cube, mouse2D, mouse3D, ray, rollOveredFace, isShiftDown, theta, isCtrlDown, rollOverMesh, rollOverMaterial, voxelPosition, tmpVec, cubeGeo, cubeMaterial, i, intersector, gui, voxelConfig, init, onWindowResize, getRealIntersector, setVoxelPosition, onDocumentMouseMove, onDocumentMouseDown, onDocumentKeyDown, onDocumentKeyUp, save, animate, render, projection, path, addGeoObject, gradient, init3d;
+var container, stats, camera, scene, renderer, projector, plane, cube, mouse2D, mouse3D, ray, rollOveredFace, isShiftDown, theta, isCtrlDown, rollOverMesh, rollOverMaterial, voxelPosition, tmpVec, cubeGeo, cubeMaterial, i, intersector, gui, voxelConfig, init, onWindowResize, getRealIntersector, setVoxelPosition, onDocumentMouseMove, onDocumentKeyDown, onDocumentKeyUp, save, animate, render, projection, path, addGeoObject, gradient, init3d;
 container = void 8;
 stats = void 8;
 camera = void 8;
@@ -37,7 +37,7 @@ init = function(){
     width: '100%',
     textAlign: 'center'
   });
-  info.innerHTML = 'HI';
+  info.innerHTML = 'press shift to rotate';
   container.appendChild(info);
   camera = new THREE.CombinedCamera(window.innerWidth, window.innerHeight, 45, 1, 10000, -2000, 10000);
   camera.position.y = 800;
@@ -83,7 +83,6 @@ init = function(){
   stats.domElement.style.top = '0px';
   container.appendChild(stats.domElement);
   document.addEventListener('mousemove', onDocumentMouseMove, false);
-  document.addEventListener('mousedown', onDocumentMouseDown, false);
   document.addEventListener('keydown', onDocumentKeyDown, false);
   document.addEventListener('keyup', onDocumentKeyUp, false);
   window.addEventListener('resize', onWindowResize, false);
@@ -132,27 +131,6 @@ onDocumentMouseMove = function(event){
   event.preventDefault();
   mouse2D.x = event.clientX / window.innerWidth * 2 - 1;
   return mouse2D.y = -(event.clientY / window.innerHeight) * 2 + 1;
-};
-onDocumentMouseDown = function(event){
-  var intersects, intersector, voxel;
-  event.preventDefault();
-  intersects = ray.intersectObjects(scene.children);
-  if (intersects.length > 0) {
-    intersector = getRealIntersector(intersects);
-    if (isCtrlDown) {
-      if (!(intersector.object === plane)) {
-        return scene.remove(intersector.object);
-      }
-    } else {
-      intersector = getRealIntersector(intersects);
-      setVoxelPosition(intersector);
-      voxel = new THREE.Mesh(cubeGeo, cubeMaterial);
-      voxel.position.copy(voxelPosition);
-      voxel.matrixAutoUpdate = false;
-      voxel.updateMatrix();
-      return scene.add(voxel);
-    }
-  }
 };
 onDocumentKeyDown = function(event){
   switch (event.keyCode) {
