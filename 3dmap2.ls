@@ -1,3 +1,6 @@
+# mostly from:
+# three3d editor example and
+# http://www.smartjava.org/content/render-geographic-information-3d-threejs-and-d3js
 container = void
 stats = void
 camera = void
