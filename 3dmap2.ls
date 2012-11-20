@@ -209,7 +209,11 @@ gradient = (length, maxLength) ->
 
 
 init3d = ->
-    Detector.addGetWebGLMessage! if not Detector.webgl
+    if not Detector.webgl
+        Detector.addGetWebGLMessage!
+        $ ->
+            $ \#nowebgl .show!
+        return
     init!
     data <- d3.json "twCounty1982.json"
     addGeoObject data

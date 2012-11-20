@@ -243,6 +243,10 @@ gradient = function(length, maxLength){
 init3d = function(){
   if (!Detector.webgl) {
     Detector.addGetWebGLMessage();
+    $(function(){
+      return $('#nowebgl').show();
+    });
+    return;
   }
   init();
   return d3.json("twCounty1982.json", function(data){
