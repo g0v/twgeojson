@@ -1,256 +1,135 @@
-var container, stats, camera, scene, renderer, projector, plane, cube, mouse2D, mouse3D, ray, rollOveredFace, isShiftDown, theta, isCtrlDown, rollOverMesh, rollOverMaterial, voxelPosition, tmpVec, cubeGeo, cubeMaterial, i, intersector, gui, voxelConfig, init, onWindowResize, getRealIntersector, setVoxelPosition, onDocumentMouseMove, onDocumentKeyDown, onDocumentKeyUp, save, animate, render, projection, path, addGeoObject, gradient, init3d;
-container = void 8;
-stats = void 8;
-camera = void 8;
-scene = void 8;
-renderer = void 8;
-projector = void 8;
-plane = void 8;
-cube = void 8;
-mouse2D = void 8;
-mouse3D = void 8;
-ray = void 8;
-rollOveredFace = void 8;
-isShiftDown = false;
-theta = 45;
-isCtrlDown = false;
-rollOverMesh = void 8;
-rollOverMaterial = void 8;
-voxelPosition = new THREE.Vector3;
-tmpVec = new THREE.Vector3;
-cubeGeo = void 8;
-cubeMaterial = void 8;
-i = void 8;
-intersector = void 8;
-gui = void 8;
-voxelConfig = {
-  orthographicProjection: false
-};
-init = function(){
-  var container, info, rollOverGeo, ambientLight, directionalLight;
-  container = document.createElement('div');
-  document.body.appendChild(container);
-  info = document.createElement('div');
-  import$(info.style, {
-    position: 'absolute',
-    top: '10px',
-    width: '100%',
-    textAlign: 'center'
-  });
-  info.innerHTML = 'press shift to rotate';
-  container.appendChild(info);
-  camera = new THREE.CombinedCamera(window.innerWidth, window.innerHeight, 45, 1, 10000, -2000, 10000);
-  camera.position.y = 800;
-  scene = new THREE.Scene;
-  rollOverGeo = new THREE.CubeGeometry(50, 50, 50);
-  rollOverMaterial = new THREE.MeshBasicMaterial({
-    color: 16711680,
-    opacity: 0.5,
-    transparent: true
-  });
-  rollOverMesh = new THREE.Mesh(rollOverGeo, rollOverMaterial);
-  scene.add(rollOverMesh);
-  cubeGeo = new THREE.CubeGeometry(50, 50, 50);
-  cubeMaterial = new THREE.MeshLambertMaterial({
-    color: 65408,
-    ambient: 65408,
-    shading: THREE.FlatShading,
-    map: THREE.ImageUtils.loadTexture('textures/square-outline-textured.png')
-  });
-  cubeMaterial.color.setHSV(0.1, 0.7, 1);
-  cubeMaterial.ambient = cubeMaterial.color;
-  projector = new THREE.Projector;
-  plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
-    color: 5592405,
-    wireframe: true
-  }));
-  plane.rotation.x = -Math.PI / 2;
-  scene.add(plane);
-  mouse2D = new THREE.Vector3(0, 10000, 0.5);
-  ambientLight = new THREE.AmbientLight(6316128);
-  scene.add(ambientLight);
-  directionalLight = new THREE.DirectionalLight(16777215);
-  directionalLight.position.set(1, 0.75, 0.5).normalize();
-  scene.add(directionalLight);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
-  stats = new Stats;
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.top = '0px';
-  container.appendChild(stats.domElement);
-  document.addEventListener('mousemove', onDocumentMouseMove, false);
-  document.addEventListener('keydown', onDocumentKeyDown, false);
-  document.addEventListener('keyup', onDocumentKeyUp, false);
-  window.addEventListener('resize', onWindowResize, false);
-  gui = new dat.GUI;
-  gui.add(voxelConfig, 'orthographicProjection').onChange(function(){
-    var ref$, theta;
-    if (voxelConfig.orthographicProjection) {
-      camera.toOrthographic();
-      ref$ = camera.position;
-      ref$.x = 1000;
-      ref$.y = 707.106;
-      ref$.z = 1000;
-      return theta = 90;
-    } else {
-      camera.toPerspective();
-      return camera.position.y = 800;
-    }
-  });
-  return gui.close();
-};
-onWindowResize = function(){
-  camera.setSize(window.innerWidth, window.innerHeight);
-  camera.updateProjectionMatrix();
-  return renderer.setSize(window.innerWidth, window.innerHeight);
-};
-getRealIntersector = function(intersects){
-  var i, intersector;
-  i = 0;
-  while (i < intersects.length) {
-    intersector = intersects[i];
-    if (!(intersector.object === rollOverMesh)) {
-      return intersector;
-    }
-    i++;
-  }
-  return null;
-};
-setVoxelPosition = function(intersector){
-  tmpVec.copy(intersector.face.normal);
-  voxelPosition.add(intersector.point, intersector.object.matrixRotationWorld.multiplyVector3(tmpVec));
-  voxelPosition.x = Math.floor(voxelPosition.x / 50) * 50 + 25;
-  voxelPosition.y = Math.floor(voxelPosition.y / 50) * 50 + 25;
-  return voxelPosition.z = Math.floor(voxelPosition.z / 50) * 50 + 25;
-};
-onDocumentMouseMove = function(event){
-  event.preventDefault();
-  mouse2D.x = event.clientX / window.innerWidth * 2 - 1;
-  return mouse2D.y = -(event.clientY / window.innerHeight) * 2 + 1;
-};
-onDocumentKeyDown = function(event){
-  switch (event.keyCode) {
-  case 16:
-    return isShiftDown = true;
-  case 17:
-    return isCtrlDown = true;
-  }
-};
-onDocumentKeyUp = function(event){
-  switch (event.keyCode) {
-  case 16:
-    return isShiftDown = false;
-  case 17:
-    return isCtrlDown = false;
-  }
-};
-save = function(){
-  return window.open(renderer.domElement.toDataURL('image/png'), 'mywindow');
-};
-animate = function(){
-  requestAnimationFrame(animate);
-  render();
-  return stats.update();
-};
-render = function(){
-  var intersects, intersector;
-  if (isShiftDown) {
-    theta += mouse2D.x * 3;
-  }
-  ray = projector.pickingRay(mouse2D.clone(), camera);
-  intersects = ray.intersectObjects(scene.children);
-  if (intersects.length > 0) {
-    intersector = getRealIntersector(intersects);
-    if (intersector) {
-      setVoxelPosition(intersector);
-      rollOverMesh.position = voxelPosition;
-    }
-  }
-  camera.position.x = 1400 * Math.sin(theta * Math.PI / 360);
-  camera.position.z = 1400 * Math.cos(theta * Math.PI / 360);
-  camera.lookAt(scene.position);
-  return renderer.render(scene, camera);
-};
+var mercator, mercatorTW, projection, path, ramp, addGeoObject, init3d, slice$ = [].slice;
 geo.setupGeo();
-projection = d3.geo.mercator().scale(50000).translate([-16400, 3800]);
+mercator = (function(){
+  mercator.displayName = 'mercator';
+  var prototype = mercator.prototype, constructor = mercator;
+  function mercator(arg$){
+    var this$ = this instanceof ctor$ ? this : new ctor$;
+    if (arg$ != null) {
+      this$.scale = arg$.scale, this$.translate = arg$.translate;
+    }
+    this$.call2 = bind$(this$, 'call2', prototype);
+    this$.m = d3.geo.mercator();
+    if (this$.scale) {
+      this$.m.scale(this$.scale);
+    }
+    if (this$.translate) {
+      this$.m.translate(this$.translate);
+    }
+    return this$;
+  } function ctor$(){} ctor$.prototype = prototype;
+  prototype.call2 = function(){
+    var args;
+    args = slice$.call(arguments);
+    return this.m.apply(this, args);
+  };
+  return mercator;
+}());
+mercatorTW = (function(superclass){
+  var prototype = extend$((import$(mercatorTW, superclass).displayName = 'mercatorTW', mercatorTW), superclass).prototype, constructor = mercatorTW;
+  function mercatorTW(arg$){
+    var ref$, ref1$, this$ = this instanceof ctor$ ? this : new ctor$;
+    ref$ = arg$ != null
+      ? arg$
+      : {}, this$.scale = (ref1$ = ref$.scale) != null ? ref1$ : 50000, this$.translate = (ref1$ = ref$.translate) != null
+      ? ref1$
+      : [-16550, 3700];
+    this$.call = bind$(this$, 'call', prototype);
+    this$.call2 = bind$(this$, 'call2', prototype);
+    mercatorTW.superclass.apply(this$, arguments);
+    return this$;
+  } function ctor$(){} ctor$.prototype = prototype;
+  prototype.call2 = function(arg$){
+    var x, y;
+    x = arg$[0], y = arg$[1];
+    return console.log('call2');
+  };
+  prototype.call = function(arg$){
+    var x, y;
+    x = arg$[0], y = arg$[1];
+    if (x < 118.5) {
+      x += 1.3;
+    }
+    if (y > 25.8) {
+      x -= 0.2;
+      y -= 1;
+    }
+    return this.m([x, y]);
+  };
+  return mercatorTW;
+}(mercator));
+projection = mercatorTW().call;
 path = d3.geo.path().projection(projection);
-addGeoObject = function(data){
-  var meshes, averageValues, totalValues, maxValueAverage, minValueAverage, maxValueTotal, minValueTotal, i, geoFeature, feature, mesh, value, scale, mathColor, material, extrude, shape3d, toAdd, results$ = [];
-  meshes = [];
-  averageValues = [];
-  totalValues = [];
-  maxValueAverage = 0;
-  minValueAverage = -1;
-  maxValueTotal = 0;
-  minValueTotal = -1;
-  i = 0;
-  while (i < data.features.length) {
-    geoFeature = data.features[i];
-    feature = path(geoFeature);
-    mesh = $d3g.transformSVGPath(feature);
-    meshes.push(mesh);
-    value = parseInt(Math.random() * 100);
-    if (value > maxValueAverage) {
-      maxValueAverage = value;
-    }
-    if (value < minValueAverage || minValueAverage === -1) {
-      minValueAverage = value;
-    }
-    averageValues.push(value);
-    value = parseInt(Math.random() * 100);
-    if (value > maxValueTotal) {
-      maxValueTotal = value;
-    }
-    if (value < minValueTotal || minValueTotal === -1) {
-      minValueTotal = value;
-    }
-    totalValues.push(value);
-    i++;
-  }
-  i = 0;
-  while (i < averageValues.length) {
-    scale = (averageValues[i] - minValueAverage) / (maxValueAverage - minValueAverage) * 255;
-    mathColor = gradient(Math.round(scale), 255);
+ramp = d3.scale.linear().domain([0, 255]).range(["red", "green"]);
+addGeoObject = function(scene, data){
+  var i$, ref$, len$, geoFeature, mesh, rgb, color, ref1$, material, amount, shape3d, x$, toAdd, results$ = [];
+  for (i$ = 0, len$ = (ref$ = data.features).length; i$ < len$; ++i$) {
+    geoFeature = ref$[i$];
+    mesh = $d3g.transformSVGPath(path(geoFeature));
+    rgb = d3.rgb(ramp(Math.random() * 255));
+    color = (ref1$ = new THREE.Color()).setRGB.apply(ref1$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
     material = new THREE.MeshLambertMaterial({
-      color: mathColor
+      color: color
     });
-    extrude = (totalValues[i] - minValueTotal) / (maxValueTotal - minValueTotal) * 100;
-    shape3d = meshes[i].extrude({
-      amount: Math.round(extrude),
+    amount = parseInt(Math.random() * 100);
+    shape3d = mesh.extrude({
+      amount: amount,
       bevelEnabled: false
     });
-    toAdd = new THREE.Mesh(shape3d, material);
-    toAdd.rotation.x = Math.PI / 2;
-    toAdd.translateY(extrude / 2);
-    scene.add(toAdd);
-    results$.push(i++);
+    shape3d.boundingSphere = {
+      radius: 3 * 100
+    };
+    x$ = toAdd = new THREE.Mesh(shape3d, material);
+    x$.rotation.x = Math.PI / 2;
+    x$.translateY(amount);
+    x$.translateX(-window.innerWidth / 4);
+    x$.translateZ(-window.innerHeight / 2);
+    results$.push(scene.add(toAdd));
   }
   return results$;
 };
-gradient = function(length, maxLength){
-  var i, r, g, b, rgb;
-  i = length * 255 / maxLength;
-  r = i;
-  g = 255 - i;
-  b = 0;
-  rgb = b | g << 8 | r << 16;
-  return rgb;
-};
 init3d = function(){
-  renderer = Detector.webgl
-    ? new THREE.WebGLRenderer({
-      antialias: true,
-      preserveDrawingBuffer: true
-    })
-    : ($(function(){
+  var world;
+  world = tQuery.createWorld({
+    webGLNeeded: false
+  });
+  if (!tQuery.World.hasWebGL()) {
+    $(function(){
       return $('#nowebgl').show();
-    }), new THREE.CanvasRenderer());
-  init();
+    });
+  }
+  console.log(world.tCamera().position);
+  world.boilerplate().start();
+  world.getCameraControls().rangeY = 3000;
+  world.getCameraControls().rangeX = -2000;
+  world.tCamera().position.set(0, 1000, 300);
   return d3.json("twCounty1982.json", function(data){
-    addGeoObject(data);
-    return animate();
+    var plane, ambientLight, directionalLight;
+    console.log('hi', data);
+    console.log(data.features);
+    plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
+      color: 5592405,
+      wireframe: true
+    }));
+    plane.rotation.x = -Math.PI / 2;
+    world.add(plane);
+    ambientLight = new THREE.AmbientLight(6316128);
+    world.add(ambientLight);
+    directionalLight = new THREE.DirectionalLight(16777215);
+    directionalLight.position.set(1, 0.75, 0.5).normalize();
+    world.add(directionalLight);
+    return addGeoObject(world, data);
   });
 };
+function bind$(obj, key, target){
+  return function(){ return (target || obj)[key].apply(obj, arguments) };
+}
+function extend$(sub, sup){
+  function fun(){} fun.prototype = (sub.superclass = sup).prototype;
+  (sub.prototype = new fun).constructor = sub;
+  if (typeof sup.extended == 'function') sup.extended(sub);
+  return sub;
+}
 function import$(obj, src){
   var own = {}.hasOwnProperty;
   for (var key in src) if (own.call(src, key)) obj[key] = src[key];

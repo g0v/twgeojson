@@ -77,12 +77,16 @@ function transformSVGPath(pathStr) {
         y = eatNum();
         path.moveTo(x, y);
         activeCmd = 'L';
+      firstX = x;
+      firstY = y;
         break;
       case 'm':
         x += eatNum();
         y += eatNum();
         path.moveTo(x, y);
         activeCmd = 'l';
+      firstX = x;
+      firstY = y;
         break;
       case 'Z':
       case 'z':
@@ -221,10 +225,6 @@ function transformSVGPath(pathStr) {
         break;
       default:
         throw new Error("weird path command: " + activeCmd);
-    }
-    if (firstX === null) {
-      firstX = x;
-      firstY = y;
     }
     // just reissue the command
     if (canRepeat && nextIsNum())
