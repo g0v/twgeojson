@@ -33,7 +33,7 @@ twTown1982raw.json: tmp/TWN_TOWN.shp
 	ogr2ogr -f geojson $@ $<
 
 twTown1982.json: twTown1982raw.json
-	./node_modules/.bin/lsc bin/tw-counties.ls --simplify 0.0005 $< > $@
+	./node_modules/.bin/lsc bin/tw-counties.ls --town --simplify 0.0005 $< > $@
 
 twTown2010.json: twTown1982raw.json
-	./node_modules/.bin/lsc bin/tw-counties.ls --2010 --simplify 0.0005 $< > $@
+	./node_modules/.bin/lsc bin/tw-counties.ls --town --2010 --simplify 0.0005 $< > $@
