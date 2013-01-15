@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>webgl + d3 geojson</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #f0f0f0;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#oldie { background-color: #ddd !important }
+		</style>
+	</head>
+	<body>
+
+                <div id="nowebgl" style="margin: 50px; display: none; position: absolute">
+                    If you have WebGL it will be FAST!
+                </div>
+
+
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+                <script src="https://github.com/jeromeetienne/tquery/raw/master/build/tquery-bundle.js"></script>
+    <script type="text/javascript" src="js/d3-threeD.js"></script>
+    <script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="js/util-geo.js"></script>
+		<script src='3dmap3.js'></script>
+
+		<script>
+
+                init3d();
+		</script>
+	</body>
+</html>
