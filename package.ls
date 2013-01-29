@@ -18,4 +18,5 @@ devDependencies:
   optimist: \*
   d3: \3.0.x
   d3-plugins: "git://github.com/d3/d3-plugins.git"
+  topojson: \0.0.10
 optionalDependencies: {}

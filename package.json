@@ -23,7 +23,8 @@
     "LiveScript": "1.1.x",
     "optimist": "*",
     "d3": "3.0.x",
-    "d3Plugins": "git://github.com/d3/d3-plugins.git"
+    "d3Plugins": "git://github.com/d3/d3-plugins.git",
+    "topojson": "0.0.10"
   },
   "optionalDependencies": {}
 }

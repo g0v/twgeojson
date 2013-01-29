@@ -41,3 +41,8 @@ twTown1982.json: twTown1982raw.json
 
 twTown2010.json: twTown1982raw.json
 	./node_modules/.bin/lsc bin/tw-counties.ls --town --2010 --simplify 0.0005 $< > $@
+
+.SUFFIXES: .json .topojson
+
+%.topojson:  %.json
+	./node_modules/.bin/topojson $< > $@
