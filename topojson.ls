@@ -4,7 +4,7 @@ class Layout
   features: []
   path: ->
   transform: ->
-  @proj = d3.geo.mercator!.scale 50000 .translate [-16570, 3560]
+  @proj = mercatorTW!call
   @carto = d3.cartogram!.projection Layout.proj
   @flat = class extends Layout
     @name= "flat"
