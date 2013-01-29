@@ -25,10 +25,10 @@ generating them.
 # Installation
 
 To build taiwan geographic json files you'll need the following:
-unrar - install it with 'brew install unrar' or your favorite package manager.
-ogr2ogr - with GDAL pacakge, which can be found at:
- * http://www.kyngchaos.com/software/archive#gdal (for Mac) 
- * http://fwtools.maptools.org/ (others)
+ * unrar - install it with 'brew install unrar' or your favorite package manager.
+ * ogr2ogr - with GDAL pacakge, which can be found at:
+   * http://www.kyngchaos.com/software/archive#gdal (for Mac) 
+   * http://fwtools.maptools.org/ (others)
 
 then build json files with make:
 
