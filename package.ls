@@ -16,6 +16,6 @@ dependencies: {}
 devDependencies:
   LiveScript: \1.1.x
   optimist: \*
-  d3: "git://github.com/mbostock/d3.git#3.0"
+  d3: \3.0.x
   d3-plugins: "git://github.com/d3/d3-plugins.git"
 optionalDependencies: {}

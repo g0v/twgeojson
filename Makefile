@@ -2,25 +2,29 @@ all:: twCounty1982.json twTown1982.json twCounty2010.json
 
 clean::
 	rm -f tw*.json
+	rm -rf tmpdir
 
-tmp/tw-town.rar:
+tmpdir:
+	mkdir -p tmpdir
+
+tmpdir/tw-town.rar: tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/71018174871.rar
 
-tmp/tw-village.rar:
+tmpdir/tw-village.rar: tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101817115371.rar
 
-tmp/tw-county.rar:
+tmpdir/tw-county.rar: tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101816594871.rar
 
-tmp/TWN_TOWN.shp: tmp/tw-town.rar
-	(cd tmp && unrar x ../$<)
+tmpdir/TWN_TOWN.shp: tmpdir/tw-town.rar tmpdir
+	(cd tmpdir && unrar x ../$<)
 	touch $@
 
-tmp/TWN_COUNTY.shp: tmp/tw-county.rar
-	(cd tmp && unrar x ../$<)
+tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar tmpdir
+	(cd tmpdir && unrar x ../$<)
 	touch $@
 
-twCounty1982raw.json: tmp/TWN_COUNTY.shp
+twCounty1982raw.json: tmpdir/TWN_COUNTY.shp
 	ogr2ogr -f geojson $@ $<
 
 twCounty1982.json: twCounty1982raw.json
@@ -29,7 +33,7 @@ twCounty1982.json: twCounty1982raw.json
 twCounty2010.json: twCounty1982raw.json
 	./node_modules/.bin/lsc bin/tw-counties.ls --2010 --simplify 0.0005 $< > $@
 
-twTown1982raw.json: tmp/TWN_TOWN.shp
+twTown1982raw.json: tmpdir/TWN_TOWN.shp
 	ogr2ogr -f geojson $@ $<
 
 twTown1982.json: twTown1982raw.json
