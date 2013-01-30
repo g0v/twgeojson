@@ -45,4 +45,4 @@ twTown2010.json: twTown1982raw.json
 .SUFFIXES: .json .topojson
 
 %.topojson:  %.json
-	./node_modules/.bin/topojson $< > $@
+	./node_modules/.bin/topojson --properties name $< > $@
