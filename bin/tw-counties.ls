@@ -1,6 +1,6 @@
 argv = require \optimist .argv
 town = argv.town
-require \d3
+global.d3 = require \d3
 require \d3-plugins/simplify/simplify
 data = require "../#{argv._.0}"
 by_county = {}
