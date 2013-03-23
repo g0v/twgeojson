@@ -7,13 +7,13 @@ clean::
 tmpdir:
 	mkdir -p tmpdir
 
-tmpdir/tw-town.rar: tmpdir
+tmpdir/tw-town.rar:
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/71018174871.rar
 
-tmpdir/tw-village.rar: tmpdir
+tmpdir/tw-village.rar:
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101817115371.rar
 
-tmpdir/tw-county.rar: tmpdir
+tmpdir/tw-county.rar:
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101816594871.rar
 
 tmpdir/TWN_VILLAGE.shp: tmpdir/tw-village.rar tmpdir
