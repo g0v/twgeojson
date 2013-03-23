@@ -13,9 +13,9 @@ infile,outfile = sys.argv[1], sys.argv[2]
 patch_county = {"台南縣":"台南市","台北縣":"新北市","台中縣":"台中市","高雄縣": "高雄市"}
 
 # query: m3166["TPQ"] = "新北市"
-m3166 = json.load(open("3166-2-tw.json","r"))
+m3166 = json.load(open("vote/3166-2-tw.json","r"))
 
-raw_sec = json.load(open("ly-section.json","r"))
+raw_sec = json.load(open("vote/ly-section.json","r"))
 # query: section[u"新北市-雙溪區-上林里"] = ["TPQ","12"]
 section = {}
 for c in raw_sec.keys():
@@ -40,8 +40,8 @@ for f in layer:
     print("warning: 找不到 '%s' 的選區對應"%key)
     continue
   c,n = section[key]
-  if key==u"屏東縣-滿州鄉-響林村" or key==u"高雄市-六龜區-建山里":
-   print("%s: %s"%(key,n))
+  #if key==u"屏東縣-滿州鄉-響林村" or key==u"高雄市-六龜區-建山里":
+  #  print("%s: %s"%(key,n))
   if not c in sec_geom: sec_geom[c] = {}
   if not n in sec_geom[c]: sec_geom[c][n] = []
   sec_geom[c][n] += [[g,key]]
