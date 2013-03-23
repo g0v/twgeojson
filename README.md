@@ -49,6 +49,8 @@ then build json files with make:
 * Merge subsumed polygons in the 2010 city merge
 * Town level translation for the 2010 city merge
 * Provide zip code as layer properties for towns
+* fix vote/errant.json
+* fix XXX-1 to XXX-0
 
 # Note
 
