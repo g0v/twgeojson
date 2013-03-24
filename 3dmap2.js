@@ -1,4 +1,4 @@
-var mercator, mercatorTW, projection, path, ramp, addGeoObject, init3d, slice$ = [].slice;
+var mercator, mercatorTW, projection, path, ramp, calculateBBoxSum, addGeoObject, init3d, slice$ = [].slice;
 geo.setupGeo();
 mercator = (function(){
   mercator.displayName = 'mercator';
@@ -61,30 +61,77 @@ mercatorTW = (function(superclass){
 projection = mercatorTW().call;
 path = d3.geo.path().projection(projection);
 ramp = d3.scale.linear().domain([0, 255]).range(["red", "green"]);
+calculateBBoxSum = function(shapes, debugName, debugCW){
+  var sum, i$, len$, shape, geometry, bbox, e;
+  sum = 0;
+  if (shapes.length) {
+    for (i$ = 0, len$ = shapes.length; i$ < len$; ++i$) {
+      shape = shapes[i$];
+      try {
+        geometry = shape.makeGeometry();
+        bbox = geometry.shapebb;
+        sum += (Math.abs(bbox.maxY - bbox.minY) + 1) * (Math.abs(bbox.maxX - bbox.minX) + 1);
+      } catch (e$) {
+        e = e$;
+        console.log("exception in calculateBBoxSum\n");
+        console.log(e);
+        console.log(shape);
+      }
+    }
+    if (!sum) {
+      console.log("Zero sum " + debugName + " " + debugCW + "\n");
+      console.log(shapes);
+    }
+  }
+  return sum;
+};
 addGeoObject = function(scene, data){
-  var i$, ref$, len$, geoFeature, mesh, rgb, color, ref1$, material, amount, shape3d, x$, toAdd, results$ = [];
+  var i$, ref$, len$, geoFeature, lresult$, name, mesh, rgb, color, ref1$, material, amount, simpleShapes, simpleShapesCCW, area, areaCCW, j$, len1$, simpleShape, shape3d, x$, toAdd, e, results$ = [];
   for (i$ = 0, len$ = (ref$ = data.features).length; i$ < len$; ++i$) {
     geoFeature = ref$[i$];
-    mesh = $d3g.transformSVGPath(path(geoFeature));
-    rgb = d3.rgb(ramp(Math.random() * 255));
-    color = (ref1$ = new THREE.Color()).setRGB.apply(ref1$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
-    material = new THREE.MeshLambertMaterial({
-      color: color
-    });
-    amount = parseInt(Math.random() * 100);
-    shape3d = mesh.extrude({
-      amount: amount,
-      bevelEnabled: false
-    });
-    shape3d.boundingSphere = {
-      radius: 3 * 100
-    };
-    x$ = toAdd = new THREE.Mesh(shape3d, material);
-    x$.rotation.x = Math.PI / 2;
-    x$.translateY(amount);
-    x$.translateX(-window.innerWidth / 4);
-    x$.translateZ(-window.innerHeight / 2);
-    results$.push(scene.add(toAdd));
+    lresult$ = [];
+    name = geoFeature.properties.name;
+    if (true || name === '台北縣' || name === '基隆市' || name === '台北市' || name === '桃園縣' || name === '新竹縣' || name === '苗栗縣' || name === '台中縣' || name === '台中市' || name === '彰化縣' || name === '雲林縣' || name === '嘉義縣' || name === '嘉義市' || name === '台南縣' || name === '台南市' || name === '高雄縣' || name === '高雄市' || name === '屏東縣' || false) {
+      mesh = $d3g.transformSVGPath(path(geoFeature));
+      rgb = d3.rgb(ramp(Math.random() * 255));
+      color = (ref1$ = new THREE.Color()).setRGB.apply(ref1$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
+      material = new THREE.MeshLambertMaterial({
+        color: color
+      });
+      amount = parseInt(Math.random() * 100);
+      simpleShapes = mesh.toShapes(false);
+      simpleShapesCCW = mesh.toShapes(true);
+      area = calculateBBoxSum(simpleShapes, name, 'CW');
+      areaCCW = calculateBBoxSum(simpleShapesCCW, name, 'CCW');
+      if (areaCCW < area) {
+        console.log("CW " + name + "\n");
+      }
+      simpleShapes = simpleShapesCCW;
+      for (j$ = 0, len1$ = simpleShapes.length; j$ < len1$; ++j$) {
+        simpleShape = simpleShapes[j$];
+        try {
+          shape3d = simpleShape.extrude({
+            amount: amount,
+            bevelEnabled: false
+          });
+          shape3d.boundingSphere = {
+            radius: 3 * 100
+          };
+          x$ = toAdd = new THREE.Mesh(shape3d, material);
+          x$.rotation.x = Math.PI / 2;
+          x$.translateY(amount);
+          x$.translateX(-window.innerWidth / 4);
+          x$.translateZ(-window.innerHeight / 2);
+          lresult$.push(scene.add(toAdd));
+        } catch (e$) {
+          e = e$;
+          console.log("error in extrude " + name + ". Ignored.\n");
+          console.log(e);
+          lresult$.push(console.log(simpleShape));
+        }
+      }
+    }
+    results$.push(lresult$);
   }
   return results$;
 };
@@ -105,7 +152,7 @@ init3d = function(){
   world.tCamera().position.set(0, 1000, 300);
   return d3.json("twCounty1982.json", function(data){
     var plane, ambientLight, directionalLight;
-    console.log('hi', data);
+    console.log('hi_data', data);
     console.log(data.features);
     plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
       color: 5592405,
