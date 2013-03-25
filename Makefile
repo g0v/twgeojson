@@ -1,30 +1,30 @@
-all:: twVillage1982.topo.json twTown1982.topo.json twCounty2010.topo.json twVote1982.topo.json
+all: twVillage1982.topo.json twTown1982.topo.json twCounty2010.topo.json twVote1982.topo.json
 
-clean::
+clean:
 	rm -f tw*.geo.json tw*.topo.json
 	rm -rf tmpdir
 
 tmpdir:
 	mkdir -p tmpdir
 
-tmpdir/tw-town.rar:
+tmpdir/tw-town.rar: | tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/71018174871.rar
 
-tmpdir/tw-village.rar:
+tmpdir/tw-village.rar: | tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101817115371.rar
 
-tmpdir/tw-county.rar:
+tmpdir/tw-county.rar: | tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101816594871.rar
 
-tmpdir/TWN_VILLAGE.shp: tmpdir/tw-village.rar tmpdir
+tmpdir/TWN_VILLAGE.shp: tmpdir/tw-village.rar
 	(cd tmpdir && unrar x ../$<)
 	touch $@
 
-tmpdir/TWN_TOWN.shp: tmpdir/tw-town.rar tmpdir
+tmpdir/TWN_TOWN.shp: tmpdir/tw-town.rar
 	(cd tmpdir && unrar x ../$<)
 	touch $@
 
-tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar tmpdir
+tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar
 	(cd tmpdir && unrar x ../$<)
 	touch $@
 
