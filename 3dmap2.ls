@@ -114,11 +114,17 @@ init3d = ->
     world = tQuery.createWorld {-webGLNeeded}
     unless tQuery.World.hasWebGL!
         $ -> $ \#nowebgl .show!
-    console.log world.tCamera!position
+    cam = world.tCamera!
+
+    # increase z near to solve z fighting.
+    cam.near = 20.0
+    cam.updateProjectionMatrix!
+
+    console.log cam.position
     world.boilerplate!start!
     world.getCameraControls!rangeY = 3000
     world.getCameraControls!rangeX = -2000
-    world.tCamera!position.set 0 1000  300
+    cam.position.set 0 1000  600
     data <- d3.json "twCounty1982.json"
     #data <- d3.json "test.json"
 #    data.features = [ f for f in data.features when f.properties.name is /台北縣/]

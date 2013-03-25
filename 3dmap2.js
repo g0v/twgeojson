@@ -136,7 +136,7 @@ addGeoObject = function(scene, data){
   return results$;
 };
 init3d = function(){
-  var world;
+  var world, cam;
   world = tQuery.createWorld({
     webGLNeeded: false
   });
@@ -145,11 +145,14 @@ init3d = function(){
       return $('#nowebgl').show();
     });
   }
-  console.log(world.tCamera().position);
+  cam = world.tCamera();
+  cam.near = 20.0;
+  cam.updateProjectionMatrix();
+  console.log(cam.position);
   world.boilerplate().start();
   world.getCameraControls().rangeY = 3000;
   world.getCameraControls().rangeX = -2000;
-  world.tCamera().position.set(0, 1000, 300);
+  cam.position.set(0, 1000, 600);
   return d3.json("twCounty1982.json", function(data){
     var plane, ambientLight, directionalLight;
     console.log('hi_data', data);
