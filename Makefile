@@ -1,3 +1,10 @@
+#config simplify factor for each topojson
+twVillage1982.topo.json.simplify=0.00000008
+twTown1982.topo.json.simplify=0.00000005
+twCounty2010.topo.json.simplify=0.00000008
+twVote1982.topo.json.simplify=0.0000001
+
+
 all: twVillage1982.topo.json twTown1982.topo.json twCounty2010.topo.json twVote1982.topo.json
 
 clean:
@@ -44,5 +51,14 @@ twVote1982.geo.json: tmpdir/TWN_VILLAGE.shp
 .SUFFIXES: .geojson .topojson
 
 %.topo.json:  %.geo.json
-	./node_modules/.bin/topojson -p -s 0.00000001 $< > $@
+	$(eval simplify=${${@}.simplify})
+	$(eval simplify=$(if ${simplify},${simplify},0.00000001))
+	./node_modules/.bin/topojson -p -s ${simplify} $< > $@
 
+vote: twVote1982.topo.json
+village: twVillage1982.topo.json
+town: twTown1982.topo.json
+county: twCounty1982.topo.json
+
+clean-topo:
+	rm tw*.topo.json
