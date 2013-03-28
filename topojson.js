@@ -41,7 +41,7 @@ Layout = (function(){
     var prototype = extend$((import$(dorling, superclass).displayName = 'dorling', dorling), superclass).prototype, constructor = dorling;
     dorling.name = "dorling";
     function dorling(topo, geom, graph){
-      var features, lens, res$, i$, len$, feature, x, o, z, avg, center, rad, fx, i, lresult$, ref$, angle, ret, res1$, j$, len1$, f, radius, pt, links, a, j, b, block, fn$ = curry$(function(x$, y$){
+      var features, lens, res$, i$, len$, feature, x, o, z, avg, center, rad, fx, i, ref$, angle, ret, res1$, j$, len1$, f, radius, pt, links, a, j, b, block, fn$ = curry$(function(x$, y$){
         return x$.concat(y$);
       }), fn1$ = curry$(function(x$, y$){
         return x$.concat(y$);
@@ -110,7 +110,6 @@ Layout = (function(){
       for (i$ = 0, len$ = features.length; i$ < len$; ++i$) {
         i = i$;
         feature = features[i$];
-        lresult$ = [];
         ref$ = [0, ""], angle = ref$[0], ret = ref$[1];
         res1$ = [];
         for (j$ = 0, len1$ = feature.length; j$ < len1$; ++j$) {
@@ -120,20 +119,14 @@ Layout = (function(){
         feature = res1$;
         radius = feature.reduce(fn4$, 0) / feature.length;
         rad.push(radius);
-        lresult$.push(f = (fn5$()));
-        res$.push(lresult$);
+        res$.push(f = (fn5$()));
       }
       fx = res$;
       res$ = [];
       for (i$ = 0, len$ = fx.length; i$ < len$; ++i$) {
         i = i$;
         f = fx[i$];
-        res$.push({
-          f: f[0],
-          z: z,
-          r: rad[i],
-          t: [(avg[i][0] - center[0]) * z, (-avg[i][1] + center[1]) * z]
-        });
+        res$.push((prototype.f = f[0], prototype.z = z, prototype.r = rad[i], prototype.t = [(avg[i][0] - center[0]) * z, (-avg[i][1] + center[1]) * z], prototype));
       }
       this.features = res$;
       links = [];
@@ -218,8 +211,11 @@ Geograph = (function(){
     this.x = 0;
     this.y = 0;
     import$(this, config);
+    if (!this.name) {
+      throw "missing name";
+    }
     this.topo = topo;
-    this.geom = topo.objects.twCounty1982.geometries;
+    this.geom = topo.objects[this.name].geometries;
     this.layouts = {};
     this.blocks = new Array(this.geom.length);
     this.use(Layout.flat);
@@ -330,10 +326,16 @@ function import$(obj, src){
   for (var key in src) if (own.call(src, key)) obj[key] = src[key];
   return obj;
 }
-function curry$(f, args){
-  return f.length > 1 ? function(){
-    var params = args ? args.concat() : [];
-    return params.push.apply(params, arguments) < f.length && arguments.length ?
-      curry$.call(this, f, params) : f.apply(this, params);
-  } : f;
+function curry$(f, bound){
+  var context,
+  _curry = function(args) {
+    return f.length > 1 ? function(){
+      var params = args ? args.concat() : [];
+      context = bound ? context || this : this;
+      return params.push.apply(params, arguments) <
+          f.length && arguments.length ?
+        _curry.call(context, params) : f.apply(context, params);
+    } : f;
+  };
+  return _curry();
 }

@@ -1,5 +1,6 @@
 <- $ document .ready 
 (graph) <- Geograph.fromjson \twCounty1982.topojson, do
+  name: \twCounty1982
   container: \body
 ,_
 

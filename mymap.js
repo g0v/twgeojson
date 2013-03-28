@@ -154,7 +154,7 @@ mymap = function(){
     })).range([1, 2, 3, 4, 5, 6, 7, 8]);
     console.log(d);
     d3.json("twCounty2010.json", function(collection){
-      var byname, res$, i$, ref$, len$, f, areas, feature, ref1$, x, y, radius, nodes, links, a, b, morelinks, properties;
+      var byname, areas, res$, i$, ref$, len$, f, nodes, feature, ref1$, x, y, radius, links, a, b, morelinks, properties;
       byname = {};
       res$ = [];
       for (i$ = 0, len$ = (ref$ = collection.features).length; i$ < len$; ++i$) {
@@ -181,7 +181,7 @@ mymap = function(){
         links.push(edge(byname[a], byname[b]));
       }
       morelinks = function(){
-        var res$, i$, ref$, len$, x, res1$, j$, ref1$, len1$, y, res;
+        var res, res$, i$, ref$, len$, x, y, res1$, j$, ref1$, len1$;
         res$ = [];
         for (i$ = 0, len$ = (ref$ = nodes).length; i$ < len$; ++i$) {
           x = ref$[i$];
@@ -279,12 +279,18 @@ mymap = function(){
     });
   });
 };
-function curry$(f, args){
-  return f.length > 1 ? function(){
-    var params = args ? args.concat() : [];
-    return params.push.apply(params, arguments) < f.length && arguments.length ?
-      curry$.call(this, f, params) : f.apply(this, params);
-  } : f;
+function curry$(f, bound){
+  var context,
+  _curry = function(args) {
+    return f.length > 1 ? function(){
+      var params = args ? args.concat() : [];
+      context = bound ? context || this : this;
+      return params.push.apply(params, arguments) <
+          f.length && arguments.length ?
+        _curry.call(context, params) : f.apply(context, params);
+    } : f;
+  };
+  return _curry();
 }
 function flip$(f){
   return curry$(function (x, y) { return f(y, x); });

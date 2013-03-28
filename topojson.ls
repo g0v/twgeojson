@@ -80,8 +80,9 @@ class Geograph
   (topo, config) ->
     @ <<< x: 0, y: 0
     @ <<< config
+    throw "missing name" unless @name
     @topo = topo
-    @geom = topo.objects.twCounty1982.geometries
+    @geom = topo.objects[@name].geometries
     @layouts = {}
     @blocks = new Array @geom.length
     #@use Layout.cartogram
