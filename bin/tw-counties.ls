@@ -1,5 +1,6 @@
 argv = require \optimist .argv
-require \d3
+town = argv.town
+global.d3 = require \d3
 require \d3-plugins/simplify/simplify
 data = require "../#{argv._.0}"
 by_county = {}
@@ -11,11 +12,18 @@ translate2010 = (name) ->
     | name is \高雄縣 => \高雄市
     | otherwise => name
 
+key = ->
+    name = it.COUNTYNAME
+    name = translate2010 name if argv.2010
+    if town
+        name + it.TOWNNAME
+    else
+        name
+
 for {properties,geometry,type} in data.features
     throw "not Feature: #type" unless type is \Feature
     throw "not Polygon" unless geometry.type is \Polygon
-    name = properties.COUNTYNAME
-    name = translate2010 name if argv.2010
+    name = key properties
     (by_county[name] ||= []).push geometry.coordinates
 
 features = for name, coordinates of by_county => do
@@ -37,6 +45,4 @@ if argv.simplify
             polygon.forEach -> it.pop!
         f.geometry.coordinates = p.coordinates
 
-console.log JSON.stringify do
-    type: \FeatureCollection
-    features: features
+console.log JSON.stringify {type: \FeatureCollection, features} , null, 4

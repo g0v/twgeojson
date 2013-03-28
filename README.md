@@ -22,12 +22,42 @@ The county level data file is about 64K in size.
 For raw data or different levels of simplification, see Makefile for the rules
 generating them.
 
+# Installation
+
+Use npm to install all required modules, including d3:
+
+    npm install
+
+
+To build taiwan geographic json files you'll need the following:
+ * unrar - install it with 'brew install unrar' or your favorite package manager.
+ * GDAL python binding - with GDAL pacakge, which can be found at:
+   * http://www.kyngchaos.com/software/archive#gdal (for Mac) 
+   * http://www.gisinternals.com/sdk/ (for MS-Windows)
+   * http://fwtools.maptools.org/ (others)
+
+then build json files with make:
+
+    make twVote1982.topo.json
+    make twVillage1982.topo.json
+    make twTown1982.topo.json
+    make twCounty2010.topo.json
+
+
 # Todo
 
 * Merge subsumed polygons in the 2010 city merge
 * Town level translation for the 2010 city merge
 * Provide zip code as layer properties for towns
+* fix vote/errant.json
+* fix XXX-1 to XXX-0
 
+# Note
+
+* we used d3-plugins/simplify to simplify the output json files,
+  but d3-plugins/simplify is declared deprecated, replaced by TopoJSON and removed from github.
+  Thus, we made some changes to adopt this issue. Please use TopoJSON format instead of GeoJSON in the future.
+  
 # See Also
 
 * http://www.iot.gov.tw/ct.asp?xItem=154948&ctNode=1091

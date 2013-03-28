@@ -1,39 +1,64 @@
-all:: twCounty1982.json twTown1982.json twCounty2010.json
+#config simplify factor for each topojson
+twVillage1982.topo.json.simplify=0.00000008
+twTown1982.topo.json.simplify=0.00000005
+twCounty2010.topo.json.simplify=0.00000008
+twVote1982.topo.json.simplify=0.0000001
 
-clean::
-	rm -f tw*.json
 
-tmp/tw-town.rar:
+all: twVillage1982.topo.json twTown1982.topo.json twCounty2010.topo.json twVote1982.topo.json
+
+clean:
+	rm -f tw*.geo.json tw*.topo.json
+	rm -rf tmpdir
+
+tmpdir:
+	mkdir -p tmpdir
+
+tmpdir/tw-town.rar: | tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/71018174871.rar
 
-tmp/tw-village.rar:
+tmpdir/tw-village.rar: | tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101817115371.rar
 
-tmp/tw-county.rar:
+tmpdir/tw-county.rar: | tmpdir
 	curl -o $@ http://www.iot.gov.tw/public/Attachment/7101816594871.rar
 
-tmp/TWN_TOWN.shp: tmp/tw-town.rar
-	(cd tmp && unrar x ../$<)
+tmpdir/TWN_VILLAGE.shp: tmpdir/tw-village.rar
+	(cd tmpdir && unrar x ../$<)
 	touch $@
 
-tmp/TWN_COUNTY.shp: tmp/tw-county.rar
-	(cd tmp && unrar x ../$<)
+tmpdir/TWN_TOWN.shp: tmpdir/tw-town.rar
+	(cd tmpdir && unrar x ../$<)
 	touch $@
 
-twCounty1982raw.json: tmp/TWN_COUNTY.shp
-	ogr2ogr -f geojson $@ $<
+tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar
+	(cd tmpdir && unrar x ../$<)
+	touch $@
 
-twCounty1982.json: twCounty1982raw.json
-	./node_modules/.bin/lsc bin/tw-counties.ls --simplify 0.0005 $< > $@
+# original command: ogr2ogr -f geojson $@ $<
+twCounty2010.geo.json: tmpdir/TWN_COUNTY.shp
+	./bin/shp2geojson.py $< $@
 
-twCounty2010.json: twCounty1982raw.json
-	./node_modules/.bin/lsc bin/tw-counties.ls --2010 --simplify 0.0005 $< > $@
+twTown1982.geo.json: tmpdir/TWN_TOWN.shp
+	./bin/shp2geojson.py $< $@
 
-twTown1982raw.json: tmp/TWN_TOWN.shp
-	ogr2ogr -f geojson $@ $<
+twVillage1982.geo.json: tmpdir/TWN_VILLAGE.shp
+	./bin/shp2geojson.py $< $@
 
-twTown1982.json: twTown1982raw.json
-	./node_modules/.bin/lsc bin/tw-counties.ls --simplify 0.0005 $< > $@
+twVote1982.geo.json: tmpdir/TWN_VILLAGE.shp
+	./vote/shp2geojson-vote.py $< $@
 
-twTown2010.json: twTown1982raw.json
-	./node_modules/.bin/lsc bin/tw-counties.ls --2010 --simplify 0.0005 $< > $@
+.SUFFIXES: .geojson .topojson
+
+%.topo.json:  %.geo.json
+	$(eval simplify=${${@}.simplify})
+	$(eval simplify=$(if ${simplify},${simplify},0.00000001))
+	./node_modules/.bin/topojson -p -s ${simplify} $< > $@
+
+vote: twVote1982.topo.json
+village: twVillage1982.topo.json
+town: twTown1982.topo.json
+county: twCounty1982.topo.json
+
+clean-topo:
+	rm tw*.topo.json
