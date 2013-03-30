@@ -45,7 +45,18 @@ iso3166 = ->
     return
   entry = {[h, row[i]] for h, i in header}
 
-  return if entry.COUNTY is /金門|連江/
+  #return if entry.COUNTY is /金門|連江/
+
+  return  unless entry.V_ID
+
+  unless entry.TOWN_ID.length
+    wtf = entry.V_ID.match /^(\d{5})(\d+)-(\d+)/
+    [_, c, t, v] = wtf
+    #[_, COUNTY_ID, town, VILLAGE_ID] =  wtf
+    entry.COUNTY_ID = c
+    entry.VILLAGE_ID = v
+    entry.TOWN_ID = entry.COUNTY_ID + t
+    [_, entry.VID] = entry.VILLAGE_ID.split /-/
 
   return unless entry.VILLAGE_ID
   if c = county[entry.COUNTY_ID]
@@ -66,17 +77,23 @@ iso3166 = ->
   if v = village[entry.VILLAGE_ID]
     console.log "#{v.name} for #{JSON.stringify entry}" if v.name isnt entry.VILLAGE
   else
-    console.log JSON.stringify entry if entry.V_ID.substr(0,8) isnt entry.TOWN_ID
+    console.log \=== JSON.stringify entry if entry.V_ID.split /-/ .0 isnt entry.TOWN_ID
     village[entry.V_ID] = do
       name: entry.VILLAGE
+      town: entry.TOWN
+      county: entry.COUNTY
       vid: entry.VILLAGE_ID
       tid: entry.TOWN_ID
       cid: entry.COUNTY_ID
       icid: county[entry.COUNTY_ID].iso3166
+      itid: town[entry.TOWN_ID].itid
       ivid: town[entry.TOWN_ID].itid + '-' + entry.VILLAGE_ID
       code: entry.VILLCODE
 #  console.log entry
 .on \end
 
-console.log {county, town, village}
+#console.log {county, town, village}
+console.log <[id name town county vid tid cid icid itid ivid code]>.join \,
+for id, v of village
+  console.log ([id] ++ v<[name town county vid tid cid icid itid ivid code]>).join \,
 console.log \hi
