@@ -61,6 +61,7 @@ iso3166 = ->
     town[entry.TOWN_ID] = do
       name: entry.TOWN
       icid: county[entry.COUNTY_ID].iso3166
+      itid: county[entry.COUNTY_ID].iso3166 + '-' + entry.TOWN_ID.substr(5,3)
 
   if v = village[entry.VILLAGE_ID]
     console.log "#{v.name} for #{JSON.stringify entry}" if v.name isnt entry.VILLAGE
@@ -72,6 +73,7 @@ iso3166 = ->
       tid: entry.TOWN_ID
       cid: entry.COUNTY_ID
       icid: county[entry.COUNTY_ID].iso3166
+      ivid: town[entry.TOWN_ID].itid + '-' + entry.VILLAGE_ID
       code: entry.VILLCODE
 #  console.log entry
 .on \end
