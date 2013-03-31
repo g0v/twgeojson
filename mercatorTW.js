@@ -1,4 +1,48 @@
-var mercator, mercatorTW, slice$ = [].slice;
+var mainland, mtw, mercator, mercatorTW, slice$ = [].slice;
+mainland = d3.geo.conicEqualArea().parallels([23.5, 24.5]).rotate([-121, 0]).center([0, 23.6]);
+mtw = function(){
+  var mainland, kme, ljf, projection;
+  mainland = d3.geo.conicEqualArea().parallels([23.5, 24.5]).rotate([-123, 0]).center([0, 23.6]);
+  kme = d3.geo.conicEqualArea().parallels([23.5, 24.5]).rotate([-121.7, 0]).center([0, 23.6]);
+  ljf = d3.geo.conicEqualArea().parallels([23.5, 24.5]).rotate([-123.4, 0]).center([0, 24.6]);
+  projection = function(arg$){
+    var lon, lat;
+    lon = arg$[0], lat = arg$[1];
+    switch (false) {
+    case !(lon < 118.5):
+      return kme;
+    case !(lat > 25.8):
+      return ljf;
+    default:
+      return mainland;
+    }
+  };
+  function mtw(coordinates){
+    return projection(coordinates)(coordinates);
+  }
+  mtw.scale = function(x){
+    if (!arguments.length) {
+      return mainland.scale();
+    }
+    mainland.scale(x);
+    kme.scale(x);
+    ljf.scale(x);
+    return mtw.translate(mainland.translate());
+  };
+  mtw.translate = function(x){
+    var dx, dy, dz;
+    dx = x[0], dy = x[1];
+    if (!arguments.length) {
+      return mainland.translate();
+    }
+    dz = mainland.scale();
+    mainland.translate(x);
+    kme.translate(x);
+    ljf.translate(x);
+    return mtw;
+  };
+  return mtw.scale(8000);
+};
 mercator = (function(){
   mercator.displayName = 'mercator';
   var prototype = mercator.prototype, constructor = mercator;
