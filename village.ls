@@ -38,6 +38,13 @@ iso3166 = ->
   it.=replace /臺/, '台'
   [id for id,name of iso3166-map when name is it]?0
 
+fixup-map = {}
+
+<- csv!from.stream fs.createReadStream './village-fix.csv'
+.on \record ([vid, name]) ->
+  fixup-map[vid] = name
+.on \end
+
 <- csv!from.stream process.stdin
 .on \record (row, i) ->
   unless header
@@ -79,7 +86,7 @@ iso3166 = ->
   else
     console.log \=== JSON.stringify entry if entry.V_ID.split /-/ .0 isnt entry.TOWN_ID
     village[entry.V_ID] = do
-      name: entry.VILLAGE
+      name: fixup-map[entry.V_ID] ? entry.VILLAGE
       town: entry.TOWN
       county: entry.COUNTY
       vid: entry.VILLAGE_ID
