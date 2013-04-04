@@ -153,7 +153,7 @@ init3d = function(){
   world.getCameraControls().rangeY = 3000;
   world.getCameraControls().rangeX = -2000;
   cam.position.set(0, 1000, 600);
-  return d3.json("twCounty1982.json", function(data){
+  return d3.json("twCounty2010.json", function(data){
     var plane, ambientLight, directionalLight;
     console.log('hi_data', data);
     console.log(data.features);
