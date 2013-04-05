@@ -125,7 +125,7 @@ init3d = ->
     world.getCameraControls!rangeY = 3000
     world.getCameraControls!rangeX = -2000
     cam.position.set 0 1000  600
-    data <- d3.json "twCounty1982.json"
+    data <- d3.json "twCounty2010.json"
     #data <- d3.json "test.json"
 #    data.features = [ f for f in data.features when f.properties.name is /台北縣/]
     console.log \hi_data data
