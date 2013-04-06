@@ -1,32 +1,6 @@
-geo.setupGeo!
+proj = mtw!scale 5000
 
-class mercator
-    ({@scale, @translate}?) ~>
-        @m = d3.geo.mercator!
-        @m.scale @scale if @scale
-        @m.translate @translate if @translate
-
-    call2: (...args) ~>
-        @m(...args)
-
-class mercatorTW extends mercator
-    ({@scale = 50000, @translate = [-16550, 3700]} = {}) ~>
-        super ...
-
-    call2: ([x,y]) ~>
-        console.log \call2
-    call: ([x,y]) ~>
-        if x < 118.5
-            x += 1.3
-        if y > 25.8
-            x -= 0.2
-            y -= 1
-        @m [x,y]
-
-
-projection = mercatorTW!call
-#projection = d3.geo.mercator!scale 50000 .translate [-16400 3800]
-path = d3.geo.path!projection projection
+path = d3.geo.path!projection proj
 
 ramp=d3.scale.linear().domain([0,255]).range(["red","green"]);
 
@@ -48,8 +22,8 @@ calculateBBoxSum = (shapes, debugName, debugCW ) ->
 
     sum
 
-addGeoObject = (scene, data) ->
-    for geoFeature in data.features
+addGeoObject = (scene, features) ->
+    for geoFeature in features
       name = geoFeature.properties.name
       if true or
          (name == '台北縣') or
@@ -125,11 +99,9 @@ init3d = ->
     world.getCameraControls!rangeY = 3000
     world.getCameraControls!rangeX = -2000
     cam.position.set 0 1000  600
-    data <- d3.json "twCounty2010.json"
-    #data <- d3.json "test.json"
-#    data.features = [ f for f in data.features when f.properties.name is /台北縣/]
-    console.log \hi_data data
-    console.log data.features
+    tw <- d3.json "twCounty2010.topo.json"
+    twtopo = topojson.object tw, tw.objects['twCounty2010.geo']
+    data = twtopo.geometries
     plane = new THREE.Mesh (new THREE.PlaneGeometry 1000, 1000, 20, 20), new THREE.MeshBasicMaterial {
       color: 5592405
       wireframe: true

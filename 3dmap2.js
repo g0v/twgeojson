@@ -1,65 +1,6 @@
-var mercator, mercatorTW, projection, path, ramp, calculateBBoxSum, addGeoObject, init3d, slice$ = [].slice;
-geo.setupGeo();
-mercator = (function(){
-  mercator.displayName = 'mercator';
-  var prototype = mercator.prototype, constructor = mercator;
-  function mercator(arg$){
-    var this$ = this instanceof ctor$ ? this : new ctor$;
-    if (arg$ != null) {
-      this$.scale = arg$.scale, this$.translate = arg$.translate;
-    }
-    this$.call2 = bind$(this$, 'call2', prototype);
-    this$.m = d3.geo.mercator();
-    if (this$.scale) {
-      this$.m.scale(this$.scale);
-    }
-    if (this$.translate) {
-      this$.m.translate(this$.translate);
-    }
-    return this$;
-  } function ctor$(){} ctor$.prototype = prototype;
-  prototype.call2 = function(){
-    var args;
-    args = slice$.call(arguments);
-    return this.m.apply(this, args);
-  };
-  return mercator;
-}());
-mercatorTW = (function(superclass){
-  var prototype = extend$((import$(mercatorTW, superclass).displayName = 'mercatorTW', mercatorTW), superclass).prototype, constructor = mercatorTW;
-  function mercatorTW(arg$){
-    var ref$, ref1$, this$ = this instanceof ctor$ ? this : new ctor$;
-    ref$ = arg$ != null
-      ? arg$
-      : {}, this$.scale = (ref1$ = ref$.scale) != null ? ref1$ : 50000, this$.translate = (ref1$ = ref$.translate) != null
-      ? ref1$
-      : [-16550, 3700];
-    this$.call = bind$(this$, 'call', prototype);
-    this$.call2 = bind$(this$, 'call2', prototype);
-    mercatorTW.superclass.apply(this$, arguments);
-    return this$;
-  } function ctor$(){} ctor$.prototype = prototype;
-  prototype.call2 = function(arg$){
-    var x, y;
-    x = arg$[0], y = arg$[1];
-    return console.log('call2');
-  };
-  prototype.call = function(arg$){
-    var x, y;
-    x = arg$[0], y = arg$[1];
-    if (x < 118.5) {
-      x += 1.3;
-    }
-    if (y > 25.8) {
-      x -= 0.2;
-      y -= 1;
-    }
-    return this.m([x, y]);
-  };
-  return mercatorTW;
-}(mercator));
-projection = mercatorTW().call;
-path = d3.geo.path().projection(projection);
+var proj, path, ramp, calculateBBoxSum, addGeoObject, init3d;
+proj = mtw().scale(5000);
+path = d3.geo.path().projection(proj);
 ramp = d3.scale.linear().domain([0, 255]).range(["red", "green"]);
 calculateBBoxSum = function(shapes, debugName, debugCW){
   var sum, i$, len$, shape, geometry, bbox, e;
@@ -85,16 +26,16 @@ calculateBBoxSum = function(shapes, debugName, debugCW){
   }
   return sum;
 };
-addGeoObject = function(scene, data){
-  var i$, ref$, len$, geoFeature, lresult$, name, mesh, rgb, color, ref1$, material, amount, simpleShapes, simpleShapesCCW, area, areaCCW, j$, len1$, simpleShape, shape3d, x$, toAdd, e, results$ = [];
-  for (i$ = 0, len$ = (ref$ = data.features).length; i$ < len$; ++i$) {
-    geoFeature = ref$[i$];
+addGeoObject = function(scene, features){
+  var i$, len$, geoFeature, lresult$, name, mesh, rgb, color, ref$, material, amount, simpleShapes, simpleShapesCCW, area, areaCCW, j$, len1$, simpleShape, shape3d, x$, toAdd, e, results$ = [];
+  for (i$ = 0, len$ = features.length; i$ < len$; ++i$) {
+    geoFeature = features[i$];
     lresult$ = [];
     name = geoFeature.properties.name;
     if (true || name === '台北縣' || name === '基隆市' || name === '台北市' || name === '桃園縣' || name === '新竹縣' || name === '苗栗縣' || name === '台中縣' || name === '台中市' || name === '彰化縣' || name === '雲林縣' || name === '嘉義縣' || name === '嘉義市' || name === '台南縣' || name === '台南市' || name === '高雄縣' || name === '高雄市' || name === '屏東縣' || false) {
       mesh = $d3g.transformSVGPath(path(geoFeature));
       rgb = d3.rgb(ramp(Math.random() * 255));
-      color = (ref1$ = new THREE.Color()).setRGB.apply(ref1$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
+      color = (ref$ = new THREE.Color()).setRGB.apply(ref$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
       material = new THREE.MeshLambertMaterial({
         color: color
       });
@@ -153,10 +94,10 @@ init3d = function(){
   world.getCameraControls().rangeY = 3000;
   world.getCameraControls().rangeX = -2000;
   cam.position.set(0, 1000, 600);
-  return d3.json("twCounty2010.json", function(data){
-    var plane, ambientLight, directionalLight;
-    console.log('hi_data', data);
-    console.log(data.features);
+  return d3.json("twCounty2010.topo.json", function(tw){
+    var twtopo, data, plane, ambientLight, directionalLight;
+    twtopo = topojson.object(tw, tw.objects['twCounty2010.geo']);
+    data = twtopo.geometries;
     plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
       color: 5592405,
       wireframe: true
@@ -171,17 +112,3 @@ init3d = function(){
     return addGeoObject(world, data);
   });
 };
-function bind$(obj, key, target){
-  return function(){ return (target || obj)[key].apply(obj, arguments) };
-}
-function extend$(sub, sup){
-  function fun(){} fun.prototype = (sub.superclass = sup).prototype;
-  (sub.prototype = new fun).constructor = sub;
-  if (typeof sup.extended == 'function') sup.extended(sub);
-  return sub;
-}
-function import$(obj, src){
-  var own = {}.hasOwnProperty;
-  for (var key in src) if (own.call(src, key)) obj[key] = src[key];
-  return obj;
-}
