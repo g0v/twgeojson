@@ -188,7 +188,7 @@ mymap = ->
                   edge x, y
               y.sort (a, b) -> a.distance - b.distance
               y[0 to 5]
-          links := links +++ res.reduce (+++)
+          links := links ++ res.reduce (++)
       morelinks!
 
       force := dolinks svg, nodes, links

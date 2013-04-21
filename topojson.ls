@@ -33,10 +33,10 @@ class Layout
         .map -> it.sort (a,b) -> b.length - a.length 
         .map -> it.0.length
       lens = [x-1 for x in lens]
-      features = [o.geometry.coordinates.reduce (+++) for o in features]
+      features = [o.geometry.coordinates.reduce (++) for o in features]
       features = for feature in features
         if typeof(feature[0][0])==typeof(0.0) then feature
-        else feature.reduce (+++)
+        else feature.reduce (++)
       z = 180
       avg = [ ( feature.reduce (a,b) -> [a.0 + b.0,a.1 + b.1], [0,0] ) 
         .map (/feature.length) for feature in features]
@@ -120,8 +120,8 @@ class Geoblock
   (parent, feature) ->
     @feature = feature
     plys = feature.geometry.coordinates
-    if feature.geometry.type=="MultiPolygon" then plys = plys.reduce (+++)
-    @avg = (( _plys = plys.reduce (+++) ) .reduce (a,b) -> [a.0+b.0, a.1+b.1] ) .map (/_plys.length)
+    if feature.geometry.type=="MultiPolygon" then plys = plys.reduce (++)
+    @avg = (( _plys = plys.reduce (++) ) .reduce (a,b) -> [a.0+b.0, a.1+b.1] ) .map (/_plys.length)
     pj = ~> [(it.0 - @avg.0), -(it.1 - @avg.1)]
     @pts2d = [ [[ [pt.0, pt.1] |> pj for pt in ply]].0 for ply in plys ]
 
