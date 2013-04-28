@@ -75,11 +75,12 @@ d3.json("tw.json", function(tw){
     });
     setWanted('TPQ-280');
     zoomTo = function(set){
-      var b, s, t, ref$, x, y;
+      var b, s, ref$, x, y;
       b = path.bounds(set);
       s = 0.95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
-      t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
       ref$ = b[0], x = ref$[0], y = ref$[1];
+      x -= (width / s - (b[1][0] - b[0][0])) / 2;
+      y -= (height / s - (b[1][1] - b[0][1])) / 2;
       return g.transition().duration(1000).attr("transform", "translate(" + 0 / 2 + "," + 0 / 2 + ")scale(" + s + ")translate(" + (-x) + "," + (-y) + ")").style("stroke-width", 5 / s + "px");
     };
     zoomTo({
