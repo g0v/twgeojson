@@ -6,12 +6,12 @@ svg = d3.select('body').append('svg').attr('width', width).attr('height', height
 d3.json("tw.json", function(tw){
   return d3.csv("census2013-03.csv", function(it){
     return census.set(it.ivid, {
-      household: it.household,
-      male: it.male,
-      female: it.female
+      household: +it.household,
+      male: +it.male,
+      female: +it.female
     });
   }, function(){
-    var val, max, _, c, quantize, proj, villages, path, g, partOf, wanted, zoomin, setWanted, zoomTo, x$;
+    var val, max, _, c, min, scale, quantize, proj, villages, path, g, partOf, wanted, zoomin, setWanted, zoomTo, x$;
     val = function(it){
       return it.male + it.female;
     };
@@ -23,9 +23,18 @@ d3.json("tw.json", function(tw){
       }
       return results$;
     }()));
-    quantize = d3.scale.quantize().domain([0, max]).range(d3.range(9).map(function(i){
-      return 'q' + i + '-9';
-    }));
+    min = d3.min((function(){
+      var ref$, results$ = [];
+      for (_ in ref$ = census) {
+        c = ref$[_];
+        results$.push(val(c));
+      }
+      return results$;
+    }()));
+    scale = d3.scale.log().domain([min + 1, max + 1]).range([0, 9]);
+    quantize = function(it){
+      return "q" + ~~scale(it) + "-9";
+    };
     proj = mtw();
     villages = topojson.feature(tw, tw.objects['villages']);
     path = d3.geo.path().projection(proj);
@@ -62,13 +71,12 @@ d3.json("tw.json", function(tw){
       }
       return quantize(val(census.get(it.properties.ivid)));
     }).attr('d', path).on('mouseover', function(it){
-      return typeof console != 'undefined' && console !== null ? console.log(it.properties.ivid) : void 8;
+      return typeof console != 'undefined' && console !== null ? console.log(it.properties.ivid, val(census.get(it.properties.ivid))) : void 8;
     });
     setWanted('TPQ-280');
     zoomTo = function(set){
       var b, s, t, ref$, x, y;
       b = path.bounds(set);
-      console.log('zoomto', b);
       s = 0.95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
       t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
       ref$ = b[0], x = ref$[0], y = ref$[1];
@@ -91,8 +99,7 @@ d3.json("tw.json", function(tw){
     x$.on('change', function(){
       var z;
       z = x$[0][0].value;
-      setWanted(z);
-      return console.log('now', z);
+      return setWanted(z);
     });
     return x$;
   });

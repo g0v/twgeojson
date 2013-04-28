@@ -5,12 +5,17 @@ census = d3.map!
 svg = d3.select 'body' .append 'svg' .attr 'width', width .attr 'height', height
 
 tw <- d3.json "tw.json"
-<- d3.csv "census2013-03.csv" -> census.set it.ivid, it{household,male,female}
+<- d3.csv "census2013-03.csv" -> census.set it.ivid, do
+  household: +it.household
+  male:      +it.male
+  female:    +it.female
 
 val = -> it.male + it.female
 
 max = d3.max [val c for _, c of census]
-quantize = d3.scale.quantize!domain [0, max] .range (d3.range 9).map ((i) -> 'q' + i + '-9')
+min = d3.min [val c for _, c of census]
+scale = d3.scale.log!domain [min+1, max+1] .range [0, 9]
+quantize = -> "q#{ ~~scale it }-9"
 
 proj = mtw!
 
@@ -53,16 +58,15 @@ g.selectAll 'path'
   .enter!append 'path'
   .attr 'class', -> 
     return unless it.properties.ivid
-    quantize val census.get it.properties.ivid 
+    quantize val census.get it.properties.ivid
   .attr 'd', path
   .on \mouseover ->
-    console?log it.properties.ivid
+    console?log it.properties.ivid, val census.get it.properties.ivid
 
 set-wanted 'TPQ-280'
 
 zoom-to = (set) ->
   b = path.bounds set
-  console.log \zoomto b
   s = 0.95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
   t = [(width - s * (b.1.0 + b.0.0)) / 2, (height - s * (b.1.1 + b.0.1)) / 2]
   [x, y] = b.0
@@ -85,4 +89,3 @@ d3.select 'input.filter'
   ..on \change ->
     z = ..0.0.value
     set-wanted z
-    console.log \now z
