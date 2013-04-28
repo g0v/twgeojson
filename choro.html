@@ -2,16 +2,22 @@
 <meta charset="utf-8">
 <style>
  
-.counties {
+.villages {
   fill: none;
-  stroke: gray
 }
  
-.states {
+.counties {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
 }
+
+.selected {
+  fill: none;
+  stroke: #f00;
+}
+
+.active {fill:yellow;}
  
 .q0-9 { fill:rgb(247,251,255); }
 .q1-9 { fill:rgb(222,235,247); }
@@ -30,5 +36,8 @@
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="mercatorTW.js"></script>
 <script src="choro.js"></script>
+
+<span class="zoomout">zoom out</span>
+<span class="zoomin">zoom in</span>
 
 </body>
