@@ -16,9 +16,11 @@ by-vid = {}
 
 set.features.=map ({properties}:f) ->
     return f if properties.TOWN is /\(海\)/
-    delete properties.V_ID if properties.V_ID is \10004010-021 # incorrect id
+    # incorrect id
+    delete properties.V_ID if properties.V_ID in <[10004010-021 10002030-009]>
     if properties.ET_ID is 7822
         properties.V_ID = '09007020-005'
+
     unless properties.V_ID
         if properties.VILLAGE is /[村里]$/
             [matched] = [v for v in villages when v<[county town name]> === properties<[COUNTY TOWN VILLAGE]>]
