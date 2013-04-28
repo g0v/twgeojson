@@ -62,3 +62,7 @@ county: twCounty1982.topo.json
 
 clean-topo:
 	rm tw*.topo.json
+
+nlsc:
+	lsc cleanup-nlsc.ls > villages.json
+	ogr2ogr -f 'ESRI Shapefile' tmpdir/tw-fixed/ villages.json  -lco ENCODING=UTF-8

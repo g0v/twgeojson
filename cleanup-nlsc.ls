@@ -14,7 +14,7 @@ set = require \./raw/tw-2013-03
 
 by-vid = {}
 
-f = set.features.map ({properties}:f) ->
+set.features.=map ({properties}:f) ->
     return f if properties.TOWN is /\(海\)/
     delete properties.V_ID if properties.V_ID is \10004010-021 # incorrect id
     if properties.ET_ID is 7822
@@ -50,5 +50,9 @@ f = set.features.map ({properties}:f) ->
     by-vid[properties.V_ID] = f
     f
 
-set.features = f.filter -> it
+set.features.=filter -> it
+
+seen = {[V_ID, 1] for {properties:{V_ID}} in set.features when V_ID}
+for {id}:v in villages when !seen[id]
+    console.error "NOT FOUND", v<[county town name]>
 console.log JSON.stringify set
