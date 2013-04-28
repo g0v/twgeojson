@@ -17,6 +17,13 @@
   stroke: #f00;
 }
 
+.control {
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
 .active {fill:yellow;}
  
 .q0-9 { fill:rgb(247,251,255); }
@@ -37,7 +44,11 @@
 <script src="mercatorTW.js"></script>
 <script src="choro.js"></script>
 
+<div class="control">
 <span class="zoomout">zoom out</span>
 <span class="zoomin">zoom in</span>
+<label>filter: <input class="filter" type="text"></label>
+
+</div>
 
 </body>

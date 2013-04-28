@@ -66,3 +66,8 @@ clean-topo:
 nlsc:
 	lsc cleanup-nlsc.ls > villages.json
 	ogr2ogr -f 'ESRI Shapefile' tmpdir/tw-fixed/ villages.json  -lco ENCODING=UTF-8
+
+villages.json: nlsc
+
+tw.json: villages.json
+	topojson -s 1e-10 -q 1e6 -o tw.json villages.json --id-property V_ID -p ivid -e ./districts.csv

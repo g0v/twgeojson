@@ -24,10 +24,29 @@ g = svg.append 'g'
 
 part-of = (name) -> -> 0 is it?indexOf name
 
-wanted = part-of 'TPQ'
-#    it in <[HSQ-010-027 HSQ-010-028 HSQ-010-029 HSQ-010-030]>
+var wanted, zoomin
 
-zoomin = villages.features.filter -> wanted it.properties?ivid
+set-wanted = ->
+    wanted := part-of it
+
+    zoomin := villages.features.filter -> wanted it.properties?ivid
+
+    # draw exterior borders of given subset
+    selected = topojson.mesh tw, tw.objects['villages'], (a, b) ->
+      f = topojson.feature tw, a
+      aa = wanted f.properties.ivid
+      return true if a is b and aa
+
+      g = topojson.feature tw, b
+      bb = wanted g.properties.ivid
+      (a isnt b and aa isnt bb)
+
+    g.selectAll 'path.selected' .remove!
+    g.append 'path'
+      .datum selected
+      .attr 'class', 'selected'
+      .attr 'd', path
+
 
 g.selectAll 'path'
   .data villages.features
@@ -36,24 +55,14 @@ g.selectAll 'path'
     return unless it.properties.ivid
     quantize val census.get it.properties.ivid 
   .attr 'd', path
+  .on \mouseover ->
+    console?log it.properties.ivid
 
-# draw exterior borders of given subset
-selected = topojson.mesh tw, tw.objects['villages'], (a, b) ->
-  f = topojson.feature tw, a
-  aa = wanted f.properties.ivid
-  return true if a is b and aa
-
-  g = topojson.feature tw, b
-  bb = wanted g.properties.ivid
-  (a isnt b and aa isnt bb)
-
-g.append 'path'
-  .datum selected
-  .attr 'class', 'selected'
-  .attr 'd', path
+set-wanted 'TPQ-280'
 
 zoom-to = (set) ->
   b = path.bounds set
+  console.log \zoomto b
   s = 0.95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
   t = [(width - s * (b.1.0 + b.0.0)) / 2, (height - s * (b.1.1 + b.0.1)) / 2]
   [x, y] = b.0
@@ -71,3 +80,9 @@ d3.select 'span.zoomout'
 d3.select 'span.zoomin'
   .on \click ->
     zoom-to {type: \FeatureCollection, features: zoomin}
+
+d3.select 'input.filter'
+  ..on \change ->
+    z = ..0.0.value
+    set-wanted z
+    console.log \now z
