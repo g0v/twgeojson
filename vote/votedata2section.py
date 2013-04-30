@@ -4,6 +4,10 @@
 import os,sys,re,glob
 import json
 
+# import pua mapping
+puamap = json.load(open("pua-map.json","r"))
+# import iso 3166 code mapping
+m3166 = json.load(open("3166-2-tw.json","r"))
 # import section data
 files = glob.glob("raw/*")
 section = {}
@@ -15,8 +19,13 @@ for f in files:
   section[county][number] = []
   data = json.load(open(f))[u"投票狀況"]
   for town in data.keys():
-    for village in data[town].keys():
-      section[county][number].append(re.sub(u"臺",u"台",'"%s-%s"'%(town,village)))
+    for villages in data[town].keys():
+      if "," in villages: villages = villages.split(",")
+      else: villages = [villages]
+      for village in villages:
+        if m3166[county]+town+village in puamap:
+          village,town,_ = puamap[m3166[county]+town+village][1].split(",")
+        section[county][number].append(re.sub(u"臺",u"台",'"%s-%s"'%(town,village)))
 
 # patch section data
 errant = json.load(open("errant.json","r"))
