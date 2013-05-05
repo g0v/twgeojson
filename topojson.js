@@ -7,7 +7,7 @@ Layout = (function(){
   prototype.features = [];
   prototype.path = function(){};
   prototype.transform = function(){};
-  Layout.proj = mercatorTW().call;
+  Layout.proj = mtw().scale(5000);
   Layout.carto = d3.cartogram().projection(Layout.proj);
   Layout.flat = (function(superclass){
     var prototype = extend$((import$(flat, superclass).displayName = 'flat', flat), superclass).prototype, constructor = flat;
@@ -122,13 +122,17 @@ Layout = (function(){
         res$.push(f = (fn5$()));
       }
       fx = res$;
-      res$ = [];
+      this.features = [];
       for (i$ = 0, len$ = fx.length; i$ < len$; ++i$) {
         i = i$;
         f = fx[i$];
-        res$.push((prototype.f = f[0], prototype.z = z, prototype.r = rad[i], prototype.t = [(avg[i][0] - center[0]) * z, (-avg[i][1] + center[1]) * z], prototype));
+        this.features.push({
+          f: f,
+          z: z,
+          r: rad[i],
+          t: [(avg[i][0] - center[0]) * z, (-avg[i][1] + center[1]) * z]
+        });
       }
-      this.features = res$;
       links = [];
       for (i$ = 0, len$ = avg.length; i$ < len$; ++i$) {
         i = i$;

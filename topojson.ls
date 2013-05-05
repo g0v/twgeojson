@@ -4,7 +4,8 @@ class Layout
   features: []
   path: ->
   transform: ->
-  @proj = mercatorTW!call
+  #@proj = mercatorTW!call
+  @proj = mtw!scale 5000
   @carto = d3.cartogram!.projection Layout.proj
   @flat = class extends Layout
     @name= "flat"
@@ -50,7 +51,12 @@ class Layout
         f = for pt in feature[0 to lens[i]]
           angle += (6.28318 / (lens[i] - 1))
           [Math.cos(angle)*radius, Math.sin(angle)*radius]
-      @features = [{f:f.0,z:z,r:rad[i],t:[(avg[i].0 - center.0)*z,( -avg[i].1 + center.1)*z]} for f,i in fx]
+      
+      @features = []
+      for f,i in fx
+        @features.push {f:f,z:z,r:rad[i],t:[(avg[i].0 - center.0)*z,( -avg[i].1 + center.1)*z]}
+      #@features = [{f:f,z:z,r:rad[i],t:[(avg[i].0 - center.0)*z,( -avg[i].1 + center.1)*z]} for f,i in fx]
+
       links = []
       for a,i in avg
         for b,j in avg
