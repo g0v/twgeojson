@@ -100,8 +100,8 @@ init3d = ->
     world.getCameraControls!rangeX = -2000
     cam.position.set 0 1000  600
     tw <- d3.json "twCounty2010.topo.json"
-    twtopo = topojson.object tw, tw.objects['twCounty2010.geo']
-    data = twtopo.geometries
+    twtopo = topojson.feature tw, tw.objects['twCounty2010.geo']
+    data = twtopo.features
     plane = new THREE.Mesh (new THREE.PlaneGeometry 1000, 1000, 20, 20), new THREE.MeshBasicMaterial {
       color: 5592405
       wireframe: true

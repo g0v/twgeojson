@@ -96,8 +96,8 @@ init3d = function(){
   cam.position.set(0, 1000, 600);
   return d3.json("twCounty2010.topo.json", function(tw){
     var twtopo, data, plane, ambientLight, directionalLight;
-    twtopo = topojson.object(tw, tw.objects['twCounty2010.geo']);
-    data = twtopo.geometries;
+    twtopo = topojson.feature(tw, tw.objects['twCounty2010.geo']);
+    data = twtopo.features;
     plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
       color: 5592405,
       wireframe: true
