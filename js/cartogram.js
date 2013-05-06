@@ -48,7 +48,7 @@
 
       // path with identity projection
       var path = d3.geo.path()
-        .projection(ident);
+        .projection(null);
 
       var objects = object(projectedArcs, {type: "GeometryCollection", geometries: geometries})
           .geometries.map(function(geom) {
@@ -61,7 +61,7 @@
           });
 
       var values = objects.map(value),
-          totalValue = sum(values);
+          totalValue = d3.sum(values);
 
       // no iterations; just return the features
       if (iterations <= 0) {
@@ -72,7 +72,7 @@
           targetSizeError = 1;
       while (i++ < iterations) {
         var areas = objects.map(path.area),
-            totalArea = sum(areas),
+            totalArea = d3.sum(areas),
             sizeErrors = [],
             meta = objects.map(function(o, j) {
               var area = Math.abs(areas[j]), // XXX: why do we have negative areas?
@@ -95,7 +95,7 @@
               };
             });
 
-        var sizeError = mean(sizeErrors),
+        var sizeError = d3.mean(sizeErrors),
             forceReductionFactor = 1 / (1 + sizeError);
 
         // console.log("meta:", meta);
@@ -159,7 +159,7 @@
 
     // for convenience
     carto.path = d3.geo.path()
-      .projection(ident);
+      .projection(null);
 
     carto.iterations = function(i) {
       if (arguments.length) {
@@ -235,18 +235,6 @@
     return transform;
   };
 
-  function sum(numbers) {
-    var total = 0;
-    for (var i = numbers.length - 1; i-- > 0;) {
-      total += numbers[i];
-    }
-    return total;
-  }
-
-  function mean(numbers) {
-    return sum(numbers) / numbers.length;
-  }
-
   function angle(a, b) {
     return Math.atan2(b[1] - a[1], b[0] - a[0]);
   }
@@ -276,11 +264,6 @@
     return function(geom) {
       return types[geom.type](geom.coordinates);
     };
-  }
-
-  // identity projection
-  function ident(c) {
-    return c;
   }
 
   function copy(o) {
