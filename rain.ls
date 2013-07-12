@@ -21,12 +21,22 @@ proj = mtw!
 county = topojson.feature tw, tw.objects['twCounty2010.geo']
 
 border = topojson.mesh tw, tw.objects['twCounty2010.geo'], (a, b) -> a is b
+var polygon
+#polygon = border.coordinates.reduce (++) .map proj |> d3.geom.polygon
+
+#polygon = d3.geom.polygon county.features[2].geometry.coordinates[0]
 
 path = d3.geo.path!projection proj
 
+window.county = county
+
+
+extent =  path.bounds county
+
 sg = svg.append 'g'
 
-regions = d3.geom.voronoi [proj [+it.longitude, +it.latitude, it.name] for it in stations]
+regions = d3.geom.voronoi!clip-extent(extent) [proj [+it.longitude, +it.latitude, it.name] for it in stations]
+
 
 update = ->
   paths = sg.selectAll("path")
@@ -34,7 +44,14 @@ update = ->
   paths.enter!append("svg:path")
 #  .attr "class" (d, i) ->
 #    if i => "q" + (i % 9) + "-9" else null
-  .attr "d" -> "M#{ it.join \L }Z"
+  .attr "d" ->
+    return "M#{ it.join \L }Z" unless polygon
+    z = it
+    clipped = polygon.clip it
+    if clipped.length
+      "M#{ clipped.join \L }Z"
+    else
+      null
   paths.style \fill (d, i) ->
     today = +rain-today[stations[i].name]?today
     today = null if today is NaN

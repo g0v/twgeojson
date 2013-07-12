@@ -10,15 +10,17 @@ d3.json("stations.json", function(stations){
   rainscale = d3.scale.quantile().domain([1, 2, 6, 10, 15, 20, 30, 40, 50, 70, 90, 110, 130, 150, 200, 300]).range(['#c5bec2', '#99feff', '#00ccfc', '#0795fd', '#025ffe', '#3c9700', '#2bfe00', '#fdfe00', '#ffcb00', '#eaa200', '#f30500', '#d60002', '#9e0003', '#9e009d', '#d400d1', '#fa00ff', '#facefb']);
   rainToday = {};
   return d3.json("twCounty2010.topo.json", function(tw){
-    var proj, county, border, path, sg, regions, it, update, g, bo;
+    var proj, county, border, polygon, path, extent, sg, regions, it, update, g, bo;
     proj = mtw();
     county = topojson.feature(tw, tw.objects['twCounty2010.geo']);
     border = topojson.mesh(tw, tw.objects['twCounty2010.geo'], function(a, b){
       return a === b;
     });
     path = d3.geo.path().projection(proj);
+    window.county = county;
+    extent = path.bounds(county);
     sg = svg.append('g');
-    regions = d3.geom.voronoi((function(){
+    regions = d3.geom.voronoi().clipExtent(extent)((function(){
       var i$, ref$, len$, results$ = [];
       for (i$ = 0, len$ = (ref$ = stations).length; i$ < len$; ++i$) {
         it = ref$[i$];
@@ -30,7 +32,17 @@ d3.json("stations.json", function(stations){
       var paths;
       paths = sg.selectAll("path").data(regions);
       paths.enter().append("svg:path").attr("d", function(it){
-        return "M" + it.join('L') + "Z";
+        var z, clipped;
+        if (!polygon) {
+          return "M" + it.join('L') + "Z";
+        }
+        z = it;
+        clipped = polygon.clip(it);
+        if (clipped.length) {
+          return "M" + clipped.join('L') + "Z";
+        } else {
+          return null;
+        }
       });
       paths.style('fill', function(d, i){
         var today, ref$;
