@@ -3,7 +3,8 @@ width = window.innerWidth * 0.8;
 height = window.innerHeight - 10;
 census = d3.map();
 svg = d3.select('body').append('svg').attr('width', width).attr('height', height);
-d3.json("tw.json", function(tw){
+d3.json("tract.json", function(tw){
+  console.log(tw);
   return d3.csv("census2013-03.csv", function(it){
     return census.set(it.ivid, {
       household: +it.household,
@@ -36,7 +37,7 @@ d3.json("tw.json", function(tw){
       return "q" + ~~scale(it) + "-9";
     };
     proj = mtw();
-    villages = topojson.feature(tw, tw.objects['villages']);
+    villages = topojson.feature(tw, tw.objects['tract']);
     path = d3.geo.path().projection(proj);
     g = svg.append('g').attr('class', 'villages');
     partOf = function(name){
@@ -44,14 +45,16 @@ d3.json("tw.json", function(tw){
         return 0 === (it != null ? it.indexOf(name) : void 8);
       };
     };
-    setWanted = function(it){
+    setWanted = function(){
       var selected;
-      wanted = partOf(it);
+      wanted = function(){
+        return 1;
+      };
       zoomin = villages.features.filter(function(it){
         var ref$;
         return wanted((ref$ = it.properties) != null ? ref$.ivid : void 8);
       });
-      selected = topojson.mesh(tw, tw.objects['villages'], function(a, b){
+      selected = topojson.mesh(tw, tw.objects['tract'], function(a, b){
         var f, aa, g, bb;
         f = topojson.feature(tw, a);
         aa = wanted(f.properties.ivid);
@@ -81,7 +84,7 @@ d3.json("tw.json", function(tw){
       ref$ = b[0], x = ref$[0], y = ref$[1];
       x -= (width / s - (b[1][0] - b[0][0])) / 2;
       y -= (height / s - (b[1][1] - b[0][1])) / 2;
-      return g.transition().duration(1000).attr("transform", "translate(" + 0 / 2 + "," + 0 / 2 + ")scale(" + s + ")translate(" + (-x) + "," + (-y) + ")").style("stroke-width", 5 / s + "px");
+      return g.transition().duration(1000).attr("transform", "translate(" + 0 / 2 + "," + 0 / 2 + ")scale(" + s + ")translate(" + (-x) + "," + (-y) + ")").style("stroke-width", 1 / s + "px");
     };
     zoomTo({
       type: 'FeatureCollection',

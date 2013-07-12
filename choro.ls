@@ -4,7 +4,8 @@ census = d3.map!
 
 svg = d3.select 'body' .append 'svg' .attr 'width', width .attr 'height', height
 
-tw <- d3.json "tw.json"
+tw <- d3.json "tract.json"
+console.log tw
 <- d3.csv "census2013-03.csv" -> census.set it.ivid, do
   household: +it.household
   male:      +it.male
@@ -19,7 +20,7 @@ quantize = -> "q#{ ~~scale it }-9"
 
 proj = mtw!
 
-villages = topojson.feature tw, tw.objects['villages']
+villages = topojson.feature tw, tw.objects['tract']
 
 
 path = d3.geo.path!projection proj
@@ -32,12 +33,12 @@ part-of = (name) -> -> 0 is it?indexOf name
 var wanted, zoomin
 
 set-wanted = ->
-    wanted := part-of it
+    wanted := -> 1 #part-of it
 
     zoomin := villages.features.filter -> wanted it.properties?ivid
 
     # draw exterior borders of given subset
-    selected = topojson.mesh tw, tw.objects['villages'], (a, b) ->
+    selected = topojson.mesh tw, tw.objects['tract'], (a, b) ->
       f = topojson.feature tw, a
       aa = wanted f.properties.ivid
       return true if a is b and aa
@@ -74,7 +75,7 @@ zoom-to = (set) ->
 
   g.transition!duration 1000
     .attr "transform" "translate(#{0 / 2},#{0 / 2})scale(#{s})translate(#{-x},#{-y})"
-    .style "stroke-width", 5 / s + "px"
+    .style "stroke-width", 1 / s + "px"
 
 zoom-to {type: \FeatureCollection, features: zoomin}
 
