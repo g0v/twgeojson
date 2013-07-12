@@ -14,26 +14,34 @@ rainscale = d3.scale.quantile!
 
 rain-today = {}
 
-tw <- d3.json "twCounty2010.topo.json"
+# XXX: use consolidated topojson file
+
+tw <- d3.json "tw.json"
+countiestopo <- d3.json "twCounty2010.topo.json"
 
 proj = mtw!
 
-county = topojson.feature tw, tw.objects['twCounty2010.geo']
+counties = topojson.feature countiestopo, countiestopo.objects['twCounty2010.geo']
 
-border = topojson.mesh tw, tw.objects['twCounty2010.geo'], (a, b) -> a is b
-var polygon
-#polygon = border.coordinates.reduce (++) .map proj |> d3.geom.polygon
-
-#polygon = d3.geom.polygon county.features[2].geometry.coordinates[0]
+villages = topojson.feature tw, tw.objects['villages']
+border = topojson.mesh tw, tw.objects['villages'], (a, b) ->
+  a is b and a.properties?ivid isnt /^(LJF|PEN|JME)/
 
 path = d3.geo.path!projection proj
+extent =  path.bounds counties
 
-window.county = county
-
-
-extent =  path.bounds county
+svg.append "defs"
+  ..append "path"
+    .attr "id" "border"
+    .datum border
+    .attr "d" path
+  ..append "clipPath"
+    .attr "id" "clip"
+    .append "use"
+    .attr "xlink:href" '#border'
 
 sg = svg.append 'g'
+  .attr "clip-path" 'url(#clip)'
 
 regions = d3.geom.voronoi!clip-extent(extent) [proj [+it.longitude, +it.latitude, it.name] for it in stations]
 
@@ -45,13 +53,7 @@ update = ->
 #  .attr "class" (d, i) ->
 #    if i => "q" + (i % 9) + "-9" else null
   .attr "d" ->
-    return "M#{ it.join \L }Z" unless polygon
-    z = it
-    clipped = polygon.clip it
-    if clipped.length
-      "M#{ clipped.join \L }Z"
-    else
-      null
+    "M#{ it.join \L }Z"
   paths.style \fill (d, i) ->
     today = +rain-today[stations[i].name]?today
     today = null if today is NaN
@@ -67,21 +69,15 @@ update = ->
     .attr "transform" ->
       "translate(#{ proj [+it.longitude, +it.latitude] })"
 
-
 g = svg.append 'g'
   .attr 'class', 'villages'
 
 g.selectAll 'path'
-  .data county.features
+  .data counties.features
   .enter!append 'path'
   .attr 'class', -> \q-9-9
   .attr 'd', path
 
-bo = svg.append 'path'
-  .attr 'class', 'border'
-  .datum border
-  .attr 'class', 'border'
-  .attr 'd', path
 
 current.on \value ->
   {time, data} = it.val!

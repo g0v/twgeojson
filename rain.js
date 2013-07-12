@@ -9,77 +9,72 @@ d3.json("stations.json", function(stations){
   current = root.child("rainfall/current");
   rainscale = d3.scale.quantile().domain([1, 2, 6, 10, 15, 20, 30, 40, 50, 70, 90, 110, 130, 150, 200, 300]).range(['#c5bec2', '#99feff', '#00ccfc', '#0795fd', '#025ffe', '#3c9700', '#2bfe00', '#fdfe00', '#ffcb00', '#eaa200', '#f30500', '#d60002', '#9e0003', '#9e009d', '#d400d1', '#fa00ff', '#facefb']);
   rainToday = {};
-  return d3.json("twCounty2010.topo.json", function(tw){
-    var proj, county, border, polygon, path, extent, sg, regions, it, update, g, bo;
-    proj = mtw();
-    county = topojson.feature(tw, tw.objects['twCounty2010.geo']);
-    border = topojson.mesh(tw, tw.objects['twCounty2010.geo'], function(a, b){
-      return a === b;
-    });
-    path = d3.geo.path().projection(proj);
-    window.county = county;
-    extent = path.bounds(county);
-    sg = svg.append('g');
-    regions = d3.geom.voronoi().clipExtent(extent)((function(){
-      var i$, ref$, len$, results$ = [];
-      for (i$ = 0, len$ = (ref$ = stations).length; i$ < len$; ++i$) {
-        it = ref$[i$];
-        results$.push(proj([+it.longitude, +it.latitude, it.name]));
-      }
-      return results$;
-    }()));
-    update = function(){
-      var paths;
-      paths = sg.selectAll("path").data(regions);
-      paths.enter().append("svg:path").attr("d", function(it){
-        var z, clipped;
-        if (!polygon) {
+  return d3.json("tw.json", function(tw){
+    return d3.json("twCounty2010.topo.json", function(countiestopo){
+      var proj, counties, villages, border, path, extent, x$, sg, regions, it, update, g;
+      proj = mtw();
+      counties = topojson.feature(countiestopo, countiestopo.objects['twCounty2010.geo']);
+      villages = topojson.feature(tw, tw.objects['villages']);
+      border = topojson.mesh(tw, tw.objects['villages'], function(a, b){
+        var ref$;
+        return a === b && !/^(LJF|PEN|JME)/.test((ref$ = a.properties) != null ? ref$.ivid : void 8);
+      });
+      path = d3.geo.path().projection(proj);
+      extent = path.bounds(counties);
+      x$ = svg.append("defs");
+      x$.append("path").attr("id", "border").datum(border).attr("d", path);
+      x$.append("clipPath").attr("id", "clip").append("use").attr("xlink:href", '#border');
+      sg = svg.append('g').attr("clip-path", 'url(#clip)');
+      regions = d3.geom.voronoi().clipExtent(extent)((function(){
+        var i$, ref$, len$, results$ = [];
+        for (i$ = 0, len$ = (ref$ = stations).length; i$ < len$; ++i$) {
+          it = ref$[i$];
+          results$.push(proj([+it.longitude, +it.latitude, it.name]));
+        }
+        return results$;
+      }()));
+      update = function(){
+        var paths;
+        paths = sg.selectAll("path").data(regions);
+        paths.enter().append("svg:path").attr("d", function(it){
           return "M" + it.join('L') + "Z";
+        });
+        paths.style('fill', function(d, i){
+          var today, ref$;
+          today = +((ref$ = rainToday[stations[i].name]) != null ? ref$.today : void 8);
+          if (today === NaN) {
+            today = null;
+          }
+          if (today) {
+            return rainscale(today);
+          } else {
+            return '#fff';
+          }
+        });
+        return sg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').attr('r', 1).attr("transform", function(it){
+          return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
+        });
+      };
+      g = svg.append('g').attr('class', 'villages');
+      g.selectAll('path').data(counties.features).enter().append('path').attr('class', function(){
+        return 'q-9-9';
+      }).attr('d', path);
+      current.on('value', function(it){
+        var ref$, time, data, today, res$, name, parsed;
+        ref$ = it.val(), time = ref$.time, data = ref$.data;
+        d3.select('#time').text(time);
+        rainToday = data;
+        res$ = [];
+        for (name in data) {
+          today = data[name].today;
+          if (parsed = parseFloat(today)) {
+            res$.push(parsed);
+          }
         }
-        z = it;
-        clipped = polygon.clip(it);
-        if (clipped.length) {
-          return "M" + clipped.join('L') + "Z";
-        } else {
-          return null;
-        }
+        today = res$;
+        return update();
       });
-      paths.style('fill', function(d, i){
-        var today, ref$;
-        today = +((ref$ = rainToday[stations[i].name]) != null ? ref$.today : void 8);
-        if (today === NaN) {
-          today = null;
-        }
-        if (today) {
-          return rainscale(today);
-        } else {
-          return '#fff';
-        }
-      });
-      return sg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').attr('r', 1).attr("transform", function(it){
-        return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
-      });
-    };
-    g = svg.append('g').attr('class', 'villages');
-    g.selectAll('path').data(county.features).enter().append('path').attr('class', function(){
-      return 'q-9-9';
-    }).attr('d', path);
-    bo = svg.append('path').attr('class', 'border').datum(border).attr('class', 'border').attr('d', path);
-    current.on('value', function(it){
-      var ref$, time, data, today, res$, name, parsed;
-      ref$ = it.val(), time = ref$.time, data = ref$.data;
-      d3.select('#time').text(time);
-      rainToday = data;
-      res$ = [];
-      for (name in data) {
-        today = data[name].today;
-        if (parsed = parseFloat(today)) {
-          res$.push(parsed);
-        }
-      }
-      today = res$;
-      return update();
+      return [];
     });
-    return [];
   });
 });
