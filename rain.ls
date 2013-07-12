@@ -64,8 +64,8 @@ update = ->
   sg.selectAll 'circle'
     .data stations
     .enter!append 'circle'
-    .style \stroke \black
-    .attr \r 1
+    .style \stroke \gray
+    .attr \r 0.5
     .attr "transform" ->
       "translate(#{ proj [+it.longitude, +it.latitude] })"
 

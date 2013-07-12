@@ -51,7 +51,7 @@ d3.json("stations.json", function(stations){
             return '#fff';
           }
         });
-        return sg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').attr('r', 1).attr("transform", function(it){
+        return sg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'gray').attr('r', 0.5).attr("transform", function(it){
           return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
         });
       };
