@@ -40,14 +40,14 @@ update = ->
       rainscale today
     else
       '#fff'
+  sg.selectAll 'circle'
+    .data stations
+    .enter!append 'circle'
+    .style \stroke \black
+    .attr \r 1
+    .attr "transform" ->
+      "translate(#{ proj [+it.longitude, +it.latitude] })"
 
-sg.selectAll 'circle'
-  .data stations
-  .enter!append 'circle'
-  .style \stroke \black
-  .attr \r 1
-  .attr "transform" ->
-    "translate(#{ proj [+it.longitude, +it.latitude] })"
 
 g = svg.append 'g'
   .attr 'class', 'villages'
@@ -60,6 +60,8 @@ g.selectAll 'path'
 
 current.on \value ->
   {time, data} = it.val!
+  d3.select \#time
+    .text time
   rain-today := data
   today = [parsed for name, {today} of data when parsed = parseFloat today]
   update!

@@ -29,7 +29,7 @@ d3.json("stations.json", function(stations){
       paths.enter().append("svg:path").attr("d", function(it){
         return "M" + it.join('L') + "Z";
       });
-      return paths.style('fill', function(d, i){
+      paths.style('fill', function(d, i){
         var today, ref$;
         today = +((ref$ = rainToday[stations[i].name]) != null ? ref$.today : void 8);
         if (today === NaN) {
@@ -41,10 +41,10 @@ d3.json("stations.json", function(stations){
           return '#fff';
         }
       });
+      return sg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').attr('r', 1).attr("transform", function(it){
+        return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
+      });
     };
-    sg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').attr('r', 1).attr("transform", function(it){
-      return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
-    });
     g = svg.append('g').attr('class', 'villages');
     g.selectAll('path').data(county.features).enter().append('path').attr('class', function(){
       return 'q-9-9';
@@ -52,6 +52,7 @@ d3.json("stations.json", function(stations){
     current.on('value', function(it){
       var ref$, time, data, today, res$, name, parsed;
       ref$ = it.val(), time = ref$.time, data = ref$.data;
+      d3.select('#time').text(time);
       rainToday = data;
       res$ = [];
       for (name in data) {
