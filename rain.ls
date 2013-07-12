@@ -20,6 +20,8 @@ proj = mtw!
 
 county = topojson.feature tw, tw.objects['twCounty2010.geo']
 
+border = topojson.mesh tw, tw.objects['twCounty2010.geo'], (a, b) -> a is b
+
 path = d3.geo.path!projection proj
 
 sg = svg.append 'g'
@@ -56,6 +58,12 @@ g.selectAll 'path'
   .data county.features
   .enter!append 'path'
   .attr 'class', -> \q-9-9
+  .attr 'd', path
+
+bo = svg.append 'path'
+  .attr 'class', 'border'
+  .datum border
+  .attr 'class', 'border'
   .attr 'd', path
 
 current.on \value ->
