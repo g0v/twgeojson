@@ -56,12 +56,12 @@ d3.json("stations.json", function(stations){
       };
       legend();
       update = function(){
-        var paths;
-        paths = sg.selectAll("path").data(regions);
-        paths.enter().append("svg:path").attr("d", function(it){
+        var x$;
+        x$ = sg.selectAll("path").data(regions);
+        x$.enter().append("svg:path").attr("d", function(it){
           return "M" + it.join('L') + "Z";
-        });
-        paths.style('fill', function(d, i){
+        }).style('fill', '#fff');
+        x$.transition().duration(300).style('fill', function(d, i){
           var today, ref$;
           today = +((ref$ = rainToday[stations[i].name]) != null ? ref$.today : void 8);
           if (today === NaN) {

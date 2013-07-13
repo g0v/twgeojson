@@ -72,20 +72,18 @@ legend = ->
 legend!
 
 update = ->
-  paths = sg.selectAll("path")
-  .data regions
-  paths.enter!append("svg:path")
-#  .attr "class" (d, i) ->
-#    if i => "q" + (i % 9) + "-9" else null
-  .attr "d" ->
-    "M#{ it.join \L }Z"
-  paths.style \fill (d, i) ->
-    today = +rain-today[stations[i].name]?today
-    today = null if today is NaN
-    if today
-      rainscale today
-    else
-      '#fff'
+  sg.selectAll "path" .data regions
+    ..enter!append("svg:path")
+      .attr "d" -> "M#{ it.join \L }Z"
+      .style \fill '#fff'
+    ..transition!duration 300ms
+      .style \fill (d, i) ->
+        today = +rain-today[stations[i].name]?today
+        today = null if today is NaN
+        if today
+          rainscale today
+        else
+          '#fff'
   sg.selectAll 'circle'
     .data stations
     .enter!append 'circle'
