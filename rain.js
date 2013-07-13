@@ -11,7 +11,7 @@ d3.json("stations.json", function(stations){
   rainToday = {};
   return d3.json("tw.json", function(tw){
     return d3.json("twCounty2010.topo.json", function(countiestopo){
-      var proj, counties, villages, border, path, extent, x$, sg, regions, it, update, g;
+      var proj, counties, villages, border, path, extent, x$, sg, regions, it, legend, update, g;
       proj = mtw();
       counties = topojson.feature(countiestopo, countiestopo.objects['twCounty2010.geo']);
       villages = topojson.feature(tw, tw.objects['villages']);
@@ -33,16 +33,28 @@ d3.json("stations.json", function(stations){
         }
         return results$;
       }()));
-      svg.selectAll("rect").data([1, 2, 6, 10, 15, 20, 30, 40, 50, 70, 90, 110, 130, 150, 200, 300]).enter().append("rect").attr("x", 400).attr("y", function(d, i){
-        return 380 - i * 20;
-      }).attr("width", 20).attr("height", 20).attr("fill", function(d){
-        return rainscale(d);
-      });
-      svg.selectAll("text").data([1, 2, 6, 10, 15, 20, 30, 40, 50, 70, 90, 110, 130, 150, 200, 300, "毫米(mm)", "累積雨量"]).enter().append("text").attr("x", 420).attr("y", function(d, i){
-        return 400 - i * 20;
-      }).text(function(d){
-        return d;
-      });
+      legend = function(){
+        var x$, y$;
+        x$ = svg.selectAll("rect").data(rainscale.domain());
+        x$.enter().append("rect").attr("x", 400).attr("y", function(d, i){
+          return 380 - i * 20;
+        }).attr("width", 20).attr("height", 20).attr("fill", function(d){
+          return rainscale(d);
+        });
+        x$.enter().append("text").attr("x", 425).attr("y", function(d, i){
+          return 400 - i * 20;
+        }).text(function(it){
+          return it;
+        });
+        y$ = svg.selectAll("text.description").data(['累積雨量', '毫米(mm)']);
+        y$.enter().append("text").attr("class", 'descrition').attr("x", 425).attr("y", function(d, i){
+          return 50 + 20 * i;
+        }).text(function(it){
+          return it;
+        });
+        return y$;
+      };
+      legend();
       update = function(){
         var paths;
         paths = sg.selectAll("path").data(regions);

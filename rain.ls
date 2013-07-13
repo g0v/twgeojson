@@ -45,24 +45,31 @@ sg = svg.append 'g'
 
 regions = d3.geom.voronoi!clip-extent(extent) [proj [+it.longitude, +it.latitude, it.name] for it in stations]
 
-svg.selectAll("rect")
-  .data([ 1 2 6 10 15 20 30 40 50 70 90 110 130 150 200 300 ])
-  .enter!append("rect")
-  .attr "x" 400
-  .attr "y" (d, i) ->
-    380-i*20
-  .attr "width" 20
-  .attr "height" 20
-  .attr "fill" (d) ->
-    rainscale d
+legend = ->
+  svg.selectAll("rect").data rainscale.domain!
+    ..enter!append("rect")
+      .attr "x" 400
+      .attr "y" (d, i) ->
+        380-i*20
+      .attr "width" 20
+      .attr "height" 20
+      .attr "fill" (d) ->
+        rainscale d
+    ..enter!append("text")
+      .attr "x" 425
+      .attr "y" (d, i) ->
+        400-i*20
+      .text -> it
 
-svg.selectAll("text")
-  .data([ 1 2 6 10 15 20 30 40 50 70 90 110 130 150 200 300 "毫米(mm)" "累積雨量"])
-  .enter!append("text")
-  .attr "x" 420
-  .attr "y" (d, i) ->
-    400-i*20
-  .text (d) -> d
+  svg.selectAll("text.description").data <[累積雨量 毫米(mm)]>
+    ..enter!append("text")
+      .attr "class" 'descrition'
+      .attr "x" 425
+      .attr "y" (d, i) ->
+        50 + 20 * i
+      .text -> it
+
+legend!
 
 update = ->
   paths = sg.selectAll("path")
