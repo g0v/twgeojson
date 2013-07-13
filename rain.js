@@ -47,7 +47,7 @@ d3.json("stations.json", function(stations){
           return rainscale(d);
         });
         y$ = svg.selectAll("text.scale").data(rainscale.domain());
-        y$.enter().append("text").attr("x", 425).attr("y", function(d, i){
+        y$.enter().append("text").attr("class", "scale").attr("x", 425).attr("y", function(d, i){
           return 400 - i * 20;
         });
         y$.text(function(it){

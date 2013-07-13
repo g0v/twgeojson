@@ -63,6 +63,7 @@ legend = ->
         rainscale d
   svg.selectAll("text.scale").data rainscale.domain!     
     ..enter!append("text")
+      .attr "class" "scale"
       .attr "x" 425
       .attr "y" (d, i) ->
         400-i*20
