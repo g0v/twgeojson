@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+#time {
+  position: absolute;
+  top: 10px;
+}
+
+.villages {
+  fill: none;
+  stroke: #aaa;
+}
+
+.border {
+  fill: none;
+  stroke: red;
+}
+
+.counties {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+.control {
+  position: absolute;
+  top: 400px;
+}
+
+</style>
+<body>
+    <div id="nowebgl" style="margin: 50px; display: none; position: absolute">
+    If you have WebGL it will be FAST!
+    </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="//cdn.firebase.com/v0/firebase.js"></script>
+<script src="js/tquery-bundle.js"></script>
+<script type="text/javascript" src="js/d3-threeD.js"></script>
+<script type="text/javascript" src="js/constants.js"></script>
+<script type="text/javascript" src="js/util-geo.js"></script>
+<script src="mercatorTW.js"></script>
+<script src="rain3d.js"></script>
+
+<h1 id="time"></h1>
+<div class="control"></div>
+
+</body>
