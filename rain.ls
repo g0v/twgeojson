@@ -135,7 +135,7 @@ d3.select '.control' .append 'button'
 d3.select '.control' .append 'button'
   ..text \change
   ..on \click ->
-    if rainscale .domain![0] is smallscale [0]
+    if rainscale .domain![0] is smallscale[0]
       rainscale := changescale bigscale
     else
       rainscale := changescale smallscale

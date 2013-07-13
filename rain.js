@@ -128,7 +128,7 @@ d3.json("stations.json", function(stations){
       z$ = d3.select('.control').append('button');
       z$.text('change');
       z$.on('click', function(){
-        if (rainscale.domain()[0] === smallscale([0])) {
+        if (rainscale.domain()[0] === smallscale[0]) {
           rainscale = changescale(bigscale);
         } else {
           rainscale = changescale(smallscale);
