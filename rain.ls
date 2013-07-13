@@ -4,13 +4,19 @@ census = d3.map!
 
 svg = d3.select 'body' .append 'svg' .attr 'width', width .attr 'height', height
 
+smallscale = [ 1 2 6 10 15 20 30 40 50 70 90 110 130 150 200 300 ]
+bigscale = [10 20 60 100 150 200 300 400 500 600 700 800 900 1000 1200 1500]
+
 stations <- d3.json "stations.json"
 
 root = new Firebase "https://cwbtw.firebaseio.com"
 current = root.child "rainfall/current"
-rainscale = d3.scale.quantile!
-.domain([ 1 2 6 10 15 20 30 40 50 70 90 110 130 150 200 300 ])
-.range <[ #c5bec2 #99feff #00ccfc #0795fd #025ffe #3c9700 #2bfe00 #fdfe00 #ffcb00 #eaa200 #f30500 #d60002 #9e0003 #9e009d #d400d1 #fa00ff #facefb]>
+changescale = (scale) ->
+  d3.scale.quantile! 
+  .domain(scale)
+  .range <[ #c5bec2 #99feff #00ccfc #0795fd #025ffe #3c9700 #2bfe00 #fdfe00 #ffcb00 #eaa200 #f30500 #d60002 #9e0003 #9e009d #d400d1 #fa00ff #facefb]>
+
+rainscale = changescale smallscale
 
 rain-today = {}
 
@@ -55,11 +61,12 @@ legend = ->
       .attr "height" 20
       .attr "fill" (d) ->
         rainscale d
+  svg.selectAll("text.scale").data rainscale.domain!     
     ..enter!append("text")
       .attr "x" 425
       .attr "y" (d, i) ->
         400-i*20
-      .text -> it
+    ..text -> it
 
   svg.selectAll("text.description").data <[累積雨量 毫米(mm)]>
     ..enter!append("text")
@@ -125,6 +132,15 @@ d3.select '.control' .append 'button'
   ..on \click ->
     ..attr \disabled true
     replay!
+d3.select '.control' .append 'button'
+  ..text \change
+  ..on \click ->
+    if rainscale .domain![0] is smallscale [0]
+      rainscale = changescale bigscale
+    else
+      rainscale = changescale smallscale
+    legend!
+    update!
 
 current.on \value ->
   {time, data} = it.val!

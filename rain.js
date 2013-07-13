@@ -1,17 +1,22 @@
-var width, height, census, svg;
+var width, height, census, svg, smallscale, bigscale;
 width = window.innerWidth * 0.8;
 height = window.innerHeight - 10;
 census = d3.map();
 svg = d3.select('body').append('svg').attr('width', width).attr('height', height);
+smallscale = [1, 2, 6, 10, 15, 20, 30, 40, 50, 70, 90, 110, 130, 150, 200, 300];
+bigscale = [10, 20, 60, 100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1500];
 d3.json("stations.json", function(stations){
-  var root, current, rainscale, rainToday;
+  var root, current, changescale, rainscale, rainToday;
   root = new Firebase("https://cwbtw.firebaseio.com");
   current = root.child("rainfall/current");
-  rainscale = d3.scale.quantile().domain([1, 2, 6, 10, 15, 20, 30, 40, 50, 70, 90, 110, 130, 150, 200, 300]).range(['#c5bec2', '#99feff', '#00ccfc', '#0795fd', '#025ffe', '#3c9700', '#2bfe00', '#fdfe00', '#ffcb00', '#eaa200', '#f30500', '#d60002', '#9e0003', '#9e009d', '#d400d1', '#fa00ff', '#facefb']);
+  changescale = function(scale){
+    return d3.scale.quantile().domain(scale).range(['#c5bec2', '#99feff', '#00ccfc', '#0795fd', '#025ffe', '#3c9700', '#2bfe00', '#fdfe00', '#ffcb00', '#eaa200', '#f30500', '#d60002', '#9e0003', '#9e009d', '#d400d1', '#fa00ff', '#facefb']);
+  };
+  rainscale = changescale(smallscale);
   rainToday = {};
   return d3.json("tw.json", function(tw){
     return d3.json("twCounty2010.topo.json", function(countiestopo){
-      var proj, counties, villages, border, path, extent, x$, sg, regions, it, legend, update, g, replay, y$;
+      var proj, counties, villages, border, path, extent, x$, sg, regions, it, legend, update, g, replay, y$, z$;
       proj = mtw();
       counties = topojson.feature(countiestopo, countiestopo.objects['twCounty2010.geo']);
       villages = topojson.feature(tw, tw.objects['villages']);
@@ -34,25 +39,27 @@ d3.json("stations.json", function(stations){
         return results$;
       }()));
       legend = function(){
-        var x$, y$;
+        var x$, y$, z$;
         x$ = svg.selectAll("rect").data(rainscale.domain());
         x$.enter().append("rect").attr("x", 400).attr("y", function(d, i){
           return 380 - i * 20;
         }).attr("width", 20).attr("height", 20).attr("fill", function(d){
           return rainscale(d);
         });
-        x$.enter().append("text").attr("x", 425).attr("y", function(d, i){
+        y$ = svg.selectAll("text.scale").data(rainscale.domain());
+        y$.enter().append("text").attr("x", 425).attr("y", function(d, i){
           return 400 - i * 20;
-        }).text(function(it){
+        });
+        y$.text(function(it){
           return it;
         });
-        y$ = svg.selectAll("text.description").data(['累積雨量', '毫米(mm)']);
-        y$.enter().append("text").attr("class", 'descrition').attr("x", 425).attr("y", function(d, i){
+        z$ = svg.selectAll("text.description").data(['累積雨量', '毫米(mm)']);
+        z$.enter().append("text").attr("class", 'descrition').attr("x", 425).attr("y", function(d, i){
           return 50 + 20 * i;
         }).text(function(it){
           return it;
         });
-        return y$;
+        return z$;
       };
       legend();
       update = function(){
@@ -117,6 +124,18 @@ d3.json("stations.json", function(stations){
       y$.on('click', function(){
         y$.attr('disabled', true);
         return replay();
+      });
+      z$ = d3.select('.control').append('button');
+      z$.text('change');
+      z$.on('click', function(){
+        var rainscale;
+        if (rainscale.domain()[0] === smallscale([0])) {
+          rainscale = changescale(bigscale);
+        } else {
+          rainscale = changescale(smallscale);
+        }
+        legend();
+        return update();
       });
       return current.on('value', function(it){
         var ref$, time, data, today, res$, name, parsed;
