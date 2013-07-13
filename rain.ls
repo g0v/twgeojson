@@ -12,7 +12,7 @@ stations <- d3.json "stations.json"
 root = new Firebase "https://cwbtw.firebaseio.com"
 current = root.child "rainfall/current"
 changescale = (scale) ->
-  d3.scale.quantile! 
+  d3.scale.quantile!
   .domain(scale)
   .range <[ #c5bec2 #99feff #00ccfc #0795fd #025ffe #3c9700 #2bfe00 #fdfe00 #ffcb00 #eaa200 #f30500 #d60002 #9e0003 #9e009d #d400d1 #fa00ff #facefb]>
 
@@ -61,7 +61,7 @@ legend = ->
       .attr "height" 20
       .attr "fill" (d) ->
         rainscale d
-  svg.selectAll("text.scale").data rainscale.domain!     
+  svg.selectAll("text.scale").data rainscale.domain!
     ..enter!append("text")
       .attr "class" "scale"
       .attr "x" 425
@@ -136,7 +136,7 @@ d3.select '.control' .append 'button'
 d3.select '.control' .append 'button'
   ..text \change
   ..on \click ->
-    if rainscale .domain![0] is smallscale[0]
+    if rainscale.domain!0 is smallscale.0
       rainscale := changescale bigscale
     else
       rainscale := changescale smallscale
