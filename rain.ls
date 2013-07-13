@@ -102,6 +102,30 @@ g.selectAll 'path'
   .attr 'd', path
 
 
+replay = ->
+  date = '2013-07-13'
+  <- root.child "rainfall/#date" .once \value
+  cbs = for time, data of it.val! => let time, data
+    ->
+      d3.select \#time
+        .text time
+      rain-today := data
+      update!
+
+  run-one = ->
+    x = cbs.shift!
+    return unless x
+    x!
+    update!
+    setTimeout run-one, 1000ms
+  run-one!
+
+d3.select '.control' .append 'button'
+  ..text \replay
+  ..on \click ->
+    ..attr \disabled true
+    replay!
+
 current.on \value ->
   {time, data} = it.val!
   d3.select \#time
@@ -109,4 +133,4 @@ current.on \value ->
   rain-today := data
   today = [parsed for name, {today} of data when parsed = parseFloat today]
   update!
-[]
+

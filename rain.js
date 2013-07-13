@@ -11,7 +11,7 @@ d3.json("stations.json", function(stations){
   rainToday = {};
   return d3.json("tw.json", function(tw){
     return d3.json("twCounty2010.topo.json", function(countiestopo){
-      var proj, counties, villages, border, path, extent, x$, sg, regions, it, legend, update, g;
+      var proj, counties, villages, border, path, extent, x$, sg, regions, it, legend, update, g, replay, y$;
       proj = mtw();
       counties = topojson.feature(countiestopo, countiestopo.objects['twCounty2010.geo']);
       villages = topojson.feature(tw, tw.objects['villages']);
@@ -81,7 +81,44 @@ d3.json("stations.json", function(stations){
       g.selectAll('path').data(counties.features).enter().append('path').attr('class', function(){
         return 'q-9-9';
       }).attr('d', path);
-      current.on('value', function(it){
+      replay = function(){
+        var date;
+        date = '2013-07-13';
+        return root.child("rainfall/" + date).once('value', function(it){
+          var cbs, res$, time, ref$, data, runOne;
+          res$ = [];
+          for (time in ref$ = it.val()) {
+            data = ref$[time];
+            res$.push((fn$.call(this, time, data)));
+          }
+          cbs = res$;
+          runOne = function(){
+            var x;
+            x = cbs.shift();
+            if (!x) {
+              return;
+            }
+            x();
+            update();
+            return setTimeout(runOne, 1000);
+          };
+          return runOne();
+          function fn$(time, data){
+            return function(){
+              d3.select('#time').text(time);
+              rainToday = data;
+              return update();
+            };
+          }
+        });
+      };
+      y$ = d3.select('.control').append('button');
+      y$.text('replay');
+      y$.on('click', function(){
+        y$.attr('disabled', true);
+        return replay();
+      });
+      return current.on('value', function(it){
         var ref$, time, data, today, res$, name, parsed;
         ref$ = it.val(), time = ref$.time, data = ref$.data;
         d3.select('#time').text(time);
@@ -96,7 +133,6 @@ d3.json("stations.json", function(stations){
         today = res$;
         return update();
       });
-      return [];
     });
   });
 });
