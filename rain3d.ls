@@ -46,7 +46,7 @@ var world
 
 setscale = (mesh, amount, scale) ->
   mesh.scale.z = scale
-  mesh.position.y = amount * scale
+  mesh.position.y = amount * scale - 200
 
 addGeoObject = (scene, features) ->
   meshes = []
@@ -77,17 +77,17 @@ init3d = ->
     world := tQuery.createWorld {-webGLNeeded}
     $ \#nowebgl .show! unless tQuery.World.hasWebGL!
     cam = world.tCamera!
+    width = window.innerWidth
+    height = window.innerHeight
+    cam.translateZ(3000)
     cam.near = 20.0
     cam.updateProjectionMatrix!
 
     world.boilerplate!start!
     world.getCameraControls!
-      ..rangeY = 3000
+      ..rangeY = 2000
       ..rangeX = -2000
     cam.position.set 0 1000  600
-    plane = new THREE.Mesh (new THREE.PlaneGeometry 1000, 1000, 20, 20), new THREE.MeshBasicMaterial {color: 5592405, +wireframe }
-    plane.rotation.x = -Math.PI / 2
-    world.add plane
     ambientLight = new THREE.AmbientLight 6316128
     world.add ambientLight
 

@@ -53,7 +53,7 @@ d3.json("stations.json", function(stations){
     });
     setscale = function(mesh, amount, scale){
       mesh.scale.z = scale;
-      return mesh.position.y = amount * scale;
+      return mesh.position.y = amount * scale - 200;
     };
     addGeoObject = function(scene, features){
       var meshes, i$, len$, i, geoFeature, mesh, today, ref$, color, material, amount, simpleShapes, j$, len1$, simpleShape, shape3d, x$, toAdd, e;
@@ -96,7 +96,7 @@ d3.json("stations.json", function(stations){
       return meshes;
     };
     init3d = function(){
-      var cam, x$, plane, ambientLight, directionalLight;
+      var cam, width, height, x$, ambientLight, directionalLight;
       world = tQuery.createWorld({
         webGLNeeded: false
       });
@@ -104,19 +104,16 @@ d3.json("stations.json", function(stations){
         $('#nowebgl').show();
       }
       cam = world.tCamera();
+      width = window.innerWidth;
+      height = window.innerHeight;
+      cam.translateZ(3000);
       cam.near = 20.0;
       cam.updateProjectionMatrix();
       world.boilerplate().start();
       x$ = world.getCameraControls();
-      x$.rangeY = 3000;
+      x$.rangeY = 2000;
       x$.rangeX = -2000;
       cam.position.set(0, 1000, 600);
-      plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
-        color: 5592405,
-        wireframe: true
-      }));
-      plane.rotation.x = -Math.PI / 2;
-      world.add(plane);
       ambientLight = new THREE.AmbientLight(6316128);
       world.add(ambientLight);
       directionalLight = new THREE.DirectionalLight(16777215);
