@@ -26,24 +26,24 @@ addGeoObject = (scene, features) ->
     for geoFeature in features
       name = geoFeature.properties.name
       if true or
-         (name == '台北縣') or
-         (name == '基隆市') or
-         (name == '台北市') or
-         (name == '桃園縣') or
-         (name == '新竹縣') or
-         (name == '苗栗縣') or
-         (name == '台中縣') or
-         (name == '台中市') or
-         (name == '彰化縣') or
-         (name == '雲林縣') or
-         (name == '嘉義縣') or
-         (name == '嘉義市') or
-         (name == '台南縣') or
-         (name == '台南市') or
-         (name == '高雄縣') or
-         (name == '高雄市') or
-         (name == '屏東縣') or
-         false
+        #(name == '新北市') or
+        #(name == '基隆市') or
+        #(name == '台北市') or
+        #(name == '桃園縣') or
+        #(name == '新竹縣') or
+        #(name == '苗栗縣') or
+        #(name == '台中縣') or
+        #(name == '台中市') or
+        #(name == '彰化縣') or
+        #(name == '雲林縣') or
+        #(name == '嘉義縣') or
+        #(name == '嘉義市') or
+        #(name == '台南縣') or
+        #(name == '台南市') or
+        #(name == '高雄縣') or
+        #(name == '高雄市') or
+        #(name == '屏東縣') or
+        false
 
         #console.log \path path
         #console.log \path \geoFeature
@@ -73,10 +73,10 @@ addGeoObject = (scene, features) ->
                 shape3d = simpleShape.extrude { amount, -bevelEnabled }
                 shape3d.boundingSphere = {radius: 3 * 100}
                 toAdd = new THREE.Mesh shape3d, material
-                    ..rotation.x = Math.PI / 2
-                    ..translateY amount
+                    ..rotation.x = Math.PI
+                    ..translateZ -amount
                     ..translateX -window.innerWidth/4
-                    ..translateZ -window.innerHeight/2
+                    ..translateY -window.innerHeight/2
                 scene.add toAdd
               catch e
                 console.log "error in extrude #name. Ignored.\n"
@@ -98,7 +98,7 @@ init3d = ->
     world.boilerplate!start!
     world.getCameraControls!rangeY = 3000
     world.getCameraControls!rangeX = -2000
-    cam.position.set 0 1000  600
+    cam.position.set 0 0  800
     tw <- d3.json "twCounty2010.topo.json"
     twtopo = topojson.feature tw, tw.objects['twCounty2010.geo']
     data = twtopo.features
@@ -106,7 +106,7 @@ init3d = ->
       color: 5592405
       wireframe: true
     }
-    plane.rotation.x = -Math.PI / 2
+    plane.rotation.x = Math.PI
     world.add plane
     ambientLight = new THREE.AmbientLight 6316128
     world.add ambientLight

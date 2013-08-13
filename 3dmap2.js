@@ -32,7 +32,7 @@ addGeoObject = function(scene, features){
     geoFeature = features[i$];
     lresult$ = [];
     name = geoFeature.properties.name;
-    if (true || name === '台北縣' || name === '基隆市' || name === '台北市' || name === '桃園縣' || name === '新竹縣' || name === '苗栗縣' || name === '台中縣' || name === '台中市' || name === '彰化縣' || name === '雲林縣' || name === '嘉義縣' || name === '嘉義市' || name === '台南縣' || name === '台南市' || name === '高雄縣' || name === '高雄市' || name === '屏東縣' || false) {
+    if (true || false) {
       mesh = $d3g.transformSVGPath(path(geoFeature));
       rgb = d3.rgb(ramp(Math.random() * 255));
       color = (ref$ = new THREE.Color()).setRGB.apply(ref$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
@@ -59,10 +59,10 @@ addGeoObject = function(scene, features){
             radius: 3 * 100
           };
           x$ = toAdd = new THREE.Mesh(shape3d, material);
-          x$.rotation.x = Math.PI / 2;
-          x$.translateY(amount);
+          x$.rotation.x = Math.PI;
+          x$.translateZ(-amount);
           x$.translateX(-window.innerWidth / 4);
-          x$.translateZ(-window.innerHeight / 2);
+          x$.translateY(-window.innerHeight / 2);
           lresult$.push(scene.add(toAdd));
         } catch (e$) {
           e = e$;
@@ -93,7 +93,7 @@ init3d = function(){
   world.boilerplate().start();
   world.getCameraControls().rangeY = 3000;
   world.getCameraControls().rangeX = -2000;
-  cam.position.set(0, 1000, 600);
+  cam.position.set(0, 0, 800);
   return d3.json("twCounty2010.topo.json", function(tw){
     var twtopo, data, plane, ambientLight, directionalLight;
     twtopo = topojson.feature(tw, tw.objects['twCounty2010.geo']);
@@ -102,7 +102,7 @@ init3d = function(){
       color: 5592405,
       wireframe: true
     }));
-    plane.rotation.x = -Math.PI / 2;
+    plane.rotation.x = Math.PI;
     world.add(plane);
     ambientLight = new THREE.AmbientLight(6316128);
     world.add(ambientLight);
