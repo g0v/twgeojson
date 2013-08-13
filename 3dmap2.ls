@@ -75,8 +75,8 @@ addGeoObject = (scene, features) ->
                 toAdd = new THREE.Mesh shape3d, material
                     ..rotation.x = Math.PI
                     ..translateZ -amount
-                    ..translateX -window.innerWidth/4
-                    ..translateY -window.innerHeight/2
+                    ..translateX -window.innerWidth/4+10
+                    ..translateY -window.innerHeight/2+140
                 scene.add toAdd
               catch e
                 console.log "error in extrude #name. Ignored.\n"

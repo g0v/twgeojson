@@ -61,8 +61,8 @@ addGeoObject = function(scene, features){
           x$ = toAdd = new THREE.Mesh(shape3d, material);
           x$.rotation.x = Math.PI;
           x$.translateZ(-amount);
-          x$.translateX(-window.innerWidth / 4);
-          x$.translateY(-window.innerHeight / 2);
+          x$.translateX(-window.innerWidth / 4 + 10);
+          x$.translateY(-window.innerHeight / 2 + 140);
           lresult$.push(scene.add(toAdd));
         } catch (e$) {
           e = e$;
