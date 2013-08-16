@@ -1,6 +1,6 @@
 
-width = 500
-height = 600
+width = 600
+height = 800
  
 x = d3.scale.linear!.range [0, width]
  
@@ -21,6 +21,9 @@ yAxis = d3.svg.axis!
 
 # [{"name":"三星", "latitude":"24.6725", "longitude":"121.6461", "id":"C1U66", "altitude":"103"}, …]
 stations <- d3.json "stations.json"
+countiestopo <- d3.json "twCounty2010.topo.json"
+
+counties = topojson.feature countiestopo, countiestopo.objects['twCounty2010.geo']
 
 #console.log [[+it.longitude, +it.latitude, it.name] for it in stations]
 root = new Firebase "https://cwbtw.firebaseio.com"
@@ -69,25 +72,66 @@ idw-interpolate = (samples, power, point) ->
 y-pixel = 0
 
 plot-interpolated-data = ->
-  min-latitude = 22.0 # min-y
-  max-latitude = 25.0 # max-y
-  min-longitude = 120.0 # min-x
+  min-latitude = 21.5 # min-y
+  max-latitude = 25.5 # max-y
+  min-longitude = 119.5 # min-x
   max-longitude = 122.5 # max-x
   dy = (max-latitude - min-latitude) / height
   dx = (max-longitude - min-longitude) / width
-  y-pixel := 0
+  y-pixel := height
 
   render-line = ->
-    if y-pixel < height
-      for x-pixel from 0 to width
+    if y-pixel >= 0
+      for x-pixel from 0 to width by 2
         y = min-latitude + dy * y-pixel
         x = min-longitude + dx * x-pixel
         z = 0 >? idw-interpolate samples, 2.75, [x, y]
         c = (500.0 - z) / 500.0 * 240
         canvas.fillStyle = d3.hsl(c, 0.6, 0.5).toString!
         canvas.fillRect x-pixel, height - y-pixel, 2, 2
-      y-pixel := y-pixel + 2
+      y-pixel := y-pixel - 2
       setTimeout render-line, 0
+    else
+      
+      draw-polygon = (polygon, ctx) ->
+        ctx.strokeStyle = \#eee
+        ctx.lineWidth = 1
+      
+        firstPoint = true
+        ctx.beginPath!
+        console.log polygon
+        
+        for pt in polygon
+          x = (pt[0] - min-longitude) / dx
+          y = height - (pt[1] - min-latitude) / dx
+          
+          if (firstPoint)
+            ctx.moveTo x, y
+            firstPoint := false
+          else 
+            ctx.lineTo x, y
+        ctx.closePath!
+        ctx.stroke!
+
+      for ct in counties.features
+        for coordinate in ct.geometry.coordinates
+          if ct.geometry.type == \MultiPolygon
+            for polygon in coordinate
+              draw-polygon polygon, canvas
+          else if ct.geometry.type == \Polygon
+            draw-polygon coordinate, canvas
+          else 
+            console.log ct.geometry.type
+
+      canvas.strokeStyle = \#000
+      canvas.lineWidth = 1
+      for st in stations
+        x = (+st.longitude - min-longitude) / dx
+        y = height - (+st.latitude - min-latitude) / dx
+        canvas.beginPath!
+        canvas.arc x, y, 2.0, 0, 2 * Math.PI, false
+        canvas.closePath!
+        canvas.stroke!
 
   render-line!
 
