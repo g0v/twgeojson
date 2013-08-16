@@ -91,6 +91,10 @@ idw-interpolate = (samples, power, point) ->
     sum-weight := sum-weight + weight * s[2]
   sum-weight / sum
 
+color-of = (z) ->
+  c = (500.0 - z) / 500.0 * 240
+  d3.hsl(c, 0.4, 0.6).toString!
+
 y-pixel = 0
 
 plot-interpolated-data = ->
@@ -102,52 +106,11 @@ plot-interpolated-data = ->
         y = min-latitude + dy * y-pixel
         x = min-longitude + dx * x-pixel
         z = 0 >? idw-interpolate samples, 2.75, [x, y]
-        c = (500.0 - z) / 500.0 * 240
-        canvas.fillStyle = d3.hsl(c, 0.6, 0.5).toString!
+        
+        canvas.fillStyle = color-of z
         canvas.fillRect x-pixel, height - y-pixel, 2, 2
       y-pixel := y-pixel - 2
       setTimeout render-line, 0
-    # else
-      
-    #   draw-polygon = (polygon, ctx) ->
-    #     ctx.strokeStyle = \#eee
-    #     ctx.lineWidth = 1
-      
-    #     firstPoint = true
-    #     ctx.beginPath!
-    #     console.log polygon
-        
-    #     for pt in polygon
-    #       x = (pt[0] - min-longitude) / dx
-    #       y = height - (pt[1] - min-latitude) / dx
-          
-    #       if (firstPoint)
-    #         ctx.moveTo x, y
-    #         firstPoint := false
-    #       else 
-    #         ctx.lineTo x, y
-    #     ctx.closePath!
-    #     ctx.stroke!
-
-    #   for ct in counties.features
-    #     for coordinate in ct.geometry.coordinates
-    #       if ct.geometry.type == \MultiPolygon
-    #         for polygon in coordinate
-    #           draw-polygon polygon, canvas
-    #       else if ct.geometry.type == \Polygon
-    #         draw-polygon coordinate, canvas
-    #       else 
-    #         console.log ct.geometry.type
-
-    #   canvas.strokeStyle = \#000
-    #   canvas.lineWidth = 1
-    #   for st in stations
-    #     x = (+st.longitude - min-longitude) / dx
-    #     y = height - (+st.latitude - min-latitude) / dx
-    #     canvas.beginPath!
-    #     canvas.arc x, y, 2.0, 0, 2 * Math.PI, false
-    #     canvas.closePath!
-    #     canvas.stroke!
 
   render-line!
 
@@ -156,4 +119,13 @@ plot-interpolated-data = ->
 current.on \value ->
   rain-data := it.val!
   samples := [[+st.longitude, +st.latitude, parseFloat rain-data[st.name][\today] ] for st in stations when rain-data[st.name]? and not isNaN rain-data[st.name][\today] ]
+
+  svg.selectAll \circle
+    .data stations
+    .style \fill (st) ->
+      if rain-data[st.name]? and not isNaN rain-data[st.name][\today]
+        color-of parseFloat rain-data[st.name][\today]
+      else 
+        \None
+
   plot-interpolated-data!

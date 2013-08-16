@@ -25,7 +25,7 @@
       return 'q-9-9';
     }).attr('d', path);
     return d3.json("stations.json", function(stations){
-      var root, current, rainData, samples, distance, idwInterpolate, yPixel, plotInterpolatedData;
+      var root, current, rainData, samples, distance, idwInterpolate, colorOf, yPixel, plotInterpolatedData;
       svg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').style('fill', 'none').attr('r', 2).attr("transform", function(it){
         return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
       });
@@ -55,20 +55,24 @@
         }
         return sumWeight / sum;
       };
+      colorOf = function(z){
+        var c;
+        c = (500.0 - z) / 500.0 * 240;
+        return d3.hsl(c, 0.4, 0.6).toString();
+      };
       yPixel = 0;
       plotInterpolatedData = function(){
         var renderLine;
         yPixel = height;
         renderLine = function(){
-          var i$, to$, xPixel, y, x, z, ref$, c;
+          var i$, to$, xPixel, y, x, z, ref$;
           if (yPixel >= 0) {
             for (i$ = 0, to$ = width; i$ <= to$; i$ += 2) {
               xPixel = i$;
               y = minLatitude + dy * yPixel;
               x = minLongitude + dx * xPixel;
               z = 0 > (ref$ = idwInterpolate(samples, 2.75, [x, y])) ? 0 : ref$;
-              c = (500.0 - z) / 500.0 * 240;
-              canvas.fillStyle = d3.hsl(c, 0.6, 0.5).toString();
+              canvas.fillStyle = colorOf(z);
               canvas.fillRect(xPixel, height - yPixel, 2, 2);
             }
             yPixel = yPixel - 2;
@@ -88,6 +92,13 @@
           }
         }
         samples = res$;
+        svg.selectAll('circle').data(stations).style('fill', function(st){
+          if (rainData[st.name] != null && !isNaN(rainData[st.name]['today'])) {
+            return colorOf(parseFloat(rainData[st.name]['today']));
+          } else {
+            return 'None';
+          }
+        });
         return plotInterpolatedData();
       });
     });
