@@ -27,12 +27,15 @@ calculateBBoxSum = function(shapes, debugName, debugCW){
   return sum;
 };
 addGeoObject = function(scene, features){
-  var i$, len$, geoFeature, lresult$, name, mesh, rgb, color, ref$, material, amount, simpleShapes, simpleShapesCCW, area, areaCCW, j$, len1$, simpleShape, shape3d, x$, toAdd, e, results$ = [];
+  var i$, len$, geoFeature, lresult$, name, coords, mesh, rgb, color, ref$, material, amount, simpleShapes, simpleShapesCCW, j$, len1$, simpleShape, shape3d, x$, toAdd, e, results$ = [];
   for (i$ = 0, len$ = features.length; i$ < len$; ++i$) {
     geoFeature = features[i$];
     lresult$ = [];
     name = geoFeature.properties.name;
     if (true || false) {
+      coords = geoFeature.geometry.coordinates;
+      coords = G0V.TOPOJSON.util.filterOutZeroArea(coords, 0.01);
+      geoFeature.geometry.coordinates = coords;
       mesh = $d3g.transformSVGPath(path(geoFeature));
       rgb = d3.rgb(ramp(Math.random() * 255));
       color = (ref$ = new THREE.Color()).setRGB.apply(ref$, [rgb['r'], rgb['g'], rgb['b']]).getHex();
@@ -42,11 +45,6 @@ addGeoObject = function(scene, features){
       amount = parseInt(Math.random() * 100);
       simpleShapes = mesh.toShapes(false);
       simpleShapesCCW = mesh.toShapes(true);
-      area = calculateBBoxSum(simpleShapes, name, 'CW');
-      areaCCW = calculateBBoxSum(simpleShapesCCW, name, 'CCW');
-      if (areaCCW < area) {
-        console.log("CW " + name + "\n");
-      }
       simpleShapes = simpleShapesCCW;
       for (j$ = 0, len1$ = simpleShapes.length; j$ < len1$; ++j$) {
         simpleShape = simpleShapes[j$];

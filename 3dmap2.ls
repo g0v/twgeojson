@@ -22,6 +22,7 @@ calculateBBoxSum = (shapes, debugName, debugCW ) ->
 
     sum
 
+
 addGeoObject = (scene, features) ->
     for geoFeature in features
       name = geoFeature.properties.name
@@ -45,6 +46,10 @@ addGeoObject = (scene, features) ->
         #(name == '屏東縣') or
         false
 
+        coords = geoFeature.geometry.coordinates
+        coords = G0V.TOPOJSON.util.filterOutZeroArea coords, 0.01
+        geoFeature.geometry.coordinates = coords
+
         #console.log \path path
         #console.log \path \geoFeature
         #console.log path geoFeature
@@ -55,20 +60,22 @@ addGeoObject = (scene, features) ->
         color = new THREE.Color!setRGB ...rgb<[r g b]> .getHex!
         material = new THREE.MeshLambertMaterial { color }
         amount = parseInt Math.random! * 100
+
         do
             simpleShapes = mesh.toShapes(false)
             simpleShapesCCW = mesh.toShapes(true)
-            area = calculateBBoxSum simpleShapes, name, \CW
-            areaCCW = calculateBBoxSum simpleShapesCCW, name, \CCW
+            #area = calculateBBoxSum simpleShapes, name, \CW
+            #areaCCW = calculateBBoxSum simpleShapesCCW, name, \CCW
 
-            if ( areaCCW < area )
-                console.log "CW #name\n"
+            #if ( areaCCW < area )
+            #    console.log "CW #name\n"
 
             simpleShapes = simpleShapesCCW
 
             #console.log \simpleShapes
             #console.log simpleShapes
             for simpleShape in simpleShapes
+              #simpleShape.holes = []
               try
                 shape3d = simpleShape.extrude { amount, -bevelEnabled }
                 shape3d.boundingSphere = {radius: 3 * 100}
