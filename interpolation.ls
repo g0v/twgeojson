@@ -18,6 +18,14 @@ svg = d3.select \body
       .style \top, \0px
       .style \left, \0px
 
+inspector = d3.select \body
+              .append \div
+              .attr \class \inspector
+              .style \opacity 0
+
+station-label = inspector.append "p"
+rainfall-label = inspector.append "p"
+
 
 min-latitude = 21.5 # min-y
 max-latitude = 25.5 # max-y
@@ -127,5 +135,19 @@ current.on \value ->
         color-of parseFloat rain-data[st.name][\today]
       else 
         \None
-
+    .on \mouseover (d, i) ->
+      inspector.transition!
+        .duration 200 
+        .style \opacity, 0.9
+      station-label.text d.name
+      rainfall-label.text if rain-data[d.name]? and not isNaN rain-data[d.name][\today]
+        rain-data[d.name][\today]
+      else
+        "-"
+      inspector.style \left (d3.event.pageX + "px")
+      inspector.style \top (d3.event.pageY + "px")
+    .on \mouseout (d) ->
+      inspector.transition!
+        .duration 500
+        .style \opacity 0.0
   plot-interpolated-data!
