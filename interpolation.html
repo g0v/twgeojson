@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+ 
+.counties {
+  fill: none;
+  stroke: #333;
+  stroke-linejoin: round;
+}
+
+div.inspector {   
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  height: 40px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: #E6DB74;
+  border: 1px solid white;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+div.inspector p {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+ 
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="interpolation.js"></script>
+</body>
