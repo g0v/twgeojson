@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="all" href="seven-segment.css" />
 <style>
  
+body {
+  background-color: black;
+}
+
 .counties {
   fill: none;
   stroke: #333;
@@ -25,11 +30,112 @@ div.inspector p {
   margin-top: 3px;
   margin-bottom: 3px;
 }
+
+#main-panel {
+  position: absolute;
+  left: 620px;
+  width: 540px;
+  top: 20px;
+  height: 540px;
+}
+
+.eva-box {
+  border-radius: 8px;
+  border: 4px solid #EE7A28;
+  color: #EE7A28;
+}
  
+.eva-box h2 {
+  font-family: "HiraMinProN-W6", serif;
+  font-size: 96pt;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.eva-box h3 {
+  font-family: "Futura-CondensedMedium", sans-serif;
+  font-size: 18pt;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  background-color: #EE7A28;
+  color: black;
+}
+
+#rainfall-box {
+  position: relative;
+  margin: 20px auto 0 20px;
+  width: 500px;
+}
+
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
 <script src="interpolation.js"></script>
+
+<div class="eva-box" id="main-panel">
+  <h3 id="rainfall-timestamp">LOADING…</h3>
+  <h2 id="station-name">雨量</h2>
+
+  <div id="rainfall-box">
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>

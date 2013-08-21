@@ -18,13 +18,13 @@ svg = d3.select \body
       .style \top, \0px
       .style \left, \0px
 
-inspector = d3.select \body
-              .append \div
-              .attr \class \inspector
-              .style \opacity 0
+# inspector = d3.select \body
+#               .append \div
+#               .attr \class \inspector
+#               .style \opacity 0
 
-station-label = inspector.append "p"
-rainfall-label = inspector.append "p"
+# station-label = inspector.append "p"
+# rainfall-label = inspector.append "p"
 
 
 min-latitude = 21.5 # min-y
@@ -69,7 +69,7 @@ svg.selectAll \circle
 
 #console.log [[+it.longitude, +it.latitude, it.name] for it in stations]
 root = new Firebase "https://cwbtw.firebaseio.com"
-current = root.child "rainfall/2013-07-13/23:50:00"
+current = root.child "rainfall/current"
 
 # {"七股":{"10m":"-", "today":"20.5"}, …}
 rain-data = {}
@@ -100,8 +100,22 @@ idw-interpolate = (samples, power, point) ->
   sum-weight / sum
 
 color-of = (z) ->
-  c = (500.0 - z) / 500.0 * 240
-  d3.hsl(c, 0.4, 0.6).toString!
+  scale = [0, 30, 60, 100, 150, 210, 280, 400, 600, 1000]
+  color = [d3.hsl(240, 1.0, 0.5),
+           d3.hsl(240, 0.4, 0.6),
+           d3.hsl(190, 0.4, 0.6),
+           d3.hsl(130, 0.4, 0.6),
+           d3.hsl(60, 0.4, 0.6),
+           d3.hsl(30, 0.4, 0.6),
+           d3.hsl(0, 0.4, 0.6),
+           d3.hsl(-80, 0.4, 0.6),
+           d3.hsl(-80, 1.0, 0.5),
+           d3.hsl(-80, 1.0, 0.0)]
+
+  for i from 0 to scale.length - 2 
+    if scale[i] <= z and (z < scale[i + 1] or i == scale.length - 1) 
+      nz = z <? scale[i + 1]
+      return d3.interpolateHsl(color[i], color[i + 1])((nz - scale[i]) / (scale[i + 1] - scale[i])).toString!
 
 y-pixel = 0
 
@@ -122,32 +136,63 @@ plot-interpolated-data = ->
 
   render-line!
 
+# value should be a four-character-length string.
+update-seven-segment = (value-string) ->
+  pins = "abcdefg"
+  seven-segment-char-map = 
+    ' ': 0x00
+    '-': 0x40
+    '0': 0x3F
+    '1': 0x06
+    '2': 0x5B
+    '3': 0x4F
+    '4': 0x66
+    '5': 0x6D
+    '6': 0x7D
+    '7': 0x07
+    '8': 0x7F
+    '9': 0x6F
 
+  d3.selectAll \.seven-segment
+    .data value-string
+    .each (d, i) ->
+      bite = seven-segment-char-map[d]
+
+      for i from 0 to pins.length - 1
+        bit = Math.pow 2 i 
+        d3.select this .select ".#{pins[i]}" .classed \on, (bit .&. bite) == bit
 
 current.on \value ->
-  rain-data := it.val!
+  rain-data := it.val!data
+  d3.select \#rainfall-timestamp
+    .text "DATE: #{it.val!date} #{it.val!time} "
+  
+  d3.select \#station-name
+    .text "已更新"
+
+  update-seven-segment "    "
+
   samples := [[+st.longitude, +st.latitude, parseFloat rain-data[st.name][\today] ] for st in stations when rain-data[st.name]? and not isNaN rain-data[st.name][\today] ]
 
+  # calculate the legend
+
+  # update station's value 
   svg.selectAll \circle
     .data stations
     .style \fill (st) ->
       if rain-data[st.name]? and not isNaN rain-data[st.name][\today]
         color-of parseFloat rain-data[st.name][\today]
       else 
-        \None
+        \#FFFFFF
     .on \mouseover (d, i) ->
-      inspector.transition!
-        .duration 200 
-        .style \opacity, 0.9
-      station-label.text d.name
-      rainfall-label.text if rain-data[d.name]? and not isNaN rain-data[d.name][\today]
-        rain-data[d.name][\today]
+      d3.select \#station-name
+        .text d.name
+
+      if rain-data[d.name]? and not isNaN rain-data[d.name][\today]
+        raw-value = (parseInt rain-data[d.name][\today]) + ""
+        update-seven-segment (" " * (0 >? 4 - raw-value.length)) + raw-value
       else
-        "-"
-      inspector.style \left (d3.event.pageX + "px")
-      inspector.style \top (d3.event.pageY + "px")
-    .on \mouseout (d) ->
-      inspector.transition!
-        .duration 500
-        .style \opacity 0.0
+        update-seven-segment "----"
+
+  # plot interpolated value
   plot-interpolated-data!
