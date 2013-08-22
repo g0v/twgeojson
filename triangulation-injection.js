@@ -1,3 +1,9 @@
+///
+/// Mindos found the code at THREE.Shape.Utils.triangulate2
+/// in three.js / src/extras/core/Shape.js and rewrote it.
+/// So the author and license should follow the original.
+
+
 THREE.Shape.Utils.triangulateShape = function( pts, holes ) {
 
 		// For use with Poly2Tri.js
