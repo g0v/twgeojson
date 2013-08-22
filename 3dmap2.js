@@ -34,7 +34,8 @@ addGeoObject = function(scene, features){
     name = geoFeature.properties.name;
     if (true || false) {
       coords = geoFeature.geometry.coordinates;
-      coords = G0V.TOPOJSON.util.filterOutZeroArea(coords, 0.01);
+      coords = G0V.TOPOJSON.util.filterOutZeroArea(coords);
+      coords = G0V.TOPOJSON.util.filterOutRepeatedPoints(coords);
       geoFeature.geometry.coordinates = coords;
       mesh = $d3g.transformSVGPath(path(geoFeature));
       rgb = d3.rgb(ramp(Math.random() * 255));
@@ -58,9 +59,9 @@ addGeoObject = function(scene, features){
           };
           x$ = toAdd = new THREE.Mesh(shape3d, material);
           x$.rotation.x = Math.PI;
-          x$.translateZ(-amount);
-          x$.translateX(-window.innerWidth / 4 + 10);
-          x$.translateY(-window.innerHeight / 2 + 140);
+          x$.translateZ(-amount - 1);
+          x$.translateX(-window.innerWidth / 2 + window.innerWidth * 0.3);
+          x$.translateY(-window.innerHeight / 2 + window.innerHeight * 0.25);
           lresult$.push(scene.add(toAdd));
         } catch (e$) {
           e = e$;
@@ -96,7 +97,7 @@ init3d = function(){
     var twtopo, data, plane, ambientLight, directionalLight;
     twtopo = topojson.feature(tw, tw.objects['twCounty2010.geo']);
     data = twtopo.features;
-    plane = new THREE.Mesh(new THREE.PlaneGeometry(1000, 1000, 20, 20), new THREE.MeshBasicMaterial({
+    plane = new THREE.Mesh(new THREE.PlaneGeometry(1600, 1600, 20, 20), new THREE.MeshBasicMaterial({
       color: 5592405,
       wireframe: true
     }));

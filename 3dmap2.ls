@@ -44,10 +44,12 @@ addGeoObject = (scene, features) ->
         #(name == '高雄縣') or
         #(name == '高雄市') or
         #(name == '屏東縣') or
+        #(name == '花蓮縣') or
         false
 
         coords = geoFeature.geometry.coordinates
-        coords = G0V.TOPOJSON.util.filterOutZeroArea coords, 0.01
+        coords = G0V.TOPOJSON.util.filterOutZeroArea coords
+        coords = G0V.TOPOJSON.util.filterOutRepeatedPoints coords
         geoFeature.geometry.coordinates = coords
 
         #console.log \path path
@@ -81,9 +83,9 @@ addGeoObject = (scene, features) ->
                 shape3d.boundingSphere = {radius: 3 * 100}
                 toAdd = new THREE.Mesh shape3d, material
                     ..rotation.x = Math.PI
-                    ..translateZ -amount
-                    ..translateX -window.innerWidth/4+10
-                    ..translateY -window.innerHeight/2+140
+                    ..translateZ(- amount - 1 )
+                    ..translateX( - window.innerWidth/2  + window.innerWidth*0.3 )
+                    ..translateY( - window.innerHeight/2 + window.innerHeight*0.25 )
                 scene.add toAdd
               catch e
                 console.log "error in extrude #name. Ignored.\n"
@@ -109,7 +111,7 @@ init3d = ->
     tw <- d3.json "twCounty2010.topo.json"
     twtopo = topojson.feature tw, tw.objects['twCounty2010.geo']
     data = twtopo.features
-    plane = new THREE.Mesh (new THREE.PlaneGeometry 1000, 1000, 20, 20), new THREE.MeshBasicMaterial {
+    plane = new THREE.Mesh (new THREE.PlaneGeometry 1600, 1600, 20, 20), new THREE.MeshBasicMaterial {
       color: 5592405
       wireframe: true
     }
