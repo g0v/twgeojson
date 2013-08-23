@@ -1,3432 +1,6104 @@
 [
-   {
-      "longitude" : "121.6461",
-      "latitude" : "24.6725",
-      "name" : "三星",
-      "id" : "C1U66",
-      "altitude" : "103"
-   },
-   {
-      "longitude" : "121.4667",
-      "latitude" : "24.6333",
-      "name" : "池端",
-      "id" : "21U11",
-      "altitude" : "1150"
-   },
-   {
-      "longitude" : "121.5789",
-      "latitude" : "24.6772",
-      "name" : "玉蘭",
-      "id" : "C0U65",
-      "altitude" : "494"
-   },
-   {
-      "longitude" : "121.5175",
-      "latitude" : "24.5072",
-      "name" : "太平山",
-      "id" : "C0U71",
-      "altitude" : "1810"
-   },
-   {
-      "longitude" : "121.3486",
-      "latitude" : "24.3989",
-      "name" : "思源",
-      "id" : "C0U73",
-      "altitude" : "2036"
-   },
-   {
-      "longitude" : "121.3733",
-      "latitude" : "24.4392",
-      "name" : "南山",
-      "id" : "C1U72",
-      "altitude" : "1260"
-   },
-   {
-      "longitude" : "121.5653",
-      "latitude" : "24.6394",
-      "name" : "牛鬥",
-      "id" : "C1U50",
-      "altitude" : "280"
-   },
-   {
-      "longitude" : "121.6633",
-      "latitude" : "24.5733",
-      "name" : "古魯",
-      "id" : "C1U51",
-      "altitude" : "492"
-   },
-   {
-      "longitude" : "121.7902",
-      "latitude" : "24.6887",
-      "name" : "五結",
-      "id" : "C0U78",
-      "altitude" : "15"
-   },
-   {
-      "longitude" : "121.7853",
-      "latitude" : "24.6342",
-      "name" : "冬山",
-      "id" : "C0U68",
-      "altitude" : "22"
-   },
-   {
-      "longitude" : "121.7083",
-      "latitude" : "24.6361",
-      "name" : "寒溪",
-      "id" : "C1U67",
-      "altitude" : "147"
-   },
-   {
-      "longitude" : "121.7431",
-      "latitude" : "24.6275",
-      "name" : "新寮",
-      "id" : "C1U69",
-      "altitude" : "101"
-   },
-   {
-      "longitude" : "121.7814",
-      "latitude" : "24.7456",
-      "name" : "壯圍",
-      "id" : "C0U62",
-      "altitude" : "17"
-   },
-   {
-      "longitude" : "121.8331",
-      "latitude" : "24.5206",
-      "name" : "東澳",
-      "id" : "C0U76",
-      "altitude" : "32"
-   },
-   {
-      "longitude" : "121.8103",
-      "latitude" : "24.4494",
-      "name" : "南澳",
-      "id" : "C0U77",
-      "altitude" : "5"
-   },
-   {
-      "longitude" : "121.8406",
-      "latitude" : "24.5393",
-      "name" : "東澳嶺",
-      "id" : "C1U84",
-      "altitude" : "750"
-   },
-   {
-      "longitude" : "121.7703",
-      "latitude" : "24.3851",
-      "name" : "觀音海岸",
-      "id" : "C1U85",
-      "altitude" : "683"
-   },
-   {
-      "longitude" : "121.6711",
-      "latitude" : "24.7169",
-      "name" : "再連",
-      "id" : "C1U63",
-      "altitude" : "140"
-   },
-   {
-      "longitude" : "121.6331",
-      "latitude" : "24.7547",
-      "name" : "雙連埤",
-      "id" : "C0U52",
-      "altitude" : "517"
-   },
-   {
-      "longitude" : "121.9531",
-      "latitude" : "24.8414",
-      "name" : "龜山島",
-      "id" : "C0U75",
-      "altitude" : "398"
-   },
-   {
-      "longitude" : "121.8653",
-      "latitude" : "24.9092",
-      "name" : "北關",
-      "id" : "C1U58",
-      "altitude" : "8"
-   },
-   {
-      "longitude" : "121.8064",
-      "latitude" : "24.8539",
-      "name" : "頭城",
-      "id" : "C1U59",
-      "altitude" : "6"
-   },
-   {
-      "longitude" : "121.67",
-      "latitude" : "24.7878",
-      "name" : "大礁溪",
-      "id" : "C1U61",
-      "altitude" : "268"
-   },
-   {
-      "longitude" : "121.7592",
-      "latitude" : "24.8203",
-      "name" : "礁溪",
-      "id" : "C0U60",
-      "altitude" : "10"
-   },
-   {
-      "longitude" : "121.7406",
-      "latitude" : "24.685",
-      "name" : "羅東",
-      "id" : "C0U64",
-      "altitude" : "24"
-   },
-   {
-      "longitude" : "121.8644",
-      "latitude" : "24.6017",
-      "name" : "蘇澳",
-      "id" : "46706",
-      "altitude" : "25"
-   },
-   {
-      "longitude" : "121.8317",
-      "latitude" : "24.4847",
-      "name" : "烏石鼻",
-      "id" : "C1U83",
-      "altitude" : "618"
-   },
-   {
-      "longitude" : "121.6867",
-      "latitude" : "25.0808",
-      "name" : "五堵",
-      "id" : "01B03",
-      "altitude" : "16"
-   },
-   {
-      "longitude" : "121.7321",
-      "latitude" : "25.1348",
-      "name" : "基隆",
-      "id" : "46694",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "121.4614",
-      "latitude" : "25.1114",
-      "name" : "社子",
-      "id" : "C0A98",
-      "altitude" : "54"
-   },
-   {
-      "longitude" : "121.5289",
-      "latitude" : "25.1194",
-      "name" : "天母",
-      "id" : "C0A9C",
-      "altitude" : "63"
-   },
-   {
-      "longitude" : "121.495",
-      "latitude" : "25.0922",
-      "name" : "士林",
-      "id" : "C0A9E",
-      "altitude" : "26"
-   },
-   {
-      "longitude" : "121.5313",
-      "latitude" : "25.0162",
-      "name" : "公館",
-      "id" : "C1A73",
-      "altitude" : "22"
-   },
-   {
-      "longitude" : "121.5347",
-      "latitude" : "25.0797",
-      "name" : "大直",
-      "id" : "C0A9A",
-      "altitude" : "49"
-   },
-   {
-      "longitude" : "121.5431",
-      "latitude" : "25.0917",
-      "name" : "劍南",
-      "id" : "N/A",
-      "altitude" : "264"
-   },
-   {
-      "longitude" : "121.5202",
-      "latitude" : "25.0849",
-      "name" : "劍潭",
-      "id" : "N/A",
-      "altitude" : "120"
-   },
-   {
-      "longitude" : "121.5097",
-      "latitude" : "25.0214",
-      "name" : "中正橋",
-      "id" : "01A41",
-      "altitude" : "15"
-   },
-   {
-      "longitude" : "121.5656",
-      "latitude" : "25.0811",
-      "name" : "內湖",
-      "id" : "C0A9F",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "121.5656",
-      "latitude" : "25.1084",
-      "name" : "大崙尾山",
-      "id" : "C0A99",
-      "altitude" : "463"
-   },
-   {
-      "longitude" : "121.5959",
-      "latitude" : "25.0982",
-      "name" : "大湖",
-      "id" : "C1M57",
-      "altitude" : "187"
-   },
-   {
-      "longitude" : "121.5835",
-      "latitude" : "25.0865",
-      "name" : "碧湖國小",
-      "id" : "N/A",
-      "altitude" : "33"
-   },
-   {
-      "longitude" : "121.5675",
-      "latitude" : "25.0041",
-      "name" : "文山",
-      "id" : "C0AC8",
-      "altitude" : "40"
-   },
-   {
-      "longitude" : "121.5871",
-      "latitude" : "24.9707",
-      "name" : "貓空",
-      "id" : "N/A",
-      "altitude" : "317"
-   },
-   {
-      "longitude" : "121.5363",
-      "latitude" : "25.165",
-      "name" : "竹子湖",
-      "id" : "01A42",
-      "altitude" : "607"
-   },
-   {
-      "longitude" : "121.5059",
-      "latitude" : "25.1176",
-      "name" : "石牌",
-      "id" : "C0A9B",
-      "altitude" : "7"
-   },
-   {
-      "longitude" : "121.4612",
-      "latitude" : "25.1353",
-      "name" : "關渡",
-      "id" : "C1AC5",
-      "altitude" : "111"
-   },
-   {
-      "longitude" : "121.4757",
-      "latitude" : "25.1498",
-      "name" : "稻香",
-      "id" : "N/A",
-      "altitude" : "180"
-   },
-   {
-      "longitude" : "121.4907",
-      "latitude" : "25.1357",
-      "name" : "北投國小",
-      "id" : "N/A",
-      "altitude" : "37"
-   },
-   {
-      "longitude" : "121.5561",
-      "latitude" : "25.0394",
-      "name" : "信義",
-      "id" : "C1I08",
-      "altitude" : "71"
-   },
-   {
-      "longitude" : "121.5747",
-      "latitude" : "25.0311",
-      "name" : "四獸",
-      "id" : "N/A",
-      "altitude" : "144"
-   },
-   {
-      "longitude" : "121.5662",
-      "latitude" : "25.0189",
-      "name" : "挹翠",
-      "id" : "N/A",
-      "altitude" : "118"
-   },
-   {
-      "longitude" : "121.5947",
-      "latitude" : "25.0575",
-      "name" : "南港",
-      "id" : "C0A9G",
-      "altitude" : "42"
-   },
-   {
-      "longitude" : "121.6165",
-      "latitude" : "25.0358",
-      "name" : "舊莊",
-      "id" : "N/A",
-      "altitude" : "47"
-   },
-   {
-      "longitude" : "121.3953",
-      "latitude" : "25.1523",
-      "name" : "八里",
-      "id" : "C0AD1",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "121.4934",
-      "latitude" : "25.2596",
-      "name" : "三芝",
-      "id" : "C0AD0",
-      "altitude" : "86"
-   },
-   {
-      "longitude" : "121.4813",
-      "latitude" : "25.0585",
-      "name" : "三重",
-      "id" : "C0A9I",
-      "altitude" : "18"
-   },
-   {
-      "longitude" : "121.4164",
-      "latitude" : "24.8861",
-      "name" : "大豹",
-      "id" : "01A21",
-      "altitude" : "600"
-   },
-   {
-      "longitude" : "121.3615",
-      "latitude" : "24.9408",
-      "name" : "三峽",
-      "id" : "01A22",
-      "altitude" : "55"
-   },
-   {
-      "longitude" : "121.4369",
-      "latitude" : "24.9749",
-      "name" : "土城",
-      "id" : "C0AD4",
-      "altitude" : "32"
-   },
-   {
-      "longitude" : "121.4822",
-      "latitude" : "24.9945",
-      "name" : "中和",
-      "id" : "C0AG9",
-      "altitude" : "25"
-   },
-   {
-      "longitude" : "121.4272",
-      "latitude" : "25.0853",
-      "name" : "五股",
-      "id" : "C0A68",
-      "altitude" : "95"
-   },
-   {
-      "longitude" : "121.7346",
-      "latitude" : "25.0044",
-      "name" : "火燒寮",
-      "id" : "01A20",
-      "altitude" : "287"
-   },
-   {
-      "longitude" : "121.4967",
-      "latitude" : "25.0106",
-      "name" : "永和",
-      "id" : "C0A9D",
-      "altitude" : "77"
-   },
-   {
-      "longitude" : "121.5573",
-      "latitude" : "25.2656",
-      "name" : "富貴角",
-      "id" : "01A35",
-      "altitude" : "196"
-   },
-   {
-      "longitude" : "121.6546",
-      "latitude" : "24.9957",
-      "name" : "石碇",
-      "id" : "01A13",
-      "altitude" : "204"
-   },
-   {
-      "longitude" : "121.6417",
-      "latitude" : "24.9042",
-      "name" : "九芎根",
-      "id" : "L1A81",
-      "altitude" : "378"
-   },
-   {
-      "longitude" : "121.6414",
-      "latitude" : "24.9458",
-      "name" : "十三股",
-      "id" : "L1A82",
-      "altitude" : "530"
-   },
-   {
-      "longitude" : "121.6336",
-      "latitude" : "25.063",
-      "name" : "社后橋",
-      "id" : "01AG0",
-      "altitude" : "13"
-   },
-   {
-      "longitude" : "121.6003",
-      "latitude" : "25.1339",
-      "name" : "五指山",
-      "id" : "C0A87",
-      "altitude" : "685"
-   },
-   {
-      "longitude" : "121.6506",
-      "latitude" : "25.0687",
-      "name" : "汐止",
-      "id" : "C0AH0",
-      "altitude" : "38"
-   },
-   {
-      "longitude" : "121.7372",
-      "latitude" : "24.8928",
-      "name" : "碧湖",
-      "id" : "01A19",
-      "altitude" : "360"
-   },
-   {
-      "longitude" : "121.7014",
-      "latitude" : "24.9397",
-      "name" : "坪林",
-      "id" : "L1A83",
-      "altitude" : "300"
-   },
-   {
-      "longitude" : "121.7375",
-      "latitude" : "24.8939",
-      "name" : "四堵",
-      "id" : "C0A54",
-      "altitude" : "401"
-   },
-   {
-      "longitude" : "121.7375",
-      "latitude" : "24.8944",
-      "name" : "碧湖",
-      "id" : "01A19",
-      "altitude" : "386"
-   },
-   {
-      "longitude" : "121.37",
-      "latitude" : "25.0781",
-      "name" : "林口",
-      "id" : "C0A71",
-      "altitude" : "238"
-   },
-   {
-      "longitude" : "121.5858",
-      "latitude" : "25.2367",
-      "name" : "三和",
-      "id" : "C0A93",
-      "altitude" : "200"
-   },
-   {
-      "longitude" : "121.6356",
-      "latitude" : "25.2253",
-      "name" : "金山",
-      "id" : "C0A94",
-      "altitude" : "49"
-   },
-   {
-      "longitude" : "121.4946",
-      "latitude" : "24.7783",
-      "name" : "福山",
-      "id" : "01A43",
-      "altitude" : "405"
-   },
-   {
-      "longitude" : "121.5917",
-      "latitude" : "24.85",
-      "name" : "桶後",
-      "id" : "C0A57",
-      "altitude" : "387"
-   },
-   {
-      "longitude" : "121.5304",
-      "latitude" : "24.7726",
-      "name" : "下盆",
-      "id" : "C1A63",
-      "altitude" : "527"
-   },
-   {
-      "longitude" : "121.9342",
-      "latitude" : "25.0192",
-      "name" : "福隆",
-      "id" : "C0A88",
-      "altitude" : "6"
-   },
-   {
-      "longitude" : "121.9939",
-      "latitude" : "25.0094",
-      "name" : "三貂角",
-      "id" : "C0A97",
-      "altitude" : "116"
-   },
-   {
-      "longitude" : "121.44",
-      "latitude" : "25.1656",
-      "name" : "淡水",
-      "id" : "46690",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "121.5142",
-      "latitude" : "25.1773",
-      "name" : "大屯山",
-      "id" : "C0AC4",
-      "altitude" : "1086"
-   },
-   {
-      "longitude" : "121.6095",
-      "latitude" : "25.0031",
-      "name" : "深坑",
-      "id" : "C0AD2",
-      "altitude" : "57"
-   },
-   {
-      "longitude" : "121.5664",
-      "latitude" : "24.87",
-      "name" : "大桶山",
-      "id" : "01A44",
-      "altitude" : "916"
-   },
-   {
-      "longitude" : "121.5165",
-      "latitude" : "24.9608",
-      "name" : "新店",
-      "id" : "A0A9M",
-      "altitude" : "24"
-   },
-   {
-      "longitude" : "121.5381",
-      "latitude" : "24.9242",
-      "name" : "屈尺",
-      "id" : "C0A58",
-      "altitude" : "70"
-   },
-   {
-      "longitude" : "121.585",
-      "latitude" : "24.9358",
-      "name" : "四十份",
-      "id" : "C1A9N",
-      "altitude" : "435"
-   },
-   {
-      "longitude" : "121.5719",
-      "latitude" : "24.9089",
-      "name" : "翡翠",
-      "id" : "L1A79",
-      "altitude" : "202"
-   },
-   {
-      "longitude" : "121.4385",
-      "latitude" : "25.0532",
-      "name" : "新莊",
-      "id" : "C0ACA",
-      "altitude" : "25"
-   },
-   {
-      "longitude" : "121.8206",
-      "latitude" : "25.0592",
-      "name" : "三貂嶺",
-      "id" : "01AF9",
-      "altitude" : "118"
-   },
-   {
-      "longitude" : "121.7926",
-      "latitude" : "25.1149",
-      "name" : "瑞芳",
-      "id" : "01A38",
-      "altitude" : "97"
-   },
-   {
-      "longitude" : "121.9153",
-      "latitude" : "25.1308",
-      "name" : "鼻頭角",
-      "id" : "C0A95",
-      "altitude" : "118"
-   },
-   {
-      "longitude" : "121.7725",
-      "latitude" : "25.0728",
-      "name" : "五分山站",
-      "id" : "46685",
-      "altitude" : "757"
-   },
-   {
-      "longitude" : "121.8307",
-      "latitude" : "25.0931",
-      "name" : "大粗坑",
-      "id" : "swc07",
-      "altitude" : "84"
-   },
-   {
-      "longitude" : "121.6247",
-      "latitude" : "25.1677",
-      "name" : "大坪",
-      "id" : "C0A86",
-      "altitude" : "362"
-   },
-   {
-      "longitude" : "121.3939",
-      "latitude" : "24.9758",
-      "name" : "山佳",
-      "id" : "C0A52",
-      "altitude" : "10"
-   },
-   {
-      "longitude" : "121.8153",
-      "latitude" : "24.9731",
-      "name" : "泰平",
-      "id" : "C0A55",
-      "altitude" : "460"
-   },
-   {
-      "longitude" : "121.8561",
-      "latitude" : "25.0379",
-      "name" : "雙溪",
-      "id" : "C0A89",
-      "altitude" : "40"
-   },
-   {
-      "longitude" : "121.82",
-      "latitude" : "24.9736",
-      "name" : "太平",
-      "id" : "L1A84",
-      "altitude" : "403"
-   },
-   {
-      "longitude" : "121.4641",
-      "latitude" : "25.0885",
-      "name" : "蘆洲",
-      "id" : "C0AD3",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "121.3372",
-      "latitude" : "24.953",
-      "name" : "鶯歌",
-      "id" : "C0AD5",
-      "altitude" : "84"
-   },
-   {
-      "longitude" : "121.275",
-      "latitude" : "24.9305",
-      "name" : "八德",
-      "id" : "C0C49",
-      "altitude" : "157"
-   },
-   {
-      "longitude" : "121.2178",
-      "latitude" : "25.0494",
-      "name" : "埔心",
-      "id" : "C0G81",
-      "altitude" : "70"
-   },
-   {
-      "longitude" : "121.2569",
-      "latitude" : "24.8847",
-      "name" : "大溪",
-      "id" : "C0C63",
-      "altitude" : "209"
-   },
-   {
-      "longitude" : "121.1771",
-      "latitude" : "24.9695",
-      "name" : "中壢",
-      "id" : "C0C52",
-      "altitude" : "151"
-   },
-   {
-      "longitude" : "121.2064",
-      "latitude" : "24.8994",
-      "name" : "平鎮",
-      "id" : "C0C65",
-      "altitude" : "208"
-   },
-   {
-      "longitude" : "121.315",
-      "latitude" : "24.9942",
-      "name" : "桃園",
-      "id" : "C0C48",
-      "altitude" : "105"
-   },
-   {
-      "longitude" : "121.3833",
-      "latitude" : "24.6833",
-      "name" : "巴陵",
-      "id" : "21C07",
-      "altitude" : "1220"
-   },
-   {
-      "longitude" : "121.35",
-      "latitude" : "24.7167",
-      "name" : "高義",
-      "id" : "21C08",
-      "altitude" : "620"
-   },
-   {
-      "longitude" : "121.4",
-      "latitude" : "24.6333",
-      "name" : "嘎拉賀",
-      "id" : "21C09",
-      "altitude" : "1260"
-   },
-   {
-      "longitude" : "121.35",
-      "latitude" : "24.8",
-      "name" : "霞雲",
-      "id" : "21C14",
-      "altitude" : "350"
-   },
-   {
-      "longitude" : "121.3443",
-      "latitude" : "24.8221",
-      "name" : "復興",
-      "id" : "C0V21",
-      "altitude" : "482"
-   },
-   {
-      "longitude" : "121.0433",
-      "latitude" : "25.0158",
-      "name" : "新屋",
-      "id" : "46705",
-      "altitude" : "5"
-   },
-   {
-      "longitude" : "121.1401",
-      "latitude" : "24.9227",
-      "name" : "楊梅",
-      "id" : "C0C50",
-      "altitude" : "181"
-   },
-   {
-      "longitude" : "121.0789",
-      "latitude" : "24.9419",
-      "name" : "水尾",
-      "id" : "C1C51",
-      "altitude" : "106"
-   },
-   {
-      "longitude" : "121.2361",
-      "latitude" : "24.8192",
-      "name" : "石門後池",
-      "id" : "N/A",
-      "altitude" : "142"
-   },
-   {
-      "longitude" : "121.2164",
-      "latitude" : "24.8564",
-      "name" : "龍潭",
-      "id" : "C0C61",
-      "altitude" : "270"
-   },
-   {
-      "longitude" : "121.3664",
-      "latitude" : "25.0331",
-      "name" : "龜山",
-      "id" : "C0C64",
-      "altitude" : "177"
-   },
-   {
-      "longitude" : "121.2575",
-      "latitude" : "25.0861",
-      "name" : "蘆竹",
-      "id" : "C0C62",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "121.1451",
-      "latitude" : "25.0289",
-      "name" : "觀音",
-      "id" : "C0C59",
-      "altitude" : "29"
-   },
-   {
-      "longitude" : "121.1079",
-      "latitude" : "24.5287",
-      "name" : "雪霸",
-      "id" : "C0D55",
-      "altitude" : "1956"
-   },
-   {
-      "longitude" : "121.0719",
-      "latitude" : "24.5817",
-      "name" : "白蘭",
-      "id" : "C1D41",
-      "altitude" : "1290"
-   },
-   {
-      "longitude" : "121.1522",
-      "latitude" : "24.6347",
-      "name" : "太閣南",
-      "id" : "C1D42",
-      "altitude" : "1279"
-   },
-   {
-      "longitude" : "121.0829",
-      "latitude" : "24.6462",
-      "name" : "外坪",
-      "id" : "C1D64",
-      "altitude" : "718"
-   },
-   {
-      "longitude" : "121.3",
-      "latitude" : "24.6667",
-      "name" : "玉峰",
-      "id" : "21D15",
-      "altitude" : "780"
-   },
-   {
-      "longitude" : "121.2167",
-      "latitude" : "24.55",
-      "name" : "白石",
-      "id" : "21D16",
-      "altitude" : "1620"
-   },
-   {
-      "longitude" : "121.3",
-      "latitude" : "24.5667",
-      "name" : "鎮西堡",
-      "id" : "21D17",
-      "altitude" : "630"
-   },
-   {
-      "longitude" : "121.35",
-      "latitude" : "24.5833",
-      "name" : "西丘斯山",
-      "id" : "21D35",
-      "altitude" : "2000"
-   },
-   {
-      "longitude" : "121.2004",
-      "latitude" : "24.6801",
-      "name" : "梅花",
-      "id" : "C0D36",
-      "altitude" : "523"
-   },
-   {
-      "longitude" : "121.2839",
-      "latitude" : "24.7192",
-      "name" : "鳥嘴山",
-      "id" : "C1D40",
-      "altitude" : "839"
-   },
-   {
-      "longitude" : "121.0499",
-      "latitude" : "24.7693",
-      "name" : "竹東",
-      "id" : "C0D56",
-      "altitude" : "147"
-   },
-   {
-      "longitude" : "121.1107",
-      "latitude" : "24.7683",
-      "name" : "飛鳳山",
-      "id" : "C1D63",
-      "altitude" : "462"
-   },
-   {
-      "longitude" : "121.0091",
-      "latitude" : "24.6924",
-      "name" : "峨眉",
-      "id" : "C0D43",
-      "altitude" : "87"
-   },
-   {
-      "longitude" : "121.0358",
-      "latitude" : "24.9111",
-      "name" : "湖口",
-      "id" : "C0D37",
-      "altitude" : "79"
-   },
-   {
-      "longitude" : "121.1426",
-      "latitude" : "24.8518",
-      "name" : "打鐵坑",
-      "id" : "C0D48",
-      "altitude" : "223"
-   },
-   {
-      "longitude" : "121.0292",
-      "latitude" : "24.8467",
-      "name" : "新埔",
-      "id" : "C1D38",
-      "altitude" : "65"
-   },
-   {
-      "longitude" : "120.9772",
-      "latitude" : "24.8706",
-      "name" : "新豐",
-      "id" : "C0D59",
-      "altitude" : "143"
-   },
-   {
-      "longitude" : "121.1172",
-      "latitude" : "24.7117",
-      "name" : "橫山",
-      "id" : "C0F99",
-      "altitude" : "227"
-   },
-   {
-      "longitude" : "121.1657",
-      "latitude" : "24.8001",
-      "name" : "關西",
-      "id" : "C0D39",
-      "altitude" : "146"
-   },
-   {
-      "longitude" : "121.0178",
-      "latitude" : "24.7381",
-      "name" : "寶山",
-      "id" : "C0D58",
-      "altitude" : "120"
-   },
-   {
-      "longitude" : "120.7578",
-      "latitude" : "24.4128",
-      "name" : "三義",
-      "id" : "C0E53",
-      "altitude" : "341"
-   },
-   {
-      "longitude" : "120.9382",
-      "latitude" : "24.619",
-      "name" : "大河",
-      "id" : "C0E44",
-      "altitude" : "122"
-   },
-   {
-      "longitude" : "120.8664",
-      "latitude" : "24.4189",
-      "name" : "大湖",
-      "id" : "C1M57",
-      "altitude" : "320"
-   },
-   {
-      "longitude" : "120.8189",
-      "latitude" : "24.3494",
-      "name" : "新開",
-      "id" : "C1E51",
-      "altitude" : "326"
-   },
-   {
-      "longitude" : "120.8294",
-      "latitude" : "24.4028",
-      "name" : "南湖",
-      "id" : "C1E69",
-      "altitude" : "786"
-   },
-   {
-      "longitude" : "120.8933",
-      "latitude" : "24.3692",
-      "name" : "馬拉邦山",
-      "id" : "C1E71",
-      "altitude" : "990"
-   },
-   {
-      "longitude" : "120.8226",
-      "latitude" : "24.5286",
-      "name" : "公館",
-      "id" : "C1A73",
-      "altitude" : "83"
-   },
-   {
-      "longitude" : "120.8808",
-      "latitude" : "24.7108",
-      "name" : "竹南",
-      "id" : "C0E42",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "120.7403",
-      "latitude" : "24.5516",
-      "name" : "西湖",
-      "id" : "C0E81",
-      "altitude" : "53"
-   },
-   {
-      "longitude" : "120.8162",
-      "latitude" : "24.3148",
-      "name" : "卓蘭",
-      "id" : "C0E79",
-      "altitude" : "344"
-   },
-   {
-      "longitude" : "120.8973",
-      "latitude" : "24.2993",
-      "name" : "白布帆",
-      "id" : "swc01",
-      "altitude" : "496"
-   },
-   {
-      "longitude" : "120.9921",
-      "latitude" : "24.6032",
-      "name" : "南庄",
-      "id" : "C0E43",
-      "altitude" : "258"
-   },
-   {
-      "longitude" : "120.9947",
-      "latitude" : "24.5403",
-      "name" : "南礦",
-      "id" : "C1E67",
-      "altitude" : "1209"
-   },
-   {
-      "longitude" : "121.0261",
-      "latitude" : "24.5567",
-      "name" : "鳳美",
-      "id" : "C1E48",
-      "altitude" : "576"
-   },
-   {
-      "longitude" : "120.7264",
-      "latitude" : "24.5744",
-      "name" : "南勢",
-      "id" : "C1E60",
-      "altitude" : "125"
-   },
-   {
-      "longitude" : "120.7756",
-      "latitude" : "24.6081",
-      "name" : "後龍",
-      "id" : "C0E54",
-      "altitude" : "32"
-   },
-   {
-      "longitude" : "120.8164",
-      "latitude" : "24.5667",
-      "name" : "苗栗",
-      "id" : "C0E75",
-      "altitude" : "62"
-   },
-   {
-      "longitude" : "120.65",
-      "latitude" : "24.4503",
-      "name" : "苑裡",
-      "id" : "C0E76",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "120.9219",
-      "latitude" : "24.4531",
-      "name" : "馬都安",
-      "id" : "C0E61",
-      "altitude" : "850"
-   },
-   {
-      "longitude" : "120.9156",
-      "latitude" : "24.4236",
-      "name" : "南勢山",
-      "id" : "C1E68",
-      "altitude" : "977"
-   },
-   {
-      "longitude" : "120.9194",
-      "latitude" : "24.4936",
-      "name" : "八卦",
-      "id" : "C1E70",
-      "altitude" : "737"
-   },
-   {
-      "longitude" : "120.9322",
-      "latitude" : "24.3703",
-      "name" : "象鼻",
-      "id" : "C1E45",
-      "altitude" : "950"
-   },
-   {
-      "longitude" : "120.9778",
-      "latitude" : "24.3994",
-      "name" : "松安",
-      "id" : "C1E46",
-      "altitude" : "1325"
-   },
-   {
-      "longitude" : "120.9594",
-      "latitude" : "24.4906",
-      "name" : "泰安",
-      "id" : "C1E72",
-      "altitude" : "1409"
-   },
-   {
-      "longitude" : "120.6964",
-      "latitude" : "24.4736",
-      "name" : "通霄",
-      "id" : "C0E59",
-      "altitude" : "40"
-   },
-   {
-      "longitude" : "120.8566",
-      "latitude" : "24.6388",
-      "name" : "造橋",
-      "id" : "C0E74",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "120.912",
-      "latitude" : "24.541",
-      "name" : "獅潭",
-      "id" : "C0E82",
-      "altitude" : "220"
-   },
-   {
-      "longitude" : "120.7826",
-      "latitude" : "24.4915",
-      "name" : "銅鑼",
-      "id" : "C0E78",
-      "altitude" : "160"
-   },
-   {
-      "longitude" : "120.9042",
-      "latitude" : "24.69",
-      "name" : "頭份",
-      "id" : "C0E73",
-      "altitude" : "26"
-   },
-   {
-      "longitude" : "120.8786",
-      "latitude" : "24.5864",
-      "name" : "明德",
-      "id" : "C0E55",
-      "altitude" : "84"
-   },
-   {
-      "longitude" : "120.6324",
-      "latitude" : "24.3499",
-      "name" : "大甲",
-      "id" : "C0F93",
-      "altitude" : "100"
-   },
-   {
-      "longitude" : "120.58",
-      "latitude" : "24.3474",
-      "name" : "大安",
-      "id" : "C0F9K",
-      "altitude" : "30"
-   },
-   {
-      "longitude" : "120.564",
-      "latitude" : "24.1547",
-      "name" : "大肚",
-      "id" : "C0F00",
-      "altitude" : "273"
-   },
-   {
-      "longitude" : "120.6922",
-      "latitude" : "24.0944",
-      "name" : "大里",
-      "id" : "C0F9N",
-      "altitude" : "75"
-   },
-   {
-      "longitude" : "120.5993",
-      "latitude" : "24.2209",
-      "name" : "橫山",
-      "id" : "C0F99",
-      "altitude" : "253"
-   },
-   {
-      "longitude" : "120.7433",
-      "latitude" : "24.1056",
-      "name" : "中竹林",
-      "id" : "C0F9A",
-      "altitude" : "425"
-   },
-   {
-      "longitude" : "120.8122",
-      "latitude" : "24.0733",
-      "name" : "清水林",
-      "id" : "C1F9J",
-      "altitude" : "723"
-   },
-   {
-      "longitude" : "120.7141",
-      "latitude" : "24.1749",
-      "name" : "大坑",
-      "id" : "C0T9E",
-      "altitude" : "145"
-   },
-   {
-      "longitude" : "120.6975",
-      "latitude" : "24.3496",
-      "name" : "外埔",
-      "id" : "C0F9Q",
-      "altitude" : "149"
-   },
-   {
-      "longitude" : "120.7621",
-      "latitude" : "24.2819",
-      "name" : "石岡",
-      "id" : "C0F92",
-      "altitude" : "290"
-   },
-   {
-      "longitude" : "120.7215",
-      "latitude" : "24.3121",
-      "name" : "后里",
-      "id" : "C0F9L",
-      "altitude" : "253"
-   },
-   {
-      "longitude" : "120.6329",
-      "latitude" : "24.182",
-      "name" : "西屯",
-      "id" : "C0F9T",
-      "altitude" : "111"
-   },
-   {
-      "longitude" : "121.36",
-      "latitude" : "24.38",
-      "name" : "武陵",
-      "id" : "D2F23",
-      "altitude" : "1734"
-   },
-   {
-      "longitude" : "120.9375",
-      "latitude" : "24.2808",
-      "name" : "烏石坑",
-      "id" : "C1F9H",
-      "altitude" : "930"
-   },
-   {
-      "longitude" : "121.182",
-      "latitude" : "24.2567",
-      "name" : "德基",
-      "id" : "C1F9W",
-      "altitude" : "1970"
-   },
-   {
-      "longitude" : "120.9217",
-      "latitude" : "24.1844",
-      "name" : "白冷",
-      "id" : "C1F9C",
-      "altitude" : "610"
-   },
-   {
-      "longitude" : "121.0186",
-      "latitude" : "24.2825",
-      "name" : "雪嶺",
-      "id" : "C1F94",
-      "altitude" : "2620"
-   },
-   {
-      "longitude" : "121.0108",
-      "latitude" : "24.205",
-      "name" : "上谷關",
-      "id" : "C1F87",
-      "altitude" : "1000"
-   },
-   {
-      "longitude" : "120.9931",
-      "latitude" : "24.2675",
-      "name" : "稍來",
-      "id" : "C1F89",
-      "altitude" : "2205"
-   },
-   {
-      "longitude" : "121.2377",
-      "latitude" : "24.245",
-      "name" : "梨山",
-      "id" : "C0F86",
-      "altitude" : "2215"
-   },
-   {
-      "longitude" : "120.8964",
-      "latitude" : "24.2903",
-      "name" : "雙崎",
-      "id" : "C0F90",
-      "altitude" : "535"
-   },
-   {
-      "longitude" : "120.9778",
-      "latitude" : "24.1786",
-      "name" : "松鶴",
-      "id" : "swc13",
-      "altitude" : "741"
-   },
-   {
-      "longitude" : "120.8249",
-      "latitude" : "24.2482",
-      "name" : "東勢",
-      "id" : "C0F85",
-      "altitude" : "379"
-   },
-   {
-      "longitude" : "120.8328",
-      "latitude" : "24.2233",
-      "name" : "新伯公",
-      "id" : "C1F91",
-      "altitude" : "417"
-   },
-   {
-      "longitude" : "120.8411",
-      "latitude" : "24.2742",
-      "name" : "伯公龍",
-      "id" : "C1F9F",
-      "altitude" : "500"
-   },
-   {
-      "longitude" : "120.8397",
-      "latitude" : "24.1828",
-      "name" : "慶福山",
-      "id" : "C1F9G",
-      "altitude" : "810"
-   },
-   {
-      "longitude" : "120.6301",
-      "latitude" : "24.1389",
-      "name" : "南屯",
-      "id" : "C0F9U",
-      "altitude" : "74"
-   },
-   {
-      "longitude" : "120.623",
-      "latitude" : "24.1075",
-      "name" : "烏日",
-      "id" : "C0F9S",
-      "altitude" : "43"
-   },
-   {
-      "longitude" : "120.6503",
-      "latitude" : "24.2742",
-      "name" : "神岡",
-      "id" : "C0F9I",
-      "altitude" : "194"
-   },
-   {
-      "longitude" : "120.5541",
-      "latitude" : "24.314",
-      "name" : "清水",
-      "id" : "C0F9P",
-      "altitude" : "26"
-   },
-   {
-      "longitude" : "120.8075",
-      "latitude" : "24.2016",
-      "name" : "新社",
-      "id" : "C0F9V",
-      "altitude" : "525"
-   },
-   {
-      "longitude" : "120.8789",
-      "latitude" : "24.16",
-      "name" : "白毛台",
-      "id" : "C1F9D",
-      "altitude" : "639"
-   },
-   {
-      "longitude" : "120.8239",
-      "latitude" : "24.1619",
-      "name" : "龍安",
-      "id" : "C1F9E",
-      "altitude" : "563"
-   },
-   {
-      "longitude" : "120.6958",
-      "latitude" : "24.2148",
-      "name" : "潭子",
-      "id" : "C0F9O",
-      "altitude" : "175"
-   },
-   {
-      "longitude" : "120.5208",
-      "latitude" : "24.1863",
-      "name" : "龍井",
-      "id" : "C0F9R",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "120.7123",
-      "latitude" : "24.2563",
-      "name" : "豐原",
-      "id" : "C0F9M",
-      "altitude" : "230"
-   },
-   {
-      "longitude" : "120.7272",
-      "latitude" : "24.0681",
-      "name" : "桐林",
-      "id" : "C1F9B",
-      "altitude" : "130"
-   },
-   {
-      "longitude" : "120.609",
-      "latitude" : "23.8128",
-      "name" : "二水",
-      "id" : "C0G88",
-      "altitude" : "92"
-   },
-   {
-      "longitude" : "120.3439",
-      "latitude" : "23.8839",
-      "name" : "中西",
-      "id" : "C1G70",
-      "altitude" : "15"
-   },
-   {
-      "longitude" : "120.2719",
-      "latitude" : "23.8506",
-      "name" : "臺西",
-      "id" : "C0G71",
-      "altitude" : "64"
-   },
-   {
-      "longitude" : "120.5065",
-      "latitude" : "23.8792",
-      "name" : "北斗",
-      "id" : "C0G84",
-      "altitude" : "32"
-   },
-   {
-      "longitude" : "120.5804",
-      "latitude" : "23.8587",
-      "name" : "田中",
-      "id" : "C0G85",
-      "altitude" : "62"
-   },
-   {
-      "longitude" : "120.5014",
-      "latitude" : "23.9034",
-      "name" : "田尾",
-      "id" : "C0G82",
-      "altitude" : "29"
-   },
-   {
-      "longitude" : "120.4762",
-      "latitude" : "24.1505",
-      "name" : "伸港",
-      "id" : "C0G89",
-      "altitude" : "24"
-   },
-   {
-      "longitude" : "120.4957",
-      "latitude" : "24.0359",
-      "name" : "秀水",
-      "id" : "C0G78",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "120.5781",
-      "latitude" : "23.8994",
-      "name" : "社頭",
-      "id" : "C0G86",
-      "altitude" : "45"
-   },
-   {
-      "longitude" : "120.3119",
-      "latitude" : "23.924",
-      "name" : "芳苑",
-      "id" : "C0G87",
-      "altitude" : "12"
-   },
-   {
-      "longitude" : "120.5441",
-      "latitude" : "24.0178",
-      "name" : "花壇",
-      "id" : "C0G79",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "120.6131",
-      "latitude" : "24.0172",
-      "name" : "芬園",
-      "id" : "C0G62",
-      "altitude" : "110"
-   },
-   {
-      "longitude" : "120.5775",
-      "latitude" : "23.9483",
-      "name" : "員林",
-      "id" : "C0G65",
-      "altitude" : "34"
-   },
-   {
-      "longitude" : "120.5176",
-      "latitude" : "23.9487",
-      "name" : "埔心",
-      "id" : "C0G81",
-      "altitude" : "26"
-   },
-   {
-      "longitude" : "120.4236",
-      "latitude" : "24.0022",
-      "name" : "埔鹽",
-      "id" : "C0G80",
-      "altitude" : "15"
-   },
-   {
-      "longitude" : "120.4447",
-      "latitude" : "23.8678",
-      "name" : "埤頭",
-      "id" : "C0G83",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "120.4222",
-      "latitude" : "24.0769",
-      "name" : "鹿港",
-      "id" : "C0G64",
-      "altitude" : "17"
-   },
-   {
-      "longitude" : "120.4881",
-      "latitude" : "23.85",
-      "name" : "溪州",
-      "id" : "C1G67",
-      "altitude" : "14"
-   },
-   {
-      "longitude" : "120.5594",
-      "latitude" : "23.8178",
-      "name" : "下水埔",
-      "id" : "C1G69",
-      "altitude" : "110"
-   },
-   {
-      "longitude" : "120.4711",
-      "latitude" : "23.9517",
-      "name" : "溪湖",
-      "id" : "C0G66",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "120.5469",
-      "latitude" : "24.0806",
-      "name" : "彰化",
-      "id" : "N/A",
-      "altitude" : "98"
-   },
-   {
-      "longitude" : "120.4295",
-      "latitude" : "24.043",
-      "name" : "福興",
-      "id" : "C0G77",
-      "altitude" : "15"
-   },
-   {
-      "longitude" : "120.7585",
-      "latitude" : "23.8863",
-      "name" : "中寮",
-      "id" : "C0H95",
-      "altitude" : "192"
-   },
-   {
-      "longitude" : "120.8039",
-      "latitude" : "23.9358",
-      "name" : "蘆竹湳",
-      "id" : "C1I21",
-      "altitude" : "529"
-   },
-   {
-      "longitude" : "121.1967",
-      "latitude" : "24.1108",
-      "name" : "翠峰",
-      "id" : "C1H00",
-      "altitude" : "1655"
-   },
-   {
-      "longitude" : "121.2186",
-      "latitude" : "24.1944",
-      "name" : "翠巒",
-      "id" : "C1H85",
-      "altitude" : "2297"
-   },
-   {
-      "longitude" : "121.175",
-      "latitude" : "24.1256",
-      "name" : "瑞岩",
-      "id" : "C1H86",
-      "altitude" : "1676"
-   },
-   {
-      "longitude" : "121.1228",
-      "latitude" : "24.0206",
-      "name" : "仁愛",
-      "id" : "C1H87",
-      "altitude" : "1113"
-   },
-   {
-      "longitude" : "120.9547",
-      "latitude" : "24.0828",
-      "name" : "清流",
-      "id" : "C1H90",
-      "altitude" : "934"
-   },
-   {
-      "longitude" : "120.9861",
-      "latitude" : "24.1278",
-      "name" : "阿眉",
-      "id" : "C1H9B",
-      "altitude" : "1710"
-   },
-   {
-      "longitude" : "121.1236",
-      "latitude" : "23.9814",
-      "name" : "萬大",
-      "id" : "C1I02",
-      "altitude" : "1555"
-   },
-   {
-      "longitude" : "121.0442",
-      "latitude" : "23.9147",
-      "name" : "武界",
-      "id" : "C1I03",
-      "altitude" : "948"
-   },
-   {
-      "longitude" : "121.0128",
-      "latitude" : "23.8267",
-      "name" : "文文社",
-      "id" : "C1I04",
-      "altitude" : "1693"
-   },
-   {
-      "longitude" : "121.1706",
-      "latitude" : "23.9547",
-      "name" : "奧萬大",
-      "id" : "C1I32",
-      "altitude" : "1275"
-   },
-   {
-      "longitude" : "121.0681",
-      "latitude" : "23.9886",
-      "name" : "楓樹林",
-      "id" : "C1I33",
-      "altitude" : "1266"
-   },
-   {
-      "longitude" : "121.2654",
-      "latitude" : "24.1231",
-      "name" : "昆陽",
-      "id" : "C0H99",
-      "altitude" : "3076"
-   },
-   {
-      "longitude" : "121.2641",
-      "latitude" : "24.1448",
-      "name" : "合歡山",
-      "id" : "C0H9C",
-      "altitude" : "3402"
-   },
-   {
-      "longitude" : "121.1733",
-      "latitude" : "24.035",
-      "name" : "廬山",
-      "id" : "C0I01",
-      "altitude" : "1562"
-   },
-   {
-      "longitude" : "121.0805",
-      "latitude" : "24.019",
-      "name" : "南豐",
-      "id" : "88H89",
-      "altitude" : "791"
-   },
-   {
-      "longitude" : "120.8658",
-      "latitude" : "23.7303",
-      "name" : "上安橋",
-      "id" : "C1I30",
-      "altitude" : "781"
-   },
-   {
-      "longitude" : "120.8458",
-      "latitude" : "23.8339",
-      "name" : "水里",
-      "id" : "C1I27",
-      "altitude" : "593"
-   },
-   {
-      "longitude" : "120.8636",
-      "latitude" : "23.7817",
-      "name" : "龍神橋",
-      "id" : "C1I16",
-      "altitude" : "339"
-   },
-   {
-      "longitude" : "120.8629",
-      "latitude" : "23.7416",
-      "name" : "郡坑",
-      "id" : "swc05",
-      "altitude" : "421"
-   },
-   {
-      "longitude" : "120.6347",
-      "latitude" : "23.8225",
-      "name" : "埔中",
-      "id" : "C1I28",
-      "altitude" : "439"
-   },
-   {
-      "longitude" : "120.7517",
-      "latitude" : "23.6803",
-      "name" : "大鞍",
-      "id" : "C1I12",
-      "altitude" : "1515"
-   },
-   {
-      "longitude" : "120.6456",
-      "latitude" : "23.6442",
-      "name" : "桶頭",
-      "id" : "C1I13",
-      "altitude" : "311"
-   },
-   {
-      "longitude" : "120.7042",
-      "latitude" : "23.7303",
-      "name" : "中心崙",
-      "id" : "C1I20",
-      "altitude" : "677"
-   },
-   {
-      "longitude" : "120.6778",
-      "latitude" : "23.7647",
-      "name" : "竹山",
-      "id" : "C0I11",
-      "altitude" : "161"
-   },
-   {
-      "longitude" : "120.8347",
-      "latitude" : "23.5361",
-      "name" : "神木村",
-      "id" : "C0H9A",
-      "altitude" : "1595"
-   },
-   {
-      "longitude" : "120.8756",
-      "latitude" : "23.7564",
-      "name" : "西巒",
-      "id" : "C1I31",
-      "altitude" : "1001"
-   },
-   {
-      "longitude" : "120.8597",
-      "latitude" : "23.5658",
-      "name" : "新興橋",
-      "id" : "C1I34",
-      "altitude" : "897"
-   },
-   {
-      "longitude" : "120.9167",
-      "latitude" : "23.5581",
-      "name" : "東埔",
-      "id" : "C1I35",
-      "altitude" : "887"
-   },
-   {
-      "longitude" : "121.0797",
-      "latitude" : "23.7561",
-      "name" : "卡奈托灣",
-      "id" : "C1I14",
-      "altitude" : "1700"
-   },
-   {
-      "longitude" : "120.9411",
-      "latitude" : "23.8008",
-      "name" : "青雲",
-      "id" : "C1I15",
-      "altitude" : "393"
-   },
-   {
-      "longitude" : "120.8789",
-      "latitude" : "23.67",
-      "name" : "豐丘",
-      "id" : "swc06",
-      "altitude" : "1151"
-   },
-   {
-      "longitude" : "121.1328",
-      "latitude" : "23.7556",
-      "name" : "丹大",
-      "id" : "C1I05",
-      "altitude" : "2568"
-   },
-   {
-      "longitude" : "120.9028",
-      "latitude" : "23.6211",
-      "name" : "望鄉",
-      "id" : "C1I06",
-      "altitude" : "2403"
-   },
-   {
-      "longitude" : "120.8808",
-      "latitude" : "23.5925",
-      "name" : "和社",
-      "id" : "C1I07",
-      "altitude" : "825"
-   },
-   {
-      "longitude" : "120.8428",
-      "latitude" : "23.6914",
-      "name" : "信義",
-      "id" : "C1I08",
-      "altitude" : "536"
-   },
-   {
-      "longitude" : "120.8686",
-      "latitude" : "23.6699",
-      "name" : "豐丘",
-      "id" : "swc06",
-      "altitude" : "613"
-   },
-   {
-      "longitude" : "120.8482",
-      "latitude" : "23.5297",
-      "name" : "神木",
-      "id" : "swc03",
-      "altitude" : "1179"
-   },
-   {
-      "longitude" : "120.6302",
-      "latitude" : "23.9266",
-      "name" : "六分寮",
-      "id" : "C1H97",
-      "altitude" : "429"
-   },
-   {
-      "longitude" : "120.9097",
-      "latitude" : "23.9606",
-      "name" : "外大坪",
-      "id" : "C1I24",
-      "altitude" : "725"
-   },
-   {
-      "longitude" : "120.9831",
-      "latitude" : "23.9639",
-      "name" : "埔里",
-      "id" : "C1I25",
-      "altitude" : "732"
-   },
-   {
-      "longitude" : "120.9989",
-      "latitude" : "23.9264",
-      "name" : "北坑",
-      "id" : "C1I26",
-      "altitude" : "601"
-   },
-   {
-      "longitude" : "121.0067",
-      "latitude" : "24.0189",
-      "name" : "凌霄",
-      "id" : "C1H88",
-      "altitude" : "1318"
-   },
-   {
-      "longitude" : "120.9442",
-      "latitude" : "23.9722",
-      "name" : "大肚城",
-      "id" : "C1H89",
-      "altitude" : "451"
-   },
-   {
-      "longitude" : "120.7942",
-      "latitude" : "23.9692",
-      "name" : "雙冬",
-      "id" : "C1H94",
-      "altitude" : "630"
-   },
-   {
-      "longitude" : "120.6722",
-      "latitude" : "23.9754",
-      "name" : "草屯",
-      "id" : "C0H96",
-      "altitude" : "120"
-   },
-   {
-      "longitude" : "120.8525",
-      "latitude" : "24.0636",
-      "name" : "水長流",
-      "id" : "C1I19",
-      "altitude" : "660"
-   },
-   {
-      "longitude" : "120.8392",
-      "latitude" : "23.9069",
-      "name" : "樟湖",
-      "id" : "C1I22",
-      "altitude" : "1098"
-   },
-   {
-      "longitude" : "120.8372",
-      "latitude" : "23.9639",
-      "name" : "九份二山",
-      "id" : "C1I23",
-      "altitude" : "917"
-   },
-   {
-      "longitude" : "120.8717",
-      "latitude" : "24.1039",
-      "name" : "長福",
-      "id" : "C1H92",
-      "altitude" : "736"
-   },
-   {
-      "longitude" : "120.8664",
-      "latitude" : "23.9872",
-      "name" : "北山",
-      "id" : "C1H93",
-      "altitude" : "393"
-   },
-   {
-      "longitude" : "120.8487",
-      "latitude" : "23.9536",
-      "name" : "九份二山",
-      "id" : "C1I23",
-      "altitude" : "527"
-   },
-   {
-      "longitude" : "120.8999",
-      "latitude" : "23.883",
-      "name" : "日月潭",
-      "id" : "46765",
-      "altitude" : "1015"
-   },
-   {
-      "longitude" : "120.9206",
-      "latitude" : "23.9028",
-      "name" : "魚池",
-      "id" : "C1H91",
-      "altitude" : "724"
-   },
-   {
-      "longitude" : "120.7992",
-      "latitude" : "23.6631",
-      "name" : "溪頭",
-      "id" : "C1I10",
-      "altitude" : "1810"
-   },
-   {
-      "longitude" : "120.7792",
-      "latitude" : "23.7297",
-      "name" : "鳳凰",
-      "id" : "C0I09",
-      "altitude" : "910"
-   },
-   {
-      "longitude" : "120.7669",
-      "latitude" : "23.8283",
-      "name" : "集集",
-      "id" : "C1I17",
-      "altitude" : "235"
-   },
-   {
-      "longitude" : "120.161",
-      "latitude" : "23.5374",
-      "name" : "宜梧",
-      "id" : "C0K29",
-      "altitude" : "5"
-   },
-   {
-      "longitude" : "120.3817",
-      "latitude" : "23.69",
-      "name" : "土庫",
-      "id" : "C1K34",
-      "altitude" : "33"
-   },
-   {
-      "longitude" : "120.5081",
-      "latitude" : "23.7072",
-      "name" : "斗六",
-      "id" : "C1K31",
-      "altitude" : "40"
-   },
-   {
-      "longitude" : "120.5036",
-      "latitude" : "23.6597",
-      "name" : "阿丹",
-      "id" : "C1K32",
-      "altitude" : "51"
-   },
-   {
-      "longitude" : "120.2867",
-      "latitude" : "23.5706",
-      "name" : "北港",
-      "id" : "C1K35",
-      "altitude" : "24"
-   },
-   {
-      "longitude" : "120.5931",
-      "latitude" : "23.5886",
-      "name" : "山豬湖",
-      "id" : "C1K38",
-      "altitude" : "649"
-   },
-   {
-      "longitude" : "120.5972",
-      "latitude" : "23.6431",
-      "name" : "大埔",
-      "id" : "C0K30",
-      "altitude" : "369"
-   },
-   {
-      "longitude" : "120.6933",
-      "latitude" : "23.5956",
-      "name" : "草嶺",
-      "id" : "C0K24",
-      "altitude" : "1132"
-   },
-   {
-      "longitude" : "120.5999",
-      "latitude" : "23.5953",
-      "name" : "華山",
-      "id" : "swc10",
-      "altitude" : "522"
-   },
-   {
-      "longitude" : "120.2172",
-      "latitude" : "23.6311",
-      "name" : "四湖",
-      "id" : "C0K28",
-      "altitude" : "23"
-   },
-   {
-      "longitude" : "120.4444",
-      "latitude" : "23.8064",
-      "name" : "西螺",
-      "id" : "C1K23",
-      "altitude" : "79"
-   },
-   {
-      "longitude" : "120.631",
-      "latitude" : "23.7556",
-      "name" : "坪頂",
-      "id" : "swc14",
-      "altitude" : "305"
-   },
-   {
-      "longitude" : "120.4325",
-      "latitude" : "23.7214",
-      "name" : "虎尾",
-      "id" : "C0K33",
-      "altitude" : "38"
-   },
-   {
-      "longitude" : "120.3108",
-      "latitude" : "23.7575",
-      "name" : "崙背",
-      "id" : "C1K25",
-      "altitude" : "59"
-   },
-   {
-      "longitude" : "120.225",
-      "latitude" : "23.7911",
-      "name" : "後安寮",
-      "id" : "C1K26",
-      "altitude" : "29"
-   },
-   {
-      "longitude" : "120.2997",
-      "latitude" : "23.7067",
-      "name" : "褒忠",
-      "id" : "C1K27",
-      "altitude" : "21"
-   },
-   {
-      "longitude" : "120.5175",
-      "latitude" : "23.5631",
-      "name" : "中坑",
-      "id" : "C1M45",
-      "altitude" : "167"
-   },
-   {
-      "longitude" : "120.5683",
-      "latitude" : "23.2536",
-      "name" : "草嶺(嘉)",
-      "id" : "N/A",
-      "altitude" : "369"
-   },
-   {
-      "longitude" : "120.5736",
-      "latitude" : "23.3264",
-      "name" : "馬頭山",
-      "id" : "C0M41",
-      "altitude" : "245"
-   },
-   {
-      "longitude" : "120.5122",
-      "latitude" : "23.4253",
-      "name" : "中埔",
-      "id" : "C1M55",
-      "altitude" : "110"
-   },
-   {
-      "longitude" : "120.3539",
-      "latitude" : "23.4803",
-      "name" : "魚寮",
-      "id" : "C1M50",
-      "altitude" : "41"
-   },
-   {
-      "longitude" : "120.3772",
-      "latitude" : "23.4136",
-      "name" : "南靖",
-      "id" : "C1M56",
-      "altitude" : "43"
-   },
-   {
-      "longitude" : "120.2494",
-      "latitude" : "23.4714",
-      "name" : "朴子",
-      "id" : "C1M51",
-      "altitude" : "8"
-   },
-   {
-      "longitude" : "120.655",
-      "latitude" : "23.4981",
-      "name" : "石磐龍",
-      "id" : "C1M61",
-      "altitude" : "1083"
-   },
-   {
-      "longitude" : "120.5994",
-      "latitude" : "23.5386",
-      "name" : "樟腦寮",
-      "id" : "C1M48",
-      "altitude" : "798"
-   },
-   {
-      "longitude" : "120.5561",
-      "latitude" : "23.4875",
-      "name" : "內埔",
-      "id" : "C1M49",
-      "altitude" : "130"
-   },
-   {
-      "longitude" : "120.6911",
-      "latitude" : "23.4958",
-      "name" : "奮起湖",
-      "id" : "C0M53",
-      "altitude" : "1385"
-   },
-   {
-      "longitude" : "120.1403",
-      "latitude" : "23.5072",
-      "name" : "鰲鼓",
-      "id" : "C1M47",
-      "altitude" : "23"
-   },
-   {
-      "longitude" : "120.8703",
-      "latitude" : "23.4808",
-      "name" : "新高口",
-      "id" : "C1M44",
-      "altitude" : "2540"
-   },
-   {
-      "longitude" : "120.7408",
-      "latitude" : "23.5969",
-      "name" : "豐山",
-      "id" : "swc12",
-      "altitude" : "1052"
-   },
-   {
-      "longitude" : "120.7399",
-      "latitude" : "23.5873",
-      "name" : "豐山",
-      "id" : "swc12",
-      "altitude" : "828"
-   },
-   {
-      "longitude" : "120.6669",
-      "latitude" : "23.5469",
-      "name" : "瑞里",
-      "id" : "C1M62",
-      "altitude" : "1252"
-   },
-   {
-      "longitude" : "120.6125",
-      "latitude" : "23.4767",
-      "name" : "大湖",
-      "id" : "C1M57",
-      "altitude" : "722"
-   },
-   {
-      "longitude" : "120.5953",
-      "latitude" : "23.4081",
-      "name" : "頭凍",
-      "id" : "C1M60",
-      "altitude" : "986"
-   },
-   {
-      "longitude" : "120.6458",
-      "latitude" : "23.4078",
-      "name" : "瀨頭",
-      "id" : "C1M39",
-      "altitude" : "1090"
-   },
-   {
-      "longitude" : "120.5728",
-      "latitude" : "23.3636",
-      "name" : "小公田",
-      "id" : "C1M54",
-      "altitude" : "768"
-   },
-   {
-      "longitude" : "120.3961",
-      "latitude" : "23.6058",
-      "name" : "溪口",
-      "id" : "C1M46",
-      "altitude" : "14"
-   },
-   {
-      "longitude" : "120.2403",
-      "latitude" : "23.3714",
-      "name" : "東後寮",
-      "id" : "C1M52",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "120.1381",
-      "latitude" : "23.1436",
-      "name" : "七股",
-      "id" : "C1X09",
-      "altitude" : "6"
-   },
-   {
-      "longitude" : "120.2481",
-      "latitude" : "23.2269",
-      "name" : "下營",
-      "id" : "C1X06",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "120.4103",
-      "latitude" : "23.15",
-      "name" : "環湖",
-      "id" : "C1O85",
-      "altitude" : "44"
-   },
-   {
-      "longitude" : "120.3533",
-      "latitude" : "23.1219",
-      "name" : "大內",
-      "id" : "C1O86",
-      "altitude" : "61"
-   },
-   {
-      "longitude" : "120.3911",
-      "latitude" : "23.2225",
-      "name" : "王爺宮",
-      "id" : "C1O84",
-      "altitude" : "144"
-   },
-   {
-      "longitude" : "120.1164",
-      "latitude" : "23.27",
-      "name" : "北門",
-      "id" : "C1X07",
-      "altitude" : "14"
-   },
-   {
-      "longitude" : "120.4525",
-      "latitude" : "23.1275",
-      "name" : "玉井",
-      "id" : "C0O93",
-      "altitude" : "42"
-   },
-   {
-      "longitude" : "120.5036",
-      "latitude" : "23.3289",
-      "name" : "關子嶺",
-      "id" : "C0X02",
-      "altitude" : "403"
-   },
-   {
-      "longitude" : "120.4208",
-      "latitude" : "23.3264",
-      "name" : "白河",
-      "id" : "C1X03",
-      "altitude" : "33"
-   },
-   {
-      "longitude" : "120.5142",
-      "latitude" : "23.3133",
-      "name" : "大棟山",
-      "id" : "C1O87",
-      "altitude" : "1246"
-   },
-   {
-      "longitude" : "120.1367",
-      "latitude" : "23.0783",
-      "name" : "和順",
-      "id" : "C1O95",
-      "altitude" : "4"
-   },
-   {
-      "longitude" : "120.1367",
-      "latitude" : "23.175",
-      "name" : "佳里",
-      "id" : "C0X08",
-      "altitude" : "2"
-   },
-   {
-      "longitude" : "120.4553",
-      "latitude" : "23.2931",
-      "name" : "東原",
-      "id" : "C1X04",
-      "altitude" : "232"
-   },
-   {
-      "longitude" : "120.3772",
-      "latitude" : "23.2986",
-      "name" : "東河",
-      "id" : "C0S81",
-      "altitude" : "19"
-   },
-   {
-      "longitude" : "120.5858",
-      "latitude" : "23.175",
-      "name" : "關山",
-      "id" : "C1O88",
-      "altitude" : "223"
-   },
-   {
-      "longitude" : "120.4869",
-      "latitude" : "23.0816",
-      "name" : "北寮",
-      "id" : "C0O83",
-      "altitude" : "105"
-   },
-   {
-      "longitude" : "120.5286",
-      "latitude" : "23.0737",
-      "name" : "羌黃坑",
-      "id" : "88O95",
-      "altitude" : "274"
-   },
-   {
-      "longitude" : "120.3139",
-      "latitude" : "23.2942",
-      "name" : "新營",
-      "id" : "C0O91",
-      "altitude" : "16"
-   },
-   {
-      "longitude" : "120.2894",
-      "latitude" : "23.1144",
-      "name" : "善化",
-      "id" : "C0O90",
-      "altitude" : "9"
-   },
-   {
-      "longitude" : "120.3397",
-      "latitude" : "23.0231",
-      "name" : "虎頭埤",
-      "id" : "C1O97",
-      "altitude" : "60"
-   },
-   {
-      "longitude" : "120.2906",
-      "latitude" : "23.0639",
-      "name" : "新市",
-      "id" : "C1O98",
-      "altitude" : "76"
-   },
-   {
-      "longitude" : "120.4764",
-      "latitude" : "23.185",
-      "name" : "楠西",
-      "id" : "C1O92",
-      "altitude" : "150"
-   },
-   {
-      "longitude" : "120.4897",
-      "latitude" : "23.2208",
-      "name" : "曾文",
-      "id" : "C0O81",
-      "altitude" : "174"
-   },
-   {
-      "longitude" : "120.3612",
-      "latitude" : "22.9613",
-      "name" : "崎頂",
-      "id" : "C0O96",
-      "altitude" : "80"
-   },
-   {
-      "longitude" : "120.2853",
-      "latitude" : "22.9933",
-      "name" : "媽祖廟",
-      "id" : "C1O99",
-      "altitude" : "23"
-   },
-   {
-      "longitude" : "120.3011",
-      "latitude" : "22.9375",
-      "name" : "沙崙",
-      "id" : "C1N00",
-      "altitude" : "25"
-   },
-   {
-      "longitude" : "120.2522",
-      "latitude" : "23.3317",
-      "name" : "岸內",
-      "id" : "C1X01",
-      "altitude" : "15"
-   },
-   {
-      "longitude" : "120.3442",
-      "latitude" : "22.7525",
-      "name" : "鳳雄",
-      "id" : "C1V42",
-      "altitude" : "55"
-   },
-   {
-      "longitude" : "120.4239",
-      "latitude" : "22.6119",
-      "name" : "大寮",
-      "id" : "C1V18",
-      "altitude" : "24"
-   },
-   {
-      "longitude" : "120.4386",
-      "latitude" : "22.7403",
-      "name" : "溪埔",
-      "id" : "C1V35",
-      "altitude" : "36"
-   },
-   {
-      "longitude" : "120.3845",
-      "latitude" : "22.5469",
-      "name" : "鳳森",
-      "id" : "C1V45",
-      "altitude" : "51"
-   },
-   {
-      "longitude" : "120.4583",
-      "latitude" : "22.9769",
-      "name" : "木柵",
-      "id" : "C1V36",
-      "altitude" : "94"
-   },
-   {
-      "longitude" : "120.6381",
-      "latitude" : "22.89",
-      "name" : "大津",
-      "id" : "C1V34",
-      "altitude" : "190"
-   },
-   {
-      "longitude" : "120.6525",
-      "latitude" : "23.0536",
-      "name" : "新發",
-      "id" : "C1V24",
-      "altitude" : "470"
-   },
-   {
-      "longitude" : "120.2872",
-      "latitude" : "22.6789",
-      "name" : "左營",
-      "id" : "C1V43",
-      "altitude" : "13"
-   },
-   {
-      "longitude" : "120.3939",
-      "latitude" : "22.895",
-      "name" : "古亭坑",
-      "id" : "C0V37",
-      "altitude" : "30"
-   },
-   {
-      "longitude" : "120.5825",
-      "latitude" : "23.0817",
-      "name" : "甲仙",
-      "id" : "C0V25",
-      "altitude" : "270"
-   },
-   {
-      "longitude" : "120.5317",
-      "latitude" : "22.9731",
-      "name" : "月眉",
-      "id" : "C1V26",
-      "altitude" : "112"
-   },
-   {
-      "longitude" : "120.5847",
-      "latitude" : "23.0304",
-      "name" : "集來",
-      "id" : "88V56",
-      "altitude" : "403"
-   },
-   {
-      "longitude" : "120.6561",
-      "latitude" : "23.2619",
-      "name" : "表湖",
-      "id" : "C0V15",
-      "altitude" : "1163"
-   },
-   {
-      "longitude" : "120.6972",
-      "latitude" : "23.2817",
-      "name" : "民生",
-      "id" : "N/A",
-      "altitude" : "1040"
-   },
-   {
-      "longitude" : "120.3195",
-      "latitude" : "22.8849",
-      "name" : "阿蓮",
-      "id" : "C1V53",
-      "altitude" : "34"
-   },
-   {
-      "longitude" : "120.5492",
-      "latitude" : "22.8433",
-      "name" : "吉東",
-      "id" : "C1V32",
-      "altitude" : "95"
-   },
-   {
-      "longitude" : "120.5111",
-      "latitude" : "22.9006",
-      "name" : "美濃",
-      "id" : "C0V31",
-      "altitude" : "46"
-   },
-   {
-      "longitude" : "120.7983",
-      "latitude" : "23.0778",
-      "name" : "溪南",
-      "id" : "C1V27",
-      "altitude" : "1792"
-   },
-   {
-      "longitude" : "120.7069",
-      "latitude" : "23.0039",
-      "name" : "御油山",
-      "id" : "C1V30",
-      "altitude" : "1637"
-   },
-   {
-      "longitude" : "120.9036",
-      "latitude" : "23.2758",
-      "name" : "南天池",
-      "id" : "C1V19",
-      "altitude" : "2700"
-   },
-   {
-      "longitude" : "120.8154",
-      "latitude" : "23.2703",
-      "name" : "梅山",
-      "id" : "C1V20",
-      "altitude" : "870"
-   },
-   {
-      "longitude" : "120.7978",
-      "latitude" : "23.2242",
-      "name" : "復興",
-      "id" : "C0V21",
-      "altitude" : "700"
-   },
-   {
-      "longitude" : "120.8053",
-      "latitude" : "23.1558",
-      "name" : "小關山",
-      "id" : "C1V22",
-      "altitude" : "1781"
-   },
-   {
-      "longitude" : "120.7089",
-      "latitude" : "23.1367",
-      "name" : "高中",
-      "id" : "C1V23",
-      "altitude" : "760"
-   },
-   {
-      "longitude" : "120.8844",
-      "latitude" : "23.4381",
-      "name" : "楠溪",
-      "id" : "C1V46",
-      "altitude" : "1857"
-   },
-   {
-      "longitude" : "120.946",
-      "latitude" : "23.4651",
-      "name" : "排雲",
-      "id" : "C1V17",
-      "altitude" : "3690"
-   },
-   {
-      "longitude" : "120.2906",
-      "latitude" : "22.6291",
-      "name" : "新興",
-      "id" : "C0V49",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "120.2719",
-      "latitude" : "22.8383",
-      "name" : "三爺",
-      "id" : "C1P9A",
-      "altitude" : "35"
-   },
-   {
-      "longitude" : "120.4861",
-      "latitude" : "22.8797",
-      "name" : "旗山",
-      "id" : "C1V33",
-      "altitude" : "63"
-   },
-   {
-      "longitude" : "120.2779",
-      "latitude" : "22.5904",
-      "name" : "旗津",
-      "id" : "C0V50",
-      "altitude" : "6"
-   },
-   {
-      "longitude" : "120.3481",
-      "latitude" : "22.6486",
-      "name" : "鳳山",
-      "id" : "C1V44",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "120.2897",
-      "latitude" : "22.7569",
-      "name" : "岡山",
-      "id" : "C1V41",
-      "altitude" : "31"
-   },
-   {
-      "longitude" : "120.3597",
-      "latitude" : "22.815",
-      "name" : "尖山",
-      "id" : "C1V39",
-      "altitude" : "60"
-   },
-   {
-      "longitude" : "120.3353",
-      "latitude" : "22.8147",
-      "name" : "竹子腳",
-      "id" : "C1V40",
-      "altitude" : "51"
-   },
-   {
-      "longitude" : "120.6372",
-      "latitude" : "22.7714",
-      "name" : "古夏",
-      "id" : "C1R11",
-      "altitude" : "140"
-   },
-   {
-      "longitude" : "120.6964",
-      "latitude" : "22.765",
-      "name" : "上德文",
-      "id" : "C1R12",
-      "altitude" : "820"
-   },
-   {
-      "longitude" : "120.6758",
-      "latitude" : "22.835",
-      "name" : "尾寮山",
-      "id" : "C0R10",
-      "altitude" : "1018"
-   },
-   {
-      "longitude" : "120.6317",
-      "latitude" : "22.7119",
-      "name" : "三地門",
-      "id" : "C0R15",
-      "altitude" : "99"
-   },
-   {
-      "longitude" : "120.5942",
-      "latitude" : "22.6689",
-      "name" : "龍泉",
-      "id" : "C1R20",
-      "altitude" : "61"
-   },
-   {
-      "longitude" : "120.7417",
-      "latitude" : "22.1167",
-      "name" : "石門山",
-      "id" : "C1R29",
-      "altitude" : "260"
-   },
-   {
-      "longitude" : "120.8786",
-      "latitude" : "22.1978",
-      "name" : "旭海",
-      "id" : "C1R30",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "120.8511",
-      "latitude" : "22.2417",
-      "name" : "壽卡",
-      "id" : "C1R31",
-      "altitude" : "489"
-   },
-   {
-      "longitude" : "120.8297",
-      "latitude" : "22.1942",
-      "name" : "牡丹",
-      "id" : "C0R34",
-      "altitude" : "285"
-   },
-   {
-      "longitude" : "120.8325",
-      "latitude" : "22.1696",
-      "name" : "牡丹池山",
-      "id" : "C0R42",
-      "altitude" : "504"
-   },
-   {
-      "longitude" : "120.7081",
-      "latitude" : "22.0758",
-      "name" : "車城",
-      "id" : "C1R32",
-      "altitude" : "54"
-   },
-   {
-      "longitude" : "120.4886",
-      "latitude" : "22.8014",
-      "name" : "里港",
-      "id" : "C1R09",
-      "altitude" : "42"
-   },
-   {
-      "longitude" : "120.668",
-      "latitude" : "22.5276",
-      "name" : "來義",
-      "id" : "88R46",
-      "altitude" : "189"
-   },
-   {
-      "longitude" : "120.6847",
-      "latitude" : "22.1917",
-      "name" : "楓港",
-      "id" : "C0R40",
-      "altitude" : "63"
-   },
-   {
-      "longitude" : "120.6531",
-      "latitude" : "22.2486",
-      "name" : "枋山",
-      "id" : "C1R33",
-      "altitude" : "36"
-   },
-   {
-      "longitude" : "120.59",
-      "latitude" : "22.3681",
-      "name" : "枋寮",
-      "id" : "C0R38",
-      "altitude" : "69"
-   },
-   {
-      "longitude" : "120.4333",
-      "latitude" : "22.4667",
-      "name" : "東港",
-      "id" : "C0R43",
-      "altitude" : "31"
-   },
-   {
-      "longitude" : "120.5086",
-      "latitude" : "22.4944",
-      "name" : "南州",
-      "id" : "C1R23",
-      "altitude" : "20"
-   },
-   {
-      "longitude" : "120.4836",
-      "latitude" : "22.6619",
-      "name" : "屏東",
-      "id" : "C1R17",
-      "altitude" : "26"
-   },
-   {
-      "longitude" : "120.7281",
-      "latitude" : "21.9244",
-      "name" : "貓鼻頭",
-      "id" : "C0R35",
-      "altitude" : "49"
-   },
-   {
-      "longitude" : "120.7942",
-      "latitude" : "21.9478",
-      "name" : "墾丁",
-      "id" : "C0R36",
-      "altitude" : "5"
-   },
-   {
-      "longitude" : "120.7451",
-      "latitude" : "22.4059",
-      "name" : "大漢山",
-      "id" : "C1R44",
-      "altitude" : "1654"
-   },
-   {
-      "longitude" : "120.62",
-      "latitude" : "22.4297",
-      "name" : "力里",
-      "id" : "C1R25",
-      "altitude" : "91"
-   },
-   {
-      "longitude" : "120.6203",
-      "latitude" : "22.3722",
-      "name" : "春日",
-      "id" : "C1R26",
-      "altitude" : "86"
-   },
-   {
-      "longitude" : "120.3542",
-      "latitude" : "22.3339",
-      "name" : "琉球嶼",
-      "id" : "C0R27",
-      "altitude" : "51"
-   },
-   {
-      "longitude" : "120.6083",
-      "latitude" : "22.5928",
-      "name" : "赤山",
-      "id" : "C1R19",
-      "altitude" : "48"
-   },
-   {
-      "longitude" : "120.6175",
-      "latitude" : "22.5289",
-      "name" : "來義",
-      "id" : "88R46",
-      "altitude" : "74"
-   },
-   {
-      "longitude" : "120.8283",
-      "latitude" : "22.0706",
-      "name" : "檳榔",
-      "id" : "C0R28",
-      "altitude" : "250"
-   },
-   {
-      "longitude" : "120.8367",
-      "latitude" : "21.9942",
-      "name" : "佳樂水",
-      "id" : "C0R37",
-      "altitude" : "94"
-   },
-   {
-      "longitude" : "120.6789",
-      "latitude" : "22.6847",
-      "name" : "瑪家",
-      "id" : "C1R14",
-      "altitude" : "740"
-   },
-   {
-      "longitude" : "120.5319",
-      "latitude" : "22.5361",
-      "name" : "潮州",
-      "id" : "C0R22",
-      "altitude" : "22"
-   },
-   {
-      "longitude" : "120.7356",
-      "latitude" : "22.7444",
-      "name" : "阿禮",
-      "id" : "C1R13",
-      "altitude" : "1040"
-   },
-   {
-      "longitude" : "120.5436",
-      "latitude" : "22.6592",
-      "name" : "麟洛",
-      "id" : "C1R21",
-      "altitude" : "54"
-   },
-   {
-      "longitude" : "120.53",
-      "latitude" : "22.7539",
-      "name" : "新圍",
-      "id" : "C1R16",
-      "altitude" : "56"
-   },
-   {
-      "longitude" : "120.8957",
-      "latitude" : "22.3576",
-      "name" : "大武",
-      "id" : "46754",
-      "altitude" : "8"
-   },
-   {
-      "longitude" : "120.9022",
-      "latitude" : "22.3915",
-      "name" : "大鳥",
-      "id" : "88S67",
-      "altitude" : "139"
-   },
-   {
-      "longitude" : "120.9858",
-      "latitude" : "22.6103",
-      "name" : "太麻里",
-      "id" : "C0S69",
-      "altitude" : "522"
-   },
-   {
-      "longitude" : "120.9353",
-      "latitude" : "22.48",
-      "name" : "大溪山",
-      "id" : "C0S77",
-      "altitude" : "375"
-   },
-   {
-      "longitude" : "120.9589",
-      "latitude" : "22.54",
-      "name" : "金崙",
-      "id" : "C0S79",
-      "altitude" : "236"
-   },
-   {
-      "longitude" : "121.0156",
-      "latitude" : "22.6597",
-      "name" : "華源",
-      "id" : "C1S80",
-      "altitude" : "80"
-   },
-   {
-      "longitude" : "121.3654",
-      "latitude" : "23.0992",
-      "name" : "成功",
-      "id" : "46761",
-      "altitude" : "34"
-   },
-   {
-      "longitude" : "121.3743",
-      "latitude" : "23.1521",
-      "name" : "南美山",
-      "id" : "C1S87",
-      "altitude" : "222"
-   },
-   {
-      "longitude" : "121.2017",
-      "latitude" : "23.1214",
-      "name" : "池上",
-      "id" : "C0S74",
-      "altitude" : "289"
-   },
-   {
-      "longitude" : "120.9975",
-      "latitude" : "22.6867",
-      "name" : "知本",
-      "id" : "C0S70",
-      "altitude" : "507"
-   },
-   {
-      "longitude" : "121.0424",
-      "latitude" : "22.8111",
-      "name" : "利嘉",
-      "id" : "C1S86",
-      "altitude" : "516"
-   },
-   {
-      "longitude" : "121.0298",
-      "latitude" : "22.7269",
-      "name" : "射馬干",
-      "id" : "swc09",
-      "altitude" : "55"
-   },
-   {
-      "longitude" : "121.0311",
-      "latitude" : "22.9217",
-      "name" : "紅葉山",
-      "id" : "C0S68",
-      "altitude" : "1659"
-   },
-   {
-      "longitude" : "121.2983",
-      "latitude" : "22.9736",
-      "name" : "東河",
-      "id" : "C0S81",
-      "altitude" : "65"
-   },
-   {
-      "longitude" : "121.2208",
-      "latitude" : "22.8797",
-      "name" : "都蘭",
-      "id" : "C1S63",
-      "altitude" : "23"
-   },
-   {
-      "longitude" : "120.9308",
-      "latitude" : "22.599",
-      "name" : "金峰",
-      "id" : "C1S82",
-      "altitude" : "177"
-   },
-   {
-      "longitude" : "121.4039",
-      "latitude" : "23.2886",
-      "name" : "長濱",
-      "id" : "C0S83",
-      "altitude" : "288"
-   },
-   {
-      "longitude" : "120.9781",
-      "latitude" : "23.25",
-      "name" : "向陽",
-      "id" : "C0S75",
-      "altitude" : "2280"
-   },
-   {
-      "longitude" : "121.12",
-      "latitude" : "23.0714",
-      "name" : "紅石",
-      "id" : "C0S76",
-      "altitude" : "1621"
-   },
-   {
-      "longitude" : "121.0622",
-      "latitude" : "23.1522",
-      "name" : "下馬",
-      "id" : "C1S66",
-      "altitude" : "794"
-   },
-   {
-      "longitude" : "121.0192",
-      "latitude" : "23.2011",
-      "name" : "摩天",
-      "id" : "C1S67",
-      "altitude" : "1580"
-   },
-   {
-      "longitude" : "121.1147",
-      "latitude" : "22.9186",
-      "name" : "鹿野",
-      "id" : "C0S71",
-      "altitude" : "313"
-   },
-   {
-      "longitude" : "120.8819",
-      "latitude" : "22.2919",
-      "name" : "南田",
-      "id" : "C0S84",
-      "altitude" : "22"
-   },
-   {
-      "longitude" : "120.8794",
-      "latitude" : "22.4547",
-      "name" : "土阪",
-      "id" : "N/A",
-      "altitude" : "122"
-   },
-   {
-      "longitude" : "121.4753",
-      "latitude" : "22.6539",
-      "name" : "綠島",
-      "id" : "C0S73",
-      "altitude" : "304"
-   },
-   {
-      "longitude" : "121.3397",
-      "latitude" : "23.3217",
-      "name" : "玉里",
-      "id" : "C0Z06",
-      "altitude" : "174"
-   },
-   {
-      "longitude" : "121.3486",
-      "latitude" : "23.3961",
-      "name" : "高寮",
-      "id" : "C1T99",
-      "altitude" : "128"
-   },
-   {
-      "longitude" : "121.405",
-      "latitude" : "23.6169",
-      "name" : "大農",
-      "id" : "C1T97",
-      "altitude" : "200"
-   },
-   {
-      "longitude" : "121.3704",
-      "latitude" : "23.5898",
-      "name" : "富源",
-      "id" : "C0Z08",
-      "altitude" : "298"
-   },
-   {
-      "longitude" : "121.4167",
-      "latitude" : "23.6625",
-      "name" : "光復",
-      "id" : "C0T96",
-      "altitude" : "140"
-   },
-   {
-      "longitude" : "121.3699",
-      "latitude" : "23.6436",
-      "name" : "大興",
-      "id" : "swc11",
-      "altitude" : "196"
-   },
-   {
-      "longitude" : "121.5547",
-      "latitude" : "23.9753",
-      "name" : "吉安",
-      "id" : "C1T85",
-      "altitude" : "50"
-   },
-   {
-      "longitude" : "121.4878",
-      "latitude" : "23.9675",
-      "name" : "銅門",
-      "id" : "C1T86",
-      "altitude" : "125"
-   },
-   {
-      "longitude" : "121.4458",
-      "latitude" : "24.2064",
-      "name" : "洛韶",
-      "id" : "C1T80",
-      "altitude" : "1260"
-   },
-   {
-      "longitude" : "121.3803",
-      "latitude" : "24.1939",
-      "name" : "慈恩",
-      "id" : "C1T81",
-      "altitude" : "2049"
-   },
-   {
-      "longitude" : "121.5797",
-      "latitude" : "24.1736",
-      "name" : "布洛灣",
-      "id" : "C1T83",
-      "altitude" : "200"
-   },
-   {
-      "longitude" : "121.4033",
-      "latitude" : "24.025",
-      "name" : "龍澗",
-      "id" : "C1T98",
-      "altitude" : "1306"
-   },
-   {
-      "longitude" : "121.597",
-      "latitude" : "24.1188",
-      "name" : "三棧",
-      "id" : "C1Z09",
-      "altitude" : "706"
-   },
-   {
-      "longitude" : "121.3078",
-      "latitude" : "24.1879",
-      "name" : "大禹嶺",
-      "id" : "C0T79",
-      "altitude" : "2823"
-   },
-   {
-      "longitude" : "121.4875",
-      "latitude" : "24.1814",
-      "name" : "天祥",
-      "id" : "C0T82",
-      "altitude" : "550"
-   },
-   {
-      "longitude" : "121.5292",
-      "latitude" : "23.9936",
-      "name" : "水源",
-      "id" : "C0T9B",
-      "altitude" : "558"
-   },
-   {
-      "longitude" : "121.6219",
-      "latitude" : "24.1497",
-      "name" : "富世",
-      "id" : "C0T9C",
-      "altitude" : "109"
-   },
-   {
-      "longitude" : "121.7333",
-      "latitude" : "24.2681",
-      "name" : "和中",
-      "id" : "C0T9D",
-      "altitude" : "7"
-   },
-   {
-      "longitude" : "121.205",
-      "latitude" : "23.3469",
-      "name" : "佳心",
-      "id" : "C0Z05",
-      "altitude" : "704"
-   },
-   {
-      "longitude" : "121.3192",
-      "latitude" : "23.445",
-      "name" : "立山",
-      "id" : "C1Z04",
-      "altitude" : "434"
-   },
-   {
-      "longitude" : "121.2636",
-      "latitude" : "23.2989",
-      "name" : "卓樂",
-      "id" : "C1Z01",
-      "altitude" : "198"
-   },
-   {
-      "longitude" : "121.2543",
-      "latitude" : "23.124",
-      "name" : "豐南",
-      "id" : "C1S85",
-      "altitude" : "489"
-   },
-   {
-      "longitude" : "121.2542",
-      "latitude" : "23.2106",
-      "name" : "明里",
-      "id" : "C0Z02",
-      "altitude" : "211"
-   },
-   {
-      "longitude" : "121.6012",
-      "latitude" : "24.0397",
-      "name" : "新城",
-      "id" : "C0T84",
-      "altitude" : "23"
-   },
-   {
-      "longitude" : "121.3658",
-      "latitude" : "23.4697",
-      "name" : "舞鶴",
-      "id" : "C0Z07",
-      "altitude" : "272"
-   },
-   {
-      "longitude" : "121.4097",
-      "latitude" : "23.8086",
-      "name" : "西林",
-      "id" : "C0T90",
-      "altitude" : "160"
-   },
-   {
-      "longitude" : "121.3969",
-      "latitude" : "23.8556",
-      "name" : "東壙",
-      "id" : "C1T91",
-      "altitude" : "653"
-   },
-   {
-      "longitude" : "121.365",
-      "latitude" : "23.7161",
-      "name" : "大觀",
-      "id" : "C1T94",
-      "altitude" : "539"
-   },
-   {
-      "longitude" : "121.3619",
-      "latitude" : "23.6686",
-      "name" : "太安",
-      "id" : "C1T95",
-      "altitude" : "1050"
-   },
-   {
-      "longitude" : "121.3306",
-      "latitude" : "23.495",
-      "name" : "紅葉",
-      "id" : "C1Z03",
-      "altitude" : "218"
-   },
-   {
-      "longitude" : "121.4906",
-      "latitude" : "23.7714",
-      "name" : "中興",
-      "id" : "C1T92",
-      "altitude" : "68"
-   },
-   {
-      "longitude" : "121.54",
-      "latitude" : "23.8889",
-      "name" : "吳全城",
-      "id" : "C1T88",
-      "altitude" : "27"
-   },
-   {
-      "longitude" : "121.4997",
-      "latitude" : "23.8711",
-      "name" : "壽豐",
-      "id" : "C1T89",
-      "altitude" : "40"
-   },
-   {
-      "longitude" : "121.5403",
-      "latitude" : "23.8258",
-      "name" : "月眉山",
-      "id" : "C0T9A",
-      "altitude" : "511"
-   },
-   {
-      "longitude" : "121.5008",
-      "latitude" : "23.9374",
-      "name" : "鯉魚潭",
-      "id" : "C0T87",
-      "altitude" : "135"
-   },
-   {
-      "longitude" : "121.5819",
-      "latitude" : "23.8806",
-      "name" : "大坑",
-      "id" : "C0T9E",
-      "altitude" : "415"
-   },
-   {
-      "longitude" : "121.5342",
-      "latitude" : "23.7989",
-      "name" : "水璉",
-      "id" : "C0T9F",
-      "altitude" : "283"
-   },
-   {
-      "longitude" : "121.4214",
-      "latitude" : "23.7478",
-      "name" : "鳳林山",
-      "id" : "C0T9G",
-      "altitude" : "650"
-   },
-   {
-      "longitude" : "121.4375",
-      "latitude" : "23.7453",
-      "name" : "鳳林",
-      "id" : "C1T93",
-      "altitude" : "130"
-   },
-   {
-      "longitude" : "121.4207",
-      "latitude" : "23.7442",
-      "name" : "鳳義坑",
-      "id" : "swc08",
-      "altitude" : "304"
-   },
-   {
-      "longitude" : "121.5189",
-      "latitude" : "23.6842",
-      "name" : "加路蘭山",
-      "id" : "C0T9H",
-      "altitude" : "746"
-   },
-   {
-      "longitude" : "121.5058",
-      "latitude" : "23.5803",
-      "name" : "豐濱",
-      "id" : "C0T9I",
-      "altitude" : "214"
-   },
-   {
-      "longitude" : "121.4867",
-      "latitude" : "23.4569",
-      "name" : "靜浦",
-      "id" : "C0T9M",
-      "altitude" : "92"
-   }
+  {
+    "altitude": "98",
+    "name": "馬祖",
+    "latitude": "26.1694",
+    "longitude": "119.9232",
+    "county": "連江縣",
+    "id": "46799",
+    "district": "南竿鄉"
+  },
+  {
+    "altitude": "102",
+    "name": "彭佳嶼",
+    "latitude": "25.6294",
+    "longitude": "122.0713",
+    "county": "基隆市",
+    "id": "46695",
+    "district": "中正區"
+  },
+  {
+    "altitude": "0",
+    "name": "富貴角",
+    "latitude": "25.2900",
+    "longitude": "121.5364",
+    "county": "新北市",
+    "id": "01A35",
+    "district": "石門區"
+  },
+  {
+    "altitude": "196",
+    "name": "富貴角",
+    "latitude": "25.2656",
+    "longitude": "121.5573",
+    "county": "新北市",
+    "id": "C0A92",
+    "district": "石門區"
+  },
+  {
+    "altitude": "86",
+    "name": "三芝",
+    "latitude": "25.2596",
+    "longitude": "121.4934",
+    "county": "新北市",
+    "id": "C0AD0",
+    "district": "三芝區"
+  },
+  {
+    "altitude": "200",
+    "name": "三和",
+    "latitude": "25.2367",
+    "longitude": "121.5858",
+    "county": "新北市",
+    "id": "C0A93",
+    "district": "金山區"
+  },
+  {
+    "altitude": "49",
+    "name": "金山",
+    "latitude": "25.2253",
+    "longitude": "121.6356",
+    "county": "新北市",
+    "id": "C0A94",
+    "district": "金山區"
+  },
+  {
+    "altitude": "826",
+    "name": "鞍部",
+    "latitude": "25.1865",
+    "longitude": "121.5202",
+    "county": "台北市",
+    "id": "46691",
+    "district": "北投區"
+  },
+  {
+    "altitude": "814",
+    "name": "油坑",
+    "latitude": "25.1821",
+    "longitude": "121.5406",
+    "county": "台北市",
+    "id": "A1AD4",
+    "district": "北投區"
+  },
+  {
+    "altitude": "1086",
+    "name": "大屯山",
+    "latitude": "25.1773",
+    "longitude": "121.5142",
+    "county": "新北市",
+    "id": "C0AC4",
+    "district": "淡水區"
+  },
+  {
+    "altitude": "699",
+    "name": "湖田國小",
+    "latitude": "25.1704",
+    "longitude": "121.5307",
+    "county": "台北市",
+    "id": "A1A9S",
+    "district": "北投區"
+  },
+  {
+    "altitude": "662",
+    "name": "竹湖",
+    "latitude": "25.1701",
+    "longitude": "121.5201",
+    "county": "台北市",
+    "id": "A1AD2",
+    "district": "北投區"
+  },
+  {
+    "altitude": "362",
+    "name": "大坪",
+    "latitude": "25.1677",
+    "longitude": "121.6247",
+    "county": "新北市",
+    "id": "C0A86",
+    "district": "萬里區"
+  },
+  {
+    "altitude": "19",
+    "name": "淡水",
+    "latitude": "25.1656",
+    "longitude": "121.4400",
+    "county": "新北市",
+    "id": "46690",
+    "district": "淡水區"
+  },
+  {
+    "altitude": "769",
+    "name": "擎天",
+    "latitude": "25.1651",
+    "longitude": "121.5598",
+    "county": "台北市",
+    "id": "A1AD1",
+    "district": "士林區"
+  },
+  {
+    "altitude": "607",
+    "name": "竹子湖",
+    "latitude": "25.1650",
+    "longitude": "121.5363",
+    "county": "台北市",
+    "id": "46693",
+    "district": "北投區"
+  },
+  {
+    "altitude": "600",
+    "name": "竹子湖",
+    "latitude": "25.1639",
+    "longitude": "121.5336",
+    "county": "台北市",
+    "id": "01A42",
+    "district": "士林區"
+  },
+  {
+    "altitude": "278",
+    "name": "貴子",
+    "latitude": "25.1577",
+    "longitude": "121.4816",
+    "county": "台北市",
+    "id": "A1AD8",
+    "district": "北投區"
+  },
+  {
+    "altitude": "318",
+    "name": "大屯國小",
+    "latitude": "25.1568",
+    "longitude": "121.4957",
+    "county": "台北市",
+    "id": "A1A9T",
+    "district": "北投區"
+  },
+  {
+    "altitude": "27",
+    "name": "八里",
+    "latitude": "25.1523",
+    "longitude": "121.3953",
+    "county": "新北市",
+    "id": "C0AD1",
+    "district": "八里區"
+  },
+  {
+    "altitude": "180",
+    "name": "稻香",
+    "latitude": "25.1498",
+    "longitude": "121.4757",
+    "county": "台北市",
+    "id": "A1AG3",
+    "district": "北投區"
+  },
+  {
+    "altitude": "485",
+    "name": "菁山",
+    "latitude": "25.1458",
+    "longitude": "121.5578",
+    "county": "台北市",
+    "id": "A1AD0",
+    "district": "士林區"
+  },
+  {
+    "altitude": "453",
+    "name": "溪山",
+    "latitude": "25.1387",
+    "longitude": "121.5807",
+    "county": "台北市",
+    "id": "A1AC9",
+    "district": "士林區"
+  },
+  {
+    "altitude": "28",
+    "name": "桃源國中",
+    "latitude": "25.1362",
+    "longitude": "121.4687",
+    "county": "台北市",
+    "id": "A1A9U",
+    "district": "北投區"
+  },
+  {
+    "altitude": "37",
+    "name": "北投國小",
+    "latitude": "25.1357",
+    "longitude": "121.4907",
+    "county": "台北市",
+    "id": "A1A9V",
+    "district": "北投區"
+  },
+  {
+    "altitude": "111",
+    "name": "關渡",
+    "latitude": "25.1353",
+    "longitude": "121.4612",
+    "county": "台北市",
+    "id": "C1AC5",
+    "district": "北投區"
+  },
+  {
+    "altitude": "27",
+    "name": "基隆",
+    "latitude": "25.1348",
+    "longitude": "121.7321",
+    "county": "基隆市",
+    "id": "46694",
+    "district": "中山區"
+  },
+  {
+    "altitude": "685",
+    "name": "五指山",
+    "latitude": "25.1339",
+    "longitude": "121.6003",
+    "county": "新北市",
+    "id": "C0A87",
+    "district": "汐止區"
+  },
+  {
+    "altitude": "394",
+    "name": "格致國中",
+    "latitude": "25.1332",
+    "longitude": "121.5374",
+    "county": "台北市",
+    "id": "A1AA1",
+    "district": "士林區"
+  },
+  {
+    "altitude": "427",
+    "name": "平等國小",
+    "latitude": "25.1310",
+    "longitude": "121.5682",
+    "county": "台北市",
+    "id": "A1AA2",
+    "district": "士林區"
+  },
+  {
+    "altitude": "118",
+    "name": "鼻頭角",
+    "latitude": "25.1308",
+    "longitude": "121.9153",
+    "county": "新北市",
+    "id": "C0A95",
+    "district": "瑞芳區"
+  },
+  {
+    "altitude": "28",
+    "name": "奇岩",
+    "latitude": "25.1257",
+    "longitude": "121.4949",
+    "county": "台北市",
+    "id": "A1AB7",
+    "district": "北投區"
+  },
+  {
+    "altitude": "63",
+    "name": "天母",
+    "latitude": "25.1194",
+    "longitude": "121.5289",
+    "county": "台北市",
+    "id": "C0A9C",
+    "district": "士林區"
+  },
+  {
+    "altitude": "7",
+    "name": "石牌",
+    "latitude": "25.1176",
+    "longitude": "121.5059",
+    "county": "台北市",
+    "id": "C0A9B",
+    "district": "北投區"
+  },
+  {
+    "altitude": "111",
+    "name": "明德",
+    "latitude": "25.1155",
+    "longitude": "121.5575",
+    "county": "台北市",
+    "id": "A1AC8",
+    "district": "士林區"
+  },
+  {
+    "altitude": "127",
+    "name": "雙溪",
+    "latitude": "25.1154",
+    "longitude": "121.5612",
+    "county": "台北市",
+    "id": "A1AB8",
+    "district": "士林區"
+  },
+  {
+    "altitude": "97",
+    "name": "瑞芳",
+    "latitude": "25.1149",
+    "longitude": "121.7926",
+    "county": "新北市",
+    "id": "C0A66",
+    "district": "瑞芳區"
+  },
+  {
+    "altitude": "101",
+    "name": "瑞芳",
+    "latitude": "25.1128",
+    "longitude": "121.7956",
+    "county": "新北市",
+    "id": "01A38",
+    "district": "瑞芳區"
+  },
+  {
+    "altitude": "54",
+    "name": "社子",
+    "latitude": "25.1114",
+    "longitude": "121.4614",
+    "county": "台北市",
+    "id": "C0A98",
+    "district": "士林區"
+  },
+  {
+    "altitude": "463",
+    "name": "大崙尾山",
+    "latitude": "25.1084",
+    "longitude": "121.5656",
+    "county": "台北市",
+    "id": "C0A99",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "8",
+    "name": "中洲",
+    "latitude": "25.1071",
+    "longitude": "121.4665",
+    "county": "台北市",
+    "id": "A1AB3",
+    "district": "士林區"
+  },
+  {
+    "altitude": "53",
+    "name": "至善國中",
+    "latitude": "25.1051",
+    "longitude": "121.5474",
+    "county": "台北市",
+    "id": "A1AA3",
+    "district": "士林區"
+  },
+  {
+    "altitude": "14",
+    "name": "福德",
+    "latitude": "25.1012",
+    "longitude": "121.5207",
+    "county": "台北市",
+    "id": "A1AB6",
+    "district": "士林區"
+  },
+  {
+    "altitude": "187",
+    "name": "大湖",
+    "latitude": "25.0982",
+    "longitude": "121.5959",
+    "county": "台北市",
+    "id": "A1AG2",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "240",
+    "name": "金面",
+    "latitude": "25.0967",
+    "longitude": "121.5617",
+    "county": "台北市",
+    "id": "A1AG8",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "18",
+    "name": "陽明高中",
+    "latitude": "25.0943",
+    "longitude": "121.5085",
+    "county": "台北市",
+    "id": "A1A9W",
+    "district": "士林區"
+  },
+  {
+    "altitude": "84",
+    "name": "大粗坑",
+    "latitude": "25.0931",
+    "longitude": "121.8307",
+    "county": "新北市",
+    "id": "swc07",
+    "district": "瑞芳區"
+  },
+  {
+    "altitude": "26",
+    "name": "士林",
+    "latitude": "25.0922",
+    "longitude": "121.4950",
+    "county": "台北市",
+    "id": "C0A9E",
+    "district": "士林區"
+  },
+  {
+    "altitude": "264",
+    "name": "劍南",
+    "latitude": "25.0917",
+    "longitude": "121.5431",
+    "county": "台北市",
+    "id": "A1AD5",
+    "district": "中山區"
+  },
+  {
+    "altitude": "63",
+    "name": "安泰",
+    "latitude": "25.0894",
+    "longitude": "121.6049",
+    "county": "台北市",
+    "id": "A1AD3",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "20",
+    "name": "蘆洲",
+    "latitude": "25.0885",
+    "longitude": "121.4641",
+    "county": "新北市",
+    "id": "C0AD3",
+    "district": "蘆洲區"
+  },
+  {
+    "altitude": "29",
+    "name": "蘆竹",
+    "latitude": "25.0878",
+    "longitude": "121.2625",
+    "county": "桃園縣",
+    "id": "C1C62",
+    "district": "蘆竹鄉"
+  },
+  {
+    "altitude": "33",
+    "name": "碧湖國小",
+    "latitude": "25.0865",
+    "longitude": "121.5835",
+    "county": "台北市",
+    "id": "A1AA4",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "19",
+    "name": "蘆竹",
+    "latitude": "25.0861",
+    "longitude": "121.2575",
+    "county": "桃園縣",
+    "id": "C0C62",
+    "district": "蘆竹鄉"
+  },
+  {
+    "altitude": "95",
+    "name": "五股",
+    "latitude": "25.0853",
+    "longitude": "121.4272",
+    "county": "新北市",
+    "id": "C0A68",
+    "district": "五股區"
+  },
+  {
+    "altitude": "120",
+    "name": "劍潭",
+    "latitude": "25.0849",
+    "longitude": "121.5202",
+    "county": "台北市",
+    "id": "A1AG5",
+    "district": "中山區"
+  },
+  {
+    "altitude": "20",
+    "name": "內湖",
+    "latitude": "25.0811",
+    "longitude": "121.5656",
+    "county": "台北市",
+    "id": "C0A9F",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "16",
+    "name": "五堵",
+    "latitude": "25.0808",
+    "longitude": "121.6867",
+    "county": "基隆市",
+    "id": "01B03",
+    "district": "七堵區"
+  },
+  {
+    "altitude": "49",
+    "name": "大直",
+    "latitude": "25.0797",
+    "longitude": "121.5347",
+    "county": "台北市",
+    "id": "C0A9A",
+    "district": "中山區"
+  },
+  {
+    "altitude": "238",
+    "name": "林口",
+    "latitude": "25.0781",
+    "longitude": "121.3700",
+    "county": "新北市",
+    "id": "C0A71",
+    "district": "林口區"
+  },
+  {
+    "altitude": "25",
+    "name": "建國",
+    "latitude": "25.0740",
+    "longitude": "121.5207",
+    "county": "台北市",
+    "id": "A1AB5",
+    "district": "中山區"
+  },
+  {
+    "altitude": "757",
+    "name": "五分山站",
+    "latitude": "25.0728",
+    "longitude": "121.7725",
+    "county": "新北市",
+    "id": "46685",
+    "district": "瑞芳區"
+  },
+  {
+    "altitude": "34",
+    "name": "東湖國小",
+    "latitude": "25.0710",
+    "longitude": "121.6068",
+    "county": "台北市",
+    "id": "A1AA5",
+    "district": "內湖區"
+  },
+  {
+    "altitude": "38",
+    "name": "汐止",
+    "latitude": "25.0687",
+    "longitude": "121.6506",
+    "county": "新北市",
+    "id": "C0AH0",
+    "district": "汐止區"
+  },
+  {
+    "altitude": "20",
+    "name": "太平國小",
+    "latitude": "25.0635",
+    "longitude": "121.5035",
+    "county": "台北市",
+    "id": "A1A9X",
+    "district": "大同區"
+  },
+  {
+    "altitude": "13",
+    "name": "社后橋",
+    "latitude": "25.0630",
+    "longitude": "121.6336",
+    "county": "新北市",
+    "id": "01AG0",
+    "district": "汐止區"
+  },
+  {
+    "altitude": "28",
+    "name": "民生國中",
+    "latitude": "25.0615",
+    "longitude": "121.5585",
+    "county": "台北市",
+    "id": "A1A9Y",
+    "district": "松山區"
+  },
+  {
+    "altitude": "118",
+    "name": "三貂嶺",
+    "latitude": "25.0592",
+    "longitude": "121.8206",
+    "county": "新北市",
+    "id": "01AF9",
+    "district": "瑞芳區"
+  },
+  {
+    "altitude": "18",
+    "name": "三重",
+    "latitude": "25.0585",
+    "longitude": "121.4813",
+    "county": "新北市",
+    "id": "C0A9I",
+    "district": "三重區"
+  },
+  {
+    "altitude": "42",
+    "name": "南港",
+    "latitude": "25.0575",
+    "longitude": "121.5947",
+    "county": "台北市",
+    "id": "C0A9G",
+    "district": "南港區"
+  },
+  {
+    "altitude": "27",
+    "name": "玉成",
+    "latitude": "25.0540",
+    "longitude": "121.5743",
+    "county": "台北市",
+    "id": "A1AB4",
+    "district": "南港區"
+  },
+  {
+    "altitude": "326",
+    "name": "大尖山",
+    "latitude": "25.0533",
+    "longitude": "121.6578",
+    "county": "新北市",
+    "id": "C0A59",
+    "district": "汐止區"
+  },
+  {
+    "altitude": "25",
+    "name": "新莊",
+    "latitude": "25.0532",
+    "longitude": "121.4385",
+    "county": "新北市",
+    "id": "C0ACA",
+    "district": "新莊區"
+  },
+  {
+    "altitude": "70",
+    "name": "埔心",
+    "latitude": "25.0494",
+    "longitude": "121.2178",
+    "county": "桃園縣",
+    "id": "C0C54",
+    "district": "大園鄉"
+  },
+  {
+    "altitude": "38",
+    "name": "舊莊國小",
+    "latitude": "25.0418",
+    "longitude": "121.6112",
+    "county": "台北市",
+    "id": "A1AA7",
+    "district": "南港區"
+  },
+  {
+    "altitude": "83",
+    "name": "市政中心",
+    "latitude": "25.0407",
+    "longitude": "121.5482",
+    "county": "台北市",
+    "id": "A1AA8",
+    "district": "信義區"
+  },
+  {
+    "altitude": "5",
+    "name": "臺北",
+    "latitude": "25.0396",
+    "longitude": "121.5067",
+    "county": "台北市",
+    "id": "46692",
+    "district": "中正區"
+  },
+  {
+    "altitude": "71",
+    "name": "信義",
+    "latitude": "25.0394",
+    "longitude": "121.5561",
+    "county": "台北市",
+    "id": "C0AC7",
+    "district": "信義區"
+  },
+  {
+    "altitude": "32",
+    "name": "留公國中",
+    "latitude": "25.0390",
+    "longitude": "121.5774",
+    "county": "台北市",
+    "id": "A1AA6",
+    "district": "信義區"
+  },
+  {
+    "altitude": "40",
+    "name": "雙溪",
+    "latitude": "25.0379",
+    "longitude": "121.8561",
+    "county": "新北市",
+    "id": "C0A89",
+    "district": "雙溪區"
+  },
+  {
+    "altitude": "47",
+    "name": "舊莊",
+    "latitude": "25.0358",
+    "longitude": "121.6165",
+    "county": "台北市",
+    "id": "A1AC5",
+    "district": "南港區"
+  },
+  {
+    "altitude": "44",
+    "name": "九如",
+    "latitude": "25.0343",
+    "longitude": "121.6034",
+    "county": "台北市",
+    "id": "A1AC6",
+    "district": "南港區"
+  },
+  {
+    "altitude": "31",
+    "name": "中正國中",
+    "latitude": "25.0335",
+    "longitude": "121.5137",
+    "county": "台北市",
+    "id": "A1A9Z",
+    "district": "中正區"
+  },
+  {
+    "altitude": "177",
+    "name": "龜山",
+    "latitude": "25.0331",
+    "longitude": "121.3664",
+    "county": "桃園縣",
+    "id": "C0C64",
+    "district": "龜山鄉"
+  },
+  {
+    "altitude": "31",
+    "name": "雙園",
+    "latitude": "25.0321",
+    "longitude": "121.4821",
+    "county": "台北市",
+    "id": "A1AB2",
+    "district": "萬華區"
+  },
+  {
+    "altitude": "144",
+    "name": "四獸",
+    "latitude": "25.0311",
+    "longitude": "121.5747",
+    "county": "台北市",
+    "id": "A1AG4",
+    "district": "信義區"
+  },
+  {
+    "altitude": "28",
+    "name": "三興國小",
+    "latitude": "25.0310",
+    "longitude": "121.5499",
+    "county": "台北市",
+    "id": "A1AA0",
+    "district": "信義區"
+  },
+  {
+    "altitude": "375",
+    "name": "茶場",
+    "latitude": "25.0302",
+    "longitude": "121.6551",
+    "county": "台北市",
+    "id": "A1AD7",
+    "district": "南港區"
+  },
+  {
+    "altitude": "29",
+    "name": "觀音",
+    "latitude": "25.0289",
+    "longitude": "121.1451",
+    "county": "桃園縣",
+    "id": "C0C59",
+    "district": "觀音鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "中正橋",
+    "latitude": "25.0214",
+    "longitude": "121.5097",
+    "county": "台北市",
+    "id": "01A41",
+    "district": "中正區"
+  },
+  {
+    "altitude": "6",
+    "name": "福隆",
+    "latitude": "25.0192",
+    "longitude": "121.9342",
+    "county": "新北市",
+    "id": "C0A88",
+    "district": "貢寮區"
+  },
+  {
+    "altitude": "118",
+    "name": "挹翠",
+    "latitude": "25.0189",
+    "longitude": "121.5662",
+    "county": "台北市",
+    "id": "A1AC7",
+    "district": "信義區"
+  },
+  {
+    "altitude": "120",
+    "name": "福州",
+    "latitude": "25.0187",
+    "longitude": "121.5461",
+    "county": "台北市",
+    "id": "A1AG6",
+    "district": "大安區"
+  },
+  {
+    "altitude": "22",
+    "name": "公館",
+    "latitude": "25.0162",
+    "longitude": "121.5313",
+    "county": "台北市",
+    "id": "C1A73",
+    "district": "大安區"
+  },
+  {
+    "altitude": "5",
+    "name": "新屋",
+    "latitude": "25.0158",
+    "longitude": "121.0433",
+    "county": "桃園縣",
+    "id": "46705",
+    "district": "新屋鄉"
+  },
+  {
+    "altitude": "5",
+    "name": "新屋",
+    "latitude": "25.0158",
+    "longitude": "121.0433",
+    "county": "桃園縣",
+    "id": "C0C57",
+    "district": "新屋鄉"
+  },
+  {
+    "altitude": "77",
+    "name": "永和",
+    "latitude": "25.0106",
+    "longitude": "121.4967",
+    "county": "新北市",
+    "id": "C0A9D",
+    "district": "永和區"
+  },
+  {
+    "altitude": "116",
+    "name": "三貂角",
+    "latitude": "25.0094",
+    "longitude": "121.9939",
+    "county": "新北市",
+    "id": "C0A97",
+    "district": "貢寮區"
+  },
+  {
+    "altitude": "287",
+    "name": "火燒寮",
+    "latitude": "25.0044",
+    "longitude": "121.7346",
+    "county": "新北市",
+    "id": "C0A65",
+    "district": "平溪區"
+  },
+  {
+    "altitude": "40",
+    "name": "文山",
+    "latitude": "25.0041",
+    "longitude": "121.5675",
+    "county": "台北市",
+    "id": "C0AC8",
+    "district": "文山區"
+  },
+  {
+    "altitude": "53",
+    "name": "博嘉國小",
+    "latitude": "25.0040",
+    "longitude": "121.5671",
+    "county": "台北市",
+    "id": "A1AA9",
+    "district": "文山區"
+  },
+  {
+    "altitude": "57",
+    "name": "深坑",
+    "latitude": "25.0031",
+    "longitude": "121.6095",
+    "county": "新北市",
+    "id": "C0AD2",
+    "district": "深坑區"
+  },
+  {
+    "altitude": "10",
+    "name": "板橋",
+    "latitude": "24.9993",
+    "longitude": "121.4338",
+    "county": "新北市",
+    "id": "46688",
+    "district": "板橋區"
+  },
+  {
+    "altitude": "204",
+    "name": "石碇",
+    "latitude": "24.9957",
+    "longitude": "121.6546",
+    "county": "新北市",
+    "id": "C0A64",
+    "district": "石碇區"
+  },
+  {
+    "altitude": "25",
+    "name": "中和",
+    "latitude": "24.9945",
+    "longitude": "121.4822",
+    "county": "新北市",
+    "id": "C0AG9",
+    "district": "中和區"
+  },
+  {
+    "altitude": "105",
+    "name": "桃園",
+    "latitude": "24.9942",
+    "longitude": "121.3150",
+    "county": "桃園縣",
+    "id": "C0C48",
+    "district": "桃園市"
+  },
+  {
+    "altitude": "250",
+    "name": "石碇",
+    "latitude": "24.9936",
+    "longitude": "121.6494",
+    "county": "新北市",
+    "id": "01A13",
+    "district": "石碇區"
+  },
+  {
+    "altitude": "32",
+    "name": "中和",
+    "latitude": "24.9919",
+    "longitude": "121.5078",
+    "county": "新北市",
+    "id": "C0AC9",
+    "district": "中和區"
+  },
+  {
+    "altitude": "60",
+    "name": "仙跡",
+    "latitude": "24.9911",
+    "longitude": "121.5350",
+    "county": "台北市",
+    "id": "A1AG7",
+    "district": "文山區"
+  },
+  {
+    "altitude": "42",
+    "name": "脾腹",
+    "latitude": "24.9882",
+    "longitude": "121.5371",
+    "county": "台北市",
+    "id": "A1AB1",
+    "district": "文山區"
+  },
+  {
+    "altitude": "39",
+    "name": "北政國中",
+    "latitude": "24.9862",
+    "longitude": "121.5693",
+    "county": "台北市",
+    "id": "A1AB0",
+    "district": "文山區"
+  },
+  {
+    "altitude": "25",
+    "name": "指南",
+    "latitude": "24.9833",
+    "longitude": "121.5721",
+    "county": "台北市",
+    "id": "A1AC4",
+    "district": "文山區"
+  },
+  {
+    "altitude": "380",
+    "name": "火燒寮",
+    "latitude": "24.9828",
+    "longitude": "121.7414",
+    "county": "新北市",
+    "id": "01A20",
+    "district": "平溪區"
+  },
+  {
+    "altitude": "10",
+    "name": "山佳",
+    "latitude": "24.9758",
+    "longitude": "121.3939",
+    "county": "新北市",
+    "id": "C0A52",
+    "district": "樹林區"
+  },
+  {
+    "altitude": "32",
+    "name": "土城",
+    "latitude": "24.9749",
+    "longitude": "121.4369",
+    "county": "新北市",
+    "id": "C0AD4",
+    "district": "土城區"
+  },
+  {
+    "altitude": "403",
+    "name": "太平",
+    "latitude": "24.9736",
+    "longitude": "121.8200",
+    "county": "新北市",
+    "id": "L1A84",
+    "district": "雙溪區"
+  },
+  {
+    "altitude": "460",
+    "name": "泰平",
+    "latitude": "24.9731",
+    "longitude": "121.8153",
+    "county": "新北市",
+    "id": "C0A55",
+    "district": "雙溪區"
+  },
+  {
+    "altitude": "105",
+    "name": "新屋",
+    "latitude": "24.9714",
+    "longitude": "121.1069",
+    "county": "桃園縣",
+    "id": "C0C45",
+    "district": "新屋鄉"
+  },
+  {
+    "altitude": "317",
+    "name": "貓空",
+    "latitude": "24.9707",
+    "longitude": "121.5871",
+    "county": "台北市",
+    "id": "A1AD6",
+    "district": "文山區"
+  },
+  {
+    "altitude": "151",
+    "name": "中壢",
+    "latitude": "24.9695",
+    "longitude": "121.1771",
+    "county": "桃園縣",
+    "id": "C0C52",
+    "district": "中壢市"
+  },
+  {
+    "altitude": "24",
+    "name": "新店",
+    "latitude": "24.9608",
+    "longitude": "121.5165",
+    "county": "新北市",
+    "id": "A0A9M",
+    "district": "新店區"
+  },
+  {
+    "altitude": "84",
+    "name": "鶯歌",
+    "latitude": "24.9530",
+    "longitude": "121.3372",
+    "county": "新北市",
+    "id": "C0AD5",
+    "district": "鶯歌區"
+  },
+  {
+    "altitude": "530",
+    "name": "十三股",
+    "latitude": "24.9458",
+    "longitude": "121.6414",
+    "county": "新北市",
+    "id": "L1A82",
+    "district": "石碇區"
+  },
+  {
+    "altitude": "106",
+    "name": "水尾",
+    "latitude": "24.9419",
+    "longitude": "121.0789",
+    "county": "桃園縣",
+    "id": "C1C51",
+    "district": "楊梅市"
+  },
+  {
+    "altitude": "55",
+    "name": "三峽",
+    "latitude": "24.9408",
+    "longitude": "121.3615",
+    "county": "新北市",
+    "id": "C0AC6",
+    "district": "三峽區"
+  },
+  {
+    "altitude": "33",
+    "name": "三峽",
+    "latitude": "24.9403",
+    "longitude": "121.3478",
+    "county": "新北市",
+    "id": "01A22",
+    "district": "三峽區"
+  },
+  {
+    "altitude": "300",
+    "name": "坪林",
+    "latitude": "24.9397",
+    "longitude": "121.7014",
+    "county": "新北市",
+    "id": "C0A53",
+    "district": "坪林區"
+  },
+  {
+    "altitude": "210",
+    "name": "坪林",
+    "latitude": "24.9386",
+    "longitude": "121.7056",
+    "county": "新北市",
+    "id": "L1A83",
+    "district": "坪林區"
+  },
+  {
+    "altitude": "200",
+    "name": "坪林",
+    "latitude": "24.9370",
+    "longitude": "121.7070",
+    "county": "新北市",
+    "id": "01A17",
+    "district": "坪林區"
+  },
+  {
+    "altitude": "435",
+    "name": "四十份",
+    "latitude": "24.9358",
+    "longitude": "121.5850",
+    "county": "新北市",
+    "id": "C1A9N",
+    "district": "新店區"
+  },
+  {
+    "altitude": "157",
+    "name": "八德",
+    "latitude": "24.9305",
+    "longitude": "121.2750",
+    "county": "桃園縣",
+    "id": "C0C49",
+    "district": "八德市"
+  },
+  {
+    "altitude": "180",
+    "name": "八德",
+    "latitude": "24.9289",
+    "longitude": "121.2833",
+    "county": "桃園縣",
+    "id": "C1C49",
+    "district": "八德市"
+  },
+  {
+    "altitude": "70",
+    "name": "屈尺",
+    "latitude": "24.9242",
+    "longitude": "121.5381",
+    "county": "新北市",
+    "id": "C0A58",
+    "district": "新店區"
+  },
+  {
+    "altitude": "187",
+    "name": "楊梅",
+    "latitude": "24.9228",
+    "longitude": "121.1400",
+    "county": "桃園縣",
+    "id": "C1C50",
+    "district": "楊梅市"
+  },
+  {
+    "altitude": "181",
+    "name": "楊梅",
+    "latitude": "24.9227",
+    "longitude": "121.1401",
+    "county": "桃園縣",
+    "id": "C0C50",
+    "district": "楊梅市"
+  },
+  {
+    "altitude": "104",
+    "name": "湖口",
+    "latitude": "24.9111",
+    "longitude": "121.0358",
+    "county": "新竹縣",
+    "id": "C1D37",
+    "district": "湖口鄉"
+  },
+  {
+    "altitude": "79",
+    "name": "湖口",
+    "latitude": "24.9111",
+    "longitude": "121.0358",
+    "county": "新竹縣",
+    "id": "C0D37",
+    "district": "湖口鄉"
+  },
+  {
+    "altitude": "8",
+    "name": "北關",
+    "latitude": "24.9092",
+    "longitude": "121.8653",
+    "county": "宜蘭縣",
+    "id": "C1U58",
+    "district": "頭城鎮"
+  },
+  {
+    "altitude": "202",
+    "name": "翡翠",
+    "latitude": "24.9089",
+    "longitude": "121.5719",
+    "county": "新北市",
+    "id": "L1A79",
+    "district": "新店區"
+  },
+  {
+    "altitude": "378",
+    "name": "九芎根",
+    "latitude": "24.9042",
+    "longitude": "121.6417",
+    "county": "新北市",
+    "id": "L1A81",
+    "district": "石碇區"
+  },
+  {
+    "altitude": "208",
+    "name": "平鎮",
+    "latitude": "24.8994",
+    "longitude": "121.2064",
+    "county": "桃園縣",
+    "id": "C0C65",
+    "district": "平鎮市"
+  },
+  {
+    "altitude": "386",
+    "name": "碧湖",
+    "latitude": "24.8944",
+    "longitude": "121.7375",
+    "county": "新北市",
+    "id": "L1A80",
+    "district": "坪林區"
+  },
+  {
+    "altitude": "401",
+    "name": "四堵",
+    "latitude": "24.8939",
+    "longitude": "121.7375",
+    "county": "新北市",
+    "id": "C0A54",
+    "district": "坪林區"
+  },
+  {
+    "altitude": "360",
+    "name": "碧湖",
+    "latitude": "24.8928",
+    "longitude": "121.7372",
+    "county": "新北市",
+    "id": "01A19",
+    "district": "坪林區"
+  },
+  {
+    "altitude": "600",
+    "name": "大豹",
+    "latitude": "24.8861",
+    "longitude": "121.4164",
+    "county": "新北市",
+    "id": "01A21",
+    "district": "三峽區"
+  },
+  {
+    "altitude": "209",
+    "name": "大溪",
+    "latitude": "24.8847",
+    "longitude": "121.2569",
+    "county": "桃園縣",
+    "id": "C0C63",
+    "district": "大溪鎮"
+  },
+  {
+    "altitude": "778",
+    "name": "熊空山",
+    "latitude": "24.8753",
+    "longitude": "121.4517",
+    "county": "新北市",
+    "id": "01AG1",
+    "district": "三峽區"
+  },
+  {
+    "altitude": "143",
+    "name": "新豐",
+    "latitude": "24.8706",
+    "longitude": "120.9772",
+    "county": "新竹縣",
+    "id": "C0D59",
+    "district": "新豐鄉"
+  },
+  {
+    "altitude": "916",
+    "name": "大桶山",
+    "latitude": "24.8700",
+    "longitude": "121.5664",
+    "county": "新北市",
+    "id": "01A44",
+    "district": "新店區"
+  },
+  {
+    "altitude": "270",
+    "name": "龍潭",
+    "latitude": "24.8564",
+    "longitude": "121.2164",
+    "county": "桃園縣",
+    "id": "C0C61",
+    "district": "龍潭鄉"
+  },
+  {
+    "altitude": "6",
+    "name": "頭城",
+    "latitude": "24.8539",
+    "longitude": "121.8064",
+    "county": "宜蘭縣",
+    "id": "C1U59",
+    "district": "頭城鎮"
+  },
+  {
+    "altitude": "223",
+    "name": "打鐵坑",
+    "latitude": "24.8518",
+    "longitude": "121.1426",
+    "county": "新竹縣",
+    "id": "C0D48",
+    "district": "新埔鎮"
+  },
+  {
+    "altitude": "387",
+    "name": "桶後",
+    "latitude": "24.8500",
+    "longitude": "121.5917",
+    "county": "新北市",
+    "id": "C0A57",
+    "district": "烏來區"
+  },
+  {
+    "altitude": "65",
+    "name": "新埔",
+    "latitude": "24.8467",
+    "longitude": "121.0292",
+    "county": "新竹縣",
+    "id": "C1D38",
+    "district": "新埔鎮"
+  },
+  {
+    "altitude": "398",
+    "name": "龜山島",
+    "latitude": "24.8414",
+    "longitude": "121.9531",
+    "county": "宜蘭縣",
+    "id": "C0U75",
+    "district": "頭城鎮"
+  },
+  {
+    "altitude": "27",
+    "name": "新竹",
+    "latitude": "24.8300",
+    "longitude": "121.0061",
+    "county": "新竹縣",
+    "id": "46757",
+    "district": "竹北市"
+  },
+  {
+    "altitude": "482",
+    "name": "復興",
+    "latitude": "24.8221",
+    "longitude": "121.3443",
+    "county": "桃園縣",
+    "id": "C0C46",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "10",
+    "name": "礁溪",
+    "latitude": "24.8203",
+    "longitude": "121.7592",
+    "county": "宜蘭縣",
+    "id": "C0U60",
+    "district": "礁溪鄉"
+  },
+  {
+    "altitude": "142",
+    "name": "石門後池",
+    "latitude": "24.8192",
+    "longitude": "121.2361",
+    "county": "桃園縣",
+    "id": "01C40",
+    "district": "龍潭鄉"
+  },
+  {
+    "altitude": "146",
+    "name": "關西",
+    "latitude": "24.8001",
+    "longitude": "121.1657",
+    "county": "新竹縣",
+    "id": "C0D39",
+    "district": "關西鎮"
+  },
+  {
+    "altitude": "350",
+    "name": "霞雲",
+    "latitude": "24.8000",
+    "longitude": "121.3500",
+    "county": "桃園縣",
+    "id": "21C14",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "268",
+    "name": "大礁溪",
+    "latitude": "24.7878",
+    "longitude": "121.6700",
+    "county": "宜蘭縣",
+    "id": "C1U61",
+    "district": "礁溪鄉"
+  },
+  {
+    "altitude": "500",
+    "name": "福山",
+    "latitude": "24.7789",
+    "longitude": "121.4817",
+    "county": "新北市",
+    "id": "01A43",
+    "district": "烏來區"
+  },
+  {
+    "altitude": "405",
+    "name": "福山",
+    "latitude": "24.7783",
+    "longitude": "121.4946",
+    "county": "新北市",
+    "id": "C0A56",
+    "district": "烏來區"
+  },
+  {
+    "altitude": "527",
+    "name": "下盆",
+    "latitude": "24.7726",
+    "longitude": "121.5304",
+    "county": "新北市",
+    "id": "C1A63",
+    "district": "烏來區"
+  },
+  {
+    "altitude": "147",
+    "name": "竹東",
+    "latitude": "24.7693",
+    "longitude": "121.0499",
+    "county": "新竹縣",
+    "id": "C0D56",
+    "district": "竹東鎮"
+  },
+  {
+    "altitude": "462",
+    "name": "飛鳳山",
+    "latitude": "24.7683",
+    "longitude": "121.1107",
+    "county": "新竹縣",
+    "id": "C1D63",
+    "district": "芎林鄉"
+  },
+  {
+    "altitude": "7",
+    "name": "宜蘭",
+    "latitude": "24.7656",
+    "longitude": "121.7479",
+    "county": "宜蘭縣",
+    "id": "46708",
+    "district": "宜蘭市"
+  },
+  {
+    "altitude": "517",
+    "name": "雙連埤",
+    "latitude": "24.7547",
+    "longitude": "121.6331",
+    "county": "宜蘭縣",
+    "id": "C0U52",
+    "district": "員山鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "香山",
+    "latitude": "24.7467",
+    "longitude": "120.9056",
+    "county": "新竹市",
+    "id": "C0D57",
+    "district": "香山區"
+  },
+  {
+    "altitude": "17",
+    "name": "壯圍",
+    "latitude": "24.7456",
+    "longitude": "121.7814",
+    "county": "宜蘭縣",
+    "id": "C0U62",
+    "district": "壯圍鄉"
+  },
+  {
+    "altitude": "120",
+    "name": "寶山",
+    "latitude": "24.7381",
+    "longitude": "121.0178",
+    "county": "新竹縣",
+    "id": "C0D58",
+    "district": "寶山鄉"
+  },
+  {
+    "altitude": "839",
+    "name": "鳥嘴山",
+    "latitude": "24.7192",
+    "longitude": "121.2839",
+    "county": "新竹縣",
+    "id": "C1D40",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "140",
+    "name": "再連",
+    "latitude": "24.7169",
+    "longitude": "121.6711",
+    "county": "宜蘭縣",
+    "id": "C1U63",
+    "district": "員山鄉"
+  },
+  {
+    "altitude": "620",
+    "name": "高義",
+    "latitude": "24.7167",
+    "longitude": "121.3500",
+    "county": "桃園縣",
+    "id": "21C08",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "227",
+    "name": "橫山",
+    "latitude": "24.7117",
+    "longitude": "121.1172",
+    "county": "新竹縣",
+    "id": "C0D54",
+    "district": "橫山鄉"
+  },
+  {
+    "altitude": "19",
+    "name": "竹南",
+    "latitude": "24.7108",
+    "longitude": "120.8808",
+    "county": "苗栗縣",
+    "id": "C0E42",
+    "district": "竹南鎮"
+  },
+  {
+    "altitude": "0",
+    "name": "蘇樂",
+    "latitude": "24.7006",
+    "longitude": "121.3568",
+    "county": "桃園縣",
+    "id": "swc15",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "87",
+    "name": "峨眉",
+    "latitude": "24.6924",
+    "longitude": "121.0091",
+    "county": "新竹縣",
+    "id": "C0D43",
+    "district": "峨眉鄉"
+  },
+  {
+    "altitude": "100",
+    "name": "峨眉",
+    "latitude": "24.6922",
+    "longitude": "121.0089",
+    "county": "新竹縣",
+    "id": "C1D43",
+    "district": "峨眉鄉"
+  },
+  {
+    "altitude": "1374",
+    "name": "拉拉山",
+    "latitude": "24.6903",
+    "longitude": "121.4039",
+    "county": "桃園縣",
+    "id": "A0C54",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "26",
+    "name": "頭份",
+    "latitude": "24.6900",
+    "longitude": "120.9042",
+    "county": "苗栗縣",
+    "id": "C0E73",
+    "district": "頭份鎮"
+  },
+  {
+    "altitude": "15",
+    "name": "五結",
+    "latitude": "24.6887",
+    "longitude": "121.7902",
+    "county": "宜蘭縣",
+    "id": "C0U78",
+    "district": "五結鄉"
+  },
+  {
+    "altitude": "24",
+    "name": "羅東",
+    "latitude": "24.6850",
+    "longitude": "121.7406",
+    "county": "宜蘭縣",
+    "id": "C0U64",
+    "district": "羅東鎮"
+  },
+  {
+    "altitude": "1220",
+    "name": "巴陵",
+    "latitude": "24.6833",
+    "longitude": "121.3833",
+    "county": "桃園縣",
+    "id": "21C07",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "523",
+    "name": "梅花",
+    "latitude": "24.6801",
+    "longitude": "121.2004",
+    "county": "新竹縣",
+    "id": "C0D36",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "494",
+    "name": "玉蘭",
+    "latitude": "24.6772",
+    "longitude": "121.5789",
+    "county": "宜蘭縣",
+    "id": "C0U65",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "103",
+    "name": "三星",
+    "latitude": "24.6725",
+    "longitude": "121.6461",
+    "county": "宜蘭縣",
+    "id": "C1U66",
+    "district": "三星鄉"
+  },
+  {
+    "altitude": "780",
+    "name": "玉峰",
+    "latitude": "24.6667",
+    "longitude": "121.3000",
+    "county": "新竹縣",
+    "id": "21D15",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "0",
+    "name": "玉峰",
+    "latitude": "24.6545",
+    "longitude": "121.3056",
+    "county": "新竹縣",
+    "id": "swc16",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "718",
+    "name": "外坪",
+    "latitude": "24.6462",
+    "longitude": "121.0829",
+    "county": "新竹縣",
+    "id": "C1D64",
+    "district": "北埔鄉"
+  },
+  {
+    "altitude": "280",
+    "name": "牛鬥",
+    "latitude": "24.6394",
+    "longitude": "121.5653",
+    "county": "宜蘭縣",
+    "id": "C1U50",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "20",
+    "name": "造橋",
+    "latitude": "24.6388",
+    "longitude": "120.8566",
+    "county": "苗栗縣",
+    "id": "C0E74",
+    "district": "造橋鄉"
+  },
+  {
+    "altitude": "147",
+    "name": "寒溪",
+    "latitude": "24.6361",
+    "longitude": "121.7083",
+    "county": "宜蘭縣",
+    "id": "C1U67",
+    "district": "冬山鄉"
+  },
+  {
+    "altitude": "0",
+    "name": "下田埔",
+    "latitude": "24.6359",
+    "longitude": "121.2733",
+    "county": "新竹縣",
+    "id": "swc17",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "1279",
+    "name": "太閣南",
+    "latitude": "24.6347",
+    "longitude": "121.1522",
+    "county": "新竹縣",
+    "id": "C1D42",
+    "district": "五峰鄉"
+  },
+  {
+    "altitude": "22",
+    "name": "冬山",
+    "latitude": "24.6342",
+    "longitude": "121.7853",
+    "county": "宜蘭縣",
+    "id": "C0U68",
+    "district": "冬山鄉"
+  },
+  {
+    "altitude": "1150",
+    "name": "池端",
+    "latitude": "24.6333",
+    "longitude": "121.4667",
+    "county": "宜蘭縣",
+    "id": "21U11",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "1260",
+    "name": "嘎拉賀",
+    "latitude": "24.6333",
+    "longitude": "121.4000",
+    "county": "桃園縣",
+    "id": "21C09",
+    "district": "復興鄉"
+  },
+  {
+    "altitude": "101",
+    "name": "新寮",
+    "latitude": "24.6275",
+    "longitude": "121.7431",
+    "county": "宜蘭縣",
+    "id": "C1U69",
+    "district": "冬山鄉"
+  },
+  {
+    "altitude": "122",
+    "name": "大河",
+    "latitude": "24.6190",
+    "longitude": "120.9382",
+    "county": "苗栗縣",
+    "id": "C0E44",
+    "district": "三灣鄉"
+  },
+  {
+    "altitude": "41",
+    "name": "後龍",
+    "latitude": "24.6081",
+    "longitude": "120.7756",
+    "county": "苗栗縣",
+    "id": "C1E54",
+    "district": "後龍鎮"
+  },
+  {
+    "altitude": "32",
+    "name": "後龍",
+    "latitude": "24.6081",
+    "longitude": "120.7756",
+    "county": "苗栗縣",
+    "id": "C0E54",
+    "district": "後龍鎮"
+  },
+  {
+    "altitude": "258",
+    "name": "南庄",
+    "latitude": "24.6032",
+    "longitude": "120.9921",
+    "county": "苗栗縣",
+    "id": "C0E43",
+    "district": "南庄鄉"
+  },
+  {
+    "altitude": "25",
+    "name": "蘇澳",
+    "latitude": "24.6017",
+    "longitude": "121.8644",
+    "county": "宜蘭縣",
+    "id": "46706",
+    "district": "蘇澳鎮"
+  },
+  {
+    "altitude": "229",
+    "name": "寒溪",
+    "latitude": "24.5963",
+    "longitude": "121.6774",
+    "county": "宜蘭縣",
+    "id": "88U83",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "109",
+    "name": "明德",
+    "latitude": "24.5864",
+    "longitude": "120.8786",
+    "county": "苗栗縣",
+    "id": "C1E55",
+    "district": "頭屋鄉"
+  },
+  {
+    "altitude": "84",
+    "name": "明德",
+    "latitude": "24.5864",
+    "longitude": "120.8786",
+    "county": "苗栗縣",
+    "id": "C0E55",
+    "district": "頭屋鄉"
+  },
+  {
+    "altitude": "2000",
+    "name": "西丘斯山",
+    "latitude": "24.5833",
+    "longitude": "121.3500",
+    "county": "新竹縣",
+    "id": "21D35",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "1290",
+    "name": "白蘭",
+    "latitude": "24.5817",
+    "longitude": "121.0719",
+    "county": "新竹縣",
+    "id": "C1D41",
+    "district": "五峰鄉"
+  },
+  {
+    "altitude": "125",
+    "name": "南勢",
+    "latitude": "24.5744",
+    "longitude": "120.7264",
+    "county": "苗栗縣",
+    "id": "C1E60",
+    "district": "後龍鎮"
+  },
+  {
+    "altitude": "492",
+    "name": "古魯",
+    "latitude": "24.5733",
+    "longitude": "121.6633",
+    "county": "宜蘭縣",
+    "id": "C1U51",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "62",
+    "name": "苗栗",
+    "latitude": "24.5667",
+    "longitude": "120.8164",
+    "county": "苗栗縣",
+    "id": "C0E75",
+    "district": "苗栗市"
+  },
+  {
+    "altitude": "630",
+    "name": "鎮西堡",
+    "latitude": "24.5667",
+    "longitude": "121.3000",
+    "county": "新竹縣",
+    "id": "21D17",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "576",
+    "name": "鳳美",
+    "latitude": "24.5567",
+    "longitude": "121.0261",
+    "county": "苗栗縣",
+    "id": "C1E48",
+    "district": "南庄鄉"
+  },
+  {
+    "altitude": "53",
+    "name": "西湖",
+    "latitude": "24.5516",
+    "longitude": "120.7403",
+    "county": "苗栗縣",
+    "id": "C0E81",
+    "district": "西湖鄉"
+  },
+  {
+    "altitude": "1620",
+    "name": "白石",
+    "latitude": "24.5500",
+    "longitude": "121.2167",
+    "county": "新竹縣",
+    "id": "21D16",
+    "district": "尖石鄉"
+  },
+  {
+    "altitude": "220",
+    "name": "獅潭",
+    "latitude": "24.5410",
+    "longitude": "120.9120",
+    "county": "苗栗縣",
+    "id": "C0E82",
+    "district": "獅潭鄉"
+  },
+  {
+    "altitude": "1209",
+    "name": "南礦",
+    "latitude": "24.5403",
+    "longitude": "120.9947",
+    "county": "苗栗縣",
+    "id": "C1E67",
+    "district": "南庄鄉"
+  },
+  {
+    "altitude": "750",
+    "name": "東澳嶺",
+    "latitude": "24.5393",
+    "longitude": "121.8406",
+    "county": "宜蘭縣",
+    "id": "C1U84",
+    "district": "南澳鄉"
+  },
+  {
+    "altitude": "1956",
+    "name": "雪霸",
+    "latitude": "24.5287",
+    "longitude": "121.1079",
+    "county": "新竹縣",
+    "id": "C0D55",
+    "district": "五峰鄉"
+  },
+  {
+    "altitude": "83",
+    "name": "公館",
+    "latitude": "24.5286",
+    "longitude": "120.8226",
+    "county": "苗栗縣",
+    "id": "C1E77",
+    "district": "公館鄉"
+  },
+  {
+    "altitude": "32",
+    "name": "東澳",
+    "latitude": "24.5206",
+    "longitude": "121.8331",
+    "county": "宜蘭縣",
+    "id": "C0U76",
+    "district": "南澳鄉"
+  },
+  {
+    "altitude": "392",
+    "name": "和興",
+    "latitude": "24.5158",
+    "longitude": "120.9069",
+    "county": "苗栗縣",
+    "id": "C1E56",
+    "district": "獅潭鄉"
+  },
+  {
+    "altitude": "1810",
+    "name": "太平山",
+    "latitude": "24.5072",
+    "longitude": "121.5175",
+    "county": "宜蘭縣",
+    "id": "C0U71",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "146",
+    "name": "公館",
+    "latitude": "24.4975",
+    "longitude": "120.8208",
+    "county": "苗栗縣",
+    "id": "C1E57",
+    "district": "公館鄉"
+  },
+  {
+    "altitude": "737",
+    "name": "八卦",
+    "latitude": "24.4936",
+    "longitude": "120.9194",
+    "county": "苗栗縣",
+    "id": "C1E70",
+    "district": "泰安鄉"
+  },
+  {
+    "altitude": "160",
+    "name": "銅鑼",
+    "latitude": "24.4915",
+    "longitude": "120.7826",
+    "county": "苗栗縣",
+    "id": "C0E78",
+    "district": "銅鑼鄉"
+  },
+  {
+    "altitude": "1409",
+    "name": "泰安",
+    "latitude": "24.4906",
+    "longitude": "120.9594",
+    "county": "苗栗縣",
+    "id": "C1E72",
+    "district": "泰安鄉"
+  },
+  {
+    "altitude": "618",
+    "name": "烏石鼻",
+    "latitude": "24.4847",
+    "longitude": "121.8317",
+    "county": "宜蘭縣",
+    "id": "C1U83",
+    "district": "蘇澳鎮"
+  },
+  {
+    "altitude": "40",
+    "name": "通霄",
+    "latitude": "24.4736",
+    "longitude": "120.6964",
+    "county": "苗栗縣",
+    "id": "C0E59",
+    "district": "通霄鎮"
+  },
+  {
+    "altitude": "70",
+    "name": "土城",
+    "latitude": "24.4733",
+    "longitude": "120.6961",
+    "county": "苗栗縣",
+    "id": "C1E59",
+    "district": "通霄鎮"
+  },
+  {
+    "altitude": "850",
+    "name": "馬都安",
+    "latitude": "24.4531",
+    "longitude": "120.9219",
+    "county": "苗栗縣",
+    "id": "C0E61",
+    "district": "泰安鄉"
+  },
+  {
+    "altitude": "19",
+    "name": "苑裡",
+    "latitude": "24.4503",
+    "longitude": "120.6500",
+    "county": "苗栗縣",
+    "id": "C0E76",
+    "district": "苑裡鎮"
+  },
+  {
+    "altitude": "5",
+    "name": "南澳",
+    "latitude": "24.4494",
+    "longitude": "121.8103",
+    "county": "宜蘭縣",
+    "id": "C0U77",
+    "district": "南澳鄉"
+  },
+  {
+    "altitude": "6",
+    "name": "金門(合)",
+    "latitude": "24.4427",
+    "longitude": "118.4319",
+    "county": "金門縣",
+    "id": "A0W03",
+    "district": "金湖鎮"
+  },
+  {
+    "altitude": "1260",
+    "name": "南山",
+    "latitude": "24.4392",
+    "longitude": "121.3733",
+    "county": "宜蘭縣",
+    "id": "C1U72",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "60",
+    "name": "苑里",
+    "latitude": "24.4353",
+    "longitude": "120.6719",
+    "county": "苗栗縣",
+    "id": "C0E58",
+    "district": "苑裡鎮"
+  },
+  {
+    "altitude": "977",
+    "name": "南勢山",
+    "latitude": "24.4236",
+    "longitude": "120.9156",
+    "county": "苗栗縣",
+    "id": "C1E68",
+    "district": "泰安鄉"
+  },
+  {
+    "altitude": "320",
+    "name": "大湖",
+    "latitude": "24.4189",
+    "longitude": "120.8664",
+    "county": "苗栗縣",
+    "id": "C0E52",
+    "district": "大湖鄉"
+  },
+  {
+    "altitude": "350",
+    "name": "大湖",
+    "latitude": "24.4189",
+    "longitude": "120.8664",
+    "county": "苗栗縣",
+    "id": "C1E52",
+    "district": "大湖鄉"
+  },
+  {
+    "altitude": "341",
+    "name": "三義",
+    "latitude": "24.4128",
+    "longitude": "120.7578",
+    "county": "苗栗縣",
+    "id": "C0E53",
+    "district": "三義鄉"
+  },
+  {
+    "altitude": "48",
+    "name": "金門",
+    "latitude": "24.4074",
+    "longitude": "118.2893",
+    "county": "金門縣",
+    "id": "46711",
+    "district": "金城鎮"
+  },
+  {
+    "altitude": "786",
+    "name": "南湖",
+    "latitude": "24.4028",
+    "longitude": "120.8294",
+    "county": "苗栗縣",
+    "id": "C1E69",
+    "district": "大湖鄉"
+  },
+  {
+    "altitude": "1325",
+    "name": "松安",
+    "latitude": "24.3994",
+    "longitude": "120.9778",
+    "county": "苗栗縣",
+    "id": "C1E46",
+    "district": "泰安鄉"
+  },
+  {
+    "altitude": "2036",
+    "name": "思源",
+    "latitude": "24.3989",
+    "longitude": "121.3486",
+    "county": "宜蘭縣",
+    "id": "C0U73",
+    "district": "大同鄉"
+  },
+  {
+    "altitude": "683",
+    "name": "觀音海岸",
+    "latitude": "24.3851",
+    "longitude": "121.7703",
+    "county": "宜蘭縣",
+    "id": "C1U85",
+    "district": "南澳鄉"
+  },
+  {
+    "altitude": "1734",
+    "name": "武陵",
+    "latitude": "24.3800",
+    "longitude": "121.3600",
+    "county": "台中市",
+    "id": "D2F23",
+    "district": "和平區"
+  },
+  {
+    "altitude": "950",
+    "name": "象鼻",
+    "latitude": "24.3703",
+    "longitude": "120.9322",
+    "county": "苗栗縣",
+    "id": "C1E45",
+    "district": "泰安鄉"
+  },
+  {
+    "altitude": "990",
+    "name": "馬拉邦山",
+    "latitude": "24.3692",
+    "longitude": "120.8933",
+    "county": "苗栗縣",
+    "id": "C1E71",
+    "district": "大湖鄉"
+  },
+  {
+    "altitude": "90",
+    "name": "大甲",
+    "latitude": "24.3528",
+    "longitude": "120.6339",
+    "county": "台中市",
+    "id": "C1F93",
+    "district": "大甲區"
+  },
+  {
+    "altitude": "100",
+    "name": "大甲",
+    "latitude": "24.3499",
+    "longitude": "120.6324",
+    "county": "台中市",
+    "id": "C0F93",
+    "district": "大甲區"
+  },
+  {
+    "altitude": "149",
+    "name": "外埔",
+    "latitude": "24.3496",
+    "longitude": "120.6975",
+    "county": "台中市",
+    "id": "C0F9Q",
+    "district": "外埔區"
+  },
+  {
+    "altitude": "326",
+    "name": "新開",
+    "latitude": "24.3494",
+    "longitude": "120.8189",
+    "county": "苗栗縣",
+    "id": "C1E51",
+    "district": "大湖鄉"
+  },
+  {
+    "altitude": "30",
+    "name": "大安",
+    "latitude": "24.3474",
+    "longitude": "120.5800",
+    "county": "台中市",
+    "id": "C0F9K",
+    "district": "大安區"
+  },
+  {
+    "altitude": "344",
+    "name": "卓蘭",
+    "latitude": "24.3148",
+    "longitude": "120.8162",
+    "county": "苗栗縣",
+    "id": "C0E79",
+    "district": "卓蘭鎮"
+  },
+  {
+    "altitude": "26",
+    "name": "清水",
+    "latitude": "24.3140",
+    "longitude": "120.5541",
+    "county": "台中市",
+    "id": "C0F9P",
+    "district": "清水區"
+  },
+  {
+    "altitude": "253",
+    "name": "后里",
+    "latitude": "24.3121",
+    "longitude": "120.7215",
+    "county": "台中市",
+    "id": "C0F9L",
+    "district": "后里區"
+  },
+  {
+    "altitude": "345",
+    "name": "卓蘭",
+    "latitude": "24.3089",
+    "longitude": "120.8031",
+    "county": "苗栗縣",
+    "id": "C1E50",
+    "district": "卓蘭鎮"
+  },
+  {
+    "altitude": "496",
+    "name": "白布帆",
+    "latitude": "24.2993",
+    "longitude": "120.8973",
+    "county": "苗栗縣",
+    "id": "swc01",
+    "district": "卓蘭鎮"
+  },
+  {
+    "altitude": "535",
+    "name": "雙崎",
+    "latitude": "24.2903",
+    "longitude": "120.8964",
+    "county": "台中市",
+    "id": "C0F90",
+    "district": "和平區"
+  },
+  {
+    "altitude": "2620",
+    "name": "雪嶺",
+    "latitude": "24.2825",
+    "longitude": "121.0186",
+    "county": "台中市",
+    "id": "C1F94",
+    "district": "和平區"
+  },
+  {
+    "altitude": "290",
+    "name": "石岡",
+    "latitude": "24.2819",
+    "longitude": "120.7621",
+    "county": "台中市",
+    "id": "C0F92",
+    "district": "石岡區"
+  },
+  {
+    "altitude": "280",
+    "name": "石岡",
+    "latitude": "24.2814",
+    "longitude": "120.7622",
+    "county": "台中市",
+    "id": "C1F92",
+    "district": "石岡區"
+  },
+  {
+    "altitude": "930",
+    "name": "烏石坑",
+    "latitude": "24.2808",
+    "longitude": "120.9375",
+    "county": "台中市",
+    "id": "C1F9H",
+    "district": "和平區"
+  },
+  {
+    "altitude": "189",
+    "name": "神岡",
+    "latitude": "24.2744",
+    "longitude": "120.6506",
+    "county": "台中市",
+    "id": "C1F9I",
+    "district": "神岡區"
+  },
+  {
+    "altitude": "194",
+    "name": "神岡",
+    "latitude": "24.2742",
+    "longitude": "120.6503",
+    "county": "台中市",
+    "id": "C0F9I",
+    "district": "神岡區"
+  },
+  {
+    "altitude": "500",
+    "name": "伯公龍",
+    "latitude": "24.2742",
+    "longitude": "120.8411",
+    "county": "台中市",
+    "id": "C1F9F",
+    "district": "東勢區"
+  },
+  {
+    "altitude": "7",
+    "name": "和中",
+    "latitude": "24.2681",
+    "longitude": "121.7333",
+    "county": "花蓮縣",
+    "id": "C0T9D",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "2205",
+    "name": "稍來",
+    "latitude": "24.2675",
+    "longitude": "120.9931",
+    "county": "台中市",
+    "id": "C1F89",
+    "district": "和平區"
+  },
+  {
+    "altitude": "32",
+    "name": "梧棲",
+    "latitude": "24.2587",
+    "longitude": "120.5151",
+    "county": "台中市",
+    "id": "46777",
+    "district": "梧棲區"
+  },
+  {
+    "altitude": "1970",
+    "name": "德基",
+    "latitude": "24.2567",
+    "longitude": "121.1820",
+    "county": "台中市",
+    "id": "C1F9W",
+    "district": "和平區"
+  },
+  {
+    "altitude": "230",
+    "name": "豐原",
+    "latitude": "24.2563",
+    "longitude": "120.7123",
+    "county": "台中市",
+    "id": "C0F9M",
+    "district": "豐原區"
+  },
+  {
+    "altitude": "379",
+    "name": "東勢",
+    "latitude": "24.2482",
+    "longitude": "120.8249",
+    "county": "台中市",
+    "id": "C0F85",
+    "district": "東勢區"
+  },
+  {
+    "altitude": "320",
+    "name": "東勢",
+    "latitude": "24.2481",
+    "longitude": "120.8253",
+    "county": "台中市",
+    "id": "C1F85",
+    "district": "東勢區"
+  },
+  {
+    "altitude": "2215",
+    "name": "梨山",
+    "latitude": "24.2450",
+    "longitude": "121.2377",
+    "county": "台中市",
+    "id": "C0F86",
+    "district": "和平區"
+  },
+  {
+    "altitude": "417",
+    "name": "新伯公",
+    "latitude": "24.2233",
+    "longitude": "120.8328",
+    "county": "台中市",
+    "id": "C1F91",
+    "district": "東勢區"
+  },
+  {
+    "altitude": "253",
+    "name": "橫山",
+    "latitude": "24.2209",
+    "longitude": "120.5993",
+    "county": "台中市",
+    "id": "C0F99",
+    "district": "大雅區"
+  },
+  {
+    "altitude": "175",
+    "name": "潭子",
+    "latitude": "24.2148",
+    "longitude": "120.6958",
+    "county": "台中市",
+    "id": "C0F9O",
+    "district": "潭子區"
+  },
+  {
+    "altitude": "1260",
+    "name": "洛韶",
+    "latitude": "24.2064",
+    "longitude": "121.4458",
+    "county": "花蓮縣",
+    "id": "C1T80",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "1000",
+    "name": "上谷關",
+    "latitude": "24.2050",
+    "longitude": "121.0108",
+    "county": "台中市",
+    "id": "C1F87",
+    "district": "和平區"
+  },
+  {
+    "altitude": "525",
+    "name": "新社",
+    "latitude": "24.2016",
+    "longitude": "120.8075",
+    "county": "台中市",
+    "id": "C0F9V",
+    "district": "新社區"
+  },
+  {
+    "altitude": "2297",
+    "name": "翠巒",
+    "latitude": "24.1944",
+    "longitude": "121.2186",
+    "county": "南投縣",
+    "id": "C1H85",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "2049",
+    "name": "慈恩",
+    "latitude": "24.1939",
+    "longitude": "121.3803",
+    "county": "花蓮縣",
+    "id": "C1T81",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "2823",
+    "name": "大禹嶺",
+    "latitude": "24.1879",
+    "longitude": "121.3078",
+    "county": "花蓮縣",
+    "id": "C0T79",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "20",
+    "name": "龍井",
+    "latitude": "24.1863",
+    "longitude": "120.5208",
+    "county": "台中市",
+    "id": "C0F9R",
+    "district": "龍井區"
+  },
+  {
+    "altitude": "610",
+    "name": "白冷",
+    "latitude": "24.1844",
+    "longitude": "120.9217",
+    "county": "台中市",
+    "id": "C1F9C",
+    "district": "和平區"
+  },
+  {
+    "altitude": "810",
+    "name": "慶福山",
+    "latitude": "24.1828",
+    "longitude": "120.8397",
+    "county": "台中市",
+    "id": "C1F9G",
+    "district": "東勢區"
+  },
+  {
+    "altitude": "111",
+    "name": "西屯",
+    "latitude": "24.1820",
+    "longitude": "120.6329",
+    "county": "台中市",
+    "id": "C0F9T",
+    "district": "西屯區"
+  },
+  {
+    "altitude": "550",
+    "name": "天祥",
+    "latitude": "24.1814",
+    "longitude": "121.4875",
+    "county": "花蓮縣",
+    "id": "C0T82",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "741",
+    "name": "松鶴",
+    "latitude": "24.1786",
+    "longitude": "120.9778",
+    "county": "台中市",
+    "id": "swc13",
+    "district": "和平區"
+  },
+  {
+    "altitude": "145",
+    "name": "大坑",
+    "latitude": "24.1749",
+    "longitude": "120.7141",
+    "county": "台中市",
+    "id": "C0F97",
+    "district": "北屯區"
+  },
+  {
+    "altitude": "200",
+    "name": "布洛灣",
+    "latitude": "24.1736",
+    "longitude": "121.5797",
+    "county": "花蓮縣",
+    "id": "C1T83",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "170",
+    "name": "大坑",
+    "latitude": "24.1733",
+    "longitude": "120.7281",
+    "county": "台中市",
+    "id": "C1F97",
+    "district": "北屯區"
+  },
+  {
+    "altitude": "563",
+    "name": "龍安",
+    "latitude": "24.1619",
+    "longitude": "120.8239",
+    "county": "台中市",
+    "id": "C1F9E",
+    "district": "新社區"
+  },
+  {
+    "altitude": "639",
+    "name": "白毛台",
+    "latitude": "24.1600",
+    "longitude": "120.8789",
+    "county": "台中市",
+    "id": "C1F9D",
+    "district": "新社區"
+  },
+  {
+    "altitude": "70",
+    "name": "太魯閣",
+    "latitude": "24.1600",
+    "longitude": "121.6150",
+    "county": "花蓮縣",
+    "id": "A0T78",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "348",
+    "name": "大肚",
+    "latitude": "24.1547",
+    "longitude": "120.5644",
+    "county": "台中市",
+    "id": "C1F00",
+    "district": "大肚區"
+  },
+  {
+    "altitude": "273",
+    "name": "大肚",
+    "latitude": "24.1547",
+    "longitude": "120.5640",
+    "county": "台中市",
+    "id": "C0F00",
+    "district": "大肚區"
+  },
+  {
+    "altitude": "24",
+    "name": "伸港",
+    "latitude": "24.1505",
+    "longitude": "120.4762",
+    "county": "彰化縣",
+    "id": "C0G89",
+    "district": "伸港鄉"
+  },
+  {
+    "altitude": "109",
+    "name": "富世",
+    "latitude": "24.1497",
+    "longitude": "121.6219",
+    "county": "花蓮縣",
+    "id": "C0T9C",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "84",
+    "name": "臺中",
+    "latitude": "24.1475",
+    "longitude": "120.6759",
+    "county": "台中市",
+    "id": "46749",
+    "district": "北區"
+  },
+  {
+    "altitude": "3402",
+    "name": "合歡山",
+    "latitude": "24.1448",
+    "longitude": "121.2641",
+    "county": "南投縣",
+    "id": "C0H9C",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "3171",
+    "name": "合歡山莊",
+    "latitude": "24.1444",
+    "longitude": "121.2764",
+    "county": "花蓮縣",
+    "id": "A0Z08",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "74",
+    "name": "南屯",
+    "latitude": "24.1389",
+    "longitude": "120.6301",
+    "county": "台中市",
+    "id": "C0F9U",
+    "district": "南屯區"
+  },
+  {
+    "altitude": "1710",
+    "name": "阿眉",
+    "latitude": "24.1278",
+    "longitude": "120.9861",
+    "county": "南投縣",
+    "id": "C1H9B",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "1676",
+    "name": "瑞岩",
+    "latitude": "24.1256",
+    "longitude": "121.1750",
+    "county": "南投縣",
+    "id": "C1H86",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "3076",
+    "name": "昆陽",
+    "latitude": "24.1231",
+    "longitude": "121.2654",
+    "county": "南投縣",
+    "id": "C0H99",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "706",
+    "name": "三棧",
+    "latitude": "24.1188",
+    "longitude": "121.5970",
+    "county": "花蓮縣",
+    "id": "C1Z09",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "1655",
+    "name": "翠峰",
+    "latitude": "24.1108",
+    "longitude": "121.1967",
+    "county": "南投縣",
+    "id": "C1H00",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "43",
+    "name": "烏日",
+    "latitude": "24.1075",
+    "longitude": "120.6230",
+    "county": "台中市",
+    "id": "C0F9S",
+    "district": "烏日區"
+  },
+  {
+    "altitude": "425",
+    "name": "中竹林",
+    "latitude": "24.1056",
+    "longitude": "120.7433",
+    "county": "台中市",
+    "id": "C0F9A",
+    "district": "太平區"
+  },
+  {
+    "altitude": "425",
+    "name": "中竹林",
+    "latitude": "24.1056",
+    "longitude": "120.7433",
+    "county": "台中市",
+    "id": "C1F9A",
+    "district": "太平區"
+  },
+  {
+    "altitude": "736",
+    "name": "長福",
+    "latitude": "24.1039",
+    "longitude": "120.8717",
+    "county": "南投縣",
+    "id": "C1H92",
+    "district": "國姓鄉"
+  },
+  {
+    "altitude": "75",
+    "name": "大里",
+    "latitude": "24.0944",
+    "longitude": "120.6922",
+    "county": "台中市",
+    "id": "C0F9N",
+    "district": "大里區"
+  },
+  {
+    "altitude": "934",
+    "name": "清流",
+    "latitude": "24.0828",
+    "longitude": "120.9547",
+    "county": "南投縣",
+    "id": "C1H90",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "37",
+    "name": "彰師大",
+    "latitude": "24.0814",
+    "longitude": "120.5567",
+    "county": "彰化縣",
+    "id": "A0G72",
+    "district": "彰化市"
+  },
+  {
+    "altitude": "98",
+    "name": "彰化",
+    "latitude": "24.0806",
+    "longitude": "120.5469",
+    "county": "彰化縣",
+    "id": "C1G63",
+    "district": "彰化市"
+  },
+  {
+    "altitude": "17",
+    "name": "鹿港",
+    "latitude": "24.0769",
+    "longitude": "120.4222",
+    "county": "彰化縣",
+    "id": "C0G64",
+    "district": "鹿港鎮"
+  },
+  {
+    "altitude": "723",
+    "name": "清水林",
+    "latitude": "24.0733",
+    "longitude": "120.8122",
+    "county": "台中市",
+    "id": "C1F9J",
+    "district": "太平區"
+  },
+  {
+    "altitude": "130",
+    "name": "桐林",
+    "latitude": "24.0681",
+    "longitude": "120.7272",
+    "county": "台中市",
+    "id": "C1F9B",
+    "district": "霧峰區"
+  },
+  {
+    "altitude": "660",
+    "name": "水長流",
+    "latitude": "24.0636",
+    "longitude": "120.8525",
+    "county": "南投縣",
+    "id": "C1I19",
+    "district": "國姓鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "福興",
+    "latitude": "24.0430",
+    "longitude": "120.4295",
+    "county": "彰化縣",
+    "id": "C0G77",
+    "district": "福興鄉"
+  },
+  {
+    "altitude": "23",
+    "name": "新城",
+    "latitude": "24.0397",
+    "longitude": "121.6012",
+    "county": "花蓮縣",
+    "id": "C0T84",
+    "district": "新城鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "秀水",
+    "latitude": "24.0359",
+    "longitude": "120.4957",
+    "county": "彰化縣",
+    "id": "C0G78",
+    "district": "秀水鄉"
+  },
+  {
+    "altitude": "1562",
+    "name": "廬山",
+    "latitude": "24.0350",
+    "longitude": "121.1733",
+    "county": "南投縣",
+    "id": "C0I01",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "1306",
+    "name": "龍澗",
+    "latitude": "24.0250",
+    "longitude": "121.4033",
+    "county": "花蓮縣",
+    "id": "C1T98",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "1113",
+    "name": "仁愛",
+    "latitude": "24.0206",
+    "longitude": "121.1228",
+    "county": "南投縣",
+    "id": "C1H87",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "791",
+    "name": "南豐",
+    "latitude": "24.0190",
+    "longitude": "121.0805",
+    "county": "南投縣",
+    "id": "88H89",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "1318",
+    "name": "凌霄",
+    "latitude": "24.0189",
+    "longitude": "121.0067",
+    "county": "南投縣",
+    "id": "C1H88",
+    "district": "埔里鎮"
+  },
+  {
+    "altitude": "27",
+    "name": "花壇",
+    "latitude": "24.0178",
+    "longitude": "120.5441",
+    "county": "彰化縣",
+    "id": "C0G79",
+    "district": "花壇鄉"
+  },
+  {
+    "altitude": "110",
+    "name": "芬園",
+    "latitude": "24.0172",
+    "longitude": "120.6131",
+    "county": "彰化縣",
+    "id": "C0G62",
+    "district": "芬園鄉"
+  },
+  {
+    "altitude": "133",
+    "name": "芬園",
+    "latitude": "24.0172",
+    "longitude": "120.6131",
+    "county": "彰化縣",
+    "id": "C1G62",
+    "district": "芬園鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "埔鹽",
+    "latitude": "24.0022",
+    "longitude": "120.4236",
+    "county": "彰化縣",
+    "id": "C0G80",
+    "district": "埔鹽鄉"
+  },
+  {
+    "altitude": "75",
+    "name": "草屯",
+    "latitude": "23.9989",
+    "longitude": "120.6547",
+    "county": "南投縣",
+    "id": "C1H96",
+    "district": "草屯鎮"
+  },
+  {
+    "altitude": "558",
+    "name": "水源",
+    "latitude": "23.9936",
+    "longitude": "121.5292",
+    "county": "花蓮縣",
+    "id": "C0T9B",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "1266",
+    "name": "楓樹林",
+    "latitude": "23.9886",
+    "longitude": "121.0681",
+    "county": "南投縣",
+    "id": "C1I33",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "393",
+    "name": "北山",
+    "latitude": "23.9872",
+    "longitude": "120.8664",
+    "county": "南投縣",
+    "id": "C1H93",
+    "district": "國姓鄉"
+  },
+  {
+    "altitude": "1555",
+    "name": "萬大",
+    "latitude": "23.9814",
+    "longitude": "121.1236",
+    "county": "南投縣",
+    "id": "C1I02",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "16",
+    "name": "花蓮",
+    "latitude": "23.9770",
+    "longitude": "121.6050",
+    "county": "花蓮縣",
+    "id": "46699",
+    "district": "花蓮市"
+  },
+  {
+    "altitude": "120",
+    "name": "草屯",
+    "latitude": "23.9754",
+    "longitude": "120.6722",
+    "county": "南投縣",
+    "id": "C0H96",
+    "district": "草屯鎮"
+  },
+  {
+    "altitude": "50",
+    "name": "吉安",
+    "latitude": "23.9753",
+    "longitude": "121.5547",
+    "county": "花蓮縣",
+    "id": "C1T85",
+    "district": "吉安鄉"
+  },
+  {
+    "altitude": "451",
+    "name": "大肚城",
+    "latitude": "23.9722",
+    "longitude": "120.9442",
+    "county": "南投縣",
+    "id": "C1H89",
+    "district": "埔里鎮"
+  },
+  {
+    "altitude": "630",
+    "name": "雙冬",
+    "latitude": "23.9692",
+    "longitude": "120.7942",
+    "county": "南投縣",
+    "id": "C1H94",
+    "district": "草屯鎮"
+  },
+  {
+    "altitude": "125",
+    "name": "銅門",
+    "latitude": "23.9675",
+    "longitude": "121.4878",
+    "county": "花蓮縣",
+    "id": "C1T86",
+    "district": "秀林鄉"
+  },
+  {
+    "altitude": "732",
+    "name": "埔里",
+    "latitude": "23.9639",
+    "longitude": "120.9831",
+    "county": "南投縣",
+    "id": "C1I25",
+    "district": "埔里鎮"
+  },
+  {
+    "altitude": "917",
+    "name": "九份二山",
+    "latitude": "23.9639",
+    "longitude": "120.8372",
+    "county": "南投縣",
+    "id": "C1I23",
+    "district": "國姓鄉"
+  },
+  {
+    "altitude": "10",
+    "name": "草湖",
+    "latitude": "23.9614",
+    "longitude": "120.3703",
+    "county": "彰化縣",
+    "id": "C1G68",
+    "district": "芳苑鄉"
+  },
+  {
+    "altitude": "725",
+    "name": "外大坪",
+    "latitude": "23.9606",
+    "longitude": "120.9097",
+    "county": "南投縣",
+    "id": "C1I24",
+    "district": "埔里鎮"
+  },
+  {
+    "altitude": "1275",
+    "name": "奧萬大",
+    "latitude": "23.9547",
+    "longitude": "121.1706",
+    "county": "南投縣",
+    "id": "C1I32",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "527",
+    "name": "九份二山",
+    "latitude": "23.9536",
+    "longitude": "120.8487",
+    "county": "南投縣",
+    "id": "swc02",
+    "district": "國姓鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "溪湖",
+    "latitude": "23.9517",
+    "longitude": "120.4711",
+    "county": "彰化縣",
+    "id": "C0G66",
+    "district": "溪湖鎮"
+  },
+  {
+    "altitude": "121",
+    "name": "溪湖",
+    "latitude": "23.9500",
+    "longitude": "120.4708",
+    "county": "彰化縣",
+    "id": "C1G66",
+    "district": "溪湖鎮"
+  },
+  {
+    "altitude": "26",
+    "name": "埔心",
+    "latitude": "23.9487",
+    "longitude": "120.5176",
+    "county": "彰化縣",
+    "id": "C0G81",
+    "district": "埔心鄉"
+  },
+  {
+    "altitude": "34",
+    "name": "員林",
+    "latitude": "23.9483",
+    "longitude": "120.5775",
+    "county": "彰化縣",
+    "id": "C0G65",
+    "district": "員林鎮"
+  },
+  {
+    "altitude": "135",
+    "name": "鯉魚潭",
+    "latitude": "23.9374",
+    "longitude": "121.5008",
+    "county": "花蓮縣",
+    "id": "C0T87",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "529",
+    "name": "蘆竹湳",
+    "latitude": "23.9358",
+    "longitude": "120.8039",
+    "county": "南投縣",
+    "id": "C1I21",
+    "district": "中寮鄉"
+  },
+  {
+    "altitude": "429",
+    "name": "六分寮",
+    "latitude": "23.9266",
+    "longitude": "120.6302",
+    "county": "南投縣",
+    "id": "C1H97",
+    "district": "南投市"
+  },
+  {
+    "altitude": "601",
+    "name": "北坑",
+    "latitude": "23.9264",
+    "longitude": "120.9989",
+    "county": "南投縣",
+    "id": "C1I26",
+    "district": "埔里鎮"
+  },
+  {
+    "altitude": "12",
+    "name": "芳苑",
+    "latitude": "23.9240",
+    "longitude": "120.3119",
+    "county": "彰化縣",
+    "id": "C0G87",
+    "district": "芳苑鄉"
+  },
+  {
+    "altitude": "948",
+    "name": "武界",
+    "latitude": "23.9147",
+    "longitude": "121.0442",
+    "county": "南投縣",
+    "id": "C1I03",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "1098",
+    "name": "樟湖",
+    "latitude": "23.9069",
+    "longitude": "120.8392",
+    "county": "南投縣",
+    "id": "C1I22",
+    "district": "國姓鄉"
+  },
+  {
+    "altitude": "29",
+    "name": "田尾",
+    "latitude": "23.9034",
+    "longitude": "120.5014",
+    "county": "彰化縣",
+    "id": "C0G82",
+    "district": "田尾鄉"
+  },
+  {
+    "altitude": "724",
+    "name": "魚池",
+    "latitude": "23.9028",
+    "longitude": "120.9206",
+    "county": "南投縣",
+    "id": "C1H91",
+    "district": "魚池鄉"
+  },
+  {
+    "altitude": "45",
+    "name": "社頭",
+    "latitude": "23.8994",
+    "longitude": "120.5781",
+    "county": "彰化縣",
+    "id": "C0G86",
+    "district": "社頭鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "吳全城",
+    "latitude": "23.8889",
+    "longitude": "121.5400",
+    "county": "花蓮縣",
+    "id": "C1T88",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "192",
+    "name": "中寮",
+    "latitude": "23.8863",
+    "longitude": "120.7585",
+    "county": "南投縣",
+    "id": "C0H95",
+    "district": "中寮鄉"
+  },
+  {
+    "altitude": "180",
+    "name": "中寮",
+    "latitude": "23.8861",
+    "longitude": "120.7583",
+    "county": "南投縣",
+    "id": "C1H95",
+    "district": "中寮鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "中西",
+    "latitude": "23.8839",
+    "longitude": "120.3439",
+    "county": "彰化縣",
+    "id": "C1G70",
+    "district": "二林鎮"
+  },
+  {
+    "altitude": "1015",
+    "name": "日月潭",
+    "latitude": "23.8830",
+    "longitude": "120.8999",
+    "county": "南投縣",
+    "id": "46765",
+    "district": "魚池鄉"
+  },
+  {
+    "altitude": "415",
+    "name": "大坑",
+    "latitude": "23.8806",
+    "longitude": "121.5819",
+    "county": "花蓮縣",
+    "id": "C0T9E",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "32",
+    "name": "北斗",
+    "latitude": "23.8792",
+    "longitude": "120.5065",
+    "county": "彰化縣",
+    "id": "C0G84",
+    "district": "北斗鎮"
+  },
+  {
+    "altitude": "40",
+    "name": "壽豐",
+    "latitude": "23.8711",
+    "longitude": "121.4997",
+    "county": "花蓮縣",
+    "id": "C1T89",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "埤頭",
+    "latitude": "23.8678",
+    "longitude": "120.4447",
+    "county": "彰化縣",
+    "id": "C0G83",
+    "district": "埤頭鄉"
+  },
+  {
+    "altitude": "62",
+    "name": "田中",
+    "latitude": "23.8587",
+    "longitude": "120.5804",
+    "county": "彰化縣",
+    "id": "C0G85",
+    "district": "田中鎮"
+  },
+  {
+    "altitude": "653",
+    "name": "東壙",
+    "latitude": "23.8556",
+    "longitude": "121.3969",
+    "county": "花蓮縣",
+    "id": "C1T91",
+    "district": "萬榮鄉"
+  },
+  {
+    "altitude": "64",
+    "name": "臺西",
+    "latitude": "23.8506",
+    "longitude": "120.2719",
+    "county": "彰化縣",
+    "id": "C0G71",
+    "district": "大城鄉"
+  },
+  {
+    "altitude": "14",
+    "name": "溪州",
+    "latitude": "23.8500",
+    "longitude": "120.4881",
+    "county": "彰化縣",
+    "id": "C1G67",
+    "district": "溪州鄉"
+  },
+  {
+    "altitude": "593",
+    "name": "水里",
+    "latitude": "23.8339",
+    "longitude": "120.8458",
+    "county": "南投縣",
+    "id": "C1I27",
+    "district": "水里鄉"
+  },
+  {
+    "altitude": "235",
+    "name": "集集",
+    "latitude": "23.8283",
+    "longitude": "120.7669",
+    "county": "南投縣",
+    "id": "C1I17",
+    "district": "集集鎮"
+  },
+  {
+    "altitude": "1693",
+    "name": "文文社",
+    "latitude": "23.8267",
+    "longitude": "121.0128",
+    "county": "南投縣",
+    "id": "C1I04",
+    "district": "仁愛鄉"
+  },
+  {
+    "altitude": "511",
+    "name": "月眉山",
+    "latitude": "23.8258",
+    "longitude": "121.5403",
+    "county": "花蓮縣",
+    "id": "C0T9A",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "439",
+    "name": "埔中",
+    "latitude": "23.8225",
+    "longitude": "120.6347",
+    "county": "南投縣",
+    "id": "C1I28",
+    "district": "名間鄉"
+  },
+  {
+    "altitude": "110",
+    "name": "下水埔",
+    "latitude": "23.8178",
+    "longitude": "120.5594",
+    "county": "彰化縣",
+    "id": "C1G69",
+    "district": "溪州鄉"
+  },
+  {
+    "altitude": "92",
+    "name": "二水",
+    "latitude": "23.8128",
+    "longitude": "120.6090",
+    "county": "彰化縣",
+    "id": "C0G88",
+    "district": "二水鄉"
+  },
+  {
+    "altitude": "160",
+    "name": "西林",
+    "latitude": "23.8086",
+    "longitude": "121.4097",
+    "county": "花蓮縣",
+    "id": "C0T90",
+    "district": "萬榮鄉"
+  },
+  {
+    "altitude": "79",
+    "name": "西螺",
+    "latitude": "23.8064",
+    "longitude": "120.4444",
+    "county": "雲林縣",
+    "id": "C1K23",
+    "district": "西螺鎮"
+  },
+  {
+    "altitude": "393",
+    "name": "青雲",
+    "latitude": "23.8008",
+    "longitude": "120.9411",
+    "county": "南投縣",
+    "id": "C1I15",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "283",
+    "name": "水璉",
+    "latitude": "23.7989",
+    "longitude": "121.5342",
+    "county": "花蓮縣",
+    "id": "C0T9F",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "23",
+    "name": "麥寮",
+    "latitude": "23.7987",
+    "longitude": "120.2177",
+    "county": "雲林縣",
+    "id": "A0K42",
+    "district": "麥寮鄉"
+  },
+  {
+    "altitude": "29",
+    "name": "後安寮",
+    "latitude": "23.7911",
+    "longitude": "120.2250",
+    "county": "雲林縣",
+    "id": "C1K26",
+    "district": "麥寮鄉"
+  },
+  {
+    "altitude": "339",
+    "name": "龍神橋",
+    "latitude": "23.7817",
+    "longitude": "120.8636",
+    "county": "南投縣",
+    "id": "C1I16",
+    "district": "水里鄉"
+  },
+  {
+    "altitude": "68",
+    "name": "中興",
+    "latitude": "23.7714",
+    "longitude": "121.4906",
+    "county": "花蓮縣",
+    "id": "C1T92",
+    "district": "壽豐鄉"
+  },
+  {
+    "altitude": "161",
+    "name": "竹山",
+    "latitude": "23.7647",
+    "longitude": "120.6778",
+    "county": "南投縣",
+    "id": "C0I11",
+    "district": "竹山鎮"
+  },
+  {
+    "altitude": "59",
+    "name": "崙背",
+    "latitude": "23.7575",
+    "longitude": "120.3108",
+    "county": "雲林縣",
+    "id": "C1K25",
+    "district": "崙背鄉"
+  },
+  {
+    "altitude": "1001",
+    "name": "西巒",
+    "latitude": "23.7564",
+    "longitude": "120.8756",
+    "county": "南投縣",
+    "id": "C1I31",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "1700",
+    "name": "卡奈托灣",
+    "latitude": "23.7561",
+    "longitude": "121.0797",
+    "county": "南投縣",
+    "id": "C1I14",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "305",
+    "name": "坪頂",
+    "latitude": "23.7556",
+    "longitude": "120.6310",
+    "county": "雲林縣",
+    "id": "swc14",
+    "district": "林內鄉"
+  },
+  {
+    "altitude": "2568",
+    "name": "丹大",
+    "latitude": "23.7556",
+    "longitude": "121.1328",
+    "county": "南投縣",
+    "id": "C1I05",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "650",
+    "name": "鳳林山",
+    "latitude": "23.7478",
+    "longitude": "121.4214",
+    "county": "花蓮縣",
+    "id": "C0T9G",
+    "district": "鳳林鎮"
+  },
+  {
+    "altitude": "130",
+    "name": "鳳林",
+    "latitude": "23.7453",
+    "longitude": "121.4375",
+    "county": "花蓮縣",
+    "id": "C1T93",
+    "district": "鳳林鎮"
+  },
+  {
+    "altitude": "304",
+    "name": "鳳義坑",
+    "latitude": "23.7442",
+    "longitude": "121.4207",
+    "county": "花蓮縣",
+    "id": "swc08",
+    "district": "鳳林鎮"
+  },
+  {
+    "altitude": "421",
+    "name": "郡坑",
+    "latitude": "23.7416",
+    "longitude": "120.8629",
+    "county": "南投縣",
+    "id": "swc05",
+    "district": "水里鄉"
+  },
+  {
+    "altitude": "3",
+    "name": "吉貝",
+    "latitude": "23.7400",
+    "longitude": "119.6042",
+    "county": "澎湖縣",
+    "id": "A0W08",
+    "district": "白沙鄉"
+  },
+  {
+    "altitude": "677",
+    "name": "中心崙",
+    "latitude": "23.7303",
+    "longitude": "120.7042",
+    "county": "南投縣",
+    "id": "C1I20",
+    "district": "竹山鎮"
+  },
+  {
+    "altitude": "781",
+    "name": "上安橋",
+    "latitude": "23.7303",
+    "longitude": "120.8658",
+    "county": "南投縣",
+    "id": "C1I30",
+    "district": "水里鄉"
+  },
+  {
+    "altitude": "910",
+    "name": "鳳凰",
+    "latitude": "23.7297",
+    "longitude": "120.7792",
+    "county": "南投縣",
+    "id": "C0I09",
+    "district": "鹿谷鄉"
+  },
+  {
+    "altitude": "459",
+    "name": "上安",
+    "latitude": "23.7247",
+    "longitude": "120.8666",
+    "county": "南投縣",
+    "id": "swc04",
+    "district": "水里鄉"
+  },
+  {
+    "altitude": "38",
+    "name": "虎尾",
+    "latitude": "23.7214",
+    "longitude": "120.4325",
+    "county": "雲林縣",
+    "id": "C0K33",
+    "district": "虎尾鎮"
+  },
+  {
+    "altitude": "539",
+    "name": "大觀",
+    "latitude": "23.7161",
+    "longitude": "121.3650",
+    "county": "花蓮縣",
+    "id": "C1T94",
+    "district": "萬榮鄉"
+  },
+  {
+    "altitude": "40",
+    "name": "斗六",
+    "latitude": "23.7072",
+    "longitude": "120.5081",
+    "county": "雲林縣",
+    "id": "C1K31",
+    "district": "斗六市"
+  },
+  {
+    "altitude": "21",
+    "name": "褒忠",
+    "latitude": "23.7067",
+    "longitude": "120.2997",
+    "county": "雲林縣",
+    "id": "C1K27",
+    "district": "褒忠鄉"
+  },
+  {
+    "altitude": "536",
+    "name": "信義",
+    "latitude": "23.6914",
+    "longitude": "120.8428",
+    "county": "南投縣",
+    "id": "C1I08",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "33",
+    "name": "土庫",
+    "latitude": "23.6900",
+    "longitude": "120.3817",
+    "county": "雲林縣",
+    "id": "C1K34",
+    "district": "土庫鎮"
+  },
+  {
+    "altitude": "746",
+    "name": "加路蘭山",
+    "latitude": "23.6842",
+    "longitude": "121.5189",
+    "county": "花蓮縣",
+    "id": "C0T9H",
+    "district": "豐濱鄉"
+  },
+  {
+    "altitude": "1515",
+    "name": "大鞍",
+    "latitude": "23.6803",
+    "longitude": "120.7517",
+    "county": "南投縣",
+    "id": "C1I12",
+    "district": "竹山鎮"
+  },
+  {
+    "altitude": "1151",
+    "name": "豐丘",
+    "latitude": "23.6700",
+    "longitude": "120.8789",
+    "county": "南投縣",
+    "id": "C1I29",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "613",
+    "name": "豐丘",
+    "latitude": "23.6699",
+    "longitude": "120.8686",
+    "county": "南投縣",
+    "id": "swc06",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "1050",
+    "name": "太安",
+    "latitude": "23.6686",
+    "longitude": "121.3619",
+    "county": "花蓮縣",
+    "id": "C1T95",
+    "district": "萬榮鄉"
+  },
+  {
+    "altitude": "1810",
+    "name": "溪頭",
+    "latitude": "23.6631",
+    "longitude": "120.7992",
+    "county": "南投縣",
+    "id": "C1I10",
+    "district": "鹿谷鄉"
+  },
+  {
+    "altitude": "140",
+    "name": "光復",
+    "latitude": "23.6625",
+    "longitude": "121.4167",
+    "county": "花蓮縣",
+    "id": "C0T96",
+    "district": "光復鄉"
+  },
+  {
+    "altitude": "51",
+    "name": "阿丹",
+    "latitude": "23.6597",
+    "longitude": "120.5036",
+    "county": "雲林縣",
+    "id": "C1K32",
+    "district": "斗南鎮"
+  },
+  {
+    "altitude": "311",
+    "name": "桶頭",
+    "latitude": "23.6442",
+    "longitude": "120.6456",
+    "county": "南投縣",
+    "id": "C1I13",
+    "district": "竹山鎮"
+  },
+  {
+    "altitude": "196",
+    "name": "大興",
+    "latitude": "23.6436",
+    "longitude": "121.3699",
+    "county": "花蓮縣",
+    "id": "swc11",
+    "district": "光復鄉"
+  },
+  {
+    "altitude": "369",
+    "name": "大埔",
+    "latitude": "23.6431",
+    "longitude": "120.5972",
+    "county": "雲林縣",
+    "id": "C0K30",
+    "district": "古坑鄉"
+  },
+  {
+    "altitude": "23",
+    "name": "四湖",
+    "latitude": "23.6311",
+    "longitude": "120.2172",
+    "county": "雲林縣",
+    "id": "C0K28",
+    "district": "四湖鄉"
+  },
+  {
+    "altitude": "2403",
+    "name": "望鄉",
+    "latitude": "23.6211",
+    "longitude": "120.9028",
+    "county": "南投縣",
+    "id": "C1I06",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "200",
+    "name": "大農",
+    "latitude": "23.6169",
+    "longitude": "121.4050",
+    "county": "花蓮縣",
+    "id": "C1T97",
+    "district": "光復鄉"
+  },
+  {
+    "altitude": "14",
+    "name": "溪口",
+    "latitude": "23.6058",
+    "longitude": "120.3961",
+    "county": "嘉義縣",
+    "id": "C1M46",
+    "district": "溪口鄉"
+  },
+  {
+    "altitude": "1052",
+    "name": "豐山",
+    "latitude": "23.5969",
+    "longitude": "120.7408",
+    "county": "嘉義縣",
+    "id": "C1M63",
+    "district": "阿里山鄉"
+  },
+  {
+    "altitude": "1132",
+    "name": "草嶺",
+    "latitude": "23.5956",
+    "longitude": "120.6933",
+    "county": "雲林縣",
+    "id": "C0K24",
+    "district": "古坑鄉"
+  },
+  {
+    "altitude": "522",
+    "name": "華山",
+    "latitude": "23.5953",
+    "longitude": "120.5999",
+    "county": "雲林縣",
+    "id": "swc10",
+    "district": "古坑鄉"
+  },
+  {
+    "altitude": "825",
+    "name": "和社",
+    "latitude": "23.5925",
+    "longitude": "120.8808",
+    "county": "南投縣",
+    "id": "C1I07",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "298",
+    "name": "富源",
+    "latitude": "23.5898",
+    "longitude": "121.3704",
+    "county": "花蓮縣",
+    "id": "C0Z08",
+    "district": "光復鄉"
+  },
+  {
+    "altitude": "649",
+    "name": "山豬湖",
+    "latitude": "23.5886",
+    "longitude": "120.5931",
+    "county": "雲林縣",
+    "id": "C1K38",
+    "district": "古坑鄉"
+  },
+  {
+    "altitude": "828",
+    "name": "豐山",
+    "latitude": "23.5873",
+    "longitude": "120.7399",
+    "county": "嘉義縣",
+    "id": "swc12",
+    "district": "阿里山鄉"
+  },
+  {
+    "altitude": "214",
+    "name": "豐濱",
+    "latitude": "23.5803",
+    "longitude": "121.5058",
+    "county": "花蓮縣",
+    "id": "C0T9I",
+    "district": "豐濱鄉"
+  },
+  {
+    "altitude": "24",
+    "name": "北港",
+    "latitude": "23.5706",
+    "longitude": "120.2867",
+    "county": "雲林縣",
+    "id": "C1K35",
+    "district": "北港鎮"
+  },
+  {
+    "altitude": "11",
+    "name": "澎湖",
+    "latitude": "23.5672",
+    "longitude": "119.5552",
+    "county": "澎湖縣",
+    "id": "46735",
+    "district": "馬公市"
+  },
+  {
+    "altitude": "897",
+    "name": "新興橋",
+    "latitude": "23.5658",
+    "longitude": "120.8597",
+    "county": "南投縣",
+    "id": "C1I34",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "167",
+    "name": "中坑",
+    "latitude": "23.5631",
+    "longitude": "120.5175",
+    "county": "嘉義縣",
+    "id": "C1M45",
+    "district": "大林鎮"
+  },
+  {
+    "altitude": "887",
+    "name": "東埔",
+    "latitude": "23.5581",
+    "longitude": "120.9167",
+    "county": "南投縣",
+    "id": "C1I35",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "1252",
+    "name": "瑞里",
+    "latitude": "23.5469",
+    "longitude": "120.6669",
+    "county": "嘉義縣",
+    "id": "C1M62",
+    "district": "梅山鄉"
+  },
+  {
+    "altitude": "798",
+    "name": "樟腦寮",
+    "latitude": "23.5386",
+    "longitude": "120.5994",
+    "county": "嘉義縣",
+    "id": "C1M48",
+    "district": "竹崎鄉"
+  },
+  {
+    "altitude": "5",
+    "name": "宜梧",
+    "latitude": "23.5374",
+    "longitude": "120.1610",
+    "county": "雲林縣",
+    "id": "C0K29",
+    "district": "口湖鄉"
+  },
+  {
+    "altitude": "1595",
+    "name": "神木村",
+    "latitude": "23.5361",
+    "longitude": "120.8347",
+    "county": "南投縣",
+    "id": "C0H9A",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "1179",
+    "name": "神木",
+    "latitude": "23.5297",
+    "longitude": "120.8482",
+    "county": "南投縣",
+    "id": "swc03",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "2413",
+    "name": "阿里山",
+    "latitude": "23.5104",
+    "longitude": "120.8051",
+    "county": "嘉義縣",
+    "id": "46753",
+    "district": "阿里山鄉"
+  },
+  {
+    "altitude": "23",
+    "name": "鰲鼓",
+    "latitude": "23.5072",
+    "longitude": "120.1403",
+    "county": "嘉義縣",
+    "id": "C1M47",
+    "district": "東石鄉"
+  },
+  {
+    "altitude": "1083",
+    "name": "石磐龍",
+    "latitude": "23.4981",
+    "longitude": "120.6550",
+    "county": "嘉義縣",
+    "id": "C1M61",
+    "district": "竹崎鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "嘉義",
+    "latitude": "23.4977",
+    "longitude": "120.4245",
+    "county": "嘉義市",
+    "id": "46748",
+    "district": "西區"
+  },
+  {
+    "altitude": "1385",
+    "name": "奮起湖",
+    "latitude": "23.4958",
+    "longitude": "120.6911",
+    "county": "嘉義縣",
+    "id": "C0M53",
+    "district": "竹崎鄉"
+  },
+  {
+    "altitude": "218",
+    "name": "紅葉",
+    "latitude": "23.4950",
+    "longitude": "121.3306",
+    "county": "花蓮縣",
+    "id": "C1Z03",
+    "district": "萬榮鄉"
+  },
+  {
+    "altitude": "3845",
+    "name": "玉山",
+    "latitude": "23.4893",
+    "longitude": "120.9517",
+    "county": "南投縣",
+    "id": "46755",
+    "district": "信義鄉"
+  },
+  {
+    "altitude": "130",
+    "name": "內埔",
+    "latitude": "23.4875",
+    "longitude": "120.5561",
+    "county": "嘉義縣",
+    "id": "C1M49",
+    "district": "竹崎鄉"
+  },
+  {
+    "altitude": "2540",
+    "name": "新高口",
+    "latitude": "23.4808",
+    "longitude": "120.8703",
+    "county": "嘉義縣",
+    "id": "C1M44",
+    "district": "阿里山鄉"
+  },
+  {
+    "altitude": "41",
+    "name": "魚寮",
+    "latitude": "23.4803",
+    "longitude": "120.3539",
+    "county": "嘉義縣",
+    "id": "C1M50",
+    "district": "太保市"
+  },
+  {
+    "altitude": "722",
+    "name": "大湖",
+    "latitude": "23.4767",
+    "longitude": "120.6125",
+    "county": "嘉義縣",
+    "id": "C1M57",
+    "district": "番路鄉"
+  },
+  {
+    "altitude": "8",
+    "name": "朴子",
+    "latitude": "23.4714",
+    "longitude": "120.2494",
+    "county": "嘉義縣",
+    "id": "C1M51",
+    "district": "朴子市"
+  },
+  {
+    "altitude": "272",
+    "name": "舞鶴",
+    "latitude": "23.4697",
+    "longitude": "121.3658",
+    "county": "花蓮縣",
+    "id": "C0Z07",
+    "district": "瑞穗鄉"
+  },
+  {
+    "altitude": "3690",
+    "name": "排雲",
+    "latitude": "23.4651",
+    "longitude": "120.9460",
+    "county": "高雄市",
+    "id": "C1V17",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "92",
+    "name": "靜浦",
+    "latitude": "23.4569",
+    "longitude": "121.4867",
+    "county": "花蓮縣",
+    "id": "C0T9M",
+    "district": "豐濱鄉"
+  },
+  {
+    "altitude": "434",
+    "name": "立山",
+    "latitude": "23.4450",
+    "longitude": "121.3192",
+    "county": "花蓮縣",
+    "id": "C1Z04",
+    "district": "卓溪鄉"
+  },
+  {
+    "altitude": "1857",
+    "name": "楠溪",
+    "latitude": "23.4381",
+    "longitude": "120.8844",
+    "county": "高雄市",
+    "id": "C1V46",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "110",
+    "name": "中埔",
+    "latitude": "23.4253",
+    "longitude": "120.5122",
+    "county": "嘉義縣",
+    "id": "C1M55",
+    "district": "中埔鄉"
+  },
+  {
+    "altitude": "43",
+    "name": "南靖",
+    "latitude": "23.4136",
+    "longitude": "120.3772",
+    "county": "嘉義縣",
+    "id": "C1M56",
+    "district": "水上鄉"
+  },
+  {
+    "altitude": "986",
+    "name": "頭凍",
+    "latitude": "23.4081",
+    "longitude": "120.5953",
+    "county": "嘉義縣",
+    "id": "C1M60",
+    "district": "番路鄉"
+  },
+  {
+    "altitude": "1090",
+    "name": "瀨頭",
+    "latitude": "23.4078",
+    "longitude": "120.6458",
+    "county": "嘉義縣",
+    "id": "C1M39",
+    "district": "番路鄉"
+  },
+  {
+    "altitude": "128",
+    "name": "高寮",
+    "latitude": "23.3961",
+    "longitude": "121.3486",
+    "county": "花蓮縣",
+    "id": "C1T99",
+    "district": "玉里鎮"
+  },
+  {
+    "altitude": "19",
+    "name": "東後寮",
+    "latitude": "23.3714",
+    "longitude": "120.2403",
+    "county": "嘉義縣",
+    "id": "C1M52",
+    "district": "義竹鄉"
+  },
+  {
+    "altitude": "768",
+    "name": "小公田",
+    "latitude": "23.3636",
+    "longitude": "120.5728",
+    "county": "嘉義縣",
+    "id": "C1M54",
+    "district": "番路鄉"
+  },
+  {
+    "altitude": "704",
+    "name": "佳心",
+    "latitude": "23.3469",
+    "longitude": "121.2050",
+    "county": "花蓮縣",
+    "id": "C0Z05",
+    "district": "卓溪鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "岸內",
+    "latitude": "23.3317",
+    "longitude": "120.2522",
+    "county": "台南市",
+    "id": "C1X01",
+    "district": "鹽水區"
+  },
+  {
+    "altitude": "403",
+    "name": "關子嶺",
+    "latitude": "23.3289",
+    "longitude": "120.5036",
+    "county": "台南市",
+    "id": "C0X02",
+    "district": "白河區"
+  },
+  {
+    "altitude": "33",
+    "name": "白河",
+    "latitude": "23.3264",
+    "longitude": "120.4208",
+    "county": "台南市",
+    "id": "C1X03",
+    "district": "白河區"
+  },
+  {
+    "altitude": "245",
+    "name": "馬頭山",
+    "latitude": "23.3264",
+    "longitude": "120.5736",
+    "county": "嘉義縣",
+    "id": "C0M41",
+    "district": "大埔鄉"
+  },
+  {
+    "altitude": "174",
+    "name": "玉里",
+    "latitude": "23.3217",
+    "longitude": "121.3397",
+    "county": "花蓮縣",
+    "id": "C0Z06",
+    "district": "玉里鎮"
+  },
+  {
+    "altitude": "1246",
+    "name": "大棟山",
+    "latitude": "23.3133",
+    "longitude": "120.5142",
+    "county": "台南市",
+    "id": "C1O87",
+    "district": "白河區"
+  },
+  {
+    "altitude": "198",
+    "name": "卓樂",
+    "latitude": "23.2989",
+    "longitude": "121.2636",
+    "county": "花蓮縣",
+    "id": "C1Z01",
+    "district": "卓溪鄉"
+  },
+  {
+    "altitude": "19",
+    "name": "東河",
+    "latitude": "23.2986",
+    "longitude": "120.3772",
+    "county": "台南市",
+    "id": "C1X05",
+    "district": "東山區"
+  },
+  {
+    "altitude": "16",
+    "name": "新營",
+    "latitude": "23.2942",
+    "longitude": "120.3139",
+    "county": "台南市",
+    "id": "C0O91",
+    "district": "柳營區"
+  },
+  {
+    "altitude": "232",
+    "name": "東原",
+    "latitude": "23.2931",
+    "longitude": "120.4553",
+    "county": "台南市",
+    "id": "C1X04",
+    "district": "東山區"
+  },
+  {
+    "altitude": "288",
+    "name": "長濱",
+    "latitude": "23.2886",
+    "longitude": "121.4039",
+    "county": "台東縣",
+    "id": "C0S83",
+    "district": "長濱鄉"
+  },
+  {
+    "altitude": "1040",
+    "name": "民生",
+    "latitude": "23.2817",
+    "longitude": "120.6972",
+    "county": "高雄市",
+    "id": "C1V16",
+    "district": "那瑪夏區"
+  },
+  {
+    "altitude": "2700",
+    "name": "南天池",
+    "latitude": "23.2758",
+    "longitude": "120.9036",
+    "county": "高雄市",
+    "id": "C1V19",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "870",
+    "name": "梅山",
+    "latitude": "23.2703",
+    "longitude": "120.8154",
+    "county": "高雄市",
+    "id": "C1V20",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "14",
+    "name": "北門",
+    "latitude": "23.2700",
+    "longitude": "120.1164",
+    "county": "台南市",
+    "id": "C1X07",
+    "district": "北門區"
+  },
+  {
+    "altitude": "1163",
+    "name": "表湖",
+    "latitude": "23.2619",
+    "longitude": "120.6561",
+    "county": "高雄市",
+    "id": "C0V15",
+    "district": "那瑪夏區"
+  },
+  {
+    "altitude": "43",
+    "name": "東吉島",
+    "latitude": "23.2590",
+    "longitude": "119.6596",
+    "county": "澎湖縣",
+    "id": "46730",
+    "district": "望安鄉"
+  },
+  {
+    "altitude": "369",
+    "name": "草嶺(嘉)",
+    "latitude": "23.2536",
+    "longitude": "120.5683",
+    "county": "嘉義縣",
+    "id": "C1M40",
+    "district": "大埔鄉"
+  },
+  {
+    "altitude": "2280",
+    "name": "向陽",
+    "latitude": "23.2500",
+    "longitude": "120.9781",
+    "county": "台東縣",
+    "id": "C0S75",
+    "district": "海端鄉"
+  },
+  {
+    "altitude": "19",
+    "name": "下營",
+    "latitude": "23.2269",
+    "longitude": "120.2481",
+    "county": "台南市",
+    "id": "C1X06",
+    "district": "下營區"
+  },
+  {
+    "altitude": "700",
+    "name": "復興",
+    "latitude": "23.2242",
+    "longitude": "120.7978",
+    "county": "高雄市",
+    "id": "C0V21",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "700",
+    "name": "復興",
+    "latitude": "23.2242",
+    "longitude": "120.7978",
+    "county": "高雄市",
+    "id": "C1V21",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "144",
+    "name": "王爺宮",
+    "latitude": "23.2225",
+    "longitude": "120.3911",
+    "county": "台南市",
+    "id": "C1O84",
+    "district": "六甲區"
+  },
+  {
+    "altitude": "144",
+    "name": "王爺宮",
+    "latitude": "23.2225",
+    "longitude": "120.3911",
+    "county": "台南市",
+    "id": "C0O84",
+    "district": "六甲區"
+  },
+  {
+    "altitude": "174",
+    "name": "曾文",
+    "latitude": "23.2208",
+    "longitude": "120.4897",
+    "county": "台南市",
+    "id": "C0O81",
+    "district": "楠西區"
+  },
+  {
+    "altitude": "211",
+    "name": "明里",
+    "latitude": "23.2106",
+    "longitude": "121.2542",
+    "county": "花蓮縣",
+    "id": "C0Z02",
+    "district": "富里鄉"
+  },
+  {
+    "altitude": "1580",
+    "name": "摩天",
+    "latitude": "23.2011",
+    "longitude": "121.0192",
+    "county": "台東縣",
+    "id": "C1S67",
+    "district": "海端鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "官田",
+    "latitude": "23.1950",
+    "longitude": "120.3075",
+    "county": "台南市",
+    "id": "C0X13",
+    "district": "官田區"
+  },
+  {
+    "altitude": "28",
+    "name": "麻豆",
+    "latitude": "23.1851",
+    "longitude": "120.2405",
+    "county": "台南市",
+    "id": "C0X12",
+    "district": "麻豆區"
+  },
+  {
+    "altitude": "150",
+    "name": "楠西",
+    "latitude": "23.1850",
+    "longitude": "120.4764",
+    "county": "台南市",
+    "id": "C1O92",
+    "district": "楠西區"
+  },
+  {
+    "altitude": "2",
+    "name": "佳里",
+    "latitude": "23.1750",
+    "longitude": "120.1367",
+    "county": "台南市",
+    "id": "C0X08",
+    "district": "佳里區"
+  },
+  {
+    "altitude": "223",
+    "name": "關山",
+    "latitude": "23.1750",
+    "longitude": "120.5858",
+    "county": "台南市",
+    "id": "C1O88",
+    "district": "南化區"
+  },
+  {
+    "altitude": "1781",
+    "name": "小關山",
+    "latitude": "23.1558",
+    "longitude": "120.8053",
+    "county": "高雄市",
+    "id": "C1V22",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "794",
+    "name": "下馬",
+    "latitude": "23.1522",
+    "longitude": "121.0622",
+    "county": "台東縣",
+    "id": "C1S66",
+    "district": "海端鄉"
+  },
+  {
+    "altitude": "222",
+    "name": "南美山",
+    "latitude": "23.1521",
+    "longitude": "121.3743",
+    "county": "台東縣",
+    "id": "C1S87",
+    "district": "成功鎮"
+  },
+  {
+    "altitude": "44",
+    "name": "環湖",
+    "latitude": "23.1500",
+    "longitude": "120.4103",
+    "county": "台南市",
+    "id": "C1O85",
+    "district": "大內區"
+  },
+  {
+    "altitude": "3",
+    "name": "七股站",
+    "latitude": "23.1478",
+    "longitude": "120.0692",
+    "county": "台南市",
+    "id": "46778",
+    "district": "七股區"
+  },
+  {
+    "altitude": "6",
+    "name": "七股",
+    "latitude": "23.1436",
+    "longitude": "120.1381",
+    "county": "台南市",
+    "id": "C1X09",
+    "district": "七股區"
+  },
+  {
+    "altitude": "760",
+    "name": "高中",
+    "latitude": "23.1367",
+    "longitude": "120.7089",
+    "county": "高雄市",
+    "id": "C1V23",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "42",
+    "name": "玉井",
+    "latitude": "23.1275",
+    "longitude": "120.4525",
+    "county": "台南市",
+    "id": "C0O93",
+    "district": "玉井區"
+  },
+  {
+    "altitude": "17",
+    "name": "西港",
+    "latitude": "23.1274",
+    "longitude": "120.1951",
+    "county": "台南市",
+    "id": "C0X14",
+    "district": "西港區"
+  },
+  {
+    "altitude": "489",
+    "name": "豐南",
+    "latitude": "23.1240",
+    "longitude": "121.2543",
+    "county": "花蓮縣",
+    "id": "C1S85",
+    "district": "富里鄉"
+  },
+  {
+    "altitude": "61",
+    "name": "大內",
+    "latitude": "23.1219",
+    "longitude": "120.3533",
+    "county": "台南市",
+    "id": "C0O86",
+    "district": "大內區"
+  },
+  {
+    "altitude": "61",
+    "name": "大內",
+    "latitude": "23.1219",
+    "longitude": "120.3533",
+    "county": "台南市",
+    "id": "C1O86",
+    "district": "大內區"
+  },
+  {
+    "altitude": "289",
+    "name": "池上",
+    "latitude": "23.1214",
+    "longitude": "121.2017",
+    "county": "台東縣",
+    "id": "C0S74",
+    "district": "池上鄉"
+  },
+  {
+    "altitude": "9",
+    "name": "善化",
+    "latitude": "23.1144",
+    "longitude": "120.2894",
+    "county": "台南市",
+    "id": "C0O90",
+    "district": "善化區"
+  },
+  {
+    "altitude": "18",
+    "name": "安定",
+    "latitude": "23.1044",
+    "longitude": "120.2200",
+    "county": "台南市",
+    "id": "C0X15",
+    "district": "安定區"
+  },
+  {
+    "altitude": "34",
+    "name": "成功",
+    "latitude": "23.0992",
+    "longitude": "121.3654",
+    "county": "台東縣",
+    "id": "46761",
+    "district": "成功鎮"
+  },
+  {
+    "altitude": "1656",
+    "name": "溪南(特)",
+    "latitude": "23.0868",
+    "longitude": "120.7804",
+    "county": "高雄市",
+    "id": "C1V58",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "270",
+    "name": "甲仙",
+    "latitude": "23.0817",
+    "longitude": "120.5825",
+    "county": "高雄市",
+    "id": "C0V25",
+    "district": "甲仙區"
+  },
+  {
+    "altitude": "105",
+    "name": "北寮",
+    "latitude": "23.0816",
+    "longitude": "120.4869",
+    "county": "台南市",
+    "id": "C0O83",
+    "district": "南化區"
+  },
+  {
+    "altitude": "105",
+    "name": "北寮",
+    "latitude": "23.0816",
+    "longitude": "120.4869",
+    "county": "台南市",
+    "id": "C1O83",
+    "district": "南化區"
+  },
+  {
+    "altitude": "4",
+    "name": "和順",
+    "latitude": "23.0783",
+    "longitude": "120.1367",
+    "county": "台南市",
+    "id": "C1O95",
+    "district": "安南區"
+  },
+  {
+    "altitude": "4",
+    "name": "安南",
+    "latitude": "23.0783",
+    "longitude": "120.1367",
+    "county": "台南市",
+    "id": "C0O95",
+    "district": "安南區"
+  },
+  {
+    "altitude": "1792",
+    "name": "溪南",
+    "latitude": "23.0778",
+    "longitude": "120.7983",
+    "county": "高雄市",
+    "id": "C1V27",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "62",
+    "name": "山上",
+    "latitude": "23.0774",
+    "longitude": "120.3552",
+    "county": "台南市",
+    "id": "C0X18",
+    "district": "山上區"
+  },
+  {
+    "altitude": "1561",
+    "name": "藤枝",
+    "latitude": "23.0737",
+    "longitude": "120.7489",
+    "county": "高雄市",
+    "id": "C1V60",
+    "district": "六龜區"
+  },
+  {
+    "altitude": "274",
+    "name": "羌黃坑",
+    "latitude": "23.0737",
+    "longitude": "120.5286",
+    "county": "台南市",
+    "id": "88O95",
+    "district": "南化區"
+  },
+  {
+    "altitude": "1621",
+    "name": "紅石",
+    "latitude": "23.0714",
+    "longitude": "121.1200",
+    "county": "台東縣",
+    "id": "C0S76",
+    "district": "海端鄉"
+  },
+  {
+    "altitude": "76",
+    "name": "新市",
+    "latitude": "23.0639",
+    "longitude": "120.2906",
+    "county": "台南市",
+    "id": "C1O98",
+    "district": "新市區"
+  },
+  {
+    "altitude": "76",
+    "name": "新市",
+    "latitude": "23.0639",
+    "longitude": "120.2906",
+    "county": "台南市",
+    "id": "C0O98",
+    "district": "新市區"
+  },
+  {
+    "altitude": "741",
+    "name": "新發",
+    "latitude": "23.0588",
+    "longitude": "120.6380",
+    "county": "高雄市",
+    "id": "C1V59",
+    "district": "六龜區"
+  },
+  {
+    "altitude": "61",
+    "name": "左鎮",
+    "latitude": "23.0585",
+    "longitude": "120.4004",
+    "county": "台南市",
+    "id": "C0X20",
+    "district": "左鎮區"
+  },
+  {
+    "altitude": "30",
+    "name": "左鎮",
+    "latitude": "23.0564",
+    "longitude": "120.3961",
+    "county": "台南市",
+    "id": "C1O82",
+    "district": "左鎮區"
+  },
+  {
+    "altitude": "470",
+    "name": "新發",
+    "latitude": "23.0536",
+    "longitude": "120.6525",
+    "county": "高雄市",
+    "id": "C1V24",
+    "district": "六龜區"
+  },
+  {
+    "altitude": "8",
+    "name": "永康",
+    "latitude": "23.0394",
+    "longitude": "120.2286",
+    "county": "台南市",
+    "id": "46742",
+    "district": "永康區"
+  },
+  {
+    "altitude": "1166",
+    "name": "新集",
+    "latitude": "23.0369",
+    "longitude": "120.7858",
+    "county": "高雄市",
+    "id": "C1V29",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "403",
+    "name": "集來",
+    "latitude": "23.0304",
+    "longitude": "120.5847",
+    "county": "高雄市",
+    "id": "88V56",
+    "district": "杉林區"
+  },
+  {
+    "altitude": "60",
+    "name": "虎頭埤",
+    "latitude": "23.0231",
+    "longitude": "120.3397",
+    "county": "台南市",
+    "id": "C0O97",
+    "district": "新化區"
+  },
+  {
+    "altitude": "60",
+    "name": "虎頭埤",
+    "latitude": "23.0231",
+    "longitude": "120.3397",
+    "county": "台南市",
+    "id": "C1O97",
+    "district": "新化區"
+  },
+  {
+    "altitude": "10",
+    "name": "臺南市北",
+    "latitude": "23.0122",
+    "longitude": "120.1863",
+    "county": "台南市",
+    "id": "C0X10",
+    "district": "北區"
+  },
+  {
+    "altitude": "1637",
+    "name": "御油山",
+    "latitude": "23.0039",
+    "longitude": "120.7069",
+    "county": "高雄市",
+    "id": "C1V30",
+    "district": "桃源區"
+  },
+  {
+    "altitude": "41",
+    "name": "南區",
+    "latitude": "22.9952",
+    "longitude": "120.1970",
+    "county": "台南市",
+    "id": "46741",
+    "district": "中西區"
+  },
+  {
+    "altitude": "10",
+    "name": "安平",
+    "latitude": "22.9950",
+    "longitude": "120.1441",
+    "county": "台南市",
+    "id": "C0X19",
+    "district": "安平區"
+  },
+  {
+    "altitude": "23",
+    "name": "媽祖廟",
+    "latitude": "22.9933",
+    "longitude": "120.2853",
+    "county": "台南市",
+    "id": "C1O99",
+    "district": "歸仁區"
+  },
+  {
+    "altitude": "23",
+    "name": "媽廟",
+    "latitude": "22.9933",
+    "longitude": "120.2853",
+    "county": "台南市",
+    "id": "C0O99",
+    "district": "歸仁區"
+  },
+  {
+    "altitude": "94",
+    "name": "內門",
+    "latitude": "22.9769",
+    "longitude": "120.4583",
+    "county": "高雄市",
+    "id": "C0V36",
+    "district": "內門區"
+  },
+  {
+    "altitude": "94",
+    "name": "木柵",
+    "latitude": "22.9769",
+    "longitude": "120.4583",
+    "county": "高雄市",
+    "id": "C1V36",
+    "district": "內門區"
+  },
+  {
+    "altitude": "65",
+    "name": "東河",
+    "latitude": "22.9736",
+    "longitude": "121.2983",
+    "county": "台東縣",
+    "id": "C0S81",
+    "district": "東河鄉"
+  },
+  {
+    "altitude": "112",
+    "name": "月眉",
+    "latitude": "22.9731",
+    "longitude": "120.5317",
+    "county": "高雄市",
+    "id": "C1V26",
+    "district": "杉林區"
+  },
+  {
+    "altitude": "112",
+    "name": "月眉",
+    "latitude": "22.9731",
+    "longitude": "120.5317",
+    "county": "高雄市",
+    "id": "C0V26",
+    "district": "杉林區"
+  },
+  {
+    "altitude": "26",
+    "name": "仁德",
+    "latitude": "22.9701",
+    "longitude": "120.2498",
+    "county": "台南市",
+    "id": "C0X16",
+    "district": "仁德區"
+  },
+  {
+    "altitude": "50",
+    "name": "關廟",
+    "latitude": "22.9649",
+    "longitude": "120.3197",
+    "county": "台南市",
+    "id": "C0X17",
+    "district": "關廟區"
+  },
+  {
+    "altitude": "20",
+    "name": "臺南市南",
+    "latitude": "22.9630",
+    "longitude": "120.1804",
+    "county": "台南市",
+    "id": "C0X11",
+    "district": "南區"
+  },
+  {
+    "altitude": "80",
+    "name": "崎頂",
+    "latitude": "22.9613",
+    "longitude": "120.3612",
+    "county": "台南市",
+    "id": "C0O96",
+    "district": "龍崎區"
+  },
+  {
+    "altitude": "80",
+    "name": "崎頂",
+    "latitude": "22.9613",
+    "longitude": "120.3612",
+    "county": "台南市",
+    "id": "C1O96",
+    "district": "龍崎區"
+  },
+  {
+    "altitude": "25",
+    "name": "沙崙",
+    "latitude": "22.9375",
+    "longitude": "120.3011",
+    "county": "台南市",
+    "id": "C1N00",
+    "district": "歸仁區"
+  },
+  {
+    "altitude": "1659",
+    "name": "紅葉山",
+    "latitude": "22.9217",
+    "longitude": "121.0311",
+    "county": "台東縣",
+    "id": "C0S68",
+    "district": "延平鄉"
+  },
+  {
+    "altitude": "313",
+    "name": "鹿野",
+    "latitude": "22.9186",
+    "longitude": "121.1147",
+    "county": "台東縣",
+    "id": "C0S71",
+    "district": "鹿野鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "湖內",
+    "latitude": "22.9100",
+    "longitude": "120.2028",
+    "county": "高雄市",
+    "id": "C0V64",
+    "district": "湖內區"
+  },
+  {
+    "altitude": "19",
+    "name": "茄萣",
+    "latitude": "22.9084",
+    "longitude": "120.1746",
+    "county": "高雄市",
+    "id": "C0V63",
+    "district": "茄萣區"
+  },
+  {
+    "altitude": "46",
+    "name": "美濃",
+    "latitude": "22.9006",
+    "longitude": "120.5111",
+    "county": "高雄市",
+    "id": "C0V31",
+    "district": "美濃區"
+  },
+  {
+    "altitude": "30",
+    "name": "古亭坑",
+    "latitude": "22.8950",
+    "longitude": "120.3939",
+    "county": "高雄市",
+    "id": "C0V37",
+    "district": "田寮區"
+  },
+  {
+    "altitude": "60",
+    "name": "旗山",
+    "latitude": "22.8904",
+    "longitude": "120.4755",
+    "county": "高雄市",
+    "id": "C0V74",
+    "district": "旗山區"
+  },
+  {
+    "altitude": "190",
+    "name": "大津",
+    "latitude": "22.8900",
+    "longitude": "120.6381",
+    "county": "高雄市",
+    "id": "C1V34",
+    "district": "六龜區"
+  },
+  {
+    "altitude": "34",
+    "name": "阿蓮",
+    "latitude": "22.8849",
+    "longitude": "120.3195",
+    "county": "高雄市",
+    "id": "C0V53",
+    "district": "阿蓮區"
+  },
+  {
+    "altitude": "34",
+    "name": "阿蓮",
+    "latitude": "22.8849",
+    "longitude": "120.3195",
+    "county": "高雄市",
+    "id": "C1V53",
+    "district": "阿蓮區"
+  },
+  {
+    "altitude": "16",
+    "name": "路竹",
+    "latitude": "22.8808",
+    "longitude": "120.2842",
+    "county": "高雄市",
+    "id": "C1V38",
+    "district": "路竹區"
+  },
+  {
+    "altitude": "23",
+    "name": "都蘭",
+    "latitude": "22.8797",
+    "longitude": "121.2208",
+    "county": "台東縣",
+    "id": "C1S63",
+    "district": "東河鄉"
+  },
+  {
+    "altitude": "63",
+    "name": "旗山",
+    "latitude": "22.8797",
+    "longitude": "120.4861",
+    "county": "高雄市",
+    "id": "C1V33",
+    "district": "旗山區"
+  },
+  {
+    "altitude": "60",
+    "name": "路竹",
+    "latitude": "22.8566",
+    "longitude": "120.2514",
+    "county": "高雄市",
+    "id": "C0V75",
+    "district": "路竹區"
+  },
+  {
+    "altitude": "82",
+    "name": "吉東",
+    "latitude": "22.8560",
+    "longitude": "120.5373",
+    "county": "高雄市",
+    "id": "C1V57",
+    "district": "美濃區"
+  },
+  {
+    "altitude": "95",
+    "name": "吉東",
+    "latitude": "22.8433",
+    "longitude": "120.5492",
+    "county": "高雄市",
+    "id": "C1V32",
+    "district": "美濃區"
+  },
+  {
+    "altitude": "35",
+    "name": "三爺",
+    "latitude": "22.8383",
+    "longitude": "120.2719",
+    "county": "高雄市",
+    "id": "C1P9A",
+    "district": "路竹區"
+  },
+  {
+    "altitude": "1018",
+    "name": "尾寮山",
+    "latitude": "22.8350",
+    "longitude": "120.6758",
+    "county": "屏東縣",
+    "id": "C0R10",
+    "district": "三地門鄉"
+  },
+  {
+    "altitude": "103",
+    "name": "高樹",
+    "latitude": "22.8282",
+    "longitude": "120.5927",
+    "county": "屏東縣",
+    "id": "C0R47",
+    "district": "高樹鄉"
+  },
+  {
+    "altitude": "18",
+    "name": "永安",
+    "latitude": "22.8250",
+    "longitude": "120.2288",
+    "county": "高雄市",
+    "id": "C0V62",
+    "district": "永安區"
+  },
+  {
+    "altitude": "60",
+    "name": "尖山",
+    "latitude": "22.8150",
+    "longitude": "120.3597",
+    "county": "高雄市",
+    "id": "C1V39",
+    "district": "燕巢區"
+  },
+  {
+    "altitude": "51",
+    "name": "阿公店",
+    "latitude": "22.8147",
+    "longitude": "120.3353",
+    "county": "高雄市",
+    "id": "C0V40",
+    "district": "燕巢區"
+  },
+  {
+    "altitude": "51",
+    "name": "竹子腳",
+    "latitude": "22.8147",
+    "longitude": "120.3353",
+    "county": "高雄市",
+    "id": "C1V40",
+    "district": "燕巢區"
+  },
+  {
+    "altitude": "516",
+    "name": "利嘉",
+    "latitude": "22.8111",
+    "longitude": "121.0424",
+    "county": "台東縣",
+    "id": "C1S86",
+    "district": "卑南鄉"
+  },
+  {
+    "altitude": "42",
+    "name": "里港",
+    "latitude": "22.8014",
+    "longitude": "120.4886",
+    "county": "屏東縣",
+    "id": "C0R09",
+    "district": "里港鄉"
+  },
+  {
+    "altitude": "42",
+    "name": "里港",
+    "latitude": "22.8014",
+    "longitude": "120.4886",
+    "county": "屏東縣",
+    "id": "C1R09",
+    "district": "里港鄉"
+  },
+  {
+    "altitude": "25",
+    "name": "岡山",
+    "latitude": "22.7993",
+    "longitude": "120.2872",
+    "county": "高雄市",
+    "id": "C0V66",
+    "district": "岡山區"
+  },
+  {
+    "altitude": "15",
+    "name": "彌陀",
+    "latitude": "22.7857",
+    "longitude": "120.2383",
+    "county": "高雄市",
+    "id": "C0V65",
+    "district": "彌陀區"
+  },
+  {
+    "altitude": "140",
+    "name": "古夏",
+    "latitude": "22.7714",
+    "longitude": "120.6372",
+    "county": "屏東縣",
+    "id": "C1R11",
+    "district": "三地門鄉"
+  },
+  {
+    "altitude": "820",
+    "name": "上德文",
+    "latitude": "22.7650",
+    "longitude": "120.6964",
+    "county": "屏東縣",
+    "id": "C1R12",
+    "district": "三地門鄉"
+  },
+  {
+    "altitude": "22",
+    "name": "梓官",
+    "latitude": "22.7624",
+    "longitude": "120.2593",
+    "county": "高雄市",
+    "id": "C0V61",
+    "district": "梓官區"
+  },
+  {
+    "altitude": "27",
+    "name": "橋頭",
+    "latitude": "22.7595",
+    "longitude": "120.2976",
+    "county": "高雄市",
+    "id": "C0V76",
+    "district": "橋頭區"
+  },
+  {
+    "altitude": "31",
+    "name": "岡山",
+    "latitude": "22.7569",
+    "longitude": "120.2897",
+    "county": "高雄市",
+    "id": "C1V41",
+    "district": "橋頭區"
+  },
+  {
+    "altitude": "9",
+    "name": "臺東",
+    "latitude": "22.7540",
+    "longitude": "121.1465",
+    "county": "台東縣",
+    "id": "46766",
+    "district": "臺東市"
+  },
+  {
+    "altitude": "56",
+    "name": "新圍",
+    "latitude": "22.7539",
+    "longitude": "120.5300",
+    "county": "屏東縣",
+    "id": "C0R16",
+    "district": "鹽埔鄉"
+  },
+  {
+    "altitude": "56",
+    "name": "新圍",
+    "latitude": "22.7539",
+    "longitude": "120.5300",
+    "county": "屏東縣",
+    "id": "C1R16",
+    "district": "鹽埔鄉"
+  },
+  {
+    "altitude": "55",
+    "name": "鳳雄",
+    "latitude": "22.7525",
+    "longitude": "120.3442",
+    "county": "高雄市",
+    "id": "C1V42",
+    "district": "大社區"
+  },
+  {
+    "altitude": "1040",
+    "name": "阿禮",
+    "latitude": "22.7444",
+    "longitude": "120.7356",
+    "county": "屏東縣",
+    "id": "C0R13",
+    "district": "霧台鄉"
+  },
+  {
+    "altitude": "1040",
+    "name": "阿禮",
+    "latitude": "22.7444",
+    "longitude": "120.7356",
+    "county": "屏東縣",
+    "id": "C1R13",
+    "district": "霧台鄉"
+  },
+  {
+    "altitude": "49",
+    "name": "九如",
+    "latitude": "22.7423",
+    "longitude": "120.4825",
+    "county": "屏東縣",
+    "id": "C0R49",
+    "district": "九如鄉"
+  },
+  {
+    "altitude": "36",
+    "name": "溪埔",
+    "latitude": "22.7403",
+    "longitude": "120.4386",
+    "county": "高雄市",
+    "id": "C0V35",
+    "district": "大樹區"
+  },
+  {
+    "altitude": "36",
+    "name": "溪埔",
+    "latitude": "22.7403",
+    "longitude": "120.4386",
+    "county": "高雄市",
+    "id": "C1V35",
+    "district": "大樹區"
+  },
+  {
+    "altitude": "37",
+    "name": "大社",
+    "latitude": "22.7321",
+    "longitude": "120.3386",
+    "county": "高雄市",
+    "id": "C0V77",
+    "district": "大社區"
+  },
+  {
+    "altitude": "55",
+    "name": "射馬干",
+    "latitude": "22.7269",
+    "longitude": "121.0298",
+    "county": "台東縣",
+    "id": "swc09",
+    "district": "卑南鄉"
+  },
+  {
+    "altitude": "42",
+    "name": "楠梓",
+    "latitude": "22.7215",
+    "longitude": "120.2779",
+    "county": "高雄市",
+    "id": "C0V67",
+    "district": "楠梓區"
+  },
+  {
+    "altitude": "99",
+    "name": "三地門",
+    "latitude": "22.7119",
+    "longitude": "120.6317",
+    "county": "屏東縣",
+    "id": "C0R15",
+    "district": "內埔鄉"
+  },
+  {
+    "altitude": "38",
+    "name": "仁武",
+    "latitude": "22.7028",
+    "longitude": "120.3397",
+    "county": "高雄市",
+    "id": "C0V68",
+    "district": "仁武區"
+  },
+  {
+    "altitude": "57",
+    "name": "長治",
+    "latitude": "22.6948",
+    "longitude": "120.5346",
+    "county": "屏東縣",
+    "id": "C0R48",
+    "district": "長治鄉"
+  },
+  {
+    "altitude": "507",
+    "name": "知本",
+    "latitude": "22.6867",
+    "longitude": "120.9975",
+    "county": "台東縣",
+    "id": "C0S70",
+    "district": "卑南鄉"
+  },
+  {
+    "altitude": "740",
+    "name": "瑪家",
+    "latitude": "22.6847",
+    "longitude": "120.6789",
+    "county": "屏東縣",
+    "id": "C1R14",
+    "district": "瑪家鄉"
+  },
+  {
+    "altitude": "740",
+    "name": "瑪家",
+    "latitude": "22.6847",
+    "longitude": "120.6789",
+    "county": "屏東縣",
+    "id": "C0R14",
+    "district": "瑪家鄉"
+  },
+  {
+    "altitude": "24",
+    "name": "左營",
+    "latitude": "22.6797",
+    "longitude": "120.2857",
+    "county": "高雄市",
+    "id": "C0V43",
+    "district": "左營區"
+  },
+  {
+    "altitude": "13",
+    "name": "左營",
+    "latitude": "22.6789",
+    "longitude": "120.2872",
+    "county": "高雄市",
+    "id": "C1V43",
+    "district": "左營區"
+  },
+  {
+    "altitude": "61",
+    "name": "龍泉",
+    "latitude": "22.6689",
+    "longitude": "120.5942",
+    "county": "屏東縣",
+    "id": "C1R20",
+    "district": "內埔鄉"
+  },
+  {
+    "altitude": "26",
+    "name": "屏東",
+    "latitude": "22.6619",
+    "longitude": "120.4836",
+    "county": "屏東縣",
+    "id": "C0R17",
+    "district": "屏東市"
+  },
+  {
+    "altitude": "26",
+    "name": "屏東",
+    "latitude": "22.6619",
+    "longitude": "120.4836",
+    "county": "屏東縣",
+    "id": "C1R17",
+    "district": "屏東市"
+  },
+  {
+    "altitude": "80",
+    "name": "華源",
+    "latitude": "22.6597",
+    "longitude": "121.0156",
+    "county": "台東縣",
+    "id": "C1S80",
+    "district": "太麻里鄉"
+  },
+  {
+    "altitude": "54",
+    "name": "麟洛",
+    "latitude": "22.6592",
+    "longitude": "120.5436",
+    "county": "屏東縣",
+    "id": "C1R21",
+    "district": "麟洛鄉"
+  },
+  {
+    "altitude": "304",
+    "name": "綠島",
+    "latitude": "22.6539",
+    "longitude": "121.4753",
+    "county": "台東縣",
+    "id": "C0S73",
+    "district": "綠島鄉"
+  },
+  {
+    "altitude": "37",
+    "name": "麟洛",
+    "latitude": "22.6525",
+    "longitude": "120.5191",
+    "county": "屏東縣",
+    "id": "C0R57",
+    "district": "麟洛鄉"
+  },
+  {
+    "altitude": "27",
+    "name": "鳳山",
+    "latitude": "22.6486",
+    "longitude": "120.3481",
+    "county": "高雄市",
+    "id": "C0V44",
+    "district": "鳳山區"
+  },
+  {
+    "altitude": "27",
+    "name": "鳳山",
+    "latitude": "22.6486",
+    "longitude": "120.3481",
+    "county": "高雄市",
+    "id": "C1V44",
+    "district": "鳳山區"
+  },
+  {
+    "altitude": "24",
+    "name": "三民",
+    "latitude": "22.6469",
+    "longitude": "120.3033",
+    "county": "高雄市",
+    "id": "C0V70",
+    "district": "三民區"
+  },
+  {
+    "altitude": "20",
+    "name": "新興",
+    "latitude": "22.6291",
+    "longitude": "120.2906",
+    "county": "高雄市",
+    "id": "C0V49",
+    "district": "新興區"
+  },
+  {
+    "altitude": "30",
+    "name": "鼓山",
+    "latitude": "22.6251",
+    "longitude": "120.2675",
+    "county": "高雄市",
+    "id": "C0V69",
+    "district": "鼓山區"
+  },
+  {
+    "altitude": "34",
+    "name": "苓雅",
+    "latitude": "22.6245",
+    "longitude": "120.3226",
+    "county": "高雄市",
+    "id": "C0V71",
+    "district": "苓雅區"
+  },
+  {
+    "altitude": "24",
+    "name": "大寮",
+    "latitude": "22.6119",
+    "longitude": "120.4239",
+    "county": "高雄市",
+    "id": "C1V18",
+    "district": "大寮區"
+  },
+  {
+    "altitude": "522",
+    "name": "太麻里",
+    "latitude": "22.6103",
+    "longitude": "120.9858",
+    "county": "台東縣",
+    "id": "C0S69",
+    "district": "太麻里鄉"
+  },
+  {
+    "altitude": "33",
+    "name": "大寮",
+    "latitude": "22.6074",
+    "longitude": "120.3877",
+    "county": "高雄市",
+    "id": "C0V73",
+    "district": "大寮區"
+  },
+  {
+    "altitude": "177",
+    "name": "金峰",
+    "latitude": "22.5990",
+    "longitude": "120.9308",
+    "county": "台東縣",
+    "id": "C1S82",
+    "district": "金峰鄉"
+  },
+  {
+    "altitude": "34",
+    "name": "赤山",
+    "latitude": "22.5941",
+    "longitude": "120.6063",
+    "county": "屏東縣",
+    "id": "C0R19",
+    "district": "萬巒鄉"
+  },
+  {
+    "altitude": "48",
+    "name": "赤山",
+    "latitude": "22.5928",
+    "longitude": "120.6083",
+    "county": "屏東縣",
+    "id": "C1R19",
+    "district": "萬巒鄉"
+  },
+  {
+    "altitude": "6",
+    "name": "旗津",
+    "latitude": "22.5904",
+    "longitude": "120.2779",
+    "county": "高雄市",
+    "id": "C0V50",
+    "district": "旗津區"
+  },
+  {
+    "altitude": "31",
+    "name": "萬丹",
+    "latitude": "22.5896",
+    "longitude": "120.4824",
+    "county": "屏東縣",
+    "id": "C0R51",
+    "district": "萬丹鄉"
+  },
+  {
+    "altitude": "32",
+    "name": "竹田",
+    "latitude": "22.5865",
+    "longitude": "120.5359",
+    "county": "屏東縣",
+    "id": "C0R50",
+    "district": "竹田鄉"
+  },
+  {
+    "altitude": "2",
+    "name": "高雄",
+    "latitude": "22.5679",
+    "longitude": "120.3080",
+    "county": "高雄市",
+    "id": "46744",
+    "district": "前鎮區"
+  },
+  {
+    "altitude": "51",
+    "name": "鳳森",
+    "latitude": "22.5469",
+    "longitude": "120.3845",
+    "county": "高雄市",
+    "id": "C1V45",
+    "district": "小港區"
+  },
+  {
+    "altitude": "51",
+    "name": "鳳森",
+    "latitude": "22.5469",
+    "longitude": "120.3845",
+    "county": "高雄市",
+    "id": "C0V45",
+    "district": "小港區"
+  },
+  {
+    "altitude": "22",
+    "name": "新園",
+    "latitude": "22.5452",
+    "longitude": "120.4535",
+    "county": "屏東縣",
+    "id": "C0R56",
+    "district": "新園鄉"
+  },
+  {
+    "altitude": "236",
+    "name": "金崙",
+    "latitude": "22.5400",
+    "longitude": "120.9589",
+    "county": "台東縣",
+    "id": "C0S79",
+    "district": "太麻里鄉"
+  },
+  {
+    "altitude": "22",
+    "name": "潮州",
+    "latitude": "22.5361",
+    "longitude": "120.5319",
+    "county": "屏東縣",
+    "id": "C0R22",
+    "district": "潮州鎮"
+  },
+  {
+    "altitude": "74",
+    "name": "來義",
+    "latitude": "22.5289",
+    "longitude": "120.6175",
+    "county": "屏東縣",
+    "id": "C1R24",
+    "district": "萬巒鄉"
+  },
+  {
+    "altitude": "74",
+    "name": "來義",
+    "latitude": "22.5289",
+    "longitude": "120.6175",
+    "county": "屏東縣",
+    "id": "C0R24",
+    "district": "萬巒鄉"
+  },
+  {
+    "altitude": "189",
+    "name": "來義",
+    "latitude": "22.5276",
+    "longitude": "120.6680",
+    "county": "屏東縣",
+    "id": "88R46",
+    "district": "來義鄉"
+  },
+  {
+    "altitude": "18",
+    "name": "崁頂",
+    "latitude": "22.5166",
+    "longitude": "120.4990",
+    "county": "屏東縣",
+    "id": "C0R52",
+    "district": "崁頂鄉"
+  },
+  {
+    "altitude": "15",
+    "name": "林園",
+    "latitude": "22.5096",
+    "longitude": "120.3866",
+    "county": "高雄市",
+    "id": "C0V72",
+    "district": "林園區"
+  },
+  {
+    "altitude": "20",
+    "name": "南州",
+    "latitude": "22.4944",
+    "longitude": "120.5086",
+    "county": "屏東縣",
+    "id": "C1R23",
+    "district": "南州鄉"
+  },
+  {
+    "altitude": "10",
+    "name": "南州",
+    "latitude": "22.4877",
+    "longitude": "120.4947",
+    "county": "屏東縣",
+    "id": "C0R58",
+    "district": "南州鄉"
+  },
+  {
+    "altitude": "375",
+    "name": "大溪山",
+    "latitude": "22.4800",
+    "longitude": "120.9353",
+    "county": "台東縣",
+    "id": "C0S77",
+    "district": "太麻里鄉"
+  },
+  {
+    "altitude": "38",
+    "name": "新埤",
+    "latitude": "22.4698",
+    "longitude": "120.5748",
+    "county": "屏東縣",
+    "id": "C0R55",
+    "district": "新埤鄉"
+  },
+  {
+    "altitude": "31",
+    "name": "東港",
+    "latitude": "22.4667",
+    "longitude": "120.4333",
+    "county": "屏東縣",
+    "id": "C0R43",
+    "district": "東港鎮"
+  },
+  {
+    "altitude": "122",
+    "name": "土阪",
+    "latitude": "22.4547",
+    "longitude": "120.8794",
+    "county": "台東縣",
+    "id": "C1S62",
+    "district": "達仁鄉"
+  },
+  {
+    "altitude": "16",
+    "name": "林邊",
+    "latitude": "22.4327",
+    "longitude": "120.5021",
+    "county": "屏東縣",
+    "id": "C0R53",
+    "district": "林邊鄉"
+  },
+  {
+    "altitude": "91",
+    "name": "力里",
+    "latitude": "22.4297",
+    "longitude": "120.6200",
+    "county": "屏東縣",
+    "id": "C1R25",
+    "district": "春日鄉"
+  },
+  {
+    "altitude": "17",
+    "name": "佳冬",
+    "latitude": "22.4212",
+    "longitude": "120.5442",
+    "county": "屏東縣",
+    "id": "C0R54",
+    "district": "佳冬鄉"
+  },
+  {
+    "altitude": "1654",
+    "name": "大漢山",
+    "latitude": "22.4059",
+    "longitude": "120.7451",
+    "county": "屏東縣",
+    "id": "C1R44",
+    "district": "春日鄉"
+  },
+  {
+    "altitude": "139",
+    "name": "大鳥",
+    "latitude": "22.3915",
+    "longitude": "120.9022",
+    "county": "台東縣",
+    "id": "88S67",
+    "district": "大武鄉"
+  },
+  {
+    "altitude": "86",
+    "name": "春日",
+    "latitude": "22.3722",
+    "longitude": "120.6203",
+    "county": "屏東縣",
+    "id": "C0R26",
+    "district": "春日鄉"
+  },
+  {
+    "altitude": "86",
+    "name": "春日",
+    "latitude": "22.3722",
+    "longitude": "120.6203",
+    "county": "屏東縣",
+    "id": "C1R26",
+    "district": "春日鄉"
+  },
+  {
+    "altitude": "69",
+    "name": "枋寮",
+    "latitude": "22.3681",
+    "longitude": "120.5900",
+    "county": "屏東縣",
+    "id": "C0R38",
+    "district": "枋寮鄉"
+  },
+  {
+    "altitude": "8",
+    "name": "大武",
+    "latitude": "22.3576",
+    "longitude": "120.8957",
+    "county": "台東縣",
+    "id": "46754",
+    "district": "大武鄉"
+  },
+  {
+    "altitude": "51",
+    "name": "琉球嶼",
+    "latitude": "22.3339",
+    "longitude": "120.3542",
+    "county": "屏東縣",
+    "id": "C0R27",
+    "district": "琉球鄉"
+  },
+  {
+    "altitude": "22",
+    "name": "南田",
+    "latitude": "22.2919",
+    "longitude": "120.8819",
+    "county": "台東縣",
+    "id": "C0S84",
+    "district": "達仁鄉"
+  },
+  {
+    "altitude": "36",
+    "name": "枋山",
+    "latitude": "22.2486",
+    "longitude": "120.6531",
+    "county": "屏東縣",
+    "id": "C1R33",
+    "district": "枋山鄉"
+  },
+  {
+    "altitude": "489",
+    "name": "壽卡",
+    "latitude": "22.2417",
+    "longitude": "120.8511",
+    "county": "屏東縣",
+    "id": "C1R31",
+    "district": "牡丹鄉"
+  },
+  {
+    "altitude": "20",
+    "name": "旭海",
+    "latitude": "22.1978",
+    "longitude": "120.8786",
+    "county": "屏東縣",
+    "id": "C1R30",
+    "district": "牡丹鄉"
+  },
+  {
+    "altitude": "285",
+    "name": "牡丹",
+    "latitude": "22.1942",
+    "longitude": "120.8297",
+    "county": "屏東縣",
+    "id": "C0R34",
+    "district": "牡丹鄉"
+  },
+  {
+    "altitude": "63",
+    "name": "楓港",
+    "latitude": "22.1917",
+    "longitude": "120.6847",
+    "county": "屏東縣",
+    "id": "C0R40",
+    "district": "枋山鄉"
+  },
+  {
+    "altitude": "504",
+    "name": "牡丹池山",
+    "latitude": "22.1696",
+    "longitude": "120.8325",
+    "county": "屏東縣",
+    "id": "C0R42",
+    "district": "牡丹鄉"
+  },
+  {
+    "altitude": "260",
+    "name": "石門山",
+    "latitude": "22.1167",
+    "longitude": "120.7417",
+    "county": "屏東縣",
+    "id": "C1R29",
+    "district": "牡丹鄉"
+  },
+  {
+    "altitude": "54",
+    "name": "車城",
+    "latitude": "22.0758",
+    "longitude": "120.7081",
+    "county": "屏東縣",
+    "id": "C1R32",
+    "district": "車城鄉"
+  },
+  {
+    "altitude": "250",
+    "name": "檳榔",
+    "latitude": "22.0706",
+    "longitude": "120.8283",
+    "county": "屏東縣",
+    "id": "C0R28",
+    "district": "滿州鄉"
+  },
+  {
+    "altitude": "324",
+    "name": "蘭嶼",
+    "latitude": "22.0387",
+    "longitude": "121.5506",
+    "county": "台東縣",
+    "id": "46762",
+    "district": "蘭嶼鄉"
+  },
+  {
+    "altitude": "22",
+    "name": "恆春",
+    "latitude": "22.0054",
+    "longitude": "120.7381",
+    "county": "屏東縣",
+    "id": "46759",
+    "district": "恆春鎮"
+  },
+  {
+    "altitude": "94",
+    "name": "佳樂水",
+    "latitude": "21.9942",
+    "longitude": "120.8367",
+    "county": "屏東縣",
+    "id": "C0R37",
+    "district": "滿州鄉"
+  },
+  {
+    "altitude": "5",
+    "name": "墾丁",
+    "latitude": "21.9478",
+    "longitude": "120.7942",
+    "county": "屏東縣",
+    "id": "C0R36",
+    "district": "恆春鎮"
+  },
+  {
+    "altitude": "49",
+    "name": "貓鼻頭",
+    "latitude": "21.9244",
+    "longitude": "120.7281",
+    "county": "屏東縣",
+    "id": "C0R35",
+    "district": "恆春鎮"
+  },
+  {
+    "altitude": "29",
+    "name": "墾雷",
+    "latitude": "21.9029",
+    "longitude": "120.8470",
+    "county": "屏東縣",
+    "id": "46779",
+    "district": "恆春鎮"
+  },
+  {
+    "altitude": "4",
+    "name": "東沙",
+    "latitude": "20.0700",
+    "longitude": "116.7167",
+    "county": "高雄市",
+    "id": "46810",
+    "district": "東沙區"
+  }
 ]
