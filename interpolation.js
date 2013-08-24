@@ -37,7 +37,7 @@
         var x1, y1, x2, y2;
         x1 = arg$[0], y1 = arg$[1];
         x2 = arg1$[0], y2 = arg1$[1];
-        return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+        return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
       };
       idwInterpolate = function(samples, power, point){
         var sum, sumWeight, i$, len$, s, d, weight;
@@ -49,7 +49,7 @@
           if (d === 0.0) {
             return s[2];
           }
-          weight = Math.pow(d, -power);
+          weight = 1.0 / (d * d);
           sum = sum + weight;
           sumWeight = sumWeight + weight * s[2];
         }

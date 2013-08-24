@@ -80,9 +80,9 @@ samples = {}
 
 # p1: [x1, y1]
 # p2: [x2, y2]
-# return sqrt((x1-x2)^2 + (y1-y2)^2)
+# return (x1-x2)^2 + (y1-y2)
 distance = ([x1, y1], [x2, y2]) ->
-  Math.sqrt (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)
+  (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)
 
 # samples: [[x, y, z], …]
 # power: positive integer
@@ -94,7 +94,8 @@ idw-interpolate = (samples, power, point) ->
   for s in samples
     d = distance(s, point)
     return s[2] if d == 0.0
-    weight = Math.pow(d, -power)
+    # weight = Math.pow(d, -power * 0.5)
+    weight = 1.0 / (d * d)
     sum := sum + weight
     sum-weight := sum-weight + weight * s[2]
   sum-weight / sum
