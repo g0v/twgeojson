@@ -102,8 +102,8 @@ idw-interpolate = (samples, power, point) ->
 
 color-of = (z) ->
   scale = [0, 30, 60, 100, 150, 210, 280, 400, 600, 1000]
-  color = [d3.hsl(240, 1.0, 0.5),
-           d3.hsl(240, 0.4, 0.6),
+  color = [d3.hsl(240, 1.0, 1.0),
+           d3.hsl(240, 0.4, 0.7),
            d3.hsl(190, 0.4, 0.6),
            d3.hsl(130, 0.4, 0.6),
            d3.hsl(60, 0.4, 0.6),
