@@ -25,7 +25,7 @@
       return 'q-9-9';
     }).attr('d', path);
     return d3.json("stations.json", function(stations){
-      var root, current, rainData, samples, distance, idwInterpolate, colorOf, yPixel, plotInterpolatedData, updateSevenSegment;
+      var root, current, rainData, samples, distanceSquare, idwInterpolate, colorOf, yPixel, plotInterpolatedData, updateSevenSegment;
       svg.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').style('fill', 'none').attr('r', 2).attr("transform", function(it){
         return "translate(" + proj([+it.longitude, +it.latitude]) + ")";
       });
@@ -33,7 +33,7 @@
       current = root.child("rainfall/current");
       rainData = {};
       samples = {};
-      distance = function(arg$, arg1$){
+      distanceSquare = function(arg$, arg1$){
         var x1, y1, x2, y2;
         x1 = arg$[0], y1 = arg$[1];
         x2 = arg1$[0], y2 = arg1$[1];
@@ -45,7 +45,7 @@
         sumWeight = 0.0;
         for (i$ = 0, len$ = samples.length; i$ < len$; ++i$) {
           s = samples[i$];
-          d = distance(s, point);
+          d = distanceSquare(s, point);
           if (d === 0.0) {
             return s[2];
           }
@@ -78,7 +78,7 @@
               xPixel = i$;
               y = minLatitude + dy * yPixel;
               x = minLongitude + dx * xPixel;
-              z = 0 > (ref$ = idwInterpolate(samples, 2.75, [x, y])) ? 0 : ref$;
+              z = 0 > (ref$ = idwInterpolate(samples, 4.0, [x, y])) ? 0 : ref$;
               canvas.fillStyle = colorOf(z);
               canvas.fillRect(xPixel, height - yPixel, 2, 2);
             }

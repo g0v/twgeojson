@@ -81,7 +81,7 @@ samples = {}
 # p1: [x1, y1]
 # p2: [x2, y2]
 # return (x1-x2)^2 + (y1-y2)
-distance = ([x1, y1], [x2, y2]) ->
+distanceSquare = ([x1, y1], [x2, y2]) ->
   (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)
 
 # samples: [[x, y, z], …]
@@ -92,10 +92,9 @@ idw-interpolate = (samples, power, point) ->
   sum = 0.0
   sum-weight = 0.0
   for s in samples
-    d = distance(s, point)
+    d = distanceSquare(s, point)
     return s[2] if d == 0.0
-    # weight = Math.pow(d, -power * 0.5)
-    weight = 1.0 / (d * d)
+    weight = 1.0 / (d * d) # Performance Hack: Let power = 4 for fast exp calculation.
     sum := sum + weight
     sum-weight := sum-weight + weight * s[2]
   sum-weight / sum
@@ -128,7 +127,7 @@ plot-interpolated-data = ->
       for x-pixel from 0 to width by 2
         y = min-latitude + dy * y-pixel
         x = min-longitude + dx * x-pixel
-        z = 0 >? idw-interpolate samples, 2.75, [x, y]
+        z = 0 >? idw-interpolate samples, 4.0, [x, y]
         
         canvas.fillStyle = color-of z
         canvas.fillRect x-pixel, height - y-pixel, 2, 2
