@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="all" href="seven-segment.css" />
+<style>
+ 
+body {
+  background-color: black;
+}
+
+.counties {
+  fill: none;
+  stroke: #333;
+  stroke-linejoin: round;
+}
+
+div.inspector {   
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  height: 40px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: #E6DB74;
+  border: 1px solid white;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+div.inspector p {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#main-panel {
+  position: absolute;
+  left: 620px;
+  width: 540px;
+  top: 20px;
+  height: 540px;
+}
+
+.eva-box {
+  border-radius: 8px;
+  border: 4px solid #EE7A28;
+  color: #EE7A28;
+}
+ 
+.eva-box h2 {
+  font-family: "HiraMinProN-W6", serif;
+  font-size: 96pt;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.eva-box h3 {
+  font-family: "Futura-CondensedMedium", sans-serif;
+  font-size: 18pt;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+  background-color: #EE7A28;
+  color: black;
+}
+
+#rainfall-box {
+  position: relative;
+  margin: 20px auto 0 20px;
+  width: 500px;
+}
+
+#rainyjs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+</style>
+<body>
+<script>
+  (function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+  })();
+
+  var that;
+  var Rainyjs = (function() {
+    function Particle (canvas) {
+      this.effective = true;
+      this.l = Math.random() * 40 + 60; // luminance
+      this.a = Math.random() * 0.3 + 0.3; // opacity
+      this.x = Math.random() * canvas.width; // x-axis location
+      this.y = 0; // y-axis location
+      this.speedY = Math.random() * 2 + 2; // y-axis speed
+      this.size = Math.random() * 45; // rainfall length
+    };
+
+    Particle.prototype.draw = function (ctx) {
+      // ctx: canvas.getContext("2d")
+      ctx.strokeStyle = "hsla(0, 0%, " + this.l + "%, " + this.a + ")";
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.y - this.size);
+      ctx.lineTo(this.x, this.y);
+      ctx.stroke();
+    };
+
+    Particle.prototype.step = function (canvas) {
+      this.y += this.speedY; // fall down
+      this.speedY += 0.1; // accelerate by gravity
+      this.a -= 0.001; // fade out
+
+      if (this.y > canvas.height) {
+        this.effective = false;
+      }
+    };
+
+    function Application () {
+      this.canvas = document.querySelector("#rainyjs");
+      this.level = 10;
+      return this;
+    };
+
+    Application.prototype.setCanvas = function (selector) {
+      this.canvas = document.querySelector(selector);
+    };
+
+    Application.prototype.setLevel = function (lvl) {
+      this.level = lvl;
+      return this;
+    }
+
+    Application.prototype.rain = function() {
+      that = this;
+      var resizeCanvasToFit = function() {
+        that.canvas.width = window.innerWidth;
+        that.canvas.height = window.innerHeight;
+      };
+      resizeCanvasToFit();
+      window.addEventListener("resize", resizeCanvasToFit, false);
+
+      this.particles = [];
+      var step = function(timestamp) {
+        var i, filtered, p;
+        var ctx = that.canvas.getContext("2d");
+        ctx.clearRect(0, 0, that.canvas.width, that.canvas.height);
+
+        // remove ineffective particles
+        filtered = that.particles.filter(function(p){return p.effective;});
+        that.particles = filtered;
+
+        // generate new particles
+        for (i = 0; i < that.level; i++) {
+          that.particles.push(new Particle(that.canvas));
+        }
+
+        // move current particles
+        for (i = 0; i < that.particles.length; i++) {
+          p = that.particles[i];
+          p.draw(ctx);
+          p.step(that.canvas);
+        } 
+
+        requestAnimationFrame(step);
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    return Application;
+  })();
+</script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="interpolation_rain.js"></script>
+
+<div class="eva-box" id="main-panel">
+  <h3 id="rainfall-timestamp">LOADING…</h3>
+  <h2 id="station-name">雨量</h2>
+
+  <div id="rainfall-box">
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+    <div class="seven-segment">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<canvas id="rainyjs"></canvas>
+
+</body>
