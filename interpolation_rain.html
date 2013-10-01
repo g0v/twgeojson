@@ -85,7 +85,6 @@ div.inspector p {
     window.requestAnimationFrame = requestAnimationFrame;
   })();
 
-  var that;
   var Rainyjs = (function() {
     function Particle (canvas) {
       this.effective = true;
@@ -124,6 +123,7 @@ div.inspector p {
 
     Application.prototype.setCanvas = function (selector) {
       this.canvas = document.querySelector(selector);
+      return this;
     };
 
     Application.prototype.setLevel = function (lvl) {
@@ -132,7 +132,7 @@ div.inspector p {
     }
 
     Application.prototype.rain = function() {
-      that = this;
+      var that = this;
       var resizeCanvasToFit = function() {
         that.canvas.width = window.innerWidth;
         that.canvas.height = window.innerHeight;
