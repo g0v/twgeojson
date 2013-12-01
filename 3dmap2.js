@@ -1,4 +1,8 @@
-var proj, path, ramp, calculateBBoxSum, addGeoObject, init3d;
+var theCenter, proj, path, ramp, calculateBBoxSum, addGeoObject, init3d;
+theCenter = {
+  x: 300,
+  y: 250
+};
 proj = mtw().scale(5000);
 path = d3.geo.path().projection(proj);
 ramp = d3.scale.linear().domain([0, 255]).range(["red", "green"]);
@@ -43,7 +47,7 @@ addGeoObject = function(scene, features){
       material = new THREE.MeshLambertMaterial({
         color: color
       });
-      amount = parseInt(Math.random() * 100);
+      amount = parseInt(Math.random() * 50);
       simpleShapes = mesh.toShapes(false);
       simpleShapesCCW = mesh.toShapes(true);
       simpleShapes = simpleShapesCCW;
@@ -54,14 +58,11 @@ addGeoObject = function(scene, features){
             amount: amount,
             bevelEnabled: false
           });
-          shape3d.boundingSphere = {
-            radius: 3 * 100
-          };
           x$ = toAdd = new THREE.Mesh(shape3d, material);
           x$.rotation.x = Math.PI;
           x$.translateZ(-amount - 1);
-          x$.translateX(-window.innerWidth / 2 + window.innerWidth * 0.3);
-          x$.translateY(-window.innerHeight / 2 + window.innerHeight * 0.25);
+          x$.translateX(-theCenter.x);
+          x$.translateY(-theCenter.y);
           lresult$.push(scene.add(toAdd));
         } catch (e$) {
           e = e$;
@@ -97,16 +98,16 @@ init3d = function(){
     var twtopo, data, plane, ambientLight, directionalLight;
     twtopo = topojson.feature(tw, tw.objects['twCounty2010.geo']);
     data = twtopo.features;
-    plane = new THREE.Mesh(new THREE.PlaneGeometry(1600, 1600, 20, 20), new THREE.MeshBasicMaterial({
-      color: 5592405,
+    plane = new THREE.Mesh(new THREE.PlaneGeometry(640, 640, 20, 20), new THREE.MeshBasicMaterial({
+      color: 0x505050,
       wireframe: true
     }));
     plane.rotation.x = Math.PI;
     world.add(plane);
-    ambientLight = new THREE.AmbientLight(6316128);
+    ambientLight = new THREE.AmbientLight(0x606060);
     world.add(ambientLight);
-    directionalLight = new THREE.DirectionalLight(16777215);
-    directionalLight.position.set(1, 0.75, 0.5).normalize();
+    directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(0.5, 0.5, 1.0).normalize();
     world.add(directionalLight);
     return addGeoObject(world, data);
   });
