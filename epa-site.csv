@@ -1,0 +1,95 @@
+"SITE_CODE","SITE","HSCITY","DISTRICT","SITE_NORTH_LAT","SITE_EAST_LONG","SITE_ENG","HSCITY_ENG"
+1,基隆,基隆市,信 義 區,"25,07,45","121,45,36.2",Keelung,KeeLung City
+2,汐止,新北市,汐 止 區,"25,04,01.67","121,38,32.28",Xizhi,New Taipei City
+3,萬里,新北市,萬 里 區,"25,10,46.8","121,41,23.57",Wanli,New Taipei City
+4,新店,新北市,新 店 區,"24,58,38","121,32,16",Xindian,New Taipei City
+5,土城,新北市,土 城 區,"24,58,57.1","121,27,06.7",Tucheng,New Taipei City
+6,板橋,新北市,板 橋 區,"25,00,46.7","121,27,31.2",Banqiao,New Taipei City
+7,新莊,新北市,新 莊 區,"25,02,16.7","121,25,57",Xinzhuang,New Taipei City
+8,菜寮,新北市,三 重 區,"25,04,8.22","121,28,51.70",Cailiao,New Taipei City
+9,林口,新北市,林 口 區,"25,04,37.91","121,22,36.73",Linkou,New Taipei City
+10,淡水,新北市,淡 水 區,"25,09,52.20","121,26,57.26",Tamsui,New Taipei City
+11,士林,台北市,北 投 區,"25,06,19.5","121,30,55.4",Shilin,Taipei City
+12,中山,台北市,中 山 區,"25,03,44.5","121,31,35.5",Zhongshan,Taipei City
+13,萬華,台北市,萬 華 區,"25,02,47.41","121,30,28.70",Wanhua,Taipei City
+14,古亭,台北市,古 亭 區,"25,01,14.19","121,31,46.40",Guting,Taipei City
+15,松山,台北市,松 山 區,"25,03,02.5","121,34,42.8",Songshan,Taipei City
+16,大同,台北市,大 同 區,"25,03,47.52","121,30,47.92",Datong,Taipei City
+17,桃園,桃園縣,桃 園 市,"24,59,41.24","121,19,11.87",Taoyuan,TaoYuan County 
+18,大園,桃園縣,大 園 鄉,"25,03,37.24","121,12,6.52",Dayuan,TaoYuan County 
+19,觀音,桃園縣,觀 音 鄉,"25,02,7.81","121,04,57.94",Guanyin,TaoYuan County 
+20,平鎮,桃園縣,平 鎮 市,"24,57,10.03","121,12,14.35",Pingzhen,TaoYuan County 
+21,龍潭,桃園縣,龍 潭 鄉,"24,51,49.93","121,12,58.86",Longtan,TaoYuan County 
+22,湖口,新竹縣,湖 口 鄉,"24,54,00.51","121,02,19.15",Hukou,HsinChu County 
+23,竹東,新竹縣,竹 東 鎮,"24,44,26.32","121,05,20.05",Zhudong,HsinChu County 
+24,新竹,新竹市,新 竹 市,"24,48,20.23","120,58,19.47",Hsinchu,HsinChu City
+25,頭份,苗栗縣,頭 份 鎮,"24,41,49.09","120,53,54.86",Toufen,MiauLi County
+26,苗栗,苗栗縣,苗 栗 市,"24,33,54.97","120,49,12.72",Miaoli,MiauLi County
+27,三義,苗栗縣,三 義 鄉,"24,22,58.59","120,45,31.80",Sanyi,MiauLi County
+28,豐原,台中市,豐 原 區,"24,15,23.71","120,44,30.16",Fengyuan,TaiChung City 
+29,沙鹿,台中市,沙 鹿 區,"24,13,32.26","120,34,7.66",Shalu,TaiChung City 
+30,大里,台中市,大 里 區,"24,05,58.60","120,40,39.68",Dali,TaiChung City 
+31,忠明,台中市,南 屯 區,"24,09,7.05","120,38,27.93",Zhongming,TaiChung City 
+32,西屯,台中市,西 屯 區,"24,09,43.91","120,37,0.9",Xitun,TaiChung City 
+33,彰化,彰化縣,彰 化 市,"24,03,57.60","120,32,29.47",Changhua,ChangHua County
+34,線西,彰化縣,線 西 鄉,"24,07,54.02","120,28,8.62",Xianxi,ChangHua County
+35,二林,彰化縣,二 林 鎮,"23,55,30.63","120,24,34.75",Erlin,ChangHua County
+36,南投,南投縣,南 投 市,"23,54,46.8","120,41,7.1",Nantou,NanTou County
+37,斗六,雲林縣,斗 六 市,"23,42,42.67","120,32,41.98",Douliu,YunLin County
+38,崙背,雲林縣,崙 背 鄉,"23,45,27.17","120,20,55.47",Lunbei,YunLin County
+39,新港,嘉義縣,新 港 鄉,"23,33,17.42","120,20,43.91",Xingang,Chiayi County
+40,朴子,嘉義縣,朴 子 市,"23,27,55.11","120,14,50.46",Puzi,Chiayi County
+41,台西,雲林縣,台 西 鄉,"23,43,3.12","120,12,10.23",Taixi,YunLin County
+42,嘉義,嘉義市,嘉 義 市,"23,27,46","120,26,27",Chiayi,Chiayi City 
+43,新營,台南市,新 營 區,"23,18,20.28","120,19,2.10",Xinying,Tainan City 
+44,善化,台南市,善 化 區,"23,06,54.35","120,17,49.71",Shanhua,Tainan City 
+45,安南,台南市,安 南 區,"23,02,53.51","120,13,03.00",Annan,Tainan City 
+46,台南,台南市,善 化 區,"22,59,04.49","120,12,09.42",Tainan,Tainan City 
+47,美濃,高雄市,美 濃 區,"22,53,00.90","120,31,49.95",Meinong,KaoHsiung City
+48,橋頭,高雄市,橋 頭 區,"22,45,27.02","120,18,20.48",Qiaotou,KaoHsiung City
+49,仁武,高雄市,仁 武 區,"22,41,20.6","120,19,57.47",Renwu,KaoHsiung City
+50,鳳山,高雄市,鳳 山 區,"22,37,38.61","120,21,29.10",Fengshan,KaoHsiung City
+51,大寮,高雄市,大 寮 區,"22,33,56.69","120,25,30.29",Daliao,KaoHsiung City
+52,林園,高雄市,林 園 區,"22,28,46.20","120,24,42.30",Linyuan,KaoHsiung City
+53,楠梓,高雄市,楠 梓 區,"22,44,01.20","120,19,41.84",Nanzi,KaoHsiung City
+54,左營,高雄市,左 營 區,"22,40,29.5","120,17,34.5",Zuoying,KaoHsiung City
+55,三民,高雄市,三 民 區,22,120,Sanmin,KaoHsiung City
+56,前金,高雄市,前 金 區,"22,37,57.24","120,17,17.11",Qianjin,KaoHsiung City
+57,前鎮,高雄市,前 鎮 區,"22,36,19.39","120,18,27.23",Qianzhen,KaoHsiung City
+58,小港,高雄市,小 港 區,"22,33,57.00","120,20,15.85",Xiaogang,KaoHsiung City
+59,屏東,屏東縣,屏 東 市,"22,40,23.09","120,29,16.92",Pingtung,PingTung County 
+60,潮州,屏東縣,潮 州 鎮,"22,31,23.19","120,33,40.23",Chaozhou,PingTung County 
+61,恆春,屏東縣,恆 春 鎮,"21,57,29.05","120,47,20.14",Hengchun,PingTung County 
+62,台東,台東縣,台 東 市,"22,45,19.29","121,09,1.62",Taitung,TaiTung County
+63,花蓮,花蓮縣,花 蓮 市,"23,58,19.04","121,35,59.17",Hualien,HuaLien 
+64,陽明,台北市,北 投 區,"25,10,57.8","121,31,46.5",Yangming,Taipei City
+65,宜蘭,宜蘭縣,宜 蘭 市,"24,44,52.50","121,44,47.02",Yilan,Ilan County
+66,冬山,宜蘭縣,冬 山 鄉,"24,37,55.93","121,47,34.54",Dongshan,Ilan County
+67,三重,新北市,三 重 區,"25,04,21.4","121,29,37.7",Sanchong,New Taipei City
+68,中壢,桃園縣,中 壢 市,"24,57,11.8","121,13,18",Zhongli,TaoYuan County 
+69,竹山,南投縣,竹 山 鎮,"23,45,23","120,40,38.3",Zhushan,NanTou County
+70,永和,新北市,永 和 區,"25,01,01.2","121,30,58.7",Yonghe,New Taipei City
+71,復興,高雄市,前 鎮 區,"22,36,31.36","120,18,43.26",Fuxing,KaoHsiung City
+72,埔里,南投縣,埔 里 鎮,"23,58,7.83","120,58,4.45",Puli,NanTou County
+73,移動站 1,MOVINGSITE,移動站,,,Motion station 1,MOVINGSITE
+74,崇倫,台中市,南 屯 區,"24,07,57.38","120,39,28.58",Chonglun,TaiChung City 
+75,馬祖,連江縣,南 竿 鄉,"26,09,37.69","119,56,59.55",Matsu,Lienchiang County
+76,阿里山,嘉義縣,阿 里 山,"23,30,30.82","120,48,05.02",Alishan,Chiayi County
+77,金門,金門縣,金 城 鎮,"24,25,55.68","118,18,44.12",Kinmen,Kinmen County
+78,馬公,澎湖縣, 馬公,"23,34,08.51","119,33,58.17",Magong,Penghu County
+80,關山,台東縣,關山鎮,"23,02,42.3","121,09,42.96",Guanshan,TaiTung County
+82,鹿林山,嘉義縣,阿 里 山,"23,28,14.19","120,52,50.06",Lulin,Chiayi County
+83,麥寮,雲林縣,麥 寮 鄉,"23,45,12.62","120,15,6.57",Mailiao,YunLin County
+401,台東仁愛,台東縣,台 東 市,"22,45,24.2","121,9,28.2",EBAM401,TaiTung County
+402,台中泰安,台中市,后 里 區,"24,19,31.1","120,45,1.6",EBAM402,TaiChung City 
+403,彰化新庄,彰化縣,和 美 鎮,"24,6,15.4","120,32,3.6",EBAM403,ChangHua County
+404,雲林旭光,雲林縣,二 崙 鄉,"23,48,18.1","120,21,56.4",EBAM404,YunLin County
+405,雲林義賢,雲林縣,二 崙 鄉,"23,49,1.9","120,24,50",EBAM405,YunLin County
+406,金門金寧,金門縣,金 寧 鎮,,,,,,,EBAM406,Kinmen County
+407,東沙,高雄市,旗 津 區,,,,,,,EBAM407,KaoHsiung City
+408,馬祖東引,連江縣,東 引 鄉,,,,,,,EBAM408,Lienchiang County
+409,金門金沙,金門縣,金 沙 鎮,,,,,,,EBAM409,Kinmen County
+411,嘉義六腳,嘉義縣,朴 子 市,,,,,,,EBAM411,Chiayi County
+412,雲林元長,雲林縣,斗 六 市,,,,,,,EBAM412,YunLin County
+413,高雄大樹,高雄市,大 樹 區,"22,39,24.87","120,25,22.17",EBAM413,KaoHsiung City
+414,屏東玉田,屏東縣,里 港 鄉,"22,46,27.10","120,29,28.54",EBAM414,PingTung County 
