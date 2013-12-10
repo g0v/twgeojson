@@ -122,6 +122,7 @@ color-of = d3.scale.linear()
          d3.hsl(0, 1.0, 0.6),
          d3.hsl(0, 1.0, 0.1)]
 
+
 y-pixel = 0
 
 plot-interpolated-data = ->
@@ -169,7 +170,6 @@ update-seven-segment = (value-string) ->
 
 #current.on \value ->
 d3.csv "http://datapipes.okfnlabs.org/csv/?url=http%3A//opendata.epa.gov.tw/ws/Data/AQX/%3F%24orderby%3DSiteName%26%24skip%3D0%26%24top%3D1000%26format%3Dcsv" ->
-  console.log \value it
   rain-data := {[e.SiteName, e] for e in it}
   d3.select \#rainfall-timestamp
     .text "DATE: #{it.0.PublishTime}"
@@ -183,6 +183,33 @@ d3.csv "http://datapipes.okfnlabs.org/csv/?url=http%3A//opendata.epa.gov.tw/ws/D
     [+st.lng, +st.lat, parseFloat rain-data[st.name][\PM10]]
 
   # calculate the legend
+  y = 0
+  svg.append \rect
+    .attr \width 150
+    .attr \height 32*5
+    .attr \x 20
+    .attr \y 20
+    .style \fill \#000000
+    .style \stroke \#555555
+    .style \stroke-width \2
+  for c in [0, 50, 100, 200, 300]
+    y += 30
+    legend = svg.append \g
+    legend
+      .append \rect
+      .attr \width 20
+      .attr \height 20
+      .attr \x 30
+      .attr \y y
+      .style \fill color-of c
+    legend
+      .append \text
+      .attr \x 55
+      .attr \y y+15
+      .attr \d \.35em
+      .text c+' 微克/立方公尺'
+      .style \fill \#AAAAAA
+      .style \font-size \10px
 
   # update station's value
   svg.selectAll \circle
