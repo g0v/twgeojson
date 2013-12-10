@@ -1,18 +1,22 @@
 (function(){
-  var windowWidth, width, height, marginTop, canvas, svg, minLatitude, maxLatitude, minLongitude, maxLongitude, dy, dx;
+  var windowWidth, width, marginTop, height, canvas, svg, minLatitude, maxLatitude, minLongitude, maxLongitude, dy, dx;
   windowWidth = $(window).width();
   if (windowWidth > 998) {
-    width = $(window).width() - 540 - 50;
-    height = 800;
+    width = 687;
     marginTop = '0px';
   } else {
     width = $(window).width();
-    height = 800 * width / 600;
     marginTop = '76px';
   }
+  height = width * 4 / 3;
   canvas = d3.select('body').append('canvas').attr('width', width).attr('height', height).style('position', 'absolute').style('margin-top', marginTop).style('top', '0px').style('left', '0px')[0][0].getContext('2d');
   svg = d3.select('body').append('svg').attr('width', width).attr('height', height).style('position', 'absolute').style('top', '0px').style('left', '0px').style('margin-top', marginTop);
   $(document).ready(function(){
+    var panelWidth;
+    panelWidth = $('#main-panel').width();
+    if (windowWidth - panelWidth > 1200) {
+      $('#main-panel').css('margin-right', panelWidth);
+    }
     $('.data.button').on('click', function(it){
       it.preventDefault();
       return $('#main-panel').toggle();

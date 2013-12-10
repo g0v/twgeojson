@@ -1,13 +1,14 @@
 
 window-width = $(window) .width!
+
 if window-width > 998
-  width = $(window) .width! - 540 - 50
-  height = 800
+  width = 687
   margin-top = \0px
 else
   width = $(window) .width!
-  height = 800 * width / 600
   margin-top = \76px 
+
+height = width * 4 / 3
 
 canvas = (d3.select \body
           .append \canvas
@@ -28,6 +29,10 @@ svg = d3.select \body
       .style \margin-top, margin-top
 
 $ document .ready ->
+  panel-width = $ \#main-panel .width!
+  if window-width - panel-width > 1200
+    $ \#main-panel .css \margin-right, panel-width
+
   $ \.data.button .on \click ->
     it.preventDefault!
     $ \#main-panel .toggle!
