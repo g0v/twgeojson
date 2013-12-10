@@ -168,8 +168,12 @@ update-seven-segment = (value-string) ->
         bit = Math.pow 2 i
         d3.select this .select ".#{pins[i]}" .classed \on, (bit .&. bite) == bit
 
+function piped(url)
+  "http://datapipes.okfnlabs.org/csv/?url=" + escape url
+
 #current.on \value ->
-d3.csv "http://datapipes.okfnlabs.org/csv/?url=http%3A//opendata.epa.gov.tw/ws/Data/AQX/%3F%24orderby%3DSiteName%26%24skip%3D0%26%24top%3D1000%26format%3Dcsv" ->
+do
+  <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQX/?$orderby=SiteName&$skip=0&$top=1000&format=csv'
   rain-data := {[e.SiteName, e] for e in it}
   d3.select \#rainfall-timestamp
     .text "DATE: #{it.0.PublishTime}"
@@ -231,3 +235,7 @@ d3.csv "http://datapipes.okfnlabs.org/csv/?url=http%3A//opendata.epa.gov.tw/ws/D
 
   # plot interpolated value
   plot-interpolated-data!
+
+do
+  forecast <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQF/?$orderby=AreaName&$skip=0&$top=1000&format=csv'
+  console.log \forecast forecast
