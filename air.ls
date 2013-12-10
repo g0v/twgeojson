@@ -1,12 +1,20 @@
 
-width = 600
-height = 800
+window-width = $(window) .width!
+if window-width > 998
+  width = $(window) .width! - 540 - 50
+  height = 800
+  margin-top = \0px
+else
+  width = $(window) .width!
+  height = 800 * width / 600
+  margin-top = \76px 
 
 canvas = (d3.select \body
           .append \canvas
           .attr \width, width
           .attr \height, height
           .style \position, \absolute
+          .style \margin-top, margin-top
           .style \top, \0px
           .style \left, \0px)[0][0].getContext(\2d)
 
@@ -17,6 +25,17 @@ svg = d3.select \body
       .style \position, \absolute
       .style \top, \0px
       .style \left, \0px
+      .style \margin-top, margin-top
+
+$ document .ready ->
+  $ \.data.button .on \click ->
+    it.preventDefault!
+    $ \#main-panel .toggle!
+
+  $ \.launch.button .on \click ->
+    it.preventDefault!
+    sidebar = $ '.sidebar'
+    sidebar.sidebar \toggle
 
 # inspector = d3.select \body
 #               .append \div
@@ -80,6 +99,28 @@ svg.selectAll \circle
   .attr "transform" ->
       "translate(#{ proj [+it.lng, +it.lat] })"
 
+draw-segment = (d, i) ->
+  d3.select \#station-name
+  .text d.name
+
+  if rain-data[d.name]? and not isNaN rain-data[d.name][\PM10]
+    raw-value = (parseInt rain-data[d.name][\PM10]) + ""
+    update-seven-segment (" " * (0 >? 4 - raw-value.length)) + raw-value
+  else
+    update-seven-segment "----"
+
+list = d3.select \div.sidebar
+
+list.selectAll \a
+  .data stations
+  .enter!append 'a'
+  .attr \class, \item
+  .text ->
+    it.SITE  
+  .on \click (d, i) ->
+    draw-segment d, i
+    $ \.launch.button .click!
+    $ \#main-panel .css \display, \block
 
 #console.log [[+it.longitude, +it.latitude, it.name] for it in stations]
 #root = new Firebase "https://cwbtw.firebaseio.com"
@@ -224,14 +265,7 @@ do
       else
         \#FFFFFF
     .on \mouseover (d, i) ->
-      d3.select \#station-name
-        .text d.name
-
-      if rain-data[d.name]? and not isNaN rain-data[d.name][\PM10]
-        raw-value = (parseInt rain-data[d.name][\PM10]) + ""
-        update-seven-segment (" " * (0 >? 4 - raw-value.length)) + raw-value
-      else
-        update-seven-segment "----"
+      draw-segment d, i
 
   # plot interpolated value
   plot-interpolated-data!

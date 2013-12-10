@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" media="all" href="seven-segment.css" />
+<link rel="stylesheet" type="text/css" media="all" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.10.0/css/semantic.min.css" />
 <style>
 
 body {
@@ -31,12 +33,25 @@ div.inspector p {
   margin-bottom: 3px;
 }
 
+.menu {
+  top: 0;
+  padding-left: 1em;
+}
+.menu .data.button, .menu .launch.button {
+  display: none;
+  font-size: 1.7rem;
+}
+
+
+.sidebar.menu .item {
+  font-size: 1.7rem;
+}
+
 #main-panel {
-  position: absolute;
-  left: 620px;
   width: 540px;
-  top: 20px;
   height: 540px;
+  margin-top: 5em;
+  float: right;
 }
 
 .eva-box {
@@ -70,17 +85,101 @@ div.inspector p {
   width: 500px;
 }
 
+#about {
+  margin-top: 1em;
+}
+
 div.unit {
   text-align: right;
 }
 
+@media screen and (max-width: 998px) {
+  .menu .data.button, .menu .launch.button {
+    display: block;
+  }
+  #main-panel {
+    position: absolute;
+    background-color: rgba(33,33,33,0.5);
+    display: none;
+    margin-left: 5em;
+  }
+  canvas {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #main-panel {
+    width: 400px;
+    margin-left: 5%;
+  }
+  .eva-box h2 {
+    font-size: 72pt;
+  }
+  #rainfall-box {
+    width: 400px;
+  }
+  .seven-segment {
+    margin: 0 2px;
+    width: 80px;
+  }
+  .seven-segment .a, .seven-segment .d, .seven-segment .g .top, .seven-segment .g .bottom {
+    width: 32px;
+  }
+  .seven-segment .b, .seven-segment .c {
+    left: 64px;
+  }
+  .seven-segment .g {
+    left: 13.5px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #main-panel {
+    width: 340px;
+    height: 440px;
+    margin-left: 0;
+  }
+  .eva-box h2 {
+    font-size: 72pt;
+  }
+  #rainfall-box {
+    width: 340px;
+  }
+  .seven-segment {
+    margin: 0 2px;
+    width: 70px;
+  }
+  .seven-segment .a, .seven-segment .d, .seven-segment .g .top, .seven-segment .g .bottom {
+    width: 20px;
+  }
+  .seven-segment .b, .seven-segment .c {
+    left: 50px;
+  }
+  .seven-segment .g {
+    left: 13.5px;
+  }
+}
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.10.0/javascript/semantic.min.js"></script>
 <script src="air.js"></script>
-
+<div class="ui fixed inverted transparent menu">
+  <a class="left floated item launch button">
+    <i class="list icon"></i>
+    測站
+  </a>
+  <a class="right floated item data button">
+    <i class="code icon"></i>
+    數據
+  </a>  
+</div>
+<div id="list" class="ui vertical floating inverted transparent sidebar menu">
+</div>
 <div class="eva-box" id="main-panel">
   <h3 id="rainfall-timestamp">LOADING…</h3>
   <h2 id="station-name">懸浮微粒</h2>
