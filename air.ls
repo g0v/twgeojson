@@ -66,28 +66,25 @@ max-longitude = 122.5 # max-x
 dy = (max-latitude - min-latitude) / height
 dx = (max-longitude - min-longitude) / width
 
-
-### Draw Taiwan
-countiestopo <- d3.json "twCounty2010.topo.json"
-counties = topojson.feature countiestopo, countiestopo.objects['twCounty2010.geo']
 proj = ([x, y]) ->
-        [(x - min-longitude) / dx, height - (y - min-latitude) / dy]
-path = d3.geo.path!projection proj
+  [(x - min-longitude) / dx, height - (y - min-latitude) / dy]
+### Draw Taiwan
+draw-taiwan = (countiestopo) ->
+  counties = topojson.feature countiestopo, countiestopo.objects['twCounty2010.geo']
 
-g = svg.append \g
-      .attr \id, \taiwan
-      .attr \class, \counties
+  path = d3.geo.path!projection proj
+  
+  g = svg.append \g
+        .attr \id, \taiwan
+        .attr \class, \counties
+  
+  g.selectAll 'path'
+    .data counties.features
+    .enter!append 'path'
+    .attr 'class', -> \q-9-9
+    .attr 'd', path
 
-g.selectAll 'path'
-  .data counties.features
-  .enter!append 'path'
-  .attr 'class', -> \q-9-9
-  .attr 'd', path
-
-### Draw Stations
-stations <- d3.csv "epa-site.csv"
-
-function ConvertDMSToDD(days, minutes, seconds)
+ConvertDMSToDD = (days, minutes, seconds) ->
   days = +days
   minutes = +minutes
   seconds = +seconds
@@ -97,20 +94,15 @@ function ConvertDMSToDD(days, minutes, seconds)
   else
     days - dd
 
-stations = for s in stations
-  s.lng = ConvertDMSToDD ...(s.SITE_EAST_LONG.split \,)
-  s.lat = ConvertDMSToDD ...(s.SITE_NORTH_LAT.split \,)
-  s.name = s.SITE
-  s
-
-svg.selectAll \circle
-  .data stations
-  .enter!append 'circle'
-  .style \stroke \black
-  .style \fill \none
-  .attr \r 2
-  .attr "transform" ->
-      "translate(#{ proj [+it.lng, +it.lat] })"
+draw-stations = (stations) ->
+  svg.selectAll \circle
+    .data stations
+    .enter!append 'circle'
+    .style \stroke \black
+    .style \fill \none
+    .attr \r 2
+    .attr "transform" ->
+        "translate(#{ proj [+it.lng, +it.lat] })"
 
 draw-segment = (d, i) ->
   d3.select \#station-name
@@ -122,8 +114,8 @@ draw-segment = (d, i) ->
   else
     update-seven-segment "----"
 
+add-list = (stations) ->
 list = d3.select \div.sidebar
-
 list.selectAll \a
   .data stations
   .enter!append 'a'
@@ -226,68 +218,91 @@ function piped(url)
   "http://datapipes.okfnlabs.org/csv/?url=" + escape url
 
 #current.on \value ->
-do
-  <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQX/?$orderby=SiteName&$skip=0&$top=1000&format=csv'
-  rain-data := {[e.SiteName, e] for e in it}
-  d3.select \#rainfall-timestamp
-    .text "DATE: #{it.0.PublishTime}"
+draw-heatmap = (stations) ->
+  do
+    <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQX/?$orderby=SiteName&$skip=0&$top=1000&format=csv'
+    rain-data := {[e.SiteName, e] for e in it}
+    d3.select \#rainfall-timestamp
+      .text "DATE: #{it.0.PublishTime}"
+  
+    d3.select \#station-name
+      .text "已更新"
+  
+    update-seven-segment "    "
+  
+    samples := for st in stations when rain-data[st.name]?
+      val = parseFloat rain-data[st.name][\PM10]
+      # XXX mark NaN stations
+      continue if isNaN val
+      [+st.lng, +st.lat, val]
 
-  d3.select \#station-name
-    .text "已更新"
+    # calculate the legend
+    y = 0
+    x-off = width - 100 - 40
+    y-off = height - (32*5) - 40
+    svg.append \rect
+      .attr \width 100
+      .attr \height 32*5
+      .attr \x 20 + x-off
+      .attr \y 20 + y-off
+      .style \fill \#000000
+      .style \stroke \#555555
+      .style \stroke-width \2
+    for c in color-of.domain!
+      y += 30
+      legend = svg.append \g
+      legend
+        .append \rect
+        .attr \width 20
+        .attr \height 20
+        .attr \x 30 + x-off
+        .attr \y y + y-off
+        .style \fill color-of c
+      legend
+        .append \text
+        .attr \x 55 + x-off
+        .attr \y y+15 + y-off
+        .attr \d \.35em
+        .text c+' μg/m³'
+        .style \fill \#AAAAAA
+        .style \font-size \10px
+  
+    # update station's value
+    svg.selectAll \circle
+      .data stations
+      .style \fill (st) ->
+        if rain-data[st.name]? and not isNaN rain-data[st.name][\PM10]
+          color-of parseFloat rain-data[st.name][\PM10]
+        else
+          \#FFFFFF
+      .on \mouseover (d, i) ->
+        draw-segment d, i
+  
+    # plot interpolated value
+    plot-interpolated-data!
 
-  update-seven-segment "    "
+draw-all = (stations) ->
+  stations = for s in stations
+    s.lng = ConvertDMSToDD ...(s.SITE_EAST_LONG.split \,)
+    s.lat = ConvertDMSToDD ...(s.SITE_NORTH_LAT.split \,)
+    s.name = s.SITE
+    s
+  draw-stations stations
+  add-list stations
+  draw-heatmap stations
 
-  samples := for st in stations when rain-data[st.name]?
-    val = parseFloat rain-data[st.name][\PM10]
-    # XXX mark NaN stations
-    continue if isNaN val
-    [+st.lng, +st.lat, val]
-
-  # calculate the legend
-  y = 0
-  x-off = width - 100 - 40
-  y-off = height - (32*5) - 40
-  svg.append \rect
-    .attr \width 100
-    .attr \height 32*5
-    .attr \x 20 + x-off
-    .attr \y 20 + y-off
-    .style \fill \#000000
-    .style \stroke \#555555
-    .style \stroke-width \2
-  for c in color-of.domain!
-    y += 30
-    legend = svg.append \g
-    legend
-      .append \rect
-      .attr \width 20
-      .attr \height 20
-      .attr \x 30 + x-off
-      .attr \y y + y-off
-      .style \fill color-of c
-    legend
-      .append \text
-      .attr \x 55 + x-off
-      .attr \y y+15 + y-off
-      .attr \d \.35em
-      .text c+' μg/m³'
-      .style \fill \#AAAAAA
-      .style \font-size \10px
-
-  # update station's value
-  svg.selectAll \circle
-    .data stations
-    .style \fill (st) ->
-      if rain-data[st.name]? and not isNaN rain-data[st.name][\PM10]
-        color-of parseFloat rain-data[st.name][\PM10]
-      else
-        \#FFFFFF
-    .on \mouseover (d, i) ->
-      draw-segment d, i
-
-  # plot interpolated value
-  plot-interpolated-data!
-
+if localStorage.countiestopo and localStorage.stations
+  console.log 'draw from local storage'
+  draw-taiwan JSON.parse localStorage.countiestopo
+  stations = JSON.parse localStorage.stations
+  draw-all stations
+else
+  countiestopo <- d3.json "twCounty2010.topo.json"
+  localStorage.countiestopo = JSON.stringify countiestopo
+  draw-taiwan countiestopo
+  stations <- d3.csv "epa-site.csv"
+  localStorage.stations = JSON.stringify stations
+  draw-all stations
 do
   forecast <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQF/?$orderby=AreaName&$skip=0&$top=1000&format=csv'
   first = forecast[0]
