@@ -37,9 +37,16 @@ $ document .ready ->
   $ \.data.button .on \click ->
     it.preventDefault!
     $ \#main-panel .toggle!
+    $ \#info-panel .hide!
+
+  $ \.forcest.button .on \click ->
+    it.preventDefault!
+    $ \#info-panel .toggle!
+    $ \#main-panel .hide!
 
   $ \.launch.button .on \click ->
     it.preventDefault!
+    $ \#info-panel .hide!
     sidebar = $ '.sidebar'
     sidebar.sidebar \toggle
 
@@ -285,4 +292,6 @@ do
   forecast <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQF/?$orderby=AreaName&$skip=0&$top=1000&format=csv'
   first = forecast[0]
   d3.select \#forecast
+    .text first.Content
+  d3.select \#info-panel
     .text first.Content

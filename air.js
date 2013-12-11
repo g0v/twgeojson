@@ -21,11 +21,18 @@
     }
     $('.data.button').on('click', function(it){
       it.preventDefault();
-      return $('#main-panel').toggle();
+      $('#main-panel').toggle();
+      return $('#info-panel').hide();
+    });
+    $('.forcest.button').on('click', function(it){
+      it.preventDefault();
+      $('#info-panel').toggle();
+      return $('#main-panel').hide();
     });
     return $('.launch.button').on('click', function(it){
       var sidebar;
       it.preventDefault();
+      $('#info-panel').hide();
       sidebar = $('.sidebar');
       return sidebar.sidebar('toggle');
     });
@@ -218,7 +225,8 @@
       return d3.csv(piped('http://opendata.epa.gov.tw/ws/Data/AQF/?$orderby=AreaName&$skip=0&$top=1000&format=csv'), function(forecast){
         var first;
         first = forecast[0];
-        return d3.select('#forecast').text(first.Content);
+        d3.select('#forecast').text(first.Content);
+        return d3.select('#info-panel').text(first.Content);
       });
     });
   });

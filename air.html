@@ -37,7 +37,7 @@ div.inspector p {
   top: 0;
   padding-left: 1em;
 }
-.menu .data.button, .menu .launch.button {
+.menu .data.button, .menu .launch.button, .menu .forcest.button{
   display: none;
   font-size: 1.7rem;
 }
@@ -49,7 +49,7 @@ div.inspector p {
 
 #main-panel {
   width: 540px;
-  height: 580px;
+  height: auto;
   margin-top: 5em;
   float: right;
 }
@@ -98,13 +98,22 @@ div.unit {
   padding: 5px 5px 0 5px;
 }
 
+#info-panel {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  margin: 20px;
+  top: 80px;
+  background-color: rgba(33,33,33,0.9);
+}
+
 @media screen and (max-width: 998px) {
-  .menu .data.button, .menu .launch.button {
+  .menu .data.button, .menu .launch.button, .menu .forcest.button {
     display: block;
   }
   #main-panel {
     position: absolute;
-    background-color: rgba(33,33,33,0.5);
+    background-color: rgba(33,33,33,0.8);
     display: none;
     margin-left: 5em;
   }
@@ -137,6 +146,10 @@ div.unit {
   .seven-segment .g {
     left: 13.5px;
   }
+
+  #forecast {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -164,6 +177,12 @@ div.unit {
   .seven-segment .g {
     left: 13.5px;
   }
+  #forecast {
+    display: none;
+  }
+  #main-panel {
+    height: 540px;
+  }
 }
 </style>
 <body>
@@ -176,6 +195,9 @@ div.unit {
   <a class="left floated item launch button">
     <i class="list icon"></i>
     測站
+  </a>
+  <a class="right floated item forcest button">
+    <i class="info icon"></i>
   </a>
   <a class="right floated item data button">
     <i class="code icon"></i>
@@ -248,5 +270,6 @@ div.unit {
   資料來源：環保署<a href="http://opendata.epa.gov.tw/Data/Contents/AQX/">空氣品質即時污染指標</a>
   </div>
 </div>
-
+<div class="eva-box" id="info-panel">
+</div>
 </body>
