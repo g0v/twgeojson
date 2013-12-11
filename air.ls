@@ -7,7 +7,7 @@ if window-width > 998
   margin-top = \0px
 else
   width = $(window) .width!
-  margin-top = \76px
+  margin-top = \65px
 
 height = width * 4 / 3
 

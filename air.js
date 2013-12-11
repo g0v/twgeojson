@@ -8,7 +8,7 @@
     marginTop = '0px';
   } else {
     width = $(window).width();
-    marginTop = '76px';
+    marginTop = '65px';
   }
   height = width * 4 / 3;
   canvas = d3.select('body').append('canvas').attr('width', width).attr('height', height).style('position', 'absolute').style('margin-top', marginTop).style('top', '0px').style('left', '0px')[0][0].getContext('2d');
