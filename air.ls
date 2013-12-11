@@ -2,7 +2,8 @@
 window-width = $(window) .width!
 
 if window-width > 998
-  width = 687
+  width = $(window) .height! / 4 * 3
+  width <?= 687
   margin-top = \0px
 else
   width = $(window) .width!
@@ -237,11 +238,13 @@ do
 
   # calculate the legend
   y = 0
+  x-off = width - 150 - 40
+  y-off = height - (32*5) - 40
   svg.append \rect
     .attr \width 150
     .attr \height 32*5
-    .attr \x 20
-    .attr \y 20
+    .attr \x 20 + x-off
+    .attr \y 20 + y-off
     .style \fill \#000000
     .style \stroke \#555555
     .style \stroke-width \2
@@ -252,13 +255,13 @@ do
       .append \rect
       .attr \width 20
       .attr \height 20
-      .attr \x 30
-      .attr \y y
+      .attr \x 30 + x-off
+      .attr \y y + y-off
       .style \fill color-of c
     legend
       .append \text
-      .attr \x 55
-      .attr \y y+15
+      .attr \x 55 + x-off
+      .attr \y y+15 + y-off
       .attr \d \.35em
       .text c+' 微克/立方公尺'
       .style \fill \#AAAAAA
