@@ -238,10 +238,10 @@ do
 
   # calculate the legend
   y = 0
-  x-off = width - 150 - 40
+  x-off = width - 100 - 40
   y-off = height - (32*5) - 40
   svg.append \rect
-    .attr \width 150
+    .attr \width 100
     .attr \height 32*5
     .attr \x 20 + x-off
     .attr \y 20 + y-off
@@ -263,7 +263,7 @@ do
       .attr \x 55 + x-off
       .attr \y y+15 + y-off
       .attr \d \.35em
-      .text c+' 微克/立方公尺'
+      .text c+' μg/m³'
       .style \fill \#AAAAAA
       .style \font-size \10px
 

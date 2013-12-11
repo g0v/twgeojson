@@ -194,15 +194,15 @@
         }
         samples = res$;
         y = 0;
-        xOff = width - 150 - 40;
+        xOff = width - 100 - 40;
         yOff = height - 32 * 5 - 40;
-        svg.append('rect').attr('width', 150).attr('height', 32 * 5).attr('x', 20 + xOff).attr('y', 20 + yOff).style('fill', '#000000').style('stroke', '#555555').style('stroke-width', '2');
+        svg.append('rect').attr('width', 100).attr('height', 32 * 5).attr('x', 20 + xOff).attr('y', 20 + yOff).style('fill', '#000000').style('stroke', '#555555').style('stroke-width', '2');
         for (i$ = 0, len$ = (ref$ = [0, 50, 100, 200, 300]).length; i$ < len$; ++i$) {
           c = ref$[i$];
           y += 30;
           legend = svg.append('g');
           legend.append('rect').attr('width', 20).attr('height', 20).attr('x', 30 + xOff).attr('y', y + yOff).style('fill', colorOf(c));
-          legend.append('text').attr('x', 55 + xOff).attr('y', y + 15 + yOff).attr('d', '.35em').text(c + ' 微克/立方公尺').style('fill', '#AAAAAA').style('font-size', '10px');
+          legend.append('text').attr('x', 55 + xOff).attr('y', y + 15 + yOff).attr('d', '.35em').text(c + ' μg/m³').style('fill', '#AAAAAA').style('font-size', '10px');
         }
         svg.selectAll('circle').data(stations).style('fill', function(st){
           if (rainData[st.name] != null && !isNaN(rainData[st.name]['PM10'])) {
