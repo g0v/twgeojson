@@ -6,7 +6,7 @@ if window-width > 998
   margin-top = \0px
 else
   width = $(window) .width!
-  margin-top = \76px 
+  margin-top = \76px
 
 height = width * 4 / 3
 
@@ -121,7 +121,7 @@ list.selectAll \a
   .enter!append 'a'
   .attr \class, \item
   .text ->
-    it.SITE  
+    it.SITE
   .on \click (d, i) ->
     draw-segment d, i
     $ \.launch.button .click!
@@ -156,7 +156,7 @@ idw-interpolate = (samples, power, point) ->
     return s[2] if d == 0.0
     weight = 1.0 / (d * d) # Performance Hack: Let power = 4 for fast exp calculation.
     sum := sum + weight
-    sum-weight := sum-weight + weight * s[2]
+    sum-weight := sum-weight + weight * if isNaN s[2] => 0 else s[2]
   sum-weight / sum
 
 
