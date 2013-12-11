@@ -248,7 +248,7 @@ do
     .style \fill \#000000
     .style \stroke \#555555
     .style \stroke-width \2
-  for c in [0, 50, 100, 200, 300]
+  for c in color-of.domain!
     y += 30
     legend = svg.append \g
     legend
@@ -283,4 +283,6 @@ do
 
 do
   forecast <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQF/?$orderby=AreaName&$skip=0&$top=1000&format=csv'
-  console.log \forecast forecast
+  first = forecast[0]
+  d3.select \#forecast
+    .text first.Content

@@ -49,7 +49,7 @@ div.inspector p {
 
 #main-panel {
   width: 540px;
-  height: 540px;
+  height: 580px;
   margin-top: 5em;
   float: right;
 }
@@ -91,6 +91,11 @@ div.inspector p {
 
 div.unit {
   text-align: right;
+  margin-right:22px;
+}
+
+#forecast {
+  padding: 5px 5px 0 5px;
 }
 
 @media screen and (max-width: 998px) {
@@ -180,6 +185,7 @@ div.unit {
 <div id="list" class="ui vertical floating inverted transparent sidebar menu">
 </div>
 <div class="eva-box" id="main-panel">
+  <div id="forecast"></div>
   <h3 id="rainfall-timestamp">LOADING…</h3>
   <h2 id="station-name">懸浮微粒</h2>
 
@@ -236,7 +242,7 @@ div.unit {
         <div class="bottom"></div>
       </div>
     </div>
-    <div class="unit">微克/立方公尺</div>
+    <div class="unit"> μg/m³</div>
   </div>
   <div id="about">
   資料來源：環保署<a href="http://opendata.epa.gov.tw/Data/Contents/AQX/">空氣品質即時污染指標</a>

@@ -197,7 +197,7 @@
         xOff = width - 100 - 40;
         yOff = height - 32 * 5 - 40;
         svg.append('rect').attr('width', 100).attr('height', 32 * 5).attr('x', 20 + xOff).attr('y', 20 + yOff).style('fill', '#000000').style('stroke', '#555555').style('stroke-width', '2');
-        for (i$ = 0, len$ = (ref$ = [0, 50, 100, 200, 300]).length; i$ < len$; ++i$) {
+        for (i$ = 0, len$ = (ref$ = colorOf.domain()).length; i$ < len$; ++i$) {
           c = ref$[i$];
           y += 30;
           legend = svg.append('g');
@@ -216,7 +216,9 @@
         return plotInterpolatedData();
       });
       return d3.csv(piped('http://opendata.epa.gov.tw/ws/Data/AQF/?$orderby=AreaName&$skip=0&$top=1000&format=csv'), function(forecast){
-        return console.log('forecast', forecast);
+        var first;
+        first = forecast[0];
+        return d3.select('#forecast').text(first.Content);
       });
     });
   });
