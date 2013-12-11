@@ -115,17 +115,17 @@ draw-segment = (d, i) ->
     update-seven-segment "----"
 
 add-list = (stations) ->
-list = d3.select \div.sidebar
-list.selectAll \a
-  .data stations
-  .enter!append 'a'
-  .attr \class, \item
-  .text ->
-    it.SITE
-  .on \click (d, i) ->
-    draw-segment d, i
-    $ \.launch.button .click!
-    $ \#main-panel .css \display, \block
+  list = d3.select \div.sidebar
+  list.selectAll \a
+    .data stations
+    .enter!append 'a'
+    .attr \class, \item
+    .text ->
+      it.SITE
+    .on \click (d, i) ->
+      draw-segment d, i
+      $ \.launch.button .click!
+      $ \#main-panel .css \display, \block
 
 #console.log [[+it.longitude, +it.latitude, it.name] for it in stations]
 #root = new Firebase "https://cwbtw.firebaseio.com"
@@ -293,6 +293,7 @@ draw-all = (stations) ->
 
 if localStorage.countiestopo and localStorage.stations
   console.log 'draw from local storage'
+  <- setTimeout _, 1ms
   draw-taiwan JSON.parse localStorage.countiestopo
   stations = JSON.parse localStorage.stations
   draw-all stations
