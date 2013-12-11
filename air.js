@@ -169,7 +169,7 @@ d3.json("twCounty2010.topo.json", function(countiestopo){
       return "http://datapipes.okfnlabs.org/csv/?url=" + escape(url);
     }
     d3.csv(piped('http://opendata.epa.gov.tw/ws/Data/AQX/?$orderby=SiteName&$skip=0&$top=1000&format=csv'), function(it){
-      var res$, i$, len$, e, ref$, st, y, c, legend;
+      var res$, i$, len$, e, ref$, st, val, y, c, legend;
       res$ = {};
       for (i$ = 0, len$ = it.length; i$ < len$; ++i$) {
         e = it[i$];
@@ -182,8 +182,12 @@ d3.json("twCounty2010.topo.json", function(countiestopo){
       res$ = [];
       for (i$ = 0, len$ = (ref$ = stations).length; i$ < len$; ++i$) {
         st = ref$[i$];
-        if (rainData[st.name] != null && !isNaN(rainData[st.name]['PM10'])) {
-          res$.push([+st.lng, +st.lat, parseFloat(rainData[st.name]['PM10'])]);
+        if (rainData[st.name] != null) {
+          val = parseFloat(rainData[st.name]['PM10']);
+          if (isNaN(val)) {
+            continue;
+          }
+          res$.push([+st.lng, +st.lat, val]);
         }
       }
       samples = res$;

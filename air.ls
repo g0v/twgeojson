@@ -229,8 +229,11 @@ do
 
   update-seven-segment "    "
 
-  samples := for st in stations when rain-data[st.name]? and not isNaN rain-data[st.name][\PM10]
-    [+st.lng, +st.lat, parseFloat rain-data[st.name][\PM10]]
+  samples := for st in stations when rain-data[st.name]?
+    val = parseFloat rain-data[st.name][\PM10]
+    # XXX mark NaN stations
+    continue if isNaN val
+    [+st.lng, +st.lat, val]
 
   # calculate the legend
   y = 0
