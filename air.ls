@@ -240,14 +240,14 @@ idw-interpolate = (samples, power, point) ->
 
 y-pixel = 0
 
-plot-interpolated-data = ->
+plot-interpolated-data = (translate = [0, 0], scale = 1.0) ->
   y-pixel := height
 
   render-line = ->
     if y-pixel >= 0
       for x-pixel from 0 to width by 2
-        y = min-latitude + dy * y-pixel
-        x = min-longitude + dx * x-pixel
+        y = min-latitude + dy * ((y-pixel + translate[1] - height) / scale + height) 
+        x = min-longitude + dx * ((x-pixel - translate[0]) / scale)
         z = 0 >? idw-interpolate samples, 4.0, [x, y]
 
         canvas.fillStyle = color-of z
@@ -340,6 +340,8 @@ zoom = d3.behavior.zoom!
     g.attr \transform 'translate(' + d3.event.translate.join(\,) + ')scale(' + d3.event.scale + ')'
     g.selectAll \path
       .attr \d path.projection proj
+  .on \zoomend ->
+    plot-interpolated-data zoom.translate!, zoom.scale!
 
 if localStorage.countiestopo and localStorage.stations
   <- setTimeout _, 1ms

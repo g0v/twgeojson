@@ -173,16 +173,18 @@ $(function(){
     return sumWeight / sum;
   };
   yPixel = 0;
-  plotInterpolatedData = function(){
+  plotInterpolatedData = function(translate, scale){
     var renderLine;
+    translate == null && (translate = [0, 0]);
+    scale == null && (scale = 1.0);
     yPixel = height;
     renderLine = function(){
       var i$, to$, xPixel, y, x, z, ref$;
       if (yPixel >= 0) {
         for (i$ = 0, to$ = width; i$ <= to$; i$ += 2) {
           xPixel = i$;
-          y = minLatitude + dy * yPixel;
-          x = minLongitude + dx * xPixel;
+          y = minLatitude + dy * ((yPixel + translate[1] - height) / scale + height);
+          x = minLongitude + dx * ((xPixel - translate[0]) / scale);
           z = 0 > (ref$ = idwInterpolate(samples, 4.0, [x, y])) ? 0 : ref$;
           canvas.fillStyle = colorOf(z);
           canvas.fillRect(xPixel, height - yPixel, 2, 2);
@@ -290,6 +292,8 @@ $(function(){
   zoom = d3.behavior.zoom().on('zoom', function(){
     g.attr('transform', 'translate(' + d3.event.translate.join(',') + ')scale(' + d3.event.scale + ')');
     return g.selectAll('path').attr('d', path.projection(proj));
+  }).on('zoomend', function(){
+    return plotInterpolatedData(zoom.translate(), zoom.scale());
   });
   if (localStorage.countiestopo && localStorage.stations) {
     setTimeout(function(){
