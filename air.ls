@@ -52,6 +52,10 @@ svg = d3.select \body
       .style \left, \0px
       .style \margin-top, margin-top
 
+g = svg.append \g
+      .attr \id, \taiwan
+      .attr \class, \counties
+
 $ document .ready ->
   panel-width = $ \#main-panel .width!
   if window-width - panel-width > 1200
@@ -91,15 +95,17 @@ dx = (max-longitude - min-longitude) / width
 
 proj = ([x, y]) ->
   [(x - min-longitude) / dx, height - (y - min-latitude) / dy]
+
+g = svg.append \g
+      .attr \id, \taiwan
+      .attr \class, \counties
+
+path = d3.geo.path!projection proj
+
 ### Draw Taiwan
 draw-taiwan = (countiestopo) ->
+
   counties = topojson.feature countiestopo, countiestopo.objects['twCounty2010.geo']
-
-  path = d3.geo.path!projection proj
-
-  g = svg.append \g
-        .attr \id, \taiwan
-        .attr \class, \counties
 
   g.selectAll 'path'
     .data counties.features
@@ -118,7 +124,7 @@ ConvertDMSToDD = (days, minutes, seconds) ->
     days - dd
 
 draw-stations = (stations) ->
-  svg.selectAll \circle
+  g.selectAll \circle
     .data stations
     .enter!append 'circle'
     .style \stroke \black
@@ -329,11 +335,18 @@ draw-all = (_stations) ->
   $ \.o3 .click ->
     set-metric \O3
 
+zoom = d3.behavior.zoom!
+  .on \zoom ->
+    g.attr \transform 'translate(' + d3.event.translate.join(\,) + ')scale(' + d3.event.scale + ')'
+    g.selectAll \path
+      .attr \d path.projection proj
+
 if localStorage.countiestopo and localStorage.stations
   <- setTimeout _, 1ms
   draw-taiwan JSON.parse localStorage.countiestopo
   stations = JSON.parse localStorage.stations
   draw-all stations
+  svg.call zoom
 else
   countiestopo <- d3.json "twCounty2010.topo.json"
   localStorage.countiestopo = JSON.stringify countiestopo
