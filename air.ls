@@ -148,6 +148,7 @@ set-metric = (name) ->
   y = 0
   x-off = width - 100 - 40
   y-off = height - (32*5) - 40
+
   svg.append \rect
     .attr \width 100
     .attr \height 32*5
@@ -156,22 +157,19 @@ set-metric = (name) ->
     .style \fill \#000000
     .style \stroke \#555555
     .style \stroke-width \2
-  for c in color-of.domain!
-    y += 30
-    legend = svg.append \g
-    legend
-      .append \rect
+
+  svg.selectAll("svg").data color-of.domain!
+    ..enter!append \rect
       .attr \width 20
       .attr \height 20
       .attr \x 30 + x-off
-      .attr \y y + y-off
-      .style \fill color-of c
-    legend
-      .append \text
+      .attr \y -> (&1+1)*30 +y-off
+      .style \fill (d) -> color-of d
+    ..enter!append \text
       .attr \x 55 + x-off
-      .attr \y y+15 + y-off
+      .attr \y -> (&1+1)*30+15 + y-off
       .attr \d \.35em
-      .text c + current-unit
+      .text -> &0 + current-unit
       .style \fill \#AAAAAA
       .style \font-size \10px
 
