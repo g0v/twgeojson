@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" media="all" href="seven-segment.css" />
@@ -57,7 +58,6 @@ div.inspector p {
 #main-panel {
   width: 540px;
   height: auto;
-  margin-top: 5em;
   float: right;
 }
 
@@ -197,12 +197,13 @@ div.unit {
   }
 }
 </style>
-<body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.1.6/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.10.0/javascript/semantic.min.js"></script>
 <script src="air.js"></script>
+</head>
+<body>
 <div class="ui fixed inverted transparent menu" style="left: 0">
   <a class="left floated item launch button" style="font-size: 1.5rem">
     <i class="list icon"></i>
@@ -219,6 +220,12 @@ div.unit {
 </div>
 <div class="eva-box" id="main-panel">
   <div id="forecast"></div>
+  <div id="metrics">
+  <a class="psi ui button">PSI</a>
+  <a class="o3 ui button">O3</a>
+  <a class="pm10 ui button">PM10</a>
+  <a class="pm25 ui button">PM2.5</a>
+  </div>
   <h3 id="rainfall-timestamp">LOADING…</h3>
   <h2 id="station-name">懸浮微粒</h2>
 

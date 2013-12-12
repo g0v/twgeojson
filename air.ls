@@ -1,4 +1,27 @@
 
+metrics = do
+  NO2: {}
+  'PM2.5':
+    domain: [0, 20, 35, 70, 100]
+    name: \細懸浮
+    unit: \μg/m³
+  PM10:
+    domain: [0, 50, 150, 350, 420]
+    unit: \μg/m³
+    name: \懸浮微粒
+  PSI:
+    domain: [0, 50, 100, 200, 300]
+    name: \污染指數
+  SO2:
+    name: \二氧化硫
+  CO: {}
+  O3:
+    domain: [0, 40, 80, 120, 300]
+    name: \臭氧
+    unit: \ppb
+
+<- $
+
 window-width = $(window) .width!
 
 if window-width > 998
@@ -73,11 +96,11 @@ draw-taiwan = (countiestopo) ->
   counties = topojson.feature countiestopo, countiestopo.objects['twCounty2010.geo']
 
   path = d3.geo.path!projection proj
-  
+
   g = svg.append \g
         .attr \id, \taiwan
         .attr \class, \counties
-  
+
   g.selectAll 'path'
     .data counties.features
     .enter!append 'path'
@@ -104,12 +127,62 @@ draw-stations = (stations) ->
     .attr "transform" ->
         "translate(#{ proj [+it.lng, +it.lat] })"
 
+var current-metric, current-unit
+var color-of
+var stations
+
+set-metric = (name) ->
+  current-metric := name
+  color-of := d3.scale.linear()
+  .domain metrics[name].domain ? [0, 50, 100, 200, 300]
+  .range [ d3.hsl(100, 1.0, 0.6)
+           d3.hsl(60, 1.0, 0.6)
+           d3.hsl(30, 1.0, 0.6)
+           d3.hsl(0, 1.0, 0.6)
+           d3.hsl(0, 1.0, 0.1) ]
+  current-unit := metrics[name].unit ? ''
+
+  add-list stations
+
+  # calculate the legend
+  y = 0
+  x-off = width - 100 - 40
+  y-off = height - (32*5) - 40
+  svg.append \rect
+    .attr \width 100
+    .attr \height 32*5
+    .attr \x 20 + x-off
+    .attr \y 20 + y-off
+    .style \fill \#000000
+    .style \stroke \#555555
+    .style \stroke-width \2
+  for c in color-of.domain!
+    y += 30
+    legend = svg.append \g
+    legend
+      .append \rect
+      .attr \width 20
+      .attr \height 20
+      .attr \x 30 + x-off
+      .attr \y y + y-off
+      .style \fill color-of c
+    legend
+      .append \text
+      .attr \x 55 + x-off
+      .attr \y y+15 + y-off
+      .attr \d \.35em
+      .text c + current-unit
+      .style \fill \#AAAAAA
+      .style \font-size \10px
+
+  draw-heatmap stations
+
 draw-segment = (d, i) ->
   d3.select \#station-name
   .text d.name
 
-  if rain-data[d.name]? and not isNaN rain-data[d.name][\PM10]
-    raw-value = (parseInt rain-data[d.name][\PM10]) + ""
+  if epa-data[d.name]? and not isNaN epa-data[d.name][current-metric]
+    raw-value = (parseInt epa-data[d.name][current-metric]) + ""
     update-seven-segment (" " * (0 >? 4 - raw-value.length)) + raw-value
   else
     update-seven-segment "----"
@@ -131,8 +204,7 @@ add-list = (stations) ->
 #root = new Firebase "https://cwbtw.firebaseio.com"
 #current = root.child "rainfall/current"
 
-# {"七股":{"10m":"-", "today":"20.5"}, …}
-rain-data = {}
+epa-data = {}
 
 # [[x, y, z], …]
 samples = {}
@@ -160,13 +232,6 @@ idw-interpolate = (samples, power, point) ->
   sum-weight / sum
 
 
-color-of = d3.scale.linear()
-.domain [0, 50, 100, 200, 300]
-.range [ d3.hsl(100, 1.0, 0.6),
-         d3.hsl(60, 1.0, 0.6),
-         d3.hsl(30, 1.0, 0.6),
-         d3.hsl(0, 1.0, 0.6),
-         d3.hsl(0, 1.0, 0.1)]
 
 
 y-pixel = 0
@@ -219,80 +284,54 @@ function piped(url)
 
 #current.on \value ->
 draw-heatmap = (stations) ->
-  do
-    <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQX/?$orderby=SiteName&$skip=0&$top=1000&format=csv'
-    rain-data := {[e.SiteName, e] for e in it}
-    d3.select \#rainfall-timestamp
-      .text "DATE: #{it.0.PublishTime}"
-  
-    d3.select \#station-name
-      .text "已更新"
-  
-    update-seven-segment "    "
-  
-    samples := for st in stations when rain-data[st.name]?
-      val = parseFloat rain-data[st.name][\PM10]
-      # XXX mark NaN stations
-      continue if isNaN val
-      [+st.lng, +st.lat, val]
+  d3.select \#rainfall-timestamp
+    .text "DATE: #{epa-data.士林.PublishTime}"
 
-    # calculate the legend
-    y = 0
-    x-off = width - 100 - 40
-    y-off = height - (32*5) - 40
-    svg.append \rect
-      .attr \width 100
-      .attr \height 32*5
-      .attr \x 20 + x-off
-      .attr \y 20 + y-off
-      .style \fill \#000000
-      .style \stroke \#555555
-      .style \stroke-width \2
-    for c in color-of.domain!
-      y += 30
-      legend = svg.append \g
-      legend
-        .append \rect
-        .attr \width 20
-        .attr \height 20
-        .attr \x 30 + x-off
-        .attr \y y + y-off
-        .style \fill color-of c
-      legend
-        .append \text
-        .attr \x 55 + x-off
-        .attr \y y+15 + y-off
-        .attr \d \.35em
-        .text c+' μg/m³'
-        .style \fill \#AAAAAA
-        .style \font-size \10px
-  
-    # update station's value
-    svg.selectAll \circle
-      .data stations
-      .style \fill (st) ->
-        if rain-data[st.name]? and not isNaN rain-data[st.name][\PM10]
-          color-of parseFloat rain-data[st.name][\PM10]
-        else
-          \#FFFFFF
-      .on \mouseover (d, i) ->
-        draw-segment d, i
-  
-    # plot interpolated value
-    plot-interpolated-data!
+  d3.select \#station-name
+    .text "已更新"
 
-draw-all = (stations) ->
-  stations = for s in stations
+  update-seven-segment "    "
+
+  samples := for st in stations when epa-data[st.name]?
+    val = parseFloat epa-data[st.name][current-metric]
+    # XXX mark NaN stations
+    continue if isNaN val
+    [+st.lng, +st.lat, val]
+
+  # update station's value
+  svg.selectAll \circle
+    .data stations
+    .style \fill (st) ->
+      if epa-data[st.name]? and not isNaN epa-data[st.name][current-metric]
+        color-of parseFloat epa-data[st.name][current-metric]
+      else
+        \#FFFFFF
+    .on \mouseover (d, i) ->
+      draw-segment d, i
+
+  # plot interpolated value
+  plot-interpolated-data!
+
+draw-all = (_stations) ->
+  stations := for s in _stations
     s.lng = ConvertDMSToDD ...(s.SITE_EAST_LONG.split \,)
     s.lat = ConvertDMSToDD ...(s.SITE_NORTH_LAT.split \,)
     s.name = s.SITE
     s
   draw-stations stations
-  add-list stations
-  draw-heatmap stations
+  <- d3.csv piped 'http://opendata.epa.gov.tw/ws/Data/AQX/?$orderby=SiteName&$skip=0&$top=1000&format=csv'
+  epa-data := {[e.SiteName, e] for e in it}
+  set-metric \PM10
+  $ \.psi .click ->
+    set-metric \PSI
+  $ \.pm10 .click ->
+    set-metric \PM10
+  $ \.pm25 .click ->
+    set-metric \PM2.5
+  $ \.o3 .click ->
+    set-metric \O3
 
 if localStorage.countiestopo and localStorage.stations
-  console.log 'draw from local storage'
   <- setTimeout _, 1ms
   draw-taiwan JSON.parse localStorage.countiestopo
   stations = JSON.parse localStorage.stations
