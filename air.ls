@@ -96,10 +96,6 @@ dx = (max-longitude - min-longitude) / width
 proj = ([x, y]) ->
   [(x - min-longitude) / dx, height - (y - min-latitude) / dy]
 
-g = svg.append \g
-      .attr \id, \taiwan
-      .attr \class, \counties
-
 path = d3.geo.path!projection proj
 
 ### Draw Taiwan

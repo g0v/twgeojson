@@ -76,7 +76,6 @@ $(function(){
     x = arg$[0], y = arg$[1];
     return [(x - minLongitude) / dx, height - (y - minLatitude) / dy];
   };
-  g = svg.append('g').attr('id', 'taiwan').attr('class', 'counties');
   path = d3.geo.path().projection(proj);
   drawTaiwan = function(countiestopo){
     var counties;
