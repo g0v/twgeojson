@@ -173,20 +173,30 @@ $(function(){
   };
   yPixel = 0;
   plotInterpolatedData = function(){
-    var renderLine;
+    var steps, starts, res$, i$, to$, ridx$, renderLine;
     yPixel = height;
+    steps = 2;
+    res$ = [];
+    for (i$ = 2, to$ = 2 * (steps - 1); i$ <= to$; i$ += 2) {
+      ridx$ = i$;
+      res$.push(ridx$);
+    }
+    starts = res$;
     renderLine = function(){
       var i$, to$, xPixel, y, x, z, ref$;
+      for (i$ = 0, to$ = width; i$ <= to$; i$ += 2) {
+        xPixel = i$;
+        y = minLatitude + dy * ((yPixel + zoom.translate()[1] - height) / zoom.scale() + height);
+        x = minLongitude + dx * ((xPixel - zoom.translate()[0]) / zoom.scale());
+        z = 0 > (ref$ = idwInterpolate(samples, 4.0, [x, y])) ? 0 : ref$;
+        canvas.fillStyle = colorOf(z);
+        canvas.fillRect(xPixel, height - yPixel, 2, 2);
+      }
       if (yPixel >= 0) {
-        for (i$ = 0, to$ = width; i$ <= to$; i$ += 2) {
-          xPixel = i$;
-          y = minLatitude + dy * ((yPixel + zoom.translate()[1] - height) / zoom.scale() + height);
-          x = minLongitude + dx * ((xPixel - zoom.translate()[0]) / zoom.scale());
-          z = 0 > (ref$ = idwInterpolate(samples, 4.0, [x, y])) ? 0 : ref$;
-          canvas.fillStyle = colorOf(z);
-          canvas.fillRect(xPixel, height - yPixel, 2, 2);
-        }
-        yPixel = yPixel - 2;
+        yPixel = yPixel - 2 * steps;
+        return setTimeout(renderLine, 0);
+      } else if (starts.length > 0) {
+        yPixel = height - starts.shift();
         return setTimeout(renderLine, 0);
       }
     };

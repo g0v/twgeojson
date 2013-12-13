@@ -239,16 +239,23 @@ y-pixel = 0
 plot-interpolated-data = ->
   y-pixel := height
 
-  render-line = ->
-    if y-pixel >= 0
-      for x-pixel from 0 to width by 2
-        y = min-latitude + dy * ((y-pixel + zoom.translate![1] - height) / zoom.scale! + height) 
-        x = min-longitude + dx * ((x-pixel - zoom.translate![0]) / zoom.scale!)
-        z = 0 >? idw-interpolate samples, 4.0, [x, y]
+  steps = 2
+  starts = [ 2 to 2 * (steps - 1) by 2 ]
 
-        canvas.fillStyle = color-of z
-        canvas.fillRect x-pixel, height - y-pixel, 2, 2
-      y-pixel := y-pixel - 2
+  render-line = ->
+    for x-pixel from 0 to width by 2
+      y = min-latitude + dy * ((y-pixel + zoom.translate![1] - height) / zoom.scale! + height) 
+      x = min-longitude + dx * ((x-pixel - zoom.translate![0]) / zoom.scale!)
+      z = 0 >? idw-interpolate samples, 4.0, [x, y]
+
+      canvas.fillStyle = color-of z
+      canvas.fillRect x-pixel, height - y-pixel, 2, 2
+
+    if y-pixel >= 0
+      y-pixel := y-pixel - 2 * steps
+      setTimeout render-line, 0
+    else if starts.length > 0
+      y-pixel := height - starts.shift!
       setTimeout render-line, 0
 
   render-line!
