@@ -35,13 +35,18 @@ else
 height = width * 4 / 3
 
 canvas = (d3.select \body
-          .append \canvas
-          .attr \width, width
-          .attr \height, height
+          .append \div
+          .style \width, width + \px
+          .style \height, height + \px
           .style \position, \absolute
           .style \margin-top, margin-top
           .style \top, \0px
-          .style \left, \0px)[0][0].getContext(\2d)
+          .style \left, \0px
+          .style \overflow, \hidden
+          .append \canvas
+          .attr \width, width
+          .attr \height, height
+          .style \position, \absolute)[0][0].getContext(\2d)
 
 svg = d3.select \body
       .append \svg
