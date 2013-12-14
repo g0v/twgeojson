@@ -34,7 +34,7 @@ else
 
 height = width * 4 / 3
 
-canvas = (d3.select \body
+wrapper = d3.select \body
           .append \div
           .style \width, width + \px
           .style \height, height + \px
@@ -43,10 +43,14 @@ canvas = (d3.select \body
           .style \top, \0px
           .style \left, \0px
           .style \overflow, \hidden
-          .append \canvas
+
+canvas = wrapper.append \canvas
           .attr \width, width
           .attr \height, height
-          .style \position, \absolute)[0][0].getContext(\2d)
+          .style \position, \absolute
+
+canvas.origin = [0 0]
+canvas.scale = 1
 
 svg = d3.select \body
       .append \svg
@@ -241,27 +245,30 @@ idw-interpolate = (samples, power, point) ->
 
 y-pixel = 0
 
-plot-interpolated-data = ->
+plot-interpolated-data = (ending) ->
   y-pixel := height
 
   steps = 2
   starts = [ 2 to 2 * (steps - 1) by 2 ]
 
   render-line = ->
+    c = canvas.node!.getContext \2d
     for x-pixel from 0 to width by 2
       y = min-latitude + dy * ((y-pixel + zoom.translate![1] - height) / zoom.scale! + height) 
       x = min-longitude + dx * ((x-pixel - zoom.translate![0]) / zoom.scale!)
       z = 0 >? idw-interpolate samples, 4.0, [x, y]
 
-      canvas.fillStyle = color-of z
-      canvas.fillRect x-pixel, height - y-pixel, 2, 2
+      c.fillStyle = color-of z
+      c.fillRect x-pixel, height - y-pixel, 2, 2
 
     if y-pixel >= 0
       y-pixel := y-pixel - 2 * steps
-      setTimeout render-line, 0
+      set-timeout render-line, 0
     else if starts.length > 0
       y-pixel := height - starts.shift!
-      setTimeout render-line, 0
+      set-timeout render-line, 0
+    else if ending
+      set-timeout ending, 0
 
   render-line!
 
@@ -348,8 +355,17 @@ zoom = d3.behavior.zoom!
     g.attr \transform 'translate(' + d3.event.translate.join(\,) + ')scale(' + d3.event.scale + ')'
     g.selectAll \path
       .attr \d path.projection proj
+    canvas
+      .style \transform-origin, 'top left'
+      .style \transform, \translate( + (zoom.translate![0] - canvas.origin[0]) + 'px,' + (zoom.translate![1] - canvas.origin[1]) + 'px)' + \scale( + zoom.scale! / canvas.scale + \)
   .on \zoomend ->
-    plot-interpolated-data!
+    canvas := wrapper.insert \canvas, \canvas
+              .attr \width, width
+              .attr \height, height
+              .style \position, \absolute
+    canvas.origin = zoom.translate!
+    canvas.scale = zoom.scale!
+    plot-interpolated-data ~> wrapper.selectAll \canvas .data [0] .exit!.remove!
 
 if localStorage.countiestopo and localStorage.stations
   <- setTimeout _, 1ms

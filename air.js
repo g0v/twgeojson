@@ -27,7 +27,7 @@ metrics = {
   }
 };
 $(function(){
-  var windowWidth, width, marginTop, height, canvas, svg, g, minLatitude, maxLatitude, minLongitude, maxLongitude, dy, dx, proj, path, drawTaiwan, ConvertDMSToDD, drawStations, currentMetric, currentUnit, colorOf, stations, setMetric, drawSegment, addList, epaData, samples, distanceSquare, idwInterpolate, yPixel, plotInterpolatedData, updateSevenSegment, drawHeatmap, drawAll, zoom;
+  var windowWidth, width, marginTop, height, wrapper, canvas, svg, g, minLatitude, maxLatitude, minLongitude, maxLongitude, dy, dx, proj, path, drawTaiwan, ConvertDMSToDD, drawStations, currentMetric, currentUnit, colorOf, stations, setMetric, drawSegment, addList, epaData, samples, distanceSquare, idwInterpolate, yPixel, plotInterpolatedData, updateSevenSegment, drawHeatmap, drawAll, zoom;
   windowWidth = $(window).width();
   if (windowWidth > 998) {
     width = $(window).height() / 4 * 3;
@@ -38,7 +38,10 @@ $(function(){
     marginTop = '65px';
   }
   height = width * 4 / 3;
-  canvas = d3.select('body').append('canvas').attr('width', width).attr('height', height).style('position', 'absolute').style('margin-top', marginTop).style('top', '0px').style('left', '0px')[0][0].getContext('2d');
+  wrapper = d3.select('body').append('div').style('width', width + 'px').style('height', height + 'px').style('position', 'absolute').style('margin-top', marginTop).style('top', '0px').style('left', '0px').style('overflow', 'hidden');
+  canvas = wrapper.append('canvas').attr('width', width).attr('height', height).style('position', 'absolute');
+  canvas.origin = [0, 0];
+  canvas.scale = 1;
   svg = d3.select('body').append('svg').attr('width', width).attr('height', height).style('position', 'absolute').style('top', '0px').style('left', '0px').style('margin-top', marginTop);
   g = svg.append('g').attr('id', 'taiwan').attr('class', 'counties');
   $(document).ready(function(){
@@ -172,7 +175,7 @@ $(function(){
     return sumWeight / sum;
   };
   yPixel = 0;
-  plotInterpolatedData = function(){
+  plotInterpolatedData = function(ending){
     var steps, starts, res$, i$, to$, ridx$, renderLine;
     yPixel = height;
     steps = 2;
@@ -183,14 +186,15 @@ $(function(){
     }
     starts = res$;
     renderLine = function(){
-      var i$, to$, xPixel, y, x, z, ref$;
+      var c, i$, to$, xPixel, y, x, z, ref$;
+      c = canvas.node().getContext('2d');
       for (i$ = 0, to$ = width; i$ <= to$; i$ += 2) {
         xPixel = i$;
         y = minLatitude + dy * ((yPixel + zoom.translate()[1] - height) / zoom.scale() + height);
         x = minLongitude + dx * ((xPixel - zoom.translate()[0]) / zoom.scale());
         z = 0 > (ref$ = idwInterpolate(samples, 4.0, [x, y])) ? 0 : ref$;
-        canvas.fillStyle = colorOf(z);
-        canvas.fillRect(xPixel, height - yPixel, 2, 2);
+        c.fillStyle = colorOf(z);
+        c.fillRect(xPixel, height - yPixel, 2, 2);
       }
       if (yPixel >= 0) {
         yPixel = yPixel - 2 * steps;
@@ -198,6 +202,8 @@ $(function(){
       } else if (starts.length > 0) {
         yPixel = height - starts.shift();
         return setTimeout(renderLine, 0);
+      } else if (ending) {
+        return setTimeout(ending, 0);
       }
     };
     return renderLine();
@@ -298,9 +304,16 @@ $(function(){
   };
   zoom = d3.behavior.zoom().on('zoom', function(){
     g.attr('transform', 'translate(' + d3.event.translate.join(',') + ')scale(' + d3.event.scale + ')');
-    return g.selectAll('path').attr('d', path.projection(proj));
+    g.selectAll('path').attr('d', path.projection(proj));
+    return canvas.style('transform-origin', 'top left').style('transform', 'translate(' + (zoom.translate()[0] - canvas.origin[0]) + 'px,' + (zoom.translate()[1] - canvas.origin[1]) + 'px)' + 'scale(' + zoom.scale() / canvas.scale + ')');
   }).on('zoomend', function(){
-    return plotInterpolatedData();
+    var this$ = this;
+    canvas = wrapper.insert('canvas', 'canvas').attr('width', width).attr('height', height).style('position', 'absolute');
+    canvas.origin = zoom.translate();
+    canvas.scale = zoom.scale();
+    return plotInterpolatedData(function(){
+      return wrapper.selectAll('canvas').data([0]).exit().remove();
+    });
   });
   if (localStorage.countiestopo && localStorage.stations) {
     setTimeout(function(){
