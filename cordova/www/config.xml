@@ -6,5 +6,8 @@
     <content src="index.html" />
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="10000" />
+    <preference name="WebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
     <access origin="*" />
 </widget>
