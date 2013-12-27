@@ -95,7 +95,7 @@ $(function(){
       : days - dd;
   };
   drawStations = function(stations){
-    return g.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'black').style('fill', 'none').attr('r', 2).attr("transform", function(it){
+    return g.selectAll('circle').data(stations).enter().append('circle').style('stroke', 'white').style('fill', 'none').attr('r', 2).attr("transform", function(it){
       return "translate(" + proj([+it.lng, +it.lat]) + ")";
     });
   };

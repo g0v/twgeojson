@@ -123,7 +123,7 @@ draw-stations = (stations) ->
   g.selectAll \circle
     .data stations
     .enter!append 'circle'
-    .style \stroke \black
+    .style \stroke \white
     .style \fill \none
     .attr \r 2
     .attr "transform" ->
