@@ -27,7 +27,7 @@ metrics = {
   }
 };
 $(function(){
-  var windowWidth, width, marginTop, height, wrapper, canvas, svg, g, minLatitude, maxLatitude, minLongitude, maxLongitude, dy, dx, proj, path, drawTaiwan, ConvertDMSToDD, drawStations, currentMetric, currentUnit, colorOf, stations, setMetric, drawSegment, addList, epaData, samples, distanceSquare, idwInterpolate, yPixel, plotInterpolatedData, updateSevenSegment, drawHeatmap, drawAll, zoom;
+  var windowWidth, width, marginTop, height, wrapper, map, canvas, svg, g, minLatitude, maxLatitude, minLongitude, maxLongitude, dy, dx, proj, path, drawTaiwan, ConvertDMSToDD, drawStations, currentMetric, currentUnit, colorOf, stations, setMetric, drawSegment, addList, epaData, samples, distanceSquare, idwInterpolate, yPixel, plotInterpolatedData, updateSevenSegment, drawHeatmap, drawAll, zoom;
   windowWidth = $(window).width();
   if (windowWidth > 998) {
     width = $(window).height() / 4 * 3;
@@ -38,7 +38,10 @@ $(function(){
     marginTop = '65px';
   }
   height = width * 4 / 3;
-  wrapper = d3.select('body').append('div').style('width', width + 'px').style('height', height + 'px').style('position', 'absolute').style('margin-top', marginTop).style('top', '0px').style('left', '0px').style('overflow', 'hidden');
+  wrapper = d3.select('body').append('div').attr('id', 'map').style('width', width + 'px').style('height', height + 'px').style('position', 'absolute').style('margin-top', marginTop).style('top', '0px').style('left', '0px').style('overflow', 'hidden');
+  map = new L.map('map').setView([24.47465, 120.72052], 8).addLayer(new L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }));
   canvas = wrapper.append('canvas').attr('width', width).attr('height', height).style('position', 'absolute');
   canvas.origin = [0, 0];
   canvas.scale = 1;
@@ -74,11 +77,13 @@ $(function(){
   maxLongitude = 122.5;
   dy = (maxLatitude - minLatitude) / height;
   dx = (maxLongitude - minLongitude) / width;
-  proj = function(arg$){
-    var x, y;
-    x = arg$[0], y = arg$[1];
-    return [(x - minLongitude) / dx, height - (y - minLatitude) / dy];
-  };
+  proj = d3.geo.transform({
+    point: function(x, y){
+      var point;
+      point = map.latLngToLayerPoint(new L.LatLng(y, x));
+      return this.stream.point(point.x, point.y);
+    }
+  });
   path = d3.geo.path().projection(proj);
   drawTaiwan = function(countiestopo){
     var counties;

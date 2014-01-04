@@ -36,6 +36,7 @@ height = width * 4 / 3
 
 wrapper = d3.select \body
           .append \div
+          .attr \id, \map
           .style \width, width + \px
           .style \height, height + \px
           .style \position, \absolute
@@ -43,6 +44,11 @@ wrapper = d3.select \body
           .style \top, \0px
           .style \left, \0px
           .style \overflow, \hidden
+
+map = new L.map \map .set-view [24.47465, 120.72052], 8
+          .addLayer new L.tileLayer 'http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          }
 
 canvas = wrapper.append \canvas
           .attr \width, width
@@ -94,7 +100,6 @@ $ document .ready ->
 # station-label = inspector.append "p"
 # rainfall-label = inspector.append "p"
 
-
 min-latitude = 21.5 # min-y
 max-latitude = 25.5 # max-y
 min-longitude = 119.5 # min-x
@@ -102,8 +107,13 @@ max-longitude = 122.5 # max-x
 dy = (max-latitude - min-latitude) / height
 dx = (max-longitude - min-longitude) / width
 
-proj = ([x, y]) ->
-  [(x - min-longitude) / dx, height - (y - min-latitude) / dy]
+#proj = ([x, y]) ->
+  #[(x - min-longitude) / dx, height - (y - min-latitude) / dy]
+
+proj = d3.geo.transform { point: (x, y) ->
+  point = map.latLngToLayerPoint(new L.LatLng y, x)
+  this.stream.point point.x, point.y
+}
 
 path = d3.geo.path!projection proj
 
