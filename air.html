@@ -4,12 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" media="all" href="seven-segment.css" />
 <link rel="stylesheet" type="text/css" media="all" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.10.0/css/semantic.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 <style>
-
 body {
   background-color: black;
 }
 
+#rainfall-timestamp {
+  line-height: 125%;
+}
 .counties {
   fill: none;
   stroke: #333;
@@ -72,9 +75,27 @@ div.inspector p {
 #metrics {
   text-align: center;
 }
+#metrics .button b {
+    font-family:
+        "Hiragino Sans GB W6", HiraginoSansGB-W6,
+        "Lantinghei TC Demibold", "Heiti TC Medium",
+        "Microsoft Jhenghei Bold", FZLTXHB--B51-0,
+        STHeitiTC-Medium, MicrosoftJhengHeiBold, "Lantinghei
+        SC Demibold", "Heiti SC Medium", "Microsoft YaHei Bold",
+        "FZLTZHK--GBK1-0", STHeitiSC-Medium,
+        MicrosoftYaHei-Bold, sans-serif;
+}
+#metrics .button {
+  line-height: 120%;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: normal;
+  height: 7ex;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
 
 .eva-box h2 {
-  font-family: "HiraMinProN-W6", serif;
+  font-family: "YuMincho Demibold", "Hiragino Mincho ProN W6", "Hiragino Mincho Pro W6", YuMin-Demibold, HiraMinProN-W6, HiraMinPro-W6, serif;
   font-size: 96px;
   font-weight: bolder;
   text-align: center;
@@ -83,7 +104,7 @@ div.inspector p {
 }
 
 .eva-box h3 {
-  font-family: "Futura-CondensedMedium", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 24px;
   font-weight: normal;
   text-align: center;
@@ -235,10 +256,10 @@ svg {
 <div class="eva-box" id="main-panel">
   <div id="forecast"></div>
   <div id="metrics">
-      <a class="psi ui button" title="測量空氣中的可吸入微粒、二氧化硫、二氧化氮、一氧化碳及臭氧等含量，再換算成副指標值，以當日各副指標值之最大值為該地方當日的空氣污染指標值。">空污指標<br/><sub>&nbsp;</sub>PSI<sub>&nbsp;</sub></a>
-      <a class="o3 ui button" title="具強氧化力，對呼吸系統具刺激性，能引起咳嗽、氣喘、頭痛、疲倦及肺部之傷害，特別是對小孩、老人、病人或戶外運動者有較大影響。">臭氧濃度<br/>O<sub>3<sub></a>
-      <a class="pm10 ui button" title="粒徑小於10微米，能深入肺部深處，如附著其他污染物，則將加深對呼吸系統之危害。">可吸入微粒<br/>PM<sub>10</sub></a>
-      <a class="pm25 ui button" title="粒徑小於2.5微米，能深入細支氣管和肺泡，直接影響肺的通氣功能，且吸附於肺泡之後很難掉落。">細微粒<br/>PM<sub>2.5</sub></a>
+      <a class="psi ui button" title="測量空氣中的可吸入微粒、二氧化硫、二氧化氮、一氧化碳及臭氧等含量，再換算成副指標值，以當日各副指標值之最大值為該地方當日的空氣污染指標值。"><b>空污指標</b><br/><sub>&nbsp;</sub>PSI<sub>&nbsp;</sub></a>
+      <a class="o3 ui button" title="具強氧化力，對呼吸系統具刺激性，能引起咳嗽、氣喘、頭痛、疲倦及肺部之傷害，特別是對小孩、老人、病人或戶外運動者有較大影響。"><b>臭氧濃度</b><br/>O<sub>3<sub></a>
+      <a class="pm10 ui button" title="粒徑小於10微米，能深入肺部深處，如附著其他污染物，則將加深對呼吸系統之危害。"><b>可吸入微粒</b><br/>PM<sub>10</sub></a>
+      <a class="pm25 ui button" title="粒徑小於2.5微米，能深入細支氣管和肺泡，直接影響肺的通氣功能，且吸附於肺泡之後很難掉落。"><b>細微粒</b><br/>PM<sub>2.5</sub></a>
   </div>
   <h3 id="rainfall-timestamp">LOADING…</h3>
   <h2 id="station-name">懸浮微粒</h2>

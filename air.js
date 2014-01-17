@@ -241,7 +241,7 @@ $(function(){
   }
   drawHeatmap = function(stations){
     var res$, i$, len$, st, val;
-    d3.select('#rainfall-timestamp').text("DATE: " + epaData.士林.PublishTime);
+    d3.select('#rainfall-timestamp').text(epaData.士林.PublishTime + "");
     d3.select('#station-name').text("已更新");
     updateSevenSegment("    ");
     res$ = [];

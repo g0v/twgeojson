@@ -304,7 +304,7 @@ function piped(url)
 #current.on \value ->
 draw-heatmap = (stations) ->
   d3.select \#rainfall-timestamp
-    .text "DATE: #{epa-data.士林.PublishTime}"
+    .text "#{epa-data.士林.PublishTime}"
 
   d3.select \#station-name
     .text "已更新"
