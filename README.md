@@ -31,10 +31,7 @@ Use npm to install all required modules, including d3:
 
 To build taiwan geographic json files you'll need the following:
  * unrar - install it with 'brew install unrar' or your favorite package manager.
- * GDAL python binding - with GDAL pacakge, which can be found at:
-   * http://www.kyngchaos.com/software/archive#gdal (for Mac) 
-   * http://www.gisinternals.com/sdk/ (for MS-Windows)
-   * http://fwtools.maptools.org/ (others)
+ * npm install -g mapshaper
 
 then build json files with make:
 
