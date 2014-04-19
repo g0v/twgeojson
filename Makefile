@@ -36,24 +36,17 @@ tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar
 	touch $@
 
 # original command: ogr2ogr -f geojson $@ $<
-twCounty2010.geo.json: tmpdir/TWN_COUNTY.shp
-	./bin/shp2geojson.py $< $@
+twCounty2010.topo.json: tmpdir/TWN_COUNTY.shp
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-twTown1982.geo.json: tmpdir/TWN_TOWN.shp
-	./bin/shp2geojson.py $< $@
+twTown1982.topo.json: tmpdir/TWN_TOWN.shp
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-twVillage1982.geo.json: tmpdir/TWN_VILLAGE.shp
-	./bin/shp2geojson.py $< $@
+twVillage1982.topo.json: tmpdir/TWN_VILLAGE.shp
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-twVote1982.geo.json: tmpdir/TWN_VILLAGE.shp
-	./vote/shp2geojson-vote.py $< $@
-
-.SUFFIXES: .geojson .topojson
-
-%.topo.json:  %.geo.json
-	$(eval simplify=${${@}.simplify})
-	$(eval simplify=$(if ${simplify},${simplify},0.00000001))
-	./node_modules/.bin/topojson -p -s ${simplify} $< > $@
+twVote1982.topo.json: tmpdir/TWN_VILLAGE.shp
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
 vote: twVote1982.topo.json
 village: twVillage1982.topo.json

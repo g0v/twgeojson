@@ -17,6 +17,6 @@ devDependencies:
   LiveScript: \1.1.x
   optimist: \*
   d3: \3.0.x
-  d3-plugins: "git://github.com/d3/d3-plugins.git"
   topojson: \0.0.10
+  mapshaper: \0.1.18
 optionalDependencies: {}
