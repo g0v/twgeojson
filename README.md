@@ -31,7 +31,6 @@ Use npm to install all required modules, including d3:
 
 To build taiwan geographic json files you'll need the following:
  * unrar - install it with 'brew install unrar' or your favorite package manager.
- * npm install -g mapshaper
 
 then build json files with make:
 

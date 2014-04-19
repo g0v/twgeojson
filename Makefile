@@ -37,16 +37,16 @@ tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar
 
 # original command: ogr2ogr -f geojson $@ $<
 twCounty2010.topo.json: tmpdir/TWN_COUNTY.shp
-	mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
 twTown1982.topo.json: tmpdir/TWN_TOWN.shp
-	mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
 twVillage1982.topo.json: tmpdir/TWN_VILLAGE.shp
-	mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
 twVote1982.topo.json: tmpdir/TWN_VILLAGE.shp
-	mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
+	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
 vote: twVote1982.topo.json
 village: twVillage1982.topo.json
