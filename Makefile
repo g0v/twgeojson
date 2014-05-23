@@ -8,7 +8,7 @@ twVote1982.topo.json.simplify=0.0000001
 all: twVillage1982.topo.json twTown1982.topo.json twCounty2010.topo.json twVote1982.topo.json
 
 clean:
-	rm -f tw*.geo.json tw*.topo.json
+	rm -f json/tw*.geo.json json/tw*.topo.json
 	rm -rf tmpdir
 
 tmpdir:
@@ -36,26 +36,26 @@ tmpdir/TWN_COUNTY.shp: tmpdir/tw-county.rar
 	touch $@
 
 # original command: ogr2ogr -f geojson $@ $<
-twCounty2010.topo.json: tmpdir/TWN_COUNTY.shp
+json/twCounty2010.topo.json: tmpdir/TWN_COUNTY.shp
 	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-twTown1982.topo.json: tmpdir/TWN_TOWN.shp
+json/twTown1982.topo.json: tmpdir/TWN_TOWN.shp
 	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-twVillage1982.topo.json: tmpdir/TWN_VILLAGE.shp
+json/twVillage1982.topo.json: tmpdir/TWN_VILLAGE.shp
 	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-twVote1982.topo.json: tmpdir/TWN_VILLAGE.shp
+json/twVote1982.topo.json: tmpdir/TWN_VILLAGE.shp
 	./node_modules/.bin/mapshaper -p 0.01 $< -f topojson --encoding big5 -o $@
 
-vote: twVote1982.topo.json
-village: twVillage1982.topo.json
-town: twTown1982.topo.json
-county: twCounty1982.topo.json
+vote: json/twVote1982.topo.json
+village: json/twVillage1982.topo.json
+town: json/twTown1982.topo.json
+county: json/twCounty1982.topo.json
 
 clean-topo:
-	rm tw*.topo.json
+	rm json/tw*.topo.json
 
 nlsc:
-	lsc cleanup-nlsc.ls > villages.json
-	ogr2ogr -f 'ESRI Shapefile' tmpdir/tw-fixed/ villages.json  -lco ENCODING=UTF-8
+	lsc cleanup-nlsc.ls > json/villages.json
+	ogr2ogr -f 'ESRI Shapefile' tmpdir/tw-fixed/ json/villages.json  -lco ENCODING=UTF-8
