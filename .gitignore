@@ -2,3 +2,5 @@ tmp
 node_modules
 *.swp
 tmpdir
+
+nbproject
