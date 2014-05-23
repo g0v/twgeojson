@@ -5,7 +5,7 @@ twCounty2010.topo.json.simplify=0.00000008
 twVote1982.topo.json.simplify=0.0000001
 
 
-all: twVillage1982.topo.json twTown1982.topo.json twCounty2010.topo.json twVote1982.topo.json
+all: json/twVillage1982.topo.json json/twTown1982.topo.json json/twCounty2010.topo.json json/twVote1982.topo.json
 
 clean:
 	rm -f json/tw*.geo.json json/tw*.topo.json
