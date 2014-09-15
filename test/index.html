@@ -1,0 +1,58 @@
+<html>
+<meta charset="utf-8">
+  <style>
+	path {
+  		stroke: white;
+  		stroke-width: 0.25px;
+	}
+  </style>
+  <script type="text/javascript" src="d3.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+  <script type="text/javascript" src="jquery-1.7.1.js"></script>
+  <!--script src='Goverment.json?jsoncallback=parseParty&tagmode=any&format=json'></script-->
+  <body>
+  	<script type="text/javascript" src="NewMap.js">
+  		<meta http-equiv="Content-Type" content="text/html; charset=Big5">
+
+
+	 /*var selection=d3.select("svg").selectAll("circle").data([3,1,4,1,5,9,2,6,5,3,5,8,9,7,9]);
+	 selection.enter().append("circle");
+	 d3.select("svg").selectAll("circle").attr({
+	   cx:function(d,i){return 50*i+50;},
+	   cy:100,
+	   r:function(d,i){return d;},
+	 });
+	 */
+	
+	 
+	 /*d3.json("topic2-2.json", function(data){
+		var selection=d3.select("svg").selectAll("circle").data(data);
+		selection.enter().append("circle");
+		sc = d3.scale.linear()
+			.domain([0,100]) 
+			.range([200, 800]);
+		d3.select("svg").selectAll("circle").attr({
+		  cx:function(d,i){return sc(d[0]);},
+		  cy:function(d,i){return sc(d[1]);},
+	      r:function(d,i){return d[2];},
+	    });
+
+		/*
+		ticks = sc.ticks(20); 
+		var selection=d3.select("svg").selectAll("rect").data(ticks);
+		d3.select("svg").selectAll("rect").attr({
+			x:function(d,i){return sc(d);},
+			y:810,
+			width:20,
+			height:20,
+			fill:"#0f0"
+		});
+		
+	 });*/	
+	 //d3.scale.pow().exponent(4).domain(array).range(0);
+	 
+  	</script>
+  </body>
+  
+</html>  
