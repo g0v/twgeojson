@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+ 
+.villages {
+  fill: none;
+  stroke: #aaa;
+}
+ 
+.counties {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+.selected {
+  fill: none;
+  stroke: #f00;
+}
+
+.control {
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 10px;
+  background: #ccc;
+}
+
+span.village-blue {
+  background: blue;
+  color: white;
+  opacity: 0.9;
+}
+
+span.village-green {
+  background: green;
+  color: white;
+  opacity: 0.9;
+}
+
+.active {fill:yellow;}
+ 
+.q0-9 { fill:rgb(247,251,255); }
+.q1-9 { fill:rgb(222,235,247); }
+.q2-9 { fill:rgb(198,219,239); }
+.q3-9 { fill:rgb(158,202,225); }
+.q4-9 { fill:rgb(107,174,214); }
+.q5-9 { fill:rgb(66,146,198); }
+.q6-9 { fill:rgb(33,113,181); }
+.q7-9 { fill:rgb(8,81,156); }
+.q8-9 { fill:rgb(8,48,107); }
+ 
+</style>
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="mercatorTW.js"></script>
+<script src="election.js"></script>
+
+<div class="control">
+<span class="zoomout">zoom out</span>
+<span class="zoomin">zoom in</span>
+<label>filter: <input class="filter" type="text"></label>
+<hr>
+
+<h3 class="village-name"></h3>
+<p>
+<span class="village-blue"></span>
+<p>
+<span class="village-green"></span>
+
+</div>
+
+</body>
