@@ -110,7 +110,7 @@ d3.json("tw.json", function(tw){
       x$ = g.selectAll('path').data(villages.features).enter();
       x$.append('path').attr('d', path).on('mouseover', show);
       x$.append('circle').attr('opacity', 0.5).attr('r', function(it){
-        return scale2(val(vote.get(it.properties.ivid)));
+        return scale2(val(vote.get(it.properties.ivid))) - scale2(valWin(vote.get(it.properties.ivid))) / 2;
       }).attr("stroke-width", function(it){
         return scale2(valWin(vote.get(it.properties.ivid)));
       }).attr("stroke", function(it){

@@ -83,7 +83,7 @@ g.selectAll 'path'
     ..append 'circle'
       .attr 'opacity' 0.5
       .attr 'r' ->
-        scale2 val vote.get it.properties.ivid
+        scale2(val vote.get it.properties.ivid) - scale2(val-win vote.get it.properties.ivid) / 2
       .attr "stroke-width" ->
         scale2 val-win vote.get it.properties.ivid
       .attr "stroke" -> color-win vote.get it.properties.ivid
