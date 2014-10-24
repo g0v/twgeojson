@@ -71,6 +71,21 @@ show = ->
   d3.select 'span.village-green' .text if total => "#{cnt.green} (#{Math.round(100 * cnt.green / total) }%)" else ''
   console?log it.properties.ivid, val vote.get it.properties.ivid
 
+entries = for v in villages.features
+  centroid = path.centroid v
+  continue unless centroid?0
+  data = vote.get v.properties.ivid
+  continue unless data
+  color-win data
+  do
+    cx: centroid.0
+    cy: centroid.1
+    win: color-win data
+    margin: val-win data
+    total: val data
+    ivid: v.properties.ivid
+entries .= sort (a, b) -> b.margin - a.margin
+
 g.selectAll 'path'
   .data villages.features
   .enter!
@@ -80,18 +95,19 @@ g.selectAll 'path'
 #          quantize val vote.get that
       .attr 'd', path
       .on \mouseover show
+g.selectAll 'circle'
+  .data entries
+  .enter!
     ..append 'circle'
       .attr 'opacity' 0.5
       .attr 'r' ->
-        scale2(val vote.get it.properties.ivid) - scale2(val-win vote.get it.properties.ivid) / 2
+        scale2(it.total) - scale2(it.margin)/2
       .attr "stroke-width" ->
-        scale2 val-win vote.get it.properties.ivid
-      .attr "stroke" -> color-win vote.get it.properties.ivid
+        scale2 it.margin
+      .attr "stroke" (.win)
 
-      .attr 'cx' ->
-        path.centroid(it)?0
-      .attr 'cy' ->
-        path.centroid(it)?1
+      .attr 'cx' (.cx)
+      .attr 'cy' (.cy)
       .on \mouseover show
 
 d3.select 'input.filter' .attr 'value' 'ILA'

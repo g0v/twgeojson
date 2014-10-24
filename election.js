@@ -19,7 +19,7 @@ d3.json("tw.json", function(tw){
         green: +it.green
       });
     }, function(){
-      var val, valWin, colorWin, max, c, min, scale, scale2, quantize, proj, villages, path, g, partOf, wanted, zoomin, setWanted, show, x$, zoomTo, y$;
+      var val, valWin, colorWin, max, c, min, scale, scale2, quantize, proj, villages, path, g, partOf, wanted, zoomin, setWanted, show, entries, res$, i$, ref$, len$, v, centroid, data, x$, y$, zoomTo, z$;
       val = function(it){
         if (it) {
           return it.blue + it.green;
@@ -107,20 +107,44 @@ d3.json("tw.json", function(tw){
         d3.select('span.village-green').text(total ? cnt.green + " (" + Math.round(100 * cnt.green / total) + "%)" : '');
         return typeof console != 'undefined' && console !== null ? console.log(it.properties.ivid, val(vote.get(it.properties.ivid))) : void 8;
       };
+      res$ = [];
+      for (i$ = 0, len$ = (ref$ = villages.features).length; i$ < len$; ++i$) {
+        v = ref$[i$];
+        centroid = path.centroid(v);
+        if (!(centroid != null && centroid[0])) {
+          continue;
+        }
+        data = vote.get(v.properties.ivid);
+        if (!data) {
+          continue;
+        }
+        colorWin(data);
+        res$.push({
+          cx: centroid[0],
+          cy: centroid[1],
+          win: colorWin(data),
+          margin: valWin(data),
+          total: val(data),
+          ivid: v.properties.ivid
+        });
+      }
+      entries = res$;
+      entries = entries.sort(function(a, b){
+        return b.margin - a.margin;
+      });
       x$ = g.selectAll('path').data(villages.features).enter();
       x$.append('path').attr('d', path).on('mouseover', show);
-      x$.append('circle').attr('opacity', 0.5).attr('r', function(it){
-        return scale2(val(vote.get(it.properties.ivid))) - scale2(valWin(vote.get(it.properties.ivid))) / 2;
+      y$ = g.selectAll('circle').data(entries).enter();
+      y$.append('circle').attr('opacity', 0.5).attr('r', function(it){
+        return scale2(it.total) - scale2(it.margin) / 2;
       }).attr("stroke-width", function(it){
-        return scale2(valWin(vote.get(it.properties.ivid)));
+        return scale2(it.margin);
       }).attr("stroke", function(it){
-        return colorWin(vote.get(it.properties.ivid));
+        return it.win;
       }).attr('cx', function(it){
-        var ref$;
-        return (ref$ = path.centroid(it)) != null ? ref$[0] : void 8;
+        return it.cx;
       }).attr('cy', function(it){
-        var ref$;
-        return (ref$ = path.centroid(it)) != null ? ref$[1] : void 8;
+        return it.cy;
       }).on('mouseover', show);
       d3.select('input.filter').attr('value', 'ILA');
       setWanted('ILA');
@@ -146,13 +170,13 @@ d3.json("tw.json", function(tw){
           features: zoomin
         });
       });
-      y$ = d3.select('input.filter');
-      y$.on('change', function(){
+      z$ = d3.select('input.filter');
+      z$.on('change', function(){
         var z;
-        z = y$[0][0].value;
+        z = z$[0][0].value;
         return setWanted(z);
       });
-      return y$;
+      return z$;
     });
   });
 });
