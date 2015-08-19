@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<style>
+		#map {
+			width: 960px;
+			height: 500px;
+		}
+		</style>
+	</head>
+	<body>
+		<svg id="map"></svg>
+	</body>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script>
+	
+	d3.json("../json/twCounty2010merge.topo.json", function (error, data) {
+
+	  	topo = topojson.feature(data, data.objects.layer1);
+		prj = d3.geo.mercator().center([120.979531, 23.978567]).scale(5000);
+
+		path = d3.geo.path().projection(prj);					
+			
+		locks = d3.select("svg#map").selectAll("path").data(topo.features).enter()
+		.append("path").attr("d", path);
+
+	});
+	</script>	
+</html>
